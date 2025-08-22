@@ -1,4 +1,4 @@
-## Primeira Reunião
+## Primeira Reunião 04/11
 
     ### O que foi feito:
     
@@ -10,7 +10,7 @@
 
         Todos vieram;
 
-## Segunda Reunião
+## Segunda Reunião 11/07
 
     ### O que foi feito:
 
@@ -23,7 +23,7 @@
     
      Maico;
 
-## Terceira Reunião
+## Terceira Reunião 18/07
 
     ## O que foi feito;
 
@@ -36,5 +36,29 @@
         Iníciação da criação do layout;
 
     ## Quem faltou:
+
+        Todos vieram;
+        
+## Quarta Reunião 15/08
+
+    ## O que vai ser feito;
+        Início da criação do layout
+        Escolher um nome fictício
+        Criação da rede social 
+    
+    ### Quem faltou: 
+
+        Mateus;
+        
+## Quinta Reunião 22/08
+
+    ## O que vai ser feito;
+        Início da base do css 
+        Organização das paginas 
+        Organização da rede social
+        Início da montantagem 
+        Criação da pagina 
+    
+    ### Quem faltou:
 
         Todos vieram;
