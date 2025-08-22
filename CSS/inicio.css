@@ -1,0 +1,96 @@
+/*Barra de navegação superior*/
+body {
+    background-color: black;
+    position: relative; /* Adicionado para contexto de posicionamento */
+}
+
+header {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Adicione esta linha */
+    padding-top: 24px;
+}
+
+.logo {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 24px;
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+header nav.nav-links a {
+    /* afasta do topo */
+    background-color: white;
+    color: black;
+    padding: 5px 10px;
+    margin-left: 10px;
+    margin-top: 8px;
+    /* separa os botões */
+    border: none;
+    border-radius: 4px;
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+}
+
+.nav-links .login-btn {
+    margin-right: 26px;
+    /* ajuste loguin */
+}
+
+.proxima-pg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    /* centraliza verticalmente */
+}
+
+.proxima-pg a {
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    color: white;
+    padding: 16px 48px;      /* diminuído */
+    border-radius: 10px 120px; /* ajustado proporcionalmente */
+    text-decoration: none;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 600;
+    font-size: 22px;         /* diminuído */
+    cursor: pointer;
+    transition: background 0.2s;
+    display: inline-block;
+    box-shadow:
+        0 0 0 2px #b8860b,
+        /* faixa dourada escura externa */
+        0 0 0 12px black,
+        /* faixa preta intermediária */
+        0 0 0 18px #b8860b;
+    /* faixa dourada escura interna */
+}
+
+.sud {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10rem;
+    /* tamanho grande */
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    color: #FF4D00;
+    text-transform: uppercase;
+    transform: scaleY(3.0);
+    z-index: 0; /* Mantém atrás */
+    pointer-events: none;
+    user-select: none;
+    display: inline-block;
+}
