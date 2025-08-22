@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- Eye -->
+  <ellipse cx="400" cy="300" rx="200" ry="120" fill="white" stroke="#424242" stroke-width="5"/>
+  <circle cx="400" cy="300" r="80" fill="#4CAF50"/>
+  <circle cx="400" cy="300" r="40" fill="#263238"/>
+  <circle cx="420" cy="280" r="15" fill="white" opacity="0.8"/>
+  
+  <!-- Eyelashes -->
+  <line x1="250" y1="250" x2="220" y2="220" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  <line x1="300" y1="220" x2="280" y2="180" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  <line x1="350" y1="200" x2="340" y2="160" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  <line x1="400" y1="190" x2="400" y2="150" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  <line x1="450" y1="200" x2="460" y2="160" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  <line x1="500" y1="220" x2="520" y2="180" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  <line x1="550" y1="250" x2="580" y2="220" stroke="#424242" stroke-width="4" stroke-linecap="round"/>
+  
+  <!-- 20-20-20 Rule -->
+  <text x="250" y="450" font-family="Arial" font-size="40" font-weight="bold" fill="#2E7D32">20-20-20 Rule</text>
+  <line x1="250" y1="470" x2="550" y2="470" stroke="#2E7D32" stroke-width="3"/>
+  
+  <!-- Clock symbol -->
+  <circle cx="200" cy="520" r="30" fill="white" stroke="#2E7D32" stroke-width="3"/>
+  <line x1="200" y1="520" x2="200" y2="500" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/>
+  <line x1="200" y1="520" x2="215" y2="520" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/>
+  <text x="240" y="530" font-family="Arial" font-size="24" fill="#424242">20 min</text>
+  
+  <!-- Screen symbol -->
+  <rect x="350" y="500" width="40" height="30" rx="2" fill="#2E7D32"/>
+  <rect x="355" y="505" width="30" height="20" fill="white"/>
+  <rect x="365" y="530" width="10" height="5" fill="#2E7D32"/>
+  <rect x="360" y="535" width="20" height="2" fill="#2E7D32"/>
+  <text x="400" y="530" font-family="Arial" font-size="24" fill="#424242">20 sec</text>
+  
+  <!-- Distance symbol -->
+  <line x1="500" y1="520" x2="580" y2="520" stroke="#2E7D32" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="500" cy="520" r="5" fill="#2E7D32"/>
+  <circle cx="580" cy="520" r="5" fill="#2E7D32"/>
+  <text x="500" y="550" font-family="Arial" font-size="24" fill="#424242">20 feet</text>
+</svg>

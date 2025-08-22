@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f5f5f5"/>
+  
+  <!-- Desk -->
+  <rect x="100" y="350" width="600" height="20" fill="#8d6e63"/>
+  <rect x="150" y="370" width="20" height="150" fill="#5d4037"/>
+  <rect x="630" y="370" width="20" height="150" fill="#5d4037"/>
+  
+  <!-- Computer -->
+  <rect x="250" y="250" width="300" height="200" rx="10" fill="#424242"/>
+  <rect x="270" y="270" width="260" height="160" fill="#4CAF50"/>
+  <rect x="350" y="350" width="100" height="20" fill="#424242"/>
+  <rect x="380" y="370" width="40" height="10" fill="#424242"/>
+  
+  <!-- Person -->
+  <circle cx="400" cy="180" r="40" fill="#ffcc80"/>
+  <rect x="380" y="220" width="40" height="60" fill="#4CAF50"/>
+  <rect x="360" y="220" width="20" height="60" fill="#2E7D32"/>
+  <rect x="420" y="220" width="20" height="60" fill="#2E7D32"/>
+  <rect x="380" y="280" width="15" height="40" fill="#4e342e"/>
+  <rect x="405" y="280" width="15" height="40" fill="#4e342e"/>
+  
+  <!-- Plant -->
+  <rect x="150" y="250" width="40" height="100" fill="#795548"/>
+  <circle cx="170" cy="230" r="30" fill="#81c784"/>
+  <circle cx="190" cy="210" r="20" fill="#66bb6a"/>
+  <circle cx="150" cy="210" r="25" fill="#4caf50"/>
+  
+  <!-- Water bottle -->
+  <rect x="550" y="250" width="30" height="100" rx="15" fill="#bbdefb"/>
+  <rect x="550" y="250" width="30" height="20" rx="10" fill="#1976d2"/>
+  
+  <!-- Health symbols -->
+  <circle cx="650" cy="150" r="40" fill="#ef5350" opacity="0.8"/>
+  <rect x="630" y="130" width="40" height="10" fill="white"/>
+  <rect x="645" y="115" width="10" height="40" fill="white"/>
+  
+  <!-- Ergonomic chair indication -->
+  <path d="M400 280 Q450 320 450 350 Q450 380 400 400" fill="none" stroke="#9e9e9e" stroke-width="3" stroke-dasharray="5,5"/>
+  
+  <!-- Exercise indication -->
+  <circle cx="150" cy="150" r="40" fill="#8bc34a" opacity="0.8"/>
+  <path d="M130 150 L170 150 M150 130 L150 170" stroke="white" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Clock for breaks -->
+  <circle cx="700" cy="100" r="30" fill="white" stroke="#616161" stroke-width="3"/>
+  <line x1="700" y1="100" x2="700" y2="80" stroke="#616161" stroke-width="3" stroke-linecap="round"/>
+  <line x1="700" y1="100" x2="715" y2="100" stroke="#616161" stroke-width="3" stroke-linecap="round"/>
+</svg>
