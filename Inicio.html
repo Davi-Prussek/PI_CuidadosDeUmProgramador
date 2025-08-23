@@ -5,85 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dev-Saúde | Início</title>
     <link rel="stylesheet" href="CSS/inicio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="CSS/Reset.CSS">
   </head>
   <body>
-    <header class="header">
-      <div class="container">
+    <header>
+      <div class="header-container">
         <div class="logo">Dev-Saúde</div>
+        <nav class="nav-links">
+          <a href="Inicio.html" class="active">Início</a>
+          <a href="testHrs.html">Teste de Horas</a>
+          <a href="rotinas.html">Rotinas</a>
+          <a href="cuidados.html">Cuidados</a>
+          <a href="sobreNos.html">Sobre nós</a>
+          <a href="login.html" class="login-btn">Login</a>
+        </nav>
       </div>
     </header>
-    
-    <main>
-      <section class="hero-section">
-        <div class="overlay"></div>
-        <h1 class="hero-title">Dev-Saúde</h1>
-      </section>
-      <section class="conteudo-principal">
-        <div class="container">
-          <div class="imagem-anexo">
-            <img src="img/programmer-health.svg" alt="Saúde do programador">
-          </div>
-          <div class="texto-principal">
-            <h2>Cansado de ter uma rotina ruim, trabalhos desorganizados e aquela sensação de que nada está no lugar?</h2>
-            <p>A vida de programador já é desafiadora por natureza: prazos apertados, horas em frente à tela e a pressão constante por resultados. Mas e se fosse possível equilibrar produtividade com bem-estar?</p>
-            <p>Aqui, a ideia é simples — mostrar que cuidar da mente, do corpo e da organização diária pode ser o diferencial que transforma sua carreira e sua vida pessoal. Pequenos ajustes de rotina podem render não só mais foco no código, mas também mais leveza no dia a dia.</p>
-            <a href="cuidados.html" class="saiba-mais">Saiba mais <i class="fas fa-arrow-right"></i></a>
-          </div>
-        </div>
-      </section>
-      
-      <section class="recursos">
-        <div class="container">
-          <h2 class="section-title">Nossos Recursos</h2>
-          <div class="cards-container">
-            <div class="card">
-            <div class="card-icon">
-              <img src="img/screen-time.svg" alt="Teste de Horas de Tela">
-            </div>
-            <h3>Teste de Horas</h3>
-            <p>Avalie quanto tempo você passa em frente às telas e receba recomendações personalizadas.</p>
-            <a href="testHrs.html" class="card-link">Fazer teste</a>
-          </div>
-            
-            <div class="card">
-            <div class="card-icon">
-              <img src="img/healthy-routine.svg" alt="Rotinas Saudáveis">
-            </div>
-            <h3>Rotinas Saudáveis</h3>
-            <p>Descubra como organizar seu dia para incluir pausas, exercícios e momentos de descanso.</p>
-            <a href="rotinas.html" class="card-link">Ver rotinas</a>
-          </div>
-            
-            <div class="card">
-            <div class="card-icon">
-              <img src="img/essential-care.svg" alt="Cuidados Essenciais">
-            </div>
-            <h3>Cuidados Essenciais</h3>
-            <p>Conheça práticas para cuidar da sua saúde física e mental enquanto programa.</p>
-            <a href="cuidados.html" class="card-link">Ver cuidados</a>
-          </div>
-          </div>
-        </div>
-      </section>
-      
-      <section class="depoimentos">
-        <div class="container">
-          <h2 class="section-title">Depoimentos</h2>
-          <div class="depoimento-card">
-            <div class="depoimento-texto">
-              <p>"Depois que comecei a seguir as dicas do Dev-Saúde, minha produtividade aumentou e minhas dores nas costas diminuíram significativamente. Recomendo a todos os desenvolvedores!"</p>
-              <div class="depoimento-autor">- Carlos Silva, Desenvolvedor Full Stack</div>
-            </div>
-            <div class="depoimento-imagem">
-                <img src="img/testimonial.svg" alt="Depoimento sobre saúde e produtividade">
-              </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    
+    <!-- footer -->
     <footer class="footer">
       <div class="container">
         <div class="footer-content">
