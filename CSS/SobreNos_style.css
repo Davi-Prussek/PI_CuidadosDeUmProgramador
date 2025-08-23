@@ -1,37 +1,52 @@
-html{
-  font-size: calc(12px + 0.8vw);
+html {
+  font-size: calc(12px + 0.95vw);
 }
 
 body {
   text-align: center;
   header {
-    background-color: #2E7D32;
-    height: 55px;
+    background-color: #0056b3;
+    height: 3rem;
 
-    h1{
-      font-size: 3rem;;
+    #titulo_sobreNos {
+      position: fixed;
+      top: 0.65rem;
+      left: 1.3rem;
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
     }
    
   }
-  h2.subTitulo_sobreNos {
-    font-size: 15px;
-  }
-  .direcionar_sobreNos {
-    text-decoration: none;
-    color: white;
+  ul.direcionar_sobreNos {
+    font-size: 0.9rem;
     display: flex;
     position: fixed;
-    top: 0.9vw;
-    right: 1.5vw;
-    gap: 10px;
+    top: 0.65rem;
+    right: 0.7rem;
+    gap: 1.1rem;
+    a {
+    text-decoration: none;
+    color: white; 
+    }
   }
-/*  display: flex;
+  h2.subTitulo_sobreNos {
+    text-align: center;
+    font-size: 2rem;
+  }
+  .pessoas_sobreNos {
+  font-size: 1.1rem;
+  text-align: center;
+  display: flex;
   flex-wrap: wrap;
+  /*gap: 2rem;*/
+  justify-content: space-around;
 
   li{
     width: 30%;
+   border: 1px solid black;
+   border-radius: 5px;
+   margin: 2rem 0 20px 0;
   }
-*/
+  }
 }
-
-  /*color: #4CAF50;*/
