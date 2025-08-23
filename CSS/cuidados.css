@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 /* Aplicar as fontes gerais */
 body {
     font-family: 'Open Sans', sans-serif;
@@ -105,7 +105,7 @@ ul.dicas-olhos li {
 footer p, .footer-links a {
     font-size: 0.9rem;
 }
-=======
+
 html {
   font-size: calc(12px + 0.95vw);
 }
@@ -141,4 +141,4 @@ body {
 
   }
 }
->>>>>>> 72d2bee (Junção de partes)
+
