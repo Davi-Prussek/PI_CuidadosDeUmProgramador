@@ -4,49 +4,59 @@ html {
 
 body {
   text-align: center;
+
   header {
     background-color: #0056b3;
-    height: 3rem;
 
-    #titulo_sobreNos {
-      position: fixed;
-      top: 0.65rem;
-      left: 1.3rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 1.5vw 2vw 1.5vw;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+    h1 a {
       font-size: 1.4rem;
       text-decoration: none;
       color: white;
     }
-   
-  }
-  ul.direcionar_sobreNos {
-    font-size: 0.9rem;
-    display: flex;
-    position: fixed;
-    top: 0.65rem;
-    right: 0.7rem;
-    gap: 1.1rem;
-    a {
-    text-decoration: none;
-    color: white; 
+
+    ul {
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.4rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
     }
+
   }
+
+  /*Conteúdo*/
   h2.subTitulo_sobreNos {
     text-align: center;
     font-size: 2rem;
   }
-  .pessoas_sobreNos {
-  font-size: 1.1rem;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  /*gap: 2rem;*/
-  justify-content: space-around;
 
-  li{
-    width: 30%;
-   border: 1px solid black;
-   border-radius: 5px;
-   margin: 2rem 0 20px 0;
-  }
+  .pessoas_sobreNos {
+    font-size: 1.1rem;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    /*gap: 2rem;*/
+    justify-content: space-around;
+
+    max-width: 1200px;
+    margin: 0 auto;
+
+    li {
+      width: 25%;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 2rem 0 20px 0;
+    }
   }
 }
+
+@media (max-width:500px) {}
