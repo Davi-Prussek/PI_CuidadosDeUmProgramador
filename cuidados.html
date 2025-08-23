@@ -6,19 +6,12 @@
     <title>Saúde do Programador</title>
     <link rel="stylesheet" href="CSS/Reset.CSS">
     <link rel="stylesheet" href="CSS/cuidados.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <div class="container">
-            <h1>Saúde do Programador</h1>
-            <nav>
-                <ul>
-                    <li><a href="Inicio.html">Início</a></li>
-                    <li><a href="cuidados.html" class="active">Cuidados</a></li>
-                    <li><a href="sobreNos.html">Sobre Nós</a></li>
-                </ul>
-            </nav>
-        </div>
+            <h1 class="titulo">Saúde do Programador</h1>
     </header>
     
     <div class="banner">
@@ -279,21 +272,5 @@
             </div>
         </div>
     </footer>
-    <a href="#" class="back-to-top">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
-    <script>
-        // Botão voltar ao topo
-        const backToTopButton = document.querySelector('.back-to-top');
-        
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 300) {
-                backToTopButton.classList.add('show');
-            } else {
-                backToTopButton.classList.remove('show');
-            }
-        });
-    </script>
 </body>
 </html>
