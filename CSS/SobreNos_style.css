@@ -6,9 +6,9 @@ body {
     #titulo_sobreNos {
             text-decoration: none;
             color: white;
-            font-size: 2vw;
+            font-size: 2vw calc(11px);
             position: fixed;
-            top: 0.8vw;
+            top: 0.9vw;
             left: 1.5vw;
             font-size: calc(30px);
             border: none;
@@ -16,7 +16,23 @@ body {
             cursor: pointer;
     }
   }
-}
+  h2.subTitulo_sobreNos {
+    font-size: 15px;
+  }
+  ul.navegarPags_sobreNos {
+    display: flex;
+    position: fixed;
+    top: 0.9vw;
+    right: 1.5vw;
+    gap: 10px;
+  }
+/*  display: flex;
+  flex-wrap: wrap;
 
+  li{
+    width: 30%;
+  }
+*/
+}
 
   /*color: #4CAF50;*/
