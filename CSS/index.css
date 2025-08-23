@@ -20,11 +20,13 @@ body {
     }
 }
 
-.header-container {
+.header {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Alinha à esquerda */
-    height: 4vw; /* Altura do header */
+    justify-content: flex-start;
+    /* Alinha à esquerda */
+    height: 4vw;
+    /* Altura do header */
     width: 100%;
 }
 
@@ -35,19 +37,21 @@ body {
     margin-left: 20px;
     margin-top: 0px;
     margin-right: 20px;
+    color: white;
 }
 
 header nav.nav-links {
     display: flex;
     align-items: center;
-    gap: 16px; /* Espaço entre os links */
+    gap: 16px;
+    /* Espaço entre os links */
     height: 100%;
     margin: 0px 0px 0px 65vw;
 }
 
 header nav.nav-links a {
     background-color: transparent;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     border: none;
     border-radius: 4px;
     text-decoration: none;
@@ -57,8 +61,10 @@ header nav.nav-links a {
     display: flex;
     align-items: center;
     height: 100%;
-    position: static; /* Remove o fixed */
+    position: static;
+    /* Remove o fixed */
 }
+
 .footer {
     background-color: #2E7D32;
     color: white;
@@ -70,4 +76,23 @@ header nav.nav-links a {
     font-family: "Times New Roman", Times, serif;
     font-weight: 400;
     font-size: 16px;
+}
+
+.footer-logo {
+    font-weight: 3vw;
+    font-size: 1.5vw;
+    text-align: start;
+}
+
+.footer-links a {
+    margin-right: 20px;
+    font-size: 1.0vw;
+    text-align: center;
+    color: #dddddd;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    /* joga pro lado direito */
+    padding-right: 40px;
+    /* controla o quanto fica afastado da borda */
 }
