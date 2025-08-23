@@ -1,25 +1,24 @@
+html{
+  font-size: calc(12px + 0.8vw);
+}
+
 body {
   text-align: center;
   header {
     background-color: #2E7D32;
-    height: 4vw;
-    #titulo_sobreNos {
-            text-decoration: none;
-            color: white;
-            font-size: 2vw calc(11px);
-            position: fixed;
-            top: 0.9vw;
-            left: 1.5vw;
-            font-size: calc(30px);
-            border: none;
-            background-color: transparent;
-            cursor: pointer;
+    height: 55px;
+
+    h1{
+      font-size: 3rem;;
     }
+   
   }
   h2.subTitulo_sobreNos {
     font-size: 15px;
   }
-  ul.navegarPags_sobreNos {
+  .direcionar_sobreNos {
+    text-decoration: none;
+    color: white;
     display: flex;
     position: fixed;
     top: 0.9vw;
