@@ -1,9 +1,22 @@
 body {
-    text-align: center;
-    h1.titulo_sobreNos {
-     font-size: 10vw;
-     color: #8BC34A;
-     color: #2E7D32;
-     color: #4CAF50;
+  text-align: center;
+  header {
+    background-color: #2E7D32;
+    height: 4vw;
+    #titulo_sobreNos {
+            text-decoration: none;
+            color: white;
+            font-size: 2vw;
+            position: fixed;
+            top: 0.8vw;
+            left: 1.5vw;
+            font-size: calc(30px);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
     }
+  }
 }
+
+
+  /*color: #4CAF50;*/
