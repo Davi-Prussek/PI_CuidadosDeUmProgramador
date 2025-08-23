@@ -1,0 +1,106 @@
+/* Aplicar as fontes gerais */
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #e6e6e6;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    color: #222;
+    font-weight: 700;
+}
+
+/* Título principal */
+.titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+/* Subtítulos */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Parágrafos */
+p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Botão-link */
+.btn-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007BFF;
+    color: white;
+    border-radius: 4px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #0056b3
+    ;
+}
+
+/* Seções e cards */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.card-text p,
+.card-text ul {
+    font-size: 0.95rem;
+}
+
+ul.recomendacoes li,
+ul.dicas-olhos li {
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+/* Dicas práticas */
+.dicas-praticas h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.dica-item h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.dica-item p {
+    font-size: 0.95rem;
+}
+
+/* Rodapé */
+footer p, .footer-links a {
+    font-size: 0.9rem;
+}
