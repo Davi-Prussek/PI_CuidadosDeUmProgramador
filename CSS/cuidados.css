@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* Aplicar as fontes gerais */
 body {
     font-family: 'Open Sans', sans-serif;
@@ -104,3 +105,40 @@ ul.dicas-olhos li {
 footer p, .footer-links a {
     font-size: 0.9rem;
 }
+=======
+html {
+  font-size: calc(12px + 0.95vw);
+}
+
+body {
+  text-align: center;
+
+  header {
+    background-color: #0056b3;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 1.5vw 2vw 1.5vw;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    ul {
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.4rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+  }
+}
+>>>>>>> 72d2bee (Junção de partes)
