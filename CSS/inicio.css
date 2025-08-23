@@ -1,51 +1,61 @@
-/*Barra de navegação superior*/
 body {
-    background-color: rgb(255, 255, 255);
-    position: relative; /* Adicionado para contexto de posicionamento */
+    text-align: center;
+
+    header {
+        background-color: #2E7D32;
+        height: 4vw;
+
+        #titulo_sobreNos {
+            text-decoration: none;
+            color: white;
+            font-size: 2vw;
+            position: fixed;
+            top: 0.8vw;
+            left: 1.5vw;
+            font-size: calc(30px);
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
+        }
+    }
 }
 
-header {
-    color: rgb(0, 0, 0);
+.header-container {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    /* Adicione esta linha */
-    padding-top: 24px;
+    justify-content: flex-start; /* Alinha à esquerda */
+    height: 4vw; /* Altura do header */
+    width: 100%;
 }
 
 .logo {
     font-family: "Times New Roman", Times, serif;
     font-weight: 700;
-    font-size: 24px;
+    font-size: 30px;
     margin-left: 20px;
-    margin-top: 8px;
+    margin-top: 0px;
+    margin-right: 20px;
+}
+
+header nav.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Espaço entre os links */
+    height: 100%;
+    margin: 0px 0px 0px 65vw;
 }
 
 header nav.nav-links a {
-    /* afasta do topo */
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    padding: 5px 10px;
-    margin-left: 10px;
-    margin-top: 8px;
-    /* separa os botões */
+    background-color: transparent;
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 4px;
     text-decoration: none;
     font-family: "Times New Roman", Times, serif;
     font-weight: 400;
     font-size: 16px;
-    transition: background 0.2s;
-    display: inline-block;
-}
-.nav-links .login-btn {
-    margin-right: 26px;
-    /* ajuste loguin */
-}
-.proxima-pg {
     display: flex;
-    justify-content: center;
     align-items: center;
-    height: 80vh;
-    /* centraliza verticalmente */
+    height: 100%;
+    position: static; /* Remove o fixed */
 }
