@@ -4,6 +4,7 @@ html {
 
 body {
   text-align: center;
+
   header {
     background-color: #0056b3;
     height: 3rem;
@@ -16,8 +17,9 @@ body {
       text-decoration: none;
       color: white;
     }
-   
+
   }
+
   ul.direcionar_sobreNos {
     font-size: 0.9rem;
     display: flex;
@@ -25,124 +27,166 @@ body {
     top: 0.65rem;
     right: 0.7rem;
     gap: 1.1rem;
+
     a {
-    text-decoration: none;
-    color: white; 
+      text-decoration: none;
+      color: white;
     }
   }
+
   h2.subTitulo_sobreNos {
     text-align: center;
     font-size: 2rem;
   }
+
   .pessoas_sobreNos {
-  font-size: 1.1rem;
-  text-align: center;
-  display: flex;
-  flex-wrap: wrap;
-  /*gap: 2rem;*/
-  justify-content: space-around;
-
-  li{
-    width: 30%;
-   border: 1px solid black;
-   border-radius: 5px;
-   margin: 2rem 0 20px 0;
-  }
-  }
-}
-
-.bv{
+    font-size: 1.1rem;
     text-align: center;
-    margin-top: 100px;
-    font-size: 2vw;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 100px;
-    opacity: 0.6;
+    display: flex;
+    flex-wrap: wrap;
+    /*gap: 2rem;*/
+    justify-content: space-around;
+
+    li {
+      width: 30%;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin: 2rem 0 20px 0;
+    }
+  }
 }
+
+.bv {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 2vw;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 100px;
+  opacity: 0.6;
+}
+
 .txt2 {
-   display: flex;
-  align-items: center; /* alinha verticalmente */
-  gap: 20px; /* espaço entre a imagem e o texto */
-    font-size: large;
+  display: flex;
+  align-items: center;
+  /* alinha verticalmente */
+  gap: 20px;
+  /* espaço entre a imagem e o texto */
+  font-size: 30px;
 }
+
+.txt1 {
+  display: flex;
+  align-items: center;
+  /* alinha verticalmente */
+  gap: 20px;
+  /* espaço entre a imagem e o texto */
+  font-size: 30px;
+}
+
 .caixa {
   display: flex;
-  align-items: center; /* alinha verticalmente */
-  gap: 20px; /* espaço entre a imagem e o texto */
+  align-items: center;
+  /* alinha verticalmente */
+  gap: 20px;
+  /* espaço entre a imagem e o texto */
   font-size: large;
   font-size: large;
 }
 
 .img {
-  width: 300px;   /* controla tamanho da imagem */
-  height: auto;
+  width: 500px;
+  /* controla tamanho da imagem */
+  height: 300px;
+  margin-right: 20px;
+  margin: 0px 20px 20px 0px;
 }
 
 .logo {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin-left: 20px;
-    margin-top: 0px;
-    margin-right: 20px;
-    color: white;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 30px;
+  margin-left: 20px;
+  margin-top: 0px;
+  margin-right: 20px;
+  color: white;
 }
 
 header nav.nav-links {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    /* Espaço entre os links */
-    height: 100%;
-    margin: 0px 0px 0px 65vw;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  /* Espaço entre os links */
+  height: 100%;
+  margin: 0px 0px 0px 65vw;
 }
 
 header nav.nav-links a {
-    background-color: transparent;
-    color: rgb(255, 255, 255);
-    border: none;
-    border-radius: 4px;
-    text-decoration: none;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-    height: 100%;
-    position: static;
-    /* Remove o fixed */
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  position: static;
+  /* Remove o fixed */
 }
 
 .footer {
-    background-color: #2E7D32;
-    color: white;
-    text-align: center;
-    padding: 1vw;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 16px;
-    width: 100%;
-    height: 4vw;
+  background-color: #0056b3   ;
+  color: white;
+  text-align: center;
+  padding: 1vw;
+  position: fixed;
+  bottom: 0;
+  width: 0;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 16px;
+  width: 100%;
+  height: 7vw;
 }
-
+.footer .container{
+  
+}
+.footer-content{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.footer-contact{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: 20px;
+  text-align: center;
+}
 .footer-logo {
-    font-weight: 3vw;
-    font-size: 1.5vw;
-    text-align: start;
+  font-weight: 1.5vw;
+  font-size: 1.5vw;
+  text-align: start;
 }
-
-.footer-links a {
-    margin-right: 20px;
-    font-size: 1.0vw;
-    text-align: center;
-    color: #dddddd;
-    text-decoration: none;
-    display: flex;
-    justify-content: flex-end;
-    /* joga pro lado direito */
-    padding-right: 40px;
-    /* controla o quanto fica afastado da borda */
+.linkRp {
+  font-size: 20px;
+  margin-bottom: 10px;
+  text-align: start;
+  align-items: center;
+  flex-direction: column;
+  margin-right: 20px;
+}
+.links a {
+  font-size: 1.0vw;
+  color: #dddddd;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  /* joga pro lado direito */
+  margin-right: 30px;
+  /* controla o quanto fica afastado da borda */
 }
