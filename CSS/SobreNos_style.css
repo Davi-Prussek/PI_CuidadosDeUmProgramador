@@ -1,5 +1,9 @@
 html {
   font-size: calc(12px + 0.95vw);
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #e6e6e6;
 }
 
 body {
