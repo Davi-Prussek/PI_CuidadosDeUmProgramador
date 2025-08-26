@@ -12,7 +12,7 @@ body {
       position: fixed;
       top: 0.65rem;
       left: 1.3rem;
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       text-decoration: none;
       color: white;
     }
@@ -20,10 +20,10 @@ body {
   }
 
   ul.direcionar_sobreNos {
-    font-size: 0.9rem;
+    font-size: 1rem;
     display: flex;
     position: fixed;
-    top: 0.65rem;
+    top: 0.70rem;
     right: 0.7rem;
     gap: 1.1rem;
 
@@ -62,15 +62,6 @@ body {
   font-family: "Times New Roman", Times, serif;
   font-size: 100px;
   opacity: 0.6;
-}
-
-.txt2 {
-  display: flex;
-  align-items: center;
-  /* alinha verticalmente */
-  gap: 20px;
-  /* espaço entre a imagem e o texto */
-  font-size: 30px;
 }
 
 .txt1 {
@@ -135,21 +126,22 @@ header nav.nav-links a {
   /* Remove o fixed */
 }
 
-/* FOOTER */
-
 .footer {
-  background-color: #0056b3   ;
+  background: linear-gradient(#0056b3, #002457);
   color: white;
   text-align: center;
-  padding: 1vw;
+  padding:0.9vw;
   position: fixed;
   bottom: 0;
   width: 0;
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 15px;
   width: 100%;
   height: 7vw;
+}
+.footer .container{
+  
 }
 .footer-content{
   display: flex;
@@ -162,15 +154,16 @@ header nav.nav-links a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-right: 11vw;
+  margin-left: 20px;
   text-align: center;
-  font-size: large;
-  margin-top: 1vw;
 }
 .footer-logo {
   font-weight: 1.5vw;
   font-size: 1.5vw;
   text-align: start;
+  display: flex;
+  flex-direction: column;
+  margin: 0px;
 }
 .linkRp {
   font-size: 20px;
@@ -178,16 +171,15 @@ header nav.nav-links a {
   text-align: start;
   align-items: center;
   flex-direction: column;
-  margin-right: 2.5vw;
-  margin-top: 0.5vw;
+  margin-right: 20px;
 }
 .links a {
   font-size: 1.0vw;
-  color: #dddddd;
+  color: #ffffff;
   text-decoration: none;
   display: flex;
   justify-content: center;
   /* joga pro lado direito */
-  margin-right: 30px;
+  margin-right: 3vw;
   /* controla o quanto fica afastado da borda */
 }
