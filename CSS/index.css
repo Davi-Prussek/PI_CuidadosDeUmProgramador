@@ -1,7 +1,6 @@
 html {
   font-size: calc(12px + 0.95vw);
 }
-
 body {
   text-align: center;
 
@@ -136,6 +135,8 @@ header nav.nav-links a {
   /* Remove o fixed */
 }
 
+/* FOOTER */
+
 .footer {
   background-color: #0056b3   ;
   color: white;
@@ -150,9 +151,6 @@ header nav.nav-links a {
   width: 100%;
   height: 7vw;
 }
-.footer .container{
-  
-}
 .footer-content{
   display: flex;
   flex-direction: row;
@@ -164,8 +162,10 @@ header nav.nav-links a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 20px;
+  margin-right: 11vw;
   text-align: center;
+  font-size: large;
+  margin-top: 1vw;
 }
 .footer-logo {
   font-weight: 1.5vw;
@@ -178,7 +178,8 @@ header nav.nav-links a {
   text-align: start;
   align-items: center;
   flex-direction: column;
-  margin-right: 20px;
+  margin-right: 2.5vw;
+  margin-top: 0.5vw;
 }
 .links a {
   font-size: 1.0vw;
