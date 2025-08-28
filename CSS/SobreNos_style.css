@@ -4,7 +4,6 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #e6e6e6;
-}
 
 body {
   text-align: center;
@@ -59,8 +58,15 @@ body {
       border: 1px solid black;
       border-radius: 5px;
       margin: 2rem 0 20px 0;
-    }
+   }
   }
+  #parte-I {
+    display: none;  
+  }
+  li:hover #parte-I {
+    display: block;
+  }
+ }
 }
 
 @media (max-width:500px) {}
