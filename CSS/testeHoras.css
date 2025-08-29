@@ -1,4 +1,4 @@
-  /* ========================================= GERAL ========================================= */
+/* ========================================= GERAL ========================================= */
 html {
   font-size: calc(12px + 0.95vw);
   font-family: 'Open Sans', sans-serif;
@@ -12,34 +12,270 @@ body {
   text-align: center;
   padding-top: 80px;
   /* Espaço para o header fixo */
+}
 
   /* ========================================= HEADER ========================================= */
-  header {
-    background-color: #0056b3;
+header {
+  background-color: #0056b3;
+  display: flex;
+  justify-content: space-between;
+  padding: 2vw 1.5vw 2vw 1.5vw;
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 100;
+}
 
-    display: flex;
-    justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    position: fixed;
-    top: 0px;
+header h1 a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: white;
+}
+
+header ul {
+  font-size: 0.9rem;
+  display: flex;
+  gap: 0.4rem;
+}
+
+header ul a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ========================================= MAIN CONTENT ========================================= */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.8rem;
+  color: #0056b3;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.intro {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* ========================================= FORM STYLES ========================================= */
+.question-section {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.question-section h3 {
+  font-size: 1.2rem;
+  color: #0056b3;
+  margin-bottom: 1.2rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #444;
+}
+
+input[type="number"],
+select {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  transition: border-color 0.3s;
+}
+
+input[type="number"]:focus,
+select:focus {
+  border-color: #0056b3;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+}
+
+.checkbox-group,
+.radio-group {
+  margin-bottom: 1rem;
+}
+
+.checkbox-item,
+.radio-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-item label,
+.radio-item label {
+  margin-left: 0.5rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.programar-details,
+.estudar-details {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  padding: 1rem;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.btn-submit {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-weight: 600;
+  margin-top: 1rem;
+}
+
+.btn-submit:hover {
+  background-color: #003d82;
+}
+
+/* ========================================= RESULTS STYLES ========================================= */
+.results-container {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px dashed #ddd;
+}
+
+.results-container h3 {
+  font-size: 1.5rem;
+  color: #0056b3;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.result-card {
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-5px);
+}
+
+.result-card h4 {
+  font-size: 1.1rem;
+  color: #0056b3;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.result-content {
+  color: #444;
+}
+
+.result-content p {
+  margin-bottom: 1rem;
+}
+
+.result-content ul {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.result-content li {
+  margin-bottom: 0.5rem;
+  position: relative;
+}
+
+.result-content li::before {
+  content: "•";
+  color: #0056b3;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.warning-result {
+  border-left: 4px solid #ff9800;
+  padding-left: 1rem;
+}
+
+.success-result {
+  border-left: 4px solid #4caf50;
+  padding-left: 1rem;
+}
+
+.info-result {
+  border-left: 4px solid #2196f3;
+  padding-left: 1rem;
+}
+
+.thumbs-up-animation {
+  font-size: 2rem;
+  margin: 1rem 0;
+  animation: bounce 1s infinite alternate;
+  display: inline-block;
+}
+
+.result-icon {
+  max-width: 60px;
+  margin: 1rem 0;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+/* ========================================= RESPONSIVE STYLES ========================================= */
+@media (max-width: 768px) {
+  .container {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  
+  .question-section {
+    padding: 1rem;
+  }
+  
+  .btn-submit {
     width: 100%;
-    box-sizing: border-box;
-
-    h1 a {
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    ul {
-      font-size: 0.9rem;
-      display: flex;
-      gap: 0.4rem;
-      a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-
+  }
+  
+  header ul {
+    flex-direction: column;
+    gap: 0.2rem;
   }
 }

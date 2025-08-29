@@ -23,7 +23,279 @@
         </ul>
       </nav>
     </header>
-    <main>      
+    <main>
+        <section class="container">
+            <h2>Teste de Horas</h2>
+            <p class="intro">Responda às perguntas abaixo para receber sugestões personalizadas sobre sua rotina diária.</p>
+            
+            <form id="horasForm">
+                <div class="question-section">
+                    <h3>O que você faz no seu dia a dia?</h3>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="programar" name="atividade" value="programar">
+                            <label for="programar">Programar</label>
+                        </div>
+                        
+                        <div class="programar-details" id="programarDetails" style="display: none;">
+                            <label for="horasProgramacao">Quantas horas por dia em média?</label>
+                            <input type="number" id="horasProgramacao" name="horasProgramacao" min="0" max="24" step="0.5">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="horasTela">Quantas horas por dia costuma usar telas além do trabalho?</label>
+                        <input type="number" id="horasTela" name="horasTela" min="0" max="24" step="0.5" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <div class="checkbox-item">
+                            <input type="checkbox" id="estudar" name="atividade" value="estudar">
+                            <label for="estudar">Estudar</label>
+                        </div>
+                        
+                        <div class="estudar-details" id="estudarDetails" style="display: none;">
+                            <label for="horasEstudo">Quantas horas por dia em média?</label>
+                            <input type="number" id="horasEstudo" name="horasEstudo" min="0" max="24" step="0.5">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="horasLazer">Tempo livre - Quantas horas por dia em média?</label>
+                        <input type="number" id="horasLazer" name="horasLazer" min="0" max="24" step="0.5" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="organizacaoCasa">Como costuma se organizar em casa?</label>
+                        <select id="organizacaoCasa" name="organizacaoCasa" required>
+                            <option value="">Selecione uma opção</option>
+                            <option value="muito-organizado">Muito organizado</option>
+                            <option value="organizado">Organizado</option>
+                            <option value="pouco-organizado">Pouco organizado</option>
+                            <option value="desorganizado">Desorganizado</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="horasSono">Tempo de sono - Quantas horas por dia em média?</label>
+                        <input type="number" id="horasSono" name="horasSono" min="0" max="24" step="0.5" required>
+                    </div>
+                </div>
+                
+                <div class="question-section">
+                    <h3>Sobre seu ambiente de trabalho</h3>
+                    
+                    <div class="form-group">
+                        <label>Você costuma ser organizado no trabalho?</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="organizadoSim" name="organizadoTrabalho" value="sim" required>
+                                <label for="organizadoSim">Sim</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="organizadoNao" name="organizadoTrabalho" value="nao">
+                                <label for="organizadoNao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Você mantém uma boa postura?</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="posturaSim" name="boaPostura" value="sim" required>
+                                <label for="posturaSim">Sim</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="posturaNao" name="boaPostura" value="nao">
+                                <label for="posturaNao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>O ambiente em que você trabalha é saudável?</label>
+                        <div class="radio-group">
+                            <div class="radio-item">
+                                <input type="radio" id="ambienteSim" name="ambienteSaudavel" value="sim" required>
+                                <label for="ambienteSim">Sim</label>
+                            </div>
+                            <div class="radio-item">
+                                <input type="radio" id="ambienteNao" name="ambienteSaudavel" value="nao">
+                                <label for="ambienteNao">Não</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="submit" class="btn-submit">Ver Resultados</button>
+            </form>
+            
+            <div id="resultados" class="results-container" style="display: none;">
+                <h3>Resultados e Sugestões</h3>
+                
+                <div class="result-card" id="sonoResultado">
+                    <h4>Sobre seu sono</h4>
+                    <div class="result-content"></div>
+                </div>
+                
+                <div class="result-card" id="telaResultado">
+                    <h4>Sobre seu tempo de tela</h4>
+                    <div class="result-content"></div>
+                </div>
+                
+                <div class="result-card" id="organizacaoResultado">
+                    <h4>Sugestões para organização</h4>
+                    <div class="result-content">
+                        <p>Sugestões para melhorar sua organização:</p>
+                        <ul>
+                            <li>Estabeleça uma rotina diária com horários definidos para cada atividade</li>
+                            <li>Use ferramentas de gerenciamento de tempo como Pomodoro</li>
+                            <li>Mantenha um espaço de trabalho limpo e organizado</li>
+                            <li>Faça listas de tarefas e priorize-as</li>
+                            <li>Evite multitarefas e foque em uma atividade por vez</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="luzSolarResultado">
+                    <h4>Sugestões para exposição à luz solar</h4>
+                    <div class="result-content">
+                        <p>Para garantir exposição adequada à luz solar:</p>
+                        <ul>
+                            <li>Tente fazer uma caminhada de 15-30 minutos pela manhã</li>
+                            <li>Posicione sua mesa de trabalho próxima a uma janela</li>
+                            <li>Faça pausas ao ar livre durante o dia</li>
+                            <li>Considere usar uma lâmpada de luz natural em dias nublados</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="posturaResultado">
+                    <h4>Sugestões para melhorar a postura</h4>
+                    <div class="result-content">
+                        <p>Para melhorar sua postura diante das telas:</p>
+                        <ul>
+                            <li>Mantenha a tela ao nível dos olhos</li>
+                            <li>Use uma cadeira ergonômica com suporte lombar</li>
+                            <li>Mantenha os pés apoiados no chão</li>
+                            <li>Faça pausas a cada 30 minutos para alongar</li>
+                            <li>Pratique exercícios de fortalecimento para as costas e core</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="estudoResultado">
+                    <h4>Sugestões para rotina de estudos</h4>
+                    <div class="result-content">
+                        <p>Para otimizar seu tempo de estudo:</p>
+                        <ul>
+                            <li>Estude nos horários em que você tem mais energia e foco</li>
+                            <li>Divida o conteúdo em blocos menores</li>
+                            <li>Use técnicas de estudo ativo como explicar o conteúdo em voz alta</li>
+                            <li>Faça revisões espaçadas do conteúdo</li>
+                            <li>Crie um ambiente de estudo livre de distrações</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="result-card" id="procrastinacaoResultado">
+                    <h4>Como evitar a procrastinação</h4>
+                    <div class="result-content">
+                        <p>Estratégias para evitar procrastinar:</p>
+                        <ul>
+                            <li>Divida grandes tarefas em etapas menores e mais gerenciáveis</li>
+                            <li>Estabeleça prazos realistas para cada etapa</li>
+                            <li>Use a técnica Pomodoro (25 minutos de foco, 5 de descanso)</li>
+                            <li>Elimine distrações como notificações de celular</li>
+                            <li>Recompense-se após completar tarefas importantes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Mostrar/ocultar detalhes quando checkbox for clicado
+            document.getElementById('programar').addEventListener('change', function() {
+                document.getElementById('programarDetails').style.display = this.checked ? 'block' : 'none';
+            });
+            
+            document.getElementById('estudar').addEventListener('change', function() {
+                document.getElementById('estudarDetails').style.display = this.checked ? 'block' : 'none';
+            });
+            
+            // Processar o formulário
+            document.getElementById('horasForm').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Obter valores do formulário
+                const horasSono = parseFloat(document.getElementById('horasSono').value);
+                const horasTela = parseFloat(document.getElementById('horasTela').value);
+                
+                // Exibir resultados
+                document.getElementById('resultados').style.display = 'block';
+                
+                // Avaliar sono
+                const sonoResultadoDiv = document.querySelector('#sonoResultado .result-content');
+                if (horasSono < 7) {
+                    sonoResultadoDiv.innerHTML = `
+                        <div class="warning-result">
+                            <p>Você está dormindo menos que o recomendado!</p>
+                            <p>Estudos mostram que adultos precisam de 7-9 horas de sono por noite para manter a saúde física e mental. A privação de sono pode afetar a concentração, memória e sistema imunológico.</p>
+                        </div>
+                    `;
+                } else if (horasSono >= 7 && horasSono <= 9) {
+                    sonoResultadoDiv.innerHTML = `
+                        <div class="success-result">
+                            <p>Parabéns! Seu sono está com boa qualidade.</p>
+                            <p>Você está dormindo entre 7-9 horas, que é o recomendado para adultos. Continue mantendo essa rotina para garantir boa saúde e disposição.</p>
+                            <div class="thumbs-up-animation">👍</div>
+                        </div>
+                    `;
+                } else {
+                    sonoResultadoDiv.innerHTML = `
+                        <div class="info-result">
+                            <p>Você está dormindo mais que o recomendado.</p>
+                            <p>Embora o descanso seja importante, dormir mais de 9 horas regularmente pode indicar problemas de saúde ou qualidade de sono ruim. Considere consultar um médico se sentir sonolência excessiva durante o dia.</p>
+                        </div>
+                    `;
+                }
+                
+                // Avaliar tempo de tela
+                const telaResultadoDiv = document.querySelector('#telaResultado .result-content');
+                if (horasTela > 4) {
+                    telaResultadoDiv.innerHTML = `
+                        <div class="warning-result">
+                            <p>Seu tempo de tela está acima do recomendado!</p>
+                            <p>Estudos indicam que mais de 4 horas diárias de exposição a telas (além do trabalho) pode causar fadiga visual, problemas de sono e sedentarismo. Tente reduzir gradualmente esse tempo.</p>
+                            <img src="img/screen-time.svg" alt="Tempo de tela" class="result-icon">
+                        </div>
+                    `;
+                } else if (horasTela <= 3) {
+                    telaResultadoDiv.innerHTML = `
+                        <div class="success-result">
+                            <p>Seu tempo de tela está adequado!</p>
+                            <p>Você mantém um tempo de tela saudável, o que ajuda a prevenir problemas visuais e melhora a qualidade do sono.</p>
+                            <div class="thumbs-up-animation">👍</div>
+                        </div>
+                    `;
+                } else {
+                    telaResultadoDiv.innerHTML = `
+                        <div class="info-result">
+                            <p>Seu tempo de tela está no limite do recomendado.</p>
+                            <p>Tente reduzir um pouco mais para melhorar sua saúde visual e qualidade de sono.</p>
+                        </div>
+                    `;
+                }
+                
+                // Rolar para os resultados
+                document.getElementById('resultados').scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
