@@ -9,10 +9,10 @@ html {
 /* Aplicar as fontes gerais */
 body {
 
-      header {
+    header {
 
     background-color: #0056b3;
-
+    position: fixed;
     display: flex;
     justify-content: space-between;
     padding: 2vw 1.5vw 2vw 1.5vw;
