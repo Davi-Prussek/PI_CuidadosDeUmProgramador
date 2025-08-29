@@ -38,6 +38,7 @@ body {
   }
 
   /*Conteúdo*/
+  main {
   h2.subTitulo_sobreNos {
     text-align: center;
     font-size: 2rem;
@@ -73,6 +74,7 @@ body {
 
   }
  }
+}
 }
 
 @media (max-width:500px) {}
