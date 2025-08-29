@@ -1,14 +1,46 @@
-
-/* Aplicar as fontes gerais */
-body {
+html {
+    font-size: calc(12px + 0.95vw);
     font-family: 'Open Sans', sans-serif;
     color: #333;
     line-height: 1.6;
     background-color: #e6e6e6;
+
+
+/* Aplicar as fontes gerais */
+body {
+
+      header {
+
+    background-color: #0056b3;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 1.5vw 2vw 1.5vw;
+    position: fixed;
+    width: 100%;
+    box-sizing: border-box;
+
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    ul {
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.4rem;
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+  }
 }
 
 /* Títulos */
-h1, h2, h3, h4, h5, h6 {
+h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     color: #222;
     font-weight: 700;
@@ -105,40 +137,4 @@ ul.dicas-olhos li {
 footer p, .footer-links a {
     font-size: 0.9rem;
 }
-
-html {
-  font-size: calc(12px + 0.95vw);
 }
-
-body {
-  text-align: center;
-
-  header {
-    background-color: #0056b3;
-
-    display: flex;
-    justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    position: fixed;
-    width: 100%;
-    box-sizing: border-box;
-
-    h1 a {
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    ul {
-      font-size: 0.9rem;
-      display: flex;
-      gap: 0.4rem;
-      a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-
-  }
-}
-

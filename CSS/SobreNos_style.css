@@ -43,6 +43,7 @@ body {
   }
 
   .pessoas_sobreNos {
+    display: flex;
     font-size: 1.1rem;
     text-align: center;
     display: flex;
@@ -54,17 +55,11 @@ body {
     margin: 0 auto;
 
     li {
-      width: 25%;
+      width: 30%;
       border: 1px solid black;
       border-radius: 5px;
       margin: 2rem 0 20px 0;
    }
-  }
-  #parte-I {
-    display: none;  
-  }
-  li:hover #parte-I {
-    display: block;
   }
  }
 }
