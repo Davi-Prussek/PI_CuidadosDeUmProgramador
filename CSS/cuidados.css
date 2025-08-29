@@ -44,6 +44,7 @@ h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
     color: #222;
     font-weight: 700;
+    padding: 3vw 0 0 3rem;
 }
 
 /* Título principal */
@@ -69,6 +70,7 @@ h3 {
 p {
     font-size: 1rem;
     margin-bottom: 1rem;
+    padding: 1vw 0 1vw 1rem;
 }
 
 /* Links */
@@ -93,6 +95,7 @@ p {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     transition: background-color 0.3s ease;
+
 }
 
 .btn-link:hover {
@@ -101,13 +104,13 @@ p {
 }
 
 /* Seções e cards */
-.container1 {
+.container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem 1rem 0 1rem;
 }
-.container1 h2{
-    padding: 3rem 0 0 0;
+.container h2{
+    margin-top: 3rem;
 }
 
 .card-text p,
@@ -141,3 +144,6 @@ footer p, .footer-links a {
     font-size: 0.9rem;
 }
 
+img{
+    margin-top: 1rem;
+}
