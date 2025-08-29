@@ -1,4 +1,4 @@
-/* ==================== GERAL ==================== */
+  /* ========================================= GERAL ========================================= */
 html {
   font-size: calc(12px + 0.95vw);
   font-family: 'Open Sans', sans-serif;
@@ -7,13 +7,13 @@ html {
   background-color: #e6e6e6;
 }
 
-/* ==================== BODY ==================== */
+  /* ========================================= BODY ========================================= */
 body {
   text-align: center;
   padding-top: 80px;
   /* Espaço para o header fixo */
 
-  /* ==================== HEADER ==================== */
+  /* ========================================= HEADER ========================================= */
   header {
     position: fixed;
     top: 0px;
@@ -77,12 +77,9 @@ body {
     margin-right: 20px;
     margin: 0px 20px 20px 0px;
   }
-
-
-
 }
 
-/* ==================== CARDS ==================== */
+/* ========================================= CARDS ========================================= */
 .card-container {
   display: flex;
   justify-content: center;
@@ -115,7 +112,7 @@ body {
     }
   }
 }
-
+/* Card direita */
 .d {
   margin-top: 30px;
 }
@@ -137,9 +134,9 @@ body {
   box-sizing: border-box;
   z-index: 2;
 }
-
+/* Sombra card */
 .card-box:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.249);
 }
 
 /* ==================== FOOTER ==================== */
@@ -201,10 +198,12 @@ body {
   /* Centraliza verticalmente */
   margin-left: 310px;
 }
-.linkRp{
+/* Titulo dos links rapidos */
+.linkRp {
   font-size: 1.6vw;
   margin-bottom: 0.6vw;
 }
+
 /* ==================== FOOTER LINKS ==================== */
 .links {
   display: flex;
@@ -214,7 +213,8 @@ body {
   margin-right: 0;
   list-style: none;
   padding: 0;
-  gap: 0.3vw; /* Espaçamento menor entre os links */
+  gap: 0.3vw;
+  /* Espaçamento menor entre os links */
 }
 
 .links a {
