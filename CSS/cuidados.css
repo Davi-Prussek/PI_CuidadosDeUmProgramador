@@ -1,10 +1,10 @@
 html {
-    font-size: calc(12px + 0.95vw);
-    font-family: 'Open Sans', sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #e6e6e6;
-
+  font-size: calc(12px + 0.95vw);
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #e6e6e6;
+}
 
 /* Aplicar as fontes gerais */
 body {
@@ -72,13 +72,13 @@ p {
 }
 
 /* Links */
-a {
+.btn-link {
     color: #007BFF;
     text-decoration: none;
     font-weight: 600;
 }
 
-a:hover {
+.btn-link:hover {
     color: #0056b3;
 }
 
@@ -137,4 +137,4 @@ ul.dicas-olhos li {
 footer p, .footer-links a {
     font-size: 0.9rem;
 }
-}
+
