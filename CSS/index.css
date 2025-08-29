@@ -1,10 +1,11 @@
 html {
-    font-size: calc(12px + 0.95vw);
+  font-size: calc(12px + 0.95vw);
   font-family: 'Open Sans', sans-serif;
   color: #333;
   line-height: 1.6;
   background-color: #e6e6e6;
 }
+
 body {
   text-align: center;
 
@@ -29,6 +30,7 @@ body {
       font-size: 0.9rem;
       display: flex;
       gap: 0.4rem;
+
       a {
         text-decoration: none;
         color: white;
@@ -37,51 +39,42 @@ body {
 
   }
 
-.bv {
-  text-align: center;
-  margin-top: 100px;
-  font-size: 2vw;
-  font-family: "Times New Roman", Times, serif;
-  font-size: 100px;
-  opacity: 0.6;
-}
+  .txt1 {
+    display: flex;
+    align-items: center;
+    /* alinha verticalmente */
+    gap: 20px;
+    /* espaço entre a imagem e o texto */
+    font-size: 30px;
+  }
 
-.txt1 {
-  display: flex;
-  align-items: center;
-  /* alinha verticalmente */
-  gap: 20px;
-  /* espaço entre a imagem e o texto */
-  font-size: 30px;
-}
+  .caixa {
+    display: flex;
+    align-items: center;
+    /* alinha verticalmente */
+    gap: 20px;
+    /* espaço entre a imagem e o texto */
+    font-size: large;
+    font-size: large;
+  }
 
-.caixa {
-  display: flex;
-  align-items: center;
-  /* alinha verticalmente */
-  gap: 20px;
-  /* espaço entre a imagem e o texto */
-  font-size: large;
-  font-size: large;
-}
+  .img {
+    width: 500px;
+    /* controla tamanho da imagem */
+    height: 300px;
+    margin-right: 20px;
+    margin: 0px 20px 20px 0px;
+  }
 
-.img {
-  width: 500px;
-  /* controla tamanho da imagem */
-  height: 300px;
-  margin-right: 20px;
-  margin: 0px 20px 20px 0px;
-}
-
-.logo {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-size: 30px;
-  margin-left: 20px;
-  margin-top: 0px;
-  margin-right: 20px;
-  color: white;
-}
+  .logo {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 30px;
+    margin-left: 20px;
+    margin-top: 0px;
+    margin-right: 20px;
+    color: white;
+  }
 
 }
 
@@ -89,57 +82,88 @@ body {
   background: linear-gradient(#0056b3, #002457);
   color: white;
   text-align: center;
-  padding:0.9vw;
-  position: fixed;
+  padding: 2vw 0;
+  position: relative; /* Footer aparece só no final */
+  left: 0;
   bottom: 0;
-  width: 0;
+  width: 100%;
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
-  font-size: 15px;
-  width: 100%;
-  height: 7vw;
+  font-size: 1.3vw;
+  min-height: 70px;
+  margin-top: auto;
+  box-sizing: border-box;
+  z-index: 10;
 }
 
-.footer .container{
-  
-
-.footer-content{
+.footer-content {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
   margin: 0 auto;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 2vw;
 }
-.footer-contact{
+
+.footer-contact {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  margin-left: 20px;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: center;
-}
-.footer-logo {
-  font-weight: 1.5vw;
-  font-size: 1.5vw;
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  margin: 0px;
-}
-.linkRp {
-  font-size: 20px;
-  margin-bottom: 10px;
-  text-align: start;
   align-items: center;
-  flex-direction: column;
-  margin-right: 20px;
+  margin-right: 0;
+  list-style: none;
+  padding: 0;
+  gap: 0.6vw; /* Espaçamento maior entre os links */
 }
+
 .links a {
-  font-size: 1.0vw;
+  font-size: 1.3vw; /* Fonte maior para melhor visualização */
   color: #ffffff;
   text-decoration: none;
+  margin-bottom: 0; /* Removido, pois gap já faz o espaçamento */
+  display: block;
+  text-align: center;
+}
+
+.footer-bottom {
+  width: 100%;
+  text-align: center;
+  margin-top: 1vw;
+  font-size: 1.1vw;
+}
+
+.card-container {
   display: flex;
   justify-content: center;
-  /* joga pro lado direito */
-  margin-right: 3vw;
-  /* controla o quanto fica afastado da borda */
-}}
+  gap: 2vw;
+  margin: 3vw 0;
+}
+
+.card-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.10);
+  border-bottom: 4px solid #000000; /* Linha destacada */
+  width: 300px;
+  min-height: 180px;
+  padding: 2vw 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+}
+
+.card-box:hover {
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+}
