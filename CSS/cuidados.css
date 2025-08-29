@@ -101,10 +101,13 @@ p {
 }
 
 /* Seções e cards */
-.container {
+.container1 {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
+}
+.container1 h2{
+    padding: 3rem 0 0 0;
 }
 
 .card-text p,
