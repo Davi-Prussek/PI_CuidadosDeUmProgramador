@@ -162,11 +162,20 @@ body {
   flex-wrap: wrap;
   text-align: center;
   transition: box-shadow 0.2s;
-  p {
+  p a {
     text-decoration: none;
     color: black;
   }
+}
 
+.link-card {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  padding: 0.5em 0;
+  box-sizing: border-box;
 }
 
 .card-box:hover {
