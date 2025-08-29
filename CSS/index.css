@@ -1,3 +1,4 @@
+/* ==================== GERAL ==================== */
 html {
   font-size: calc(12px + 0.95vw);
   font-family: 'Open Sans', sans-serif;
@@ -6,9 +7,13 @@ html {
   background-color: #e6e6e6;
 }
 
+/* ==================== BODY ==================== */
 body {
   text-align: center;
+  padding-top: 80px;
+  /* Espaço para o header fixo */
 
+  /* ==================== HEADER ==================== */
   header {
     position: fixed;
     top: 0px;
@@ -19,6 +24,10 @@ body {
     padding: 2vw 1.5vw 2vw 1.5vw;
     width: 100%;
     box-sizing: border-box;
+    height: 80px;
+    /* Altura fixa para facilitar o cálculo do padding-top */
+    z-index: 100;
+    /* Garante que o header fique acima dos outros elementos */
 
     h1 a {
       font-size: 1.4rem;
@@ -39,6 +48,7 @@ body {
 
   }
 
+  /* ==================== TEXTO PRINCIPAL ==================== */
   .txt1 {
     display: flex;
     align-items: center;
@@ -48,6 +58,7 @@ body {
     font-size: 30px;
   }
 
+  /* ==================== CAIXA DE TEXTO ==================== */
   .caixa {
     display: flex;
     align-items: center;
@@ -58,6 +69,7 @@ body {
     font-size: large;
   }
 
+  /* ==================== IMAGEM ==================== */
   .img {
     width: 500px;
     /* controla tamanho da imagem */
@@ -66,83 +78,11 @@ body {
     margin: 0px 20px 20px 0px;
   }
 
-  .logo {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    font-size: 30px;
-    margin-left: 20px;
-    margin-top: 0px;
-    margin-right: 20px;
-    color: white;
-  }
+
 
 }
 
-.footer {
-  background: linear-gradient(#0056b3, #002457);
-  color: white;
-  text-align: center;
-  padding: 2vw 0;
-  position: relative; /* Footer aparece só no final */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1.3vw;
-  min-height: 70px;
-  margin-top: auto;
-  box-sizing: border-box;
-  z-index: 10;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1200px;
-  padding: 0 2vw;
-}
-
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 0;
-}
-
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  text-align: center;
-  align-items: center;
-  margin-right: 0;
-  list-style: none;
-  padding: 0;
-  gap: 0.6vw; /* Espaçamento maior entre os links */
-}
-
-.links a {
-  font-size: 1.3vw; /* Fonte maior para melhor visualização */
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 0; /* Removido, pois gap já faz o espaçamento */
-  display: block;
-  text-align: center;
-}
-
-.footer-bottom {
-  width: 100%;
-  text-align: center;
-  margin-top: 1vw;
-  font-size: 1.1vw;
-}
-
+/* ==================== CARDS ==================== */
 .card-container {
   display: flex;
   justify-content: center;
@@ -153,7 +93,7 @@ body {
 .card-box {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0px 4px 16px rgba(0,0,0,0.10);
+  box-shadow: 0px 4px 16px rgb(0, 0, 0);
   width: 300px;
   max-width: 1200px;
   margin: 0 auto;
@@ -162,22 +102,133 @@ body {
   flex-wrap: wrap;
   text-align: center;
   transition: box-shadow 0.2s;
-  p a {
-    text-decoration: none;
-    color: black;
+  position: relative;
+
+  /* Adicionado para posicionamento absoluto do link */
+  p {
+    a {
+      text-decoration: none;
+      color: black;
+      text-align: center;
+      align-items: center;
+      margin: 85px 10px 0px 1px
+    }
   }
 }
 
+.d {
+  margin-top: 30px;
+}
+
+/* ==================== LINK CARD ==================== */
 .link-card {
   display: block;
   width: 100%;
+  height: 100%;
+  /* Ocupa toda a altura do card */
+  position: absolute;
+  /* Cobre toda a área do card */
+  top: 0;
+  left: 0;
   text-align: center;
   text-decoration: none;
   color: black;
   padding: 0.5em 0;
   box-sizing: border-box;
+  z-index: 2;
 }
 
 .card-box:hover {
-  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+}
+
+/* ==================== FOOTER ==================== */
+.footer {
+  background: linear-gradient(#0056b3, #002457);
+  color: white;
+  text-align: center;
+  padding: 2vw 0;
+  position: relative;
+  /* Footer aparece só no final */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  min-height: 70px;
+  margin-top: auto;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  max-width: auto;
+}
+
+/* ==================== FOOTER CONTENT ==================== */
+.footer-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  /* Centraliza horizontalmente */
+  align-items: center;
+  /* Centraliza verticalmente */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+  padding: 0 2vw;
+
+}
+
+/* ==================== FOOTER CONTACT ==================== */
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  margin-left: 0;
+}
+
+/* ==================== LOGO ==================== */
+.logo {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Centraliza verticalmente */
+  margin-left: 310px;
+}
+.linkRp{
+  font-size: 1.6vw;
+  margin-bottom: 0.6vw;
+}
+/* ==================== FOOTER LINKS ==================== */
+.links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-right: 0;
+  list-style: none;
+  padding: 0;
+  gap: 0.3vw; /* Espaçamento menor entre os links */
+}
+
+.links a {
+  font-size: 1.3vw;
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 0;
+  display: block;
+  text-align: center;
+}
+
+/* ==================== FOOTER BOTTOM ==================== */
+.footer-direitos {
+  width: 100%;
+  text-align: center;
+  font-size: 1.1vw;
 }
