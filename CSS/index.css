@@ -21,13 +21,9 @@ body {
 
     display: flex;
     justify-content: space-between;
-    padding: 1.8vw 1.3vw 1.8vw 1.3vw;
+    padding: 2vw 1.5vw 2vw 1.5vw;
     width: 100%;
     box-sizing: border-box;
-    height: 80px;
-    /* Altura fixa para facilitar o cálculo do padding-top */
-    z-index: 100;
-    /* Garante que o header fique acima dos outros elementos */
 
     h1 a {
       font-size: 1.4rem;
