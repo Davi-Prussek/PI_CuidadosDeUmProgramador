@@ -1,20 +1,23 @@
 /* ========================================= GERAL ========================================= */
 html {
-  font-size: calc(12px + 0.95vw);
+  font-size: calc(12px + 0.7vw);
   font-family: 'Open Sans', sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: #e6e6e6;
+  background-color: #f5f7fa;
 }
 
-  /* ========================================= BODY ========================================= */
+/* ========================================= BODY ========================================= */
 body {
   text-align: center;
   padding-top: 80px;
-  /* Espaço para o header fixo */
+  background-image: url('../src/fundo-horas.png');
+  background-repeat: repeat-y;
+  background-size: cover;
+  background-position: center top;
 }
 
-  /* ========================================= HEADER ========================================= */
+/* ========================================= HEADER ========================================= */
 header {
   background-color: #0056b3;
   display: flex;
@@ -46,26 +49,45 @@ header ul a {
 
 /* ========================================= MAIN CONTENT ========================================= */
 .container {
-  max-width: 900px;
+  max-width: 700px;
   margin: 2rem auto;
-  padding: 2rem;
-  background-color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem 1.5rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
 }
 
 h2 {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   color: #0056b3;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
+  letter-spacing: 0.5px;
 }
 
 .intro {
   font-size: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.2rem;
   color: #555;
+}
+
+/* FIELDSET E LEGEND PARA PARTES DO QUESTIONÁRIO */
+fieldset {
+  border: 1px solid #e0e4ea;
+  border-radius: 8px;
+  margin-bottom: 1.2rem;
+  padding: 1rem 1.2rem 0.7rem 1.2rem;
+  background: #f8f9fc;
+}
+
+legend {
+  font-size: 1.1rem;
+  color: #0056b3;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 0.5rem;
+  padding: 0 0.5rem;
 }
 
 /* ========================================= FORM STYLES ========================================= */
@@ -86,73 +108,92 @@ h2 {
 }
 
 .form-group {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
-.form-group label {
+.form-group label,
+label {
   display: block;
-  margin-bottom: 0.5rem;
-  font-weight: 600;
+  margin-bottom: 0.3rem;
+  font-weight: 500;
   color: #444;
+  font-size: 0.98rem;
 }
 
+input[type="text"],
 input[type="number"],
-select {
+select,
+textarea {
   width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  transition: border-color 0.3s;
+  padding: 0.6rem 0.000000005rem; /* KAKAKAAKAKAKAKAKAKAKAKAKAKA */
+  border: 1px solid #dbe2ea;
+  border-radius: 3px;
+  font-size: 0.95rem;
+  background: #fff;
+  transition: border-color 0.2s;
+  margin-bottom: 0.2rem;
 }
 
 input[type="number"]:focus,
-select:focus {
+input[type="text"]:focus,
+select:focus,
+textarea:focus {
   border-color: #0056b3;
   outline: none;
-  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.2);
+  box-shadow: 0 0 0 2px rgba(0, 86, 179, 0.08);
 }
 
 .checkbox-group,
 .radio-group {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
 }
 
 .checkbox-item,
 .radio-item {
   display: flex;
   align-items: center;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .checkbox-item label,
 .radio-item label {
-  margin-left: 0.5rem;
+  margin-left: 0.4rem;
   margin-bottom: 0;
   cursor: pointer;
+  font-weight: 400;
+  font-size: 0.97rem;
 }
 
 .programar-details,
-.estudar-details {
+.estudar-details,
+#trabalhoCondicional,
+#estudoCondicional,
+#tempoLivreCondicional,
+#posturaCondicional {
   margin-top: 0.5rem;
-  margin-left: 1.5rem;
-  padding: 1rem;
-  background-color: #f0f0f0;
+  margin-left: 0.5rem;
+  padding: 0.7rem;
+  background-color: #f0f4fa;
   border-radius: 4px;
-  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  border: 1px solid #e0e4ea;
 }
 
 .btn-submit {
   background-color: #0056b3;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
+  padding: 0.7rem 1.5rem;
   font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
   font-weight: 600;
-  margin-top: 1rem;
+  margin-top: 0.7rem;
+  box-shadow: 0 1px 4px rgba(0, 86, 179, 0.07);
 }
 
 .btn-submit:hover {
@@ -161,37 +202,42 @@ select:focus {
 
 /* ========================================= RESULTS STYLES ========================================= */
 .results-container {
-  margin-top: 3rem;
-  padding-top: 2rem;
-  border-top: 2px dashed #ddd;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 2px dashed #e0e4ea;
+  background: #f8f9fc;
+  border-radius: 8px;
 }
 
 .results-container h3 {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: #0056b3;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
   font-weight: 700;
   font-family: 'Montserrat', sans-serif;
 }
 
-.result-card {
-  margin-bottom: 2rem;
-  padding: 1.5rem;
+.result-card,
+#feedbackGeral,
+#feedbackCondicional,
+#feedbackSono,
+#feedbackTela,
+#feedbackPostura,
+#feedbackAmbiente,
+#feedbackFechamento {
+  margin-bottom: 1.2rem;
+  padding: 1rem;
   background-color: #f8f9fa;
-  border-radius: 8px;
+  border-radius: 7px;
   text-align: left;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.result-card:hover {
-  transform: translateY(-5px);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  font-size: 0.98rem;
 }
 
 .result-card h4 {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #0056b3;
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
   font-weight: 600;
   font-family: 'Montserrat', sans-serif;
 }
@@ -201,16 +247,16 @@ select:focus {
 }
 
 .result-content p {
-  margin-bottom: 1rem;
+  margin-bottom: 0.7rem;
 }
 
 .result-content ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
+  padding-left: 1.2rem;
+  margin-bottom: 0.7rem;
 }
 
 .result-content li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
   position: relative;
 }
 
@@ -225,55 +271,59 @@ select:focus {
 
 .warning-result {
   border-left: 4px solid #ff9800;
-  padding-left: 1rem;
+  padding-left: 0.7rem;
+  background: #fff8e1;
 }
 
 .success-result {
   border-left: 4px solid #4caf50;
-  padding-left: 1rem;
+  padding-left: 0.7rem;
+  background: #e8f5e9;
 }
 
 .info-result {
   border-left: 4px solid #2196f3;
-  padding-left: 1rem;
+  padding-left: 0.7rem;
+  background: #e3f2fd;
 }
 
 .thumbs-up-animation {
-  font-size: 2rem;
-  margin: 1rem 0;
+  font-size: 1.7rem;
+  margin: 0.7rem 0;
   animation: bounce 1s infinite alternate;
   display: inline-block;
 }
 
 .result-icon {
-  max-width: 60px;
-  margin: 1rem 0;
+  max-width: 45px;
+  margin: 0.7rem 0;
 }
 
 @keyframes bounce {
   from {
     transform: translateY(0);
   }
+
   to {
-    transform: translateY(-10px);
+    transform: translateY(-7px);
   }
 }
 
 /* ========================================= RESPONSIVE STYLES ========================================= */
 @media (max-width: 768px) {
   .container {
-    padding: 1.5rem;
-    margin: 1rem;
-  }
-  
-  .question-section {
     padding: 1rem;
+    margin: 0.5rem;
   }
-  
+
+  fieldset {
+    padding: 0.7rem 0.5rem 0.5rem 0.5rem;
+  }
+
   .btn-submit {
     width: 100%;
   }
-  
+
   header ul {
     flex-direction: column;
     gap: 0.2rem;
