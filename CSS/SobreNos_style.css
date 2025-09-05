@@ -52,8 +52,7 @@ body {
     font-size: 1.1rem;
     text-align: center;
     flex-wrap: wrap;
-    /*gap: 2rem;*/
-    justify-content: space-around;
+    justify-content: space-between;
 
     max-width: 1200px;
     margin: 0 auto;
@@ -71,8 +70,7 @@ body {
     }
 
         li:hover div{
-      display: block;
-      transition: 0.4s;
+       display: block;
     }
   }
  }
