@@ -1,52 +1,75 @@
-  /* ========================================= GERAL ========================================= */
+/* ========================================= GERAL ========================================= */
 html {
   font-size: calc(12px + 0.95vw);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #333;
   line-height: 1.6;
   background-color: #e6e6e6;
-
-
+}
   /* ========================================= BODY ========================================= */
-body {
-  text-align: center;
-  padding-top: 80px;
-  /* Espaço para o header fixo */
+  body {
+    text-align: center;
 
-  /* ========================================= HEADER ========================================= */
-  header {
-    position: fixed;
-    top: 0px;
-    background-color: #0056b3;
+    /* ========================================= HEADER ========================================= */
+    header {
+      background-color: #0056b3;
 
-    display: flex;
-    justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 35px;
-
-    h1 a {
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    ul {
-      font-size: 0.9rem;
       display: flex;
-      gap: 0.4rem;
+      justify-content: space-between;
+      padding: 2vw 1.5vw 2vw 1.5vw;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      box-sizing: border-box;
 
-      a {
+      h1 a {
+        font-size: 1.4rem;
         text-decoration: none;
         color: white;
       }
-    }
 
+      ul {
+        font-size: 0.9rem;
+        display: flex;
+        gap: 0.4rem;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+    }
   }
+
 main {
-    margin-top: 4rem;
-    
+  margin-top: 4rem;
+
+  .container {
+    background-color: #0057b318;
+    margin: 9vw 1.6rem 2rem 1.6rem;
+    border-radius: 30px;
+    padding: 20px;
+    h2 {
+      font-size: 2rem;
+      font-weight: 100;
+    }
+    .intro {
+        margin: 20px 0px 20px 0px;
+    }
+    .horasForm{
+        fieldset{
+            legend{
+                font-size: 40px;
+                font-weight: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        .form-group{
+            text-align: center;
+        }
+    }
+  }
 }
-}
+
+@media (max-width: 500px) {
 }
