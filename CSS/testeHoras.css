@@ -1,0 +1,52 @@
+  /* ========================================= GERAL ========================================= */
+html {
+  font-size: calc(12px + 0.95vw);
+  font-family: 'Open Sans', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #e6e6e6;
+
+
+  /* ========================================= BODY ========================================= */
+body {
+  text-align: center;
+  padding-top: 80px;
+  /* Espaço para o header fixo */
+
+  /* ========================================= HEADER ========================================= */
+  header {
+    position: fixed;
+    top: 0px;
+    background-color: #0056b3;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 1.5vw 2vw 1.5vw;
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 35px;
+
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    ul {
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.4rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+
+  }
+main {
+    margin-top: 4rem;
+    
+}
+}
+}

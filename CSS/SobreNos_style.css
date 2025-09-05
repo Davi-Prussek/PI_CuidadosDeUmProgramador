@@ -16,6 +16,7 @@ body {
     justify-content: space-between;
     padding: 2vw 1.5vw 2vw 1.5vw;
     position: fixed;
+    top: 0px;
     width: 100%;
     box-sizing: border-box;
 
@@ -40,6 +41,7 @@ body {
 
   /*Conteúdo*/
   main {
+  margin-top: 4rem;
   h2.subTitulo_sobreNos {
     text-align: center;
     font-size: 2rem;
