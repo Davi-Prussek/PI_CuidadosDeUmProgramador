@@ -5,75 +5,102 @@ html {
   line-height: 1.6;
   background-color: #e6e6e6;
 
-body {
-  background-color: #e6e6e6;
-  text-align: center;
+  body {
+    background-color: #e6e6e6;
+    text-align: center;
 
-  header {
-    background-color: #0056b3;
+    header {
+      background-color: #0056b3;
 
-    display: flex;
-    justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    box-sizing: border-box;
-
-    h1 a {
-
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    ul {
-      font-size: 0.9rem;
       display: flex;
-      gap: 0.4rem;
-      a {
+      justify-content: space-between;
+      padding: 2vw 1.5vw 2vw 1.5vw;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      box-sizing: border-box;
+
+      h1 a {
+
+        font-size: 1.4rem;
         text-decoration: none;
         color: white;
       }
+
+      ul {
+        font-size: 0.9rem;
+        display: flex;
+        gap: 0.4rem;
+
+        a {
+          text-decoration: none;
+          color: white;
+        }
+      }
+
     }
 
-  }
+    /*Conteúdo*/
+    main {
+      margin-top: 4rem;
 
-  /*Conteúdo*/
-  main {
-  margin-top: 4rem;
-  h2.subTitulo_sobreNos {
-    text-align: center;
-    font-size: 2rem;
-  }
+      h2.subTitulo_sobreNos {
+        text-align: center;
+        font-size: 2rem;
+      }
 
-  .pessoas_sobreNos {
-    display: flex;
-    font-size: 1.1rem;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: space-between;
+      .pessoas_sobreNos {
+        display: flex;
+        font-size: 1.1rem;
+        text-align: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
-    max-width: 1200px;
-    margin: 0 auto;
+        max-width: 1200px;
+        margin: 0 auto;
 
-    li {
-      box-shadow: 0px 6px 8px #b8b8b8;
-      width: 45%;
-      border: 1px solid black;
-      border-radius: 5px;
-      margin: 2rem 0 20px 0;
+        li {
+          width: 45%;
+          margin: 2rem 0 20px 0;
+          
+        }
+        
+        li > div {
+          box-shadow: 0px 6px 8px #b8b8b8;
+          height: fit-content;
+          border: 1px solid black;
+          border-radius: 5px;
+        }
 
-   }
-    div {
-      display: none;
+        li div div {
+          display: none;
+        }
+         li:hover #parte-I {
+          display: block;
+          margin: 0;
+        }
+        li:hover #parte-II {
+        display: block;
+        margin: 0;
+        }
+        li:hover #parte-III {
+        display: block;
+        margin: 0;
+        }
+        li:hover #parte-IV {
+        display: block;
+        margin: 0;
+        }
+        li:hover #parte-V {
+        display: block;
+        margin: 0;
+        }
+        li:hover #parte-VI {
+        display: block;
+        margin: 0;
+        }
+      }
     }
-
-        li:hover div{
-       display: block;
-    }
-  }
- }
 }
 }
 
