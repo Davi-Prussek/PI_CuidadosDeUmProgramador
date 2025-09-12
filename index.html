@@ -1,97 +1,106 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev-Saúde | Início</title>
-    <link rel="stylesheet" href="CSS/Reset.CSS">
-    <link rel="stylesheet" href="CSS/index.css">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
-  </head>
-  <body>
-    <header>
-      <h1><a href="index.html">Dev-Saúde</a></h1>
-      <nav>
-        <ul class="direcionar_sobreNos">
-          <li><a href="index.html">Início</a></li>
-          <li><a href="testeHoras.html">Teste de Horas</a></li>
-          <li><a href="rotinas.html">Rotinas</a></li>
-          <li><a href="cuidados.html">Cuidados</a></li>
-          <li><a href="sobreNos.html">Sobre nós</a></li>
-        </ul>
-      </nav>
-    </header>
+  const canvas = document.getElementById("bg");
+  const ctx = canvas.getContext("2d");
 
-    <main>
-      <section class="apresentação1">
-        <div class="caixa">
-          <p class="txt1">
-            Seja bem-vindo ao DevSaúde, o conteúdo a seguir tem como objetivo te
-            auxiliar tanto na vida pessoal quanto também na vida profissional,
-            servindo como base para programar a sua rotina com base no conteúdo
-            presente no site.
-          </p>
-          <img
-            src="img/família-feliz-relaxando-e-brincando-ao-ar-livre-juntos-no-parque-fim-de-semana-pai-da-mãe-crianças-desfrutando-piquenique-282540208.webp"
-            width="200px" class="img">
-        </div>
-        <div class="card-container">
-          <div class="card-box">
-            <p> O site tem como objetivo guiar o usuário na vida profissional e
-              pessoal com a organização, o que pode parecer algo simples é
-              fundamental para todas as áreas da vida, bem como a saúde, o foco
-              e
-              principalmente a produtividade.</p>
-          </div>
-          <div class="card-box">
-            <p><a href="testeHoras.html" class="link-card">Clique no card e
-                descubra como esta a sua saúde do sono, podendo ajudar voçê a se
-                organizar😊</a></p>
-          </div>
-          <div class="card-box">
-            <p class="d">Além disso, o usuário poderá acessar conteúdo que
-              poderá auxiliar
-              no
-              seu conhecimento e aprender mais sobre como a vida é influenciada
-              por
-              hábitos, pelo ambiente, pelas telas, etc.</p>
-          </div>
-        </div>
-      </section>
-      <section class="apresentação2">
+  function resize() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  window.addEventListener("resize", resize);
+  resize();
 
-      </section>
-    </main>
+  // Objeto Partícula
+  class Particle {
+    constructor(x, y, size, color, speedX, speedY) {
+      this.x = x;
+      this.y = y;
+      this.size = size;
+      this.color = color;
+      this.speedX = speedX;
+      this.speedY = speedY;
+    }
 
-    <!-- footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-contact">
-            <h4>Contato</h4>
-            <p><i class="fas fa-envelope"></i>@devsaude_oficial</p>
-            <p><i class="fas fa-phone"></i>+55 (47) 99878801</p>
-          </div>
-          <div class="logo">
-            <img src="img/logo_PI-fundo_removido.png" alt="logo-site" width="150px" height="150px">
-          </div>
-          <div>
-            <h4 class="linkRp">Links Rápidos</h4>
-            <ul class="links">
-              <li><a href="Inicio.html">Início</a></li>
-              <li><a href="testHrs.html">Teste de Horas</a></li>
-              <li><a href="rotinas.html">Rotinas</a></li>
-              <li><a href="cuidados.html">Cuidados</a></li>
-              <li><a href="sobreNos.html">Sobre nós</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-direitos">
-          <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
-        </div>
-      </div>
-    </footer>
-  </body>
-</html>
+    update() {
+      this.x += this.speedX;
+      this.y += this.speedY;
+
+      if (this.x < 0 || this.x > canvas.width) this.speedX *= -1;
+      if (this.y < 0 || this.y > canvas.height) this.speedY *= -1;
+    }
+
+    draw() {
+      ctx.beginPath();
+      ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+      ctx.fillStyle = this.color;
+      ctx.fill();
+    }
+  }
+
+  // Criar muitas partículas
+  const particles = [];
+  const colors = ["#ff0040", "#00ffea", "#ffd700", "#ff6f61", "#8a2be2"];
+
+  function initParticles() {
+    for (let i = 0; i < 150; i++) {
+      let size = Math.random() * 4 + 1;
+      let x = Math.random() * canvas.width;
+      let y = Math.random() * canvas.height;
+      let color = colors[Math.floor(Math.random() * colors.length)];
+      let speedX = (Math.random() - 0.5) * 2;
+      let speedY = (Math.random() - 0.5) * 2;
+      particles.push(new Particle(x, y, size, color, speedX, speedY));
+    }
+  }
+
+  initParticles();
+
+  // Função para conectar partículas próximas
+  function connectParticles() {
+    for (let a = 0; a < particles.length; a++) {
+      for (let b = a; b < particles.length; b++) {
+        let dx = particles[a].x - particles[b].x;
+        let dy = particles[a].y - particles[b].y;
+        let distance = Math.sqrt(dx * dx + dy * dy);
+
+        if (distance < 100) {
+          ctx.beginPath();
+          ctx.strokeStyle = "rgba(255,255,255,0.2)";
+          ctx.lineWidth = 1;
+          ctx.moveTo(particles[a].x, particles[a].y);
+          ctx.lineTo(particles[b].x, particles[b].y);
+          ctx.stroke();
+        }
+      }
+    }
+  }
+
+  // Loop de animação
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+    particles.forEach(p => {
+      p.update();
+      p.draw();
+    });
+
+    connectParticles();
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+<>
+  body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    background: #0a0a0a;
+  }
+
+  canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1; /* fundo */
+  }
