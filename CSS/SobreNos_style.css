@@ -86,7 +86,7 @@ html {
         }
       
         footer {
-          background-color:#0056b3;
+          background: linear-gradient(#0056b3, #002457);
           color: white;
           text-align: center;
           padding: 2vw 0;
