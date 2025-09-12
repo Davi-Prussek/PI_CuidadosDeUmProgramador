@@ -1,13 +1,13 @@
-  /* ========================================= GERAL ========================================= */
+/* ========================================= GERAL ========================================= */
 html {
   font-size: calc(12px + 0.95vw);
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: #333;
   line-height: 1.6;
-  background-color: #e6e6e6;
+  background-color: #ffffff91;
 }
 
-  /* ========================================= BODY ========================================= */
+/* ========================================= BODY ========================================= */
 body {
   text-align: center;
   padding-top: 80px;
@@ -25,7 +25,7 @@ body {
     width: 100%;
     box-sizing: border-box;
 
-    h1 a {
+    p a {
       font-size: 1.4rem;
       text-decoration: none;
       color: white;
@@ -41,190 +41,134 @@ body {
         color: white;
       }
     }
-
   }
 
-  /* ==================== TEXTO PRINCIPAL ==================== */
-  .txt1 {
-    display: flex;
-    align-items: center;
-    /* alinha verticalmente */
-    gap: 20px;
-    /* espaço entre a imagem e o texto */
-    font-size: 30px;
-  }
-
-  /* ==================== CAIXA DE TEXTO ==================== */
-  .caixa {
-    display: flex;
-    align-items: center;
-    /* alinha verticalmente */
-    gap: 20px;
-    /* espaço entre a imagem e o texto */
-    font-size: large;
-    font-size: large;
-  }
-
-  /* ==================== IMAGEM ==================== */
-  .img {
-    width: 500px;
-    /* controla tamanho da imagem */
-    height: 300px;
-    margin-right: 20px;
-    margin: 0px 20px 20px 0px;
-  }
-}
-
-/* ========================================= CARDS ========================================= */
-.card-container {
-  display: flex;
-  justify-content: center;
-  gap: 2vw;
-  margin: 3vw 0;
-}
-
-.card-box {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0px 4px 16px rgb(0, 0, 0);
-  width: 300px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2vw 1vw;
-  display: flex;
-  flex-wrap: wrap;
-  text-align: center;
-  transition: box-shadow 0.2s;
-  position: relative;
-
-  /* Adicionado para posicionamento absoluto do link */
-  p {
-    a {
-      text-decoration: none;
-      color: black;
-      text-align: center;
+  /*===================== Apresentação 1 ===================*/
+  main {
+    .apresentacao1{
       align-items: center;
-      margin: 85px 10px 0px 1px
+      text-align: center;
+      .ol{
+        font-size: 30px;
+        font-weight: 50px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+      }
+      .txt1{
+        font-weight: 20px;
+        font-size: 25px;
+        text-align: center;
+        font-weight: 1000px;
+      }
+    }
+    .ap1-2{
+      text-align: center;
+      p{
+
+      }
     }
   }
-}
-/* Card direita */
-.d {
-  margin-top: 30px;
-}
+  /*===================== TEXTO FUNDO =========================*/
+  .titulo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: rgba(0, 0, 0, 0.041);
+    z-index: -1;
+    pointer-events: none;
+  }
+  /* ========================================= FOOTER ========================================= */
+  .footer {
+    background: linear-gradient(#0056b3, #002457);
+    color: white;
+    text-align: center;
+    padding: 2vw 0;
+    position: relative;
+    /* Footer aparece só no final */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 400;
+    font-size: 1.3vw;
+    min-height: 70px;
+    margin-top: auto;
+    box-sizing: border-box;
+    z-index: 10;
+    width: 100%;
+    max-width: auto;
+  }
 
-/* ==================== LINK CARD ==================== */
-.link-card {
-  display: block;
-  width: 100%;
-  height: 100%;
-  /* Ocupa toda a altura do card */
-  position: absolute;
-  /* Cobre toda a área do card */
-  top: 0;
-  left: 0;
-  text-align: center;
-  text-decoration: none;
-  color: black;
-  padding: 0.5em 0;
-  box-sizing: border-box;
-  z-index: 2;
-}
-/* Sombra card */
-.card-box:hover {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.249);
-}
+  /* ==================== FOOTER CONTENT ==================== */
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 2vw;
+  }
 
-/* ========================================= FOOTER ========================================= */
-.footer {
-  background: linear-gradient(#0056b3, #002457);
-  color: white;
-  text-align: center;
-  padding: 2vw 0;
-  position: relative;
-  /* Footer aparece só no final */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1.3vw;
-  min-height: 70px;
-  margin-top: auto;
-  box-sizing: border-box;
-  z-index: 10;
-  width: 100%;
-  max-width: auto;
-}
+  /* ==================== FOOTER CONTACT ==================== */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+  }
 
-/* ==================== FOOTER CONTENT ==================== */
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* Centraliza horizontalmente */
-  align-items: center;
-  /* Centraliza verticalmente */
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  padding: 0 2vw;
+  /* ==================== LOGO ==================== */
+  .logo {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin-left: 310px;
+  }
+  /* Titulo dos links rapidos */
+  .linkRp {
+    font-size: 1.6vw;
+    margin-bottom: 0.6vw;
+  }
 
-}
+  /* ==================== FOOTER LINKS ==================== */
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+    list-style: none;
+    padding: 0;
+    gap: 0.3vw;
+    /* Espaçamento menor entre os links */
+  }
 
-/* ==================== FOOTER CONTACT ==================== */
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 0;
-}
+  .links a {
+    font-size: 1.3vw;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
 
-/* ==================== LOGO ==================== */
-.logo {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-size: 30px;
-  color: white;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Centraliza verticalmente */
-  margin-left: 310px;
-}
-/* Titulo dos links rapidos */
-.linkRp {
-  font-size: 1.6vw;
-  margin-bottom: 0.6vw;
-}
-
-/* ==================== FOOTER LINKS ==================== */
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-right: 0;
-  list-style: none;
-  padding: 0;
-  gap: 0.3vw;
-  /* Espaçamento menor entre os links */
-}
-
-.links a {
-  font-size: 1.3vw;
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 0;
-  display: block;
-  text-align: center;
-}
-
-/* ==================== FOOTER BOTTOM ==================== */
-.footer-direitos {
-  width: 100%;
-  text-align: center;
-  font-size: 1.1vw;
+  /* ==================== FOOTER BOTTOM ==================== */
+  .footer-direitos {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1vw;
+  }
 }
