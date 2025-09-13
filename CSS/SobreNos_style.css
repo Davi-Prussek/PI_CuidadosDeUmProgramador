@@ -10,10 +10,15 @@ html {
       text-align: center;
 
         header {
+          img {
+            height: 3.2rem;
+          }
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          align-items: center;
           background: #0056b3;
           display: flex;
           justify-content: space-between;
-          padding: 2vw 1.5vw 2vw 1.5vw;
+          padding: 1vw 2vw;
           position: fixed;
           top: 0px;
           width: 100%;
@@ -26,9 +31,9 @@ html {
             }
 
             ul {
-              font-size: 0.9rem;
+              font-size: 1.2rem;
               display: flex;
-              gap: 0.7rem;
+              gap: 1rem;
               
                 a {
                   text-decoration: none;
@@ -41,7 +46,7 @@ html {
         }
 
         main {
-          margin-top: 4rem;
+          margin-top: 6rem;
           margin-bottom: 3rem;
 
             h2 {

@@ -14,38 +14,36 @@ body {
   /* Espaço para o header fixo */
 
   /* ========================================= HEADER ========================================= */
-  header {
-    position: fixed;
-    top: 0px;
-    background-color: #0056b3;
+        header {
+          background: #0056b3;
+          display: flex;
+          justify-content: space-between;
+          padding: 2vw 1.5vw 2vw 1.5vw;
+          position: fixed;
+          top: 0px;
+          width: 100%;
+          box-sizing: border-box;
 
-    display: flex;
-    justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    width: 100%;
-    box-sizing: border-box;
+            h1 a {
+              font-size: 1.4rem;
+              text-decoration: none;
+              color: white;
+            }
 
-    p a {
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    ul {
-      font-size: 0.9rem;
-      display: flex;
-      gap: 0.4rem;
-
-      a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-    li:hover a {
-      border-bottom: 2px solid #ffffff;
-    }
-  }
-
+            ul {
+              font-size: 0.9rem;
+              display: flex;
+              gap: 0.7rem;
+              
+                a {
+                  text-decoration: none;
+                  color: white;
+                }
+            }
+            li:hover a {
+              border-bottom: 2px solid #ffffff;
+            }
+        }
   /*===================== Apresentação 1 ===================*/
   main {
     .apresentacao1 {
