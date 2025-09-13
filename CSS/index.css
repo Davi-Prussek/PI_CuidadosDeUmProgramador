@@ -11,18 +11,18 @@ html {
 body {
   text-align: center;
   padding-top: 80px;
-  /* Espaço para o header fixo */
 
   /* ========================================= HEADER ========================================= */
-        header {
-          background: #0056b3;
-          display: flex;
-          justify-content: space-between;
-          padding: 2vw 1.5vw 2vw 1.5vw;
-          position: fixed;
-          top: 0px;
-          width: 100%;
-          box-sizing: border-box;
+  header {
+    position: fixed;
+    top: 0px;
+    background-color: #0056b3;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 2vw 1.5vw 2vw 1.5vw;
+    width: 100%;
+    box-sizing: border-box;
 
             h1 a {
               font-size: 1.4rem;
@@ -30,20 +30,21 @@ body {
               color: white;
             }
 
-            ul {
-              font-size: 0.9rem;
-              display: flex;
-              gap: 0.7rem;
-              
-                a {
-                  text-decoration: none;
-                  color: white;
-                }
-            }
-            li:hover a {
-              border-bottom: 2px solid #ffffff;
-            }
-        }
+    ul {
+      font-size: 0.9rem;
+      display: flex;
+      gap: 0.4rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    li:hover a {
+      border-bottom: 2px solid #ffffff;
+    }
+  }
+
   /*===================== Apresentação 1 ===================*/
   main {
     .apresentacao1 {
@@ -53,8 +54,9 @@ body {
       background-size: cover;
       background-position: center;
       background-repeat: no-repeat;
+      background-attachment: fixed;
       padding: 100px 20px;
-      min-height: 400px;
+      min-height: 420px;
       .ol {
         font-size: 36px;
         font-weight: 700;
@@ -165,76 +167,76 @@ body {
     z-index: 10;
     width: 100%;
     max-width: auto;
-  }
 
-  /* ==================== FOOTER CONTENT ==================== */
-  .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
-    padding: 0 2vw;
-  }
+    /* ==================== FOOTER CONTENT ==================== */
+    .footer-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      /* Centraliza horizontalmente */
+      align-items: center;
+      /* Centraliza verticalmente */
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1000px;
+      padding: 0 2vw;
+    }
 
-  /* ==================== FOOTER CONTACT ==================== */
-  .footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin-left: 0;
-  }
+    /* ==================== FOOTER CONTACT ==================== */
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+      margin-left: 0;
+    }
 
-  /* ========================= LOGO ========================= */
-  .logo {
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 700;
-    font-size: 30px;
-    color: white;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Centraliza verticalmente */
-    margin-left: 310px;
-  }
-  /* ================== Titulo dos links rapidos ============ */
-  .linkRp {
-    font-size: 1.6vw;
-    margin-bottom: 0.6vw;
-  }
+    /* ========================= LOGO ========================= */
+    .logo {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 30px;
+      color: white;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* Centraliza verticalmente */
+      margin-left: 310px;
+    }
+    /* ================== Titulo dos links rapidos ============ */
+    .linkRp {
+      font-size: 1.6vw;
+      margin-bottom: 0.6vw;
+    }
 
-  /* ====================== FOOTER LINKS =================== */
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 0;
-    list-style: none;
-    padding: 0;
-    gap: 0.3vw;
-    /* Espaçamento menor entre os links */
-  }
+    /* ====================== FOOTER LINKS =================== */
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-right: 0;
+      list-style: none;
+      padding: 0;
+      gap: 0.3vw;
+      /* Espaçamento menor entre os links */
+    }
 
-  .links a {
-    font-size: 1.3vw;
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 0;
-    display: block;
-    text-align: center;
-  }
+    .links a {
+      font-size: 1.3vw;
+      color: #ffffff;
+      text-decoration: none;
+      margin-bottom: 0;
+      display: block;
+      text-align: center;
+    }
 
-  /* ====================== FOOTER BOTTOM ================== */
-  .footer-direitos {
-    width: 100%;
-    text-align: center;
-    font-size: 1.1vw;
+    /* ====================== FOOTER BOTTOM ================== */
+    .footer-direitos {
+      width: 100%;
+      text-align: center;
+      font-size: 1.1vw;
+    }
   }
 }
