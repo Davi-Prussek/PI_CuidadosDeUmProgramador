@@ -27,40 +27,6 @@
 
     <main>
       <section class="apresentacao1">
-        <h1 class="titulo">
-          const canvas = document.getElementById("bg"); const ctx =
-          canvas.getContext("2d"); function resize() { canvas.width =
-          window.innerWidth; canvas.height = window.innerHeight; }
-          window.addEventListener("resize", resize); resize(); // Objeto
-          Partícula class Particle { constructor(x, y, size, color, speedX,
-          speedY) { this.x = x; this.y = y; this.size = size; this.color =
-          color; this.speedX = speedX; this.speedY = speedY; } update() { this.x
-          += this.speedX; this.y += this.speedY; if (this.x < 0 || this.x >
-          canvas.width) this.speedX *= -1; if (this.y < 0 || this.y >
-          canvas.height) this.speedY *= -1; } draw() { ctx.beginPath();
-          ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2); ctx.fillStyle =
-          this.color; ctx.fill(); } } // Criar muitas partículas const particles
-          = []; const colors = ["#ff0040", "#00ffea", "#ffd700", "#ff6f61",
-          "#8a2be2"]; function initParticles() { for (let i = 0; i < 150; i++) {
-          let size = Math.random() * 4 + 1; let x = Math.random() *
-          canvas.width; let y = Math.random() * canvas.height; let color =
-          colors[Math.floor(Math.random() * colors.length)]; let speedX =
-          (Math.random() - 0.5) * 2; let speedY = (Math.random() - 0.5) * 2;
-          particles.push(new Particle(x, y, size, color, speedX, speedY)); } }
-          initParticles(); // Função para conectar partículas próximas function
-          connectParticles() { for (let a = 0; a < particles.length; a++) { for
-          (let b = a; b < particles.length; b++) { let dx = particles[a].x -
-          particles[b].x; let dy = particles[a].y - particles[b].y; let distance
-          = Math.sqrt(dx * dx + dy * dy); if (distance < 100) { ctx.beginPath();
-          ctx.strokeStyle = "rgba(255,255,255,0.2)"; ctx.lineWidth = 1;
-          ctx.moveTo(particles[a].x, particles[a].y); ctx.lineTo(particles[b].x,
-          particles[b].y); ctx.stroke(); } } } } // Loop de animação function
-          animate() { ctx.clearRect(0, 0, canvas.width, canvas.height);
-          particles.forEach(p => { p.update(); p.draw(); }); connectParticles();
-          requestAnimationFrame(animate); } animate(); <> body, html { margin:
-          0; padding: 0; height: 100%; overflow: hidden; background: #0a0a0a; }
-          canvas { position: fixed; top: 0; left: 0; z-index: -1; /* fundo */
-        </h1>
         <div>
           <p class="ol">Olá Usuario</p>
           <p class="txt1">

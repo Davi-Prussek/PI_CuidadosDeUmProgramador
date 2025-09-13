@@ -40,7 +40,11 @@ body {
         text-decoration: none;
         color: white;
       }
+      
     }
+    li:hover a{
+        border-bottom: 2px solid #ffffff;
+      }
   }
 
   /*===================== Apresentação 1 ===================*/
@@ -68,17 +72,7 @@ body {
       }
     }
   }
-  /*===================== TEXTO FUNDO =========================*/
-  .titulo {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 2rem;
-    color: rgba(0, 0, 0, 0.041);
-    z-index: -1;
-    pointer-events: none;
-  }
+  
   /* ========================================= FOOTER ========================================= */
   .footer {
     background: linear-gradient(#0056b3, #002457);
