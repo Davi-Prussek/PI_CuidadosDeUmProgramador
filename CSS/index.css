@@ -14,7 +14,7 @@ body {
 
   /* ========================================= HEADER ========================================= */
   header {
-/* = img = */
+    /* = img = */
     img {
       height: 3.2rem;
       filter: brightness(1.05) contrast(1.4) saturate(1.2);
@@ -44,10 +44,25 @@ body {
       a {
         text-decoration: none;
         color: white;
+        position: relative;
       }
-    }
-    li:hover a {
-      border-bottom: 2px solid #ffffff;
+
+      a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #ffffff;
+        transform: scaleX(0);
+        transform-origin: center;
+        transition: transform 0.5s ease;
+      }
+
+      a:hover::after {
+        transform: scaleX(1);
+      }
     }
   }
 
@@ -59,10 +74,25 @@ body {
     a {
       text-decoration: none;
       color: white;
+      position: relative;
     }
-  }
-  li:hover a {
-    border-bottom: 2px solid #ffffff;
+
+    a::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #ffffff;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.3s ease;
+    }
+
+    a:hover::after {
+      transform: scaleX(1);
+    }
   }
 }
 /*===================== Apresentação 1 ===================*/
@@ -70,7 +100,7 @@ main {
   .apresentacao1 {
     align-items: center;
     text-align: center;
-/* = img = */
+    /* = img = */
     background-image: url("../img/tech-380x220.jpg");
     background-size: cover;
     background-position: center;
@@ -79,9 +109,9 @@ main {
     padding: 100px 20px;
     min-height: 420px;
     .ol {
-      font-size: 36px;
-      font-weight: 700;
-      margin-top: 40px;
+      font-size: 100px;
+      font-weight: 900;
+      margin-top: 100px;
       margin-bottom: 30px;
       color: #00ff2a;
       .txt1 {
@@ -90,7 +120,7 @@ main {
         color: #ffffff;
         line-height: 1.4;
         display: block;
-        margin-top: 10px;
+        margin-top: 20px;
       }
     }
   }
@@ -134,9 +164,13 @@ main {
       justify-content: space-between;
       min-height: 160px;
       transition: box-shadow 0.3s ease;
+      transition: transform 1.0s ease;
+      transform-origin: center;
+      transform-style: preserve-3d;
     }
     .card:hover {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transform: rotateY(360deg);
     }
     h3 {
       margin-bottom: 10px;
@@ -170,14 +204,13 @@ main {
 
 /* ======================== FOOTER ======================== */
 .footer {
-  background: linear-gradient(#0056b3, #002457);
+  background: linear-gradient(#0057b3c4, #002457);
   color: white;
   text-align: center;
-  padding: 2vw 0;
+  padding: 3vw 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
   position: relative;
   /* Footer aparece só no final */
-  left: 0;
-  bottom: 0;
   width: 100%;
   font-family: "Times New Roman", Times, serif;
   font-weight: 400;
@@ -186,8 +219,6 @@ main {
   margin-top: auto;
   box-sizing: border-box;
   z-index: 10;
-  width: 100%;
-  max-width: auto;
 
   /* ==================== FOOTER CONTENT ==================== */
   .footer-content {
@@ -213,9 +244,8 @@ main {
   }
 
   /* ========================= LOGO ========================= */
-/* = img = */
+  /* = img = */
   .logo {
-    font-family: "Times New Roman", Times, serif;
     font-weight: 700;
     font-size: 30px;
     color: white;
@@ -224,7 +254,6 @@ main {
     justify-content: center;
     align-items: center;
     /* Centraliza verticalmente */
-    margin-left: 310px;
   }
   /* ================== Titulo dos links rapidos ============ */
   .linkRp {
@@ -252,6 +281,11 @@ main {
     margin-bottom: 0;
     display: block;
     text-align: center;
+    transition: color 0.5s ease;
+  }
+
+  .links a:hover {
+    color: #e0e0e0;
   }
 
   /* ====================== FOOTER BOTTOM ================== */
