@@ -24,11 +24,11 @@ body {
     width: 100%;
     box-sizing: border-box;
 
-            h1 a {
-              font-size: 1.4rem;
-              text-decoration: none;
-              color: white;
-            }
+    p a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
 
     ul {
       font-size: 0.9rem;
