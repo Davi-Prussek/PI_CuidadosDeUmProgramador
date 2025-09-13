@@ -13,30 +13,22 @@ body {
   padding-top: 80px;
 
   /* ========================================= HEADER ========================================= */
-        header {
-          img {
-            height: 3.2rem;
-          }
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          align-items: center;
-          background: #0056b3;
-          display: flex;
-          justify-content: space-between;
-          padding: 1vw 2vw;
-          position: fixed;
-          top: 0px;
-          width: 100%;
-          box-sizing: border-box;
   header {
-    position: fixed;
-    top: 0px;
-    background-color: #0056b3;
-
+/* = img = */
+    img {
+      height: 3.2rem;
+      filter: brightness(1.05) contrast(1.4) saturate(1.2);
+    }
+    align-items: center;
+    background: #0056b3;
     display: flex;
     justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    width: 100%;
+    padding: 1vw 2vw;
+    top: 0px;
     box-sizing: border-box;
+    position: fixed;
+    top: 0px;
+    width: 100%;
 
     p a {
       font-size: 1.4rem;
@@ -59,212 +51,213 @@ body {
     }
   }
 
-            ul {
-              font-size: 1.2rem;
-              display: flex;
-              gap: 1rem;
-              
-                a {
-                  text-decoration: none;
-                  color: white;
-                }
-            }
-            li:hover a {
-              border-bottom: 2px solid #ffffff;
-            }
-        }
-  /*===================== Apresentação 1 ===================*/
-  main {
-    .apresentacao1 {
-      align-items: center;
-      text-align: center;
-      background-image: url("../img/tech-380x220.jpg");
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      padding: 100px 20px;
-      min-height: 420px;
-      .ol {
-        font-size: 36px;
-        font-weight: 700;
-        margin-top: 40px;
-        margin-bottom: 30px;
-        color: #00ff2a;
-        .txt1 {
-          font-size: 28px;
-          font-weight: 600;
-          color: #ffffff;
-          line-height: 1.4;
-          display: block;
-          margin-top: 10px;
-        }
-      }
-    }
-    /* ==== section 1-2 ==== */
-    .ap1-2 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-      gap: 20px;
+  ul {
+    font-size: 1.2rem;
+    display: flex;
+    gap: 1rem;
 
-      .text-left {
-        text-align: center;
-        p {
-          font-size: 18px;
-          line-height: 1.6;
-        }
-      }
-      .services-title {
-        font-size: 24px;
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+  li:hover a {
+    border-bottom: 2px solid #ffffff;
+  }
+}
+/*===================== Apresentação 1 ===================*/
+main {
+  .apresentacao1 {
+    align-items: center;
+    text-align: center;
+/* = img = */
+    background-image: url("../img/tech-380x220.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 100px 20px;
+    min-height: 420px;
+    .ol {
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 30px;
+      color: #00ff2a;
+      .txt1 {
+        font-size: 28px;
         font-weight: 600;
-        color: #0056b3;
-        margin: 10px 0;
-        text-align: center;
-      }
-      .cards-right {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 15px;
-        max-width: 1000px;
-      }
-      .card {
-        background-color: #f9f9f9;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 20px 15px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 160px;
-        transition: box-shadow 0.3s ease;
-      }
-      .card:hover {
-        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-      }
-      h3 {
-        margin-bottom: 10px;
-        font-size: 18px;
-        color: #0056b3;
-      }
-      p {
-        font-size: 14px;
-        margin-bottom: 5px;
-        flex-grow: 1;
-      }
-      a {
-        display: inline-block;
-        background-color: white;
-        color: #0056b3;
-        padding: 8px 16px;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        font-size: 14px;
-        align-self: center;
-        border: 1px solid #0056b3;
-        transition: all 0.3s ease;
-      }
-      a:hover {
-        background-color: #0056b3;
-        color: white;
+        color: #ffffff;
+        line-height: 1.4;
+        display: block;
+        margin-top: 10px;
       }
     }
   }
+  /* ==== section 1-2 ==== */
+  .ap1-2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
 
-  /* ======================== FOOTER ======================== */
-  .footer {
-    background: linear-gradient(#0056b3, #002457);
-    color: white;
-    text-align: center;
-    padding: 2vw 0;
-    position: relative;
-    /* Footer aparece só no final */
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    font-family: "Times New Roman", Times, serif;
-    font-weight: 400;
-    font-size: 1.3vw;
-    min-height: 70px;
-    margin-top: auto;
-    box-sizing: border-box;
-    z-index: 10;
-    width: 100%;
-    max-width: auto;
-
-    /* ==================== FOOTER CONTENT ==================== */
-    .footer-content {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      /* Centraliza horizontalmente */
-      align-items: center;
-      /* Centraliza verticalmente */
-      margin: 0 auto;
-      width: 100%;
+    .text-left {
+      text-align: center;
+      p {
+        font-size: 18px;
+        line-height: 1.6;
+      }
+    }
+    .services-title {
+      font-size: 24px;
+      font-weight: 600;
+      color: #0056b3;
+      margin: 10px 0;
+      text-align: center;
+    }
+    .cards-right {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
       max-width: 1000px;
-      padding: 0 2vw;
     }
-
-    /* ==================== FOOTER CONTACT ==================== */
-    .footer-contact {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-      margin-left: 0;
-    }
-
-    /* ========================= LOGO ========================= */
-    .logo {
-      font-family: "Times New Roman", Times, serif;
-      font-weight: 700;
-      font-size: 30px;
-      color: white;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      /* Centraliza verticalmente */
-      margin-left: 310px;
-    }
-    /* ================== Titulo dos links rapidos ============ */
-    .linkRp {
-      font-size: 1.6vw;
-      margin-bottom: 0.6vw;
-    }
-
-    /* ====================== FOOTER LINKS =================== */
-    .links {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    .card {
+      background-color: #f9f9f9;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px 15px;
       text-align: center;
-      margin-right: 0;
-      list-style: none;
-      padding: 0;
-      gap: 0.3vw;
-      /* Espaçamento menor entre os links */
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 160px;
+      transition: box-shadow 0.3s ease;
     }
-
-    .links a {
-      font-size: 1.3vw;
-      color: #ffffff;
+    .card:hover {
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+    h3 {
+      margin-bottom: 10px;
+      font-size: 18px;
+      color: #0056b3;
+    }
+    p {
+      font-size: 14px;
+      margin-bottom: 5px;
+      flex-grow: 1;
+    }
+    a {
+      display: inline-block;
+      background-color: white;
+      color: #0056b3;
+      padding: 8px 16px;
       text-decoration: none;
-      margin-bottom: 0;
-      display: block;
-      text-align: center;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 14px;
+      align-self: center;
+      border: 1px solid #0056b3;
+      transition: all 0.3s ease;
     }
+    a:hover {
+      background-color: #0056b3;
+      color: white;
+    }
+  }
+}
 
-    /* ====================== FOOTER BOTTOM ================== */
-    .footer-direitos {
-      width: 100%;
-      text-align: center;
-      font-size: 1.1vw;
-    }
+/* ======================== FOOTER ======================== */
+.footer {
+  background: linear-gradient(#0056b3, #002457);
+  color: white;
+  text-align: center;
+  padding: 2vw 0;
+  position: relative;
+  /* Footer aparece só no final */
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  min-height: 70px;
+  margin-top: auto;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  max-width: auto;
+
+  /* ==================== FOOTER CONTENT ==================== */
+  .footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1000px;
+    padding: 0 2vw;
+  }
+
+  /* ==================== FOOTER CONTACT ==================== */
+  .footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    margin-left: 0;
+  }
+
+  /* ========================= LOGO ========================= */
+/* = img = */
+  .logo {
+    font-family: "Times New Roman", Times, serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Centraliza verticalmente */
+    margin-left: 310px;
+  }
+  /* ================== Titulo dos links rapidos ============ */
+  .linkRp {
+    font-size: 1.6vw;
+    margin-bottom: 0.6vw;
+  }
+
+  /* ====================== FOOTER LINKS =================== */
+  .links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-right: 0;
+    list-style: none;
+    padding: 0;
+    gap: 0.3vw;
+    /* Espaçamento menor entre os links */
+  }
+
+  .links a {
+    font-size: 1.3vw;
+    color: #ffffff;
+    text-decoration: none;
+    margin-bottom: 0;
+    display: block;
+    text-align: center;
+  }
+
+  /* ====================== FOOTER BOTTOM ================== */
+  .footer-direitos {
+    width: 100%;
+    text-align: center;
+    font-size: 1.1vw;
   }
 }
