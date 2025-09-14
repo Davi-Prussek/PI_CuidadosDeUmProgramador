@@ -109,11 +109,10 @@ main {
     padding: 100px 20px;
     min-height: 420px;
     .ol {
-      font-size: 100px;
+      font-size: 70px;
       font-weight: 900;
       margin-top: 100px;
       margin-bottom: 30px;
-      color: #00ff2a;
       .txt1 {
         font-size: 28px;
         font-weight: 600;
@@ -123,6 +122,10 @@ main {
         margin-top: 20px;
       }
     }
+  }
+  #ol1 {
+    font-family: "Press Start 2P", monospace;
+    color: limegreen;
   }
   /* ==== section 1-2 ==== */
   .ap1-2 {
@@ -146,12 +149,6 @@ main {
       margin: 10px 0;
       text-align: center;
     }
-    .cards-right {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
-      max-width: 1000px;
-    }
     .card {
       background-color: #f9f9f9;
       border: 1px solid #ddd;
@@ -163,10 +160,15 @@ main {
       flex-direction: column;
       justify-content: space-between;
       min-height: 160px;
-      transition: box-shadow 0.3s ease;
-      transition: transform 1.0s ease;
+      transition: box-shadow 1.5s ease;
+      transition: transform 1s ease;
       transform-origin: center;
-      transform-style: preserve-3d;
+    }
+    .cards-right {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 15px;
+      max-width: 1000px;
     }
     .card:hover {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);

@@ -6,47 +6,47 @@ html {
   line-height: 1.6;
   background-color: #e6e6e6;
 }
-  /* ========================================= BODY ========================================= */
-  body {
-    text-align: center;
+/* ========================================= BODY ========================================= */
+body {
+  text-align: center;
 
-    /* ========================================= HEADER ========================================= */
-        header {
-          img {
-            height: 3.2rem;
-          }
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          align-items: center;
-          background: #0056b3;
-          display: flex;
-          justify-content: space-between;
-          padding: 1vw 2vw;
-          position: fixed;
-          top: 0px;
-          width: 100%;
-          box-sizing: border-box;
+  /* ========================================= HEADER ========================================= */
+  header {
+    img {
+      height: 3.2rem;
+    }
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    align-items: center;
+    background: #0056b3;
+    display: flex;
+    justify-content: space-between;
+    padding: 1vw 2vw;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
 
-            h1 a {
-              font-size: 1.4rem;
-              text-decoration: none;
-              color: white;
-            }
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
 
-            ul {
-              font-size: 1.2rem;
-              display: flex;
-              gap: 1rem;
-              
-                a {
-                  text-decoration: none;
-                  color: white;
-                }
-            }
-            li:hover a {
-              border-bottom: 2px solid #ffffff;
-            }
-        }
+    ul {
+      font-size: 1.2rem;
+      display: flex;
+      gap: 1rem;
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+    }
+    li:hover a {
+      border-bottom: 2px solid #ffffff;
+    }
   }
+}
 
 main {
   margin-top: 4rem;
@@ -61,19 +61,19 @@ main {
       font-weight: 100;
     }
     .intro {
-        margin: 20px 0px 20px 0px;
+      margin: 20px 0px 20px 0px;
     }
-    .horasForm{
-        fieldset{
-            legend{
-                font-size: 40px;
-                font-weight: 20px;
-                margin-bottom: 10px;
-            }
+    .horasForm {
+      fieldset {
+        legend {
+          font-size: 40px;
+          font-weight: 20px;
+          margin-bottom: 10px;
         }
-        .form-group{
-            text-align: center;
-        }
+      }
+      .form-group {
+        text-align: center;
+      }
     }
   }
 }
