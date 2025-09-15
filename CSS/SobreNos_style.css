@@ -9,70 +9,60 @@ html {
     background-color: #e6e6e6;
     text-align: center;
 
-        header {
-          img {
-            height: 3.2rem;
-          }
-          font-family: Verdana, Geneva, Tahoma, sans-serif;
-          align-items: center;
-          background: #0056b3;
-          display: flex;
-          justify-content: space-between;
-          padding: 1vw 2vw;
-          position: fixed;
-          top: 0px;
-          width: 100%;
-          box-sizing: border-box;
-  header {
-    position: fixed;
-    top: 0px;
-    background-color: #0056b3;
-
-    display: flex;
-    justify-content: space-between;
-    padding: 2vw 1.5vw 2vw 1.5vw;
-    width: 100%;
-    box-sizing: border-box;
-
-    p a {
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    ul {
-      font-size: 0.9rem;
+    header {
+      img {
+        height: 3.2rem;
+        filter: brightness(1.05) contrast(1.4) saturate(1.2);
+      }
+      align-items: center;
+      background: #0056b3;
       display: flex;
-      gap: 0.4rem;
+      justify-content: space-between;
+      padding: 1vw 2vw;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      box-sizing: border-box;
 
-      a {
+      h1 a {
+        font-size: 1.4rem;
         text-decoration: none;
         color: white;
       }
-    }
-    li:hover a {
-      border-bottom: 2px solid #ffffff;
-    }
-  }
 
-            ul {
-              font-size: 1.2rem;
-              display: flex;
-              gap: 1rem;
-              
-                a {
-                  text-decoration: none;
-                  color: white;
-                }
-            }
-            li:hover a {
-              border-bottom: 2px solid #ffffff;
-            }
+      ul {
+        font-size: 0.9rem;
+        display: flex;
+        gap: 0.4rem;
+
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
         }
 
-        main {
-          margin-top: 4rem;
-          margin-bottom: 3rem;
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.5s ease;
+        }
+
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+
+    main {
+      margin-top: 4rem;
+      margin-bottom: 3rem;
 
       .titulo {
         text-align: center;
