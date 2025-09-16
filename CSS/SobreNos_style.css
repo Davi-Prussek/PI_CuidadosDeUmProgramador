@@ -91,20 +91,25 @@ html {
         .p-1,
         .p-2,
         .p-3 {
-          min-height: 10rem;
+          min-height: 30rem;
           max-height: 0rem;
           display: flex;
+          justify-content: center;
           gap: 4rem;
 
           li {
+            img {
+              width: 100%;
+              display: block;
+            }
             h3 {
               background-color: #0056b3;
               color: white;
               padding: 7px 0;
             }
             min-width: 3rem;
-            width: 50%;
-            margin: 2rem 0;
+            width: 38%;
+            margin: 3rem 0;
             box-shadow: 0px 6px 8px #b8b8b8;
             height: fit-content;
             border: 1px solid black;
@@ -217,5 +222,3 @@ html {
   }
 }
 
-@media (max-width: 500px) {
-}
