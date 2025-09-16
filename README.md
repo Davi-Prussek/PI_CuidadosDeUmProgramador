@@ -62,3 +62,15 @@
     ### Quem faltou:
 
         Todos vieram;
+
+## Sexta Reunião 12/09
+
+    ## O que vai ser feito;
+        terminando a pagina Cuidados
+        Refazer a pagina do index
+        Acrescentando conteudo na base do projeto
+        Fazer as pagina do Html no canva
+
+    ### Quem faltou:
+
+        Davi;
