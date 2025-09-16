@@ -23,6 +23,7 @@ html {
       top: 0px;
       width: 100%;
       box-sizing: border-box;
+      z-index: 3;
 
       h1 a {
         font-size: 1.4rem;
@@ -72,8 +73,9 @@ html {
       }
 
       .pessoas_sobreNos {
+        width: 80%;
         text-align: center;
-        font-size: 1.1rem;
+        font-size: 1.005rem;
         text-align: center;
         max-width: 1500px;
         margin: 0 auto;
@@ -81,11 +83,11 @@ html {
         .p-1,
         .p-2,
         .p-3 {
-          min-height: 30rem;
+          min-height: 34rem;
           max-height: 0rem;
           display: flex;
           justify-content: center;
-          gap: 4rem;
+          gap: 5rem;
 
           li {
             img {
@@ -98,7 +100,7 @@ html {
               padding: 7px 0;
             }
             min-width: 3rem;
-            width: 38%;
+            width: 50%;
             margin: 3rem 0;
             box-shadow: 0px 6px 8px #b8b8b8;
             height: fit-content;
@@ -110,6 +112,17 @@ html {
               opacity: 0;
               overflow: hidden;
               transition: max-height 0.9s ease, opacity 0.8s ease;
+              a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-decoration: none;
+                color: #333;
+                img {
+              width: 50px;
+              display: block;
+            }
+              }
             }
           }
 
@@ -159,9 +172,18 @@ html {
           .footer-contact {
             display: flex;
             flex-direction: column;
-            align-items: flex-start;
+            align-items: center;
             text-align: left;
             margin-left: 0;
+            display: flex;
+            .midia {
+              display: flex;
+              
+              img {
+                width: 60px;
+              }
+            }
+            
           }
 
           .logo {
