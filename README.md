@@ -74,3 +74,32 @@
     ### Quem faltou:
 
         Davi;
+
+## Sétima Reunião 13/09
+
+    ## O que vai ser feito;
+        Codação do index
+        Continuação das paginas
+
+    ### Quem faltou:
+
+        Camilly , Felipe, Bruno e o Maico;
+
+## Oitava Reunião 16/09
+
+    ## O que vai ser feito;
+        continuação das páginas no canva
+        Fazer as edições das redes sociais
+        Separação dos conteudos das páginas
+        Ajudar e cuidar das páginas 
+        Fazer o burnout
+        Página da luz solar
+
+    ### Quem faltou:
+
+        Todos vieram; 
+
+        ##
+
+
+        
