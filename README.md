@@ -83,7 +83,7 @@
 
     ### Quem faltou:
 
-        Camilly , Felipe, Bruno e o Maico;
+        Camilly , Felipe e Bruno;
 
 ## Oitava Reunião 16/09
 
