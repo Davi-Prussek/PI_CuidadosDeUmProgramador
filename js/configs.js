@@ -1,0 +1,1 @@
+const atoAbrirCuidados = document.getElementById()
