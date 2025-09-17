@@ -127,5 +127,102 @@ html {
                 }
             }
         }
+
+        margin-top: 6vw;
+        text-align: center;
+
+
+
+
     }
+}
+
+/* Aplicar as fontes gerais */
+
+/* Títulos */
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+    font-weight: 700;
+    padding: 3vw 0 0 3rem;
+}
+
+/* Título principal */
+.titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+/* Subtítulos */
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1vw;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Parágrafos */
+body p {
+    font-size: 1rem;
+    margin: 2vw 8vw;
+    text-align: left;
+}
+
+p span {
+    font-weight: bold;
+}
+/* Background dos parágrafos */
+p {
+    color: #333;
+    background-color: #3333332d;
+    padding: 1vw;
+    border-radius: 15px;
+    border: 1px solid white;
+    transition: background-color 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+/* Interação com o background */
+p:hover {
+    background-color: #3333333d;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid grey;
+}
+
+/* Links */
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
+
+}
+
+.btn-link:hover {
+    color: #0056b3;
+}
+
+/* Botão-link */
+.btn-link {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.btn-link:hover {
+    background-color: #0056b3;
 }
