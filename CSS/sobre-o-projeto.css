@@ -1,113 +1,309 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 /* Corpo da página */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff; /* fundo branco */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fbff; /* fundo branco suave */
   color: #003366; /* azul escuro para texto */
-  line-height: 1.6;
-  padding: 20px;
+  line-height: 1.7;
+  padding: 24px 20px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Cabeçalho com imagem de fundo e sobreposição escura */
+/* Estilo da imagem dentro do header */
+header img {
+  height: 3.2rem;
+  filter: brightness(1.1) contrast(1.5) saturate(1.3);
+  transition: filter 0.3s ease;
+}
+
+header img:hover {
+  filter: brightness(1.2) contrast(1.6) saturate(1.4);
+}
+
+/* Header fixo */
 header {
+  align-items: center;
+  background: linear-gradient(90deg, #004a99, #0066cc);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2vw;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+  height: 6vw;
+  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
+  backdrop-filter: saturate(180%) blur(10px);
+}
+
+/* Link dentro do h1 no header */
+header h1 a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  transition: color 0.3s ease;
+}
+
+header h1 a:hover {
+  color: #cce6ff;
+}
+
+/* Nav dentro do header */
+header nav {
+  height: 100%;
   position: relative;
-  background-image: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80');
+}
+
+/* Ul dentro do nav */
+header nav ul {
+  height: 100%;
+  align-items: center;
+  font-size: 1rem;
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* .cuidados .botao dentro do ul */
+header nav ul .cuidados .botao {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+  padding: 0.4rem 0.6rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+header nav ul .cuidados .botao:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+/* Imagem dentro do .botao */
+header nav ul .cuidados .botao img {
+  width: 22px;
+  height: auto;
+  margin-left: 6px;
+  transition: transform 0.3s ease;
+}
+
+header nav ul .cuidados:hover .botao img {
+  transform: rotate(15deg);
+}
+
+/* Submenu */
+header nav ul .cuidados .sub-menus {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #12152c;
+  padding: 0.75rem 0.75rem;
+  border-radius: 8px;
+  margin-top: 0.6rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  min-width: 80px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+/* Mostrar submenu ao passar o mouse */
+header nav ul .cuidados:hover .sub-menus {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+header nav ul .sobre-nos .sub-sobre-nos {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #12152c;
+  padding: 0.75rem 0.75rem;
+  border-radius: 8px;
+  margin-top: 0.6rem;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  z-index: 1001;
+  min-width: 80px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+header nav ul .sobre-nos:hover .sub-sobre-nos {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+/* li dentro do ul */
+header nav ul li {
+  text-align: center;
+  min-width: 8rem;
+  height: 100%;
+  padding-top: 1.5vw;
+  box-sizing: border-box;
+  position: relative;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+/* Links dentro do nav */
+header nav ul li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+  display: block;
+  padding: 0.6rem 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Hover no li */
+header nav ul li:hover {
+  background-color: #12152c;
+  box-shadow: inset 0 -3px 0 #00aaff;
+}
+
+/* Links com efeito underline animado */
+header nav ul a::after {
+  content: "";
+  position: absolute;
+  bottom: 6px;
+  left: 10%;
+  width: 80%;
+  height: 2px;
+  background-color: #00aaff;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.3s ease;
+  border-radius: 2px;
+}
+
+header nav ul a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Seção com fundo de imagem e sobreposição */
+.h2 {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: #ffffff;
-  padding: 60px 20px;
+  padding: 70px 24px;
   text-align: center;
-  border-radius: 12px;
-  margin-bottom: 30px;
+  border-radius: 16px;
+  margin-bottom: 40px;
   overflow: hidden;
-  box-shadow: 0 6px 12px rgba(0, 89, 179, 0.6);
+  box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Sobreposição escura no header */
-header::before {
+.h2:hover {
+  box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
+}
+
+/* Sobreposição escura para .h2 */
+.h2::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* preto com 50% de opacidade */
-  z-index: 0;
-  border-radius: 12px;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: -1;
+  border-radius: 16px;
 }
 
-/* Conteúdo do header acima da sobreposição */
-header h1,
-header p {
+/* Títulos dentro de .h2 devem estar acima da sobreposição */
+.h2 h2,
+.h2 p {
   position: relative;
-  z-index: 1;
-  text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.7);
-}
-
-header h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
-
-header p {
-  font-size: 1.3rem;
-  font-weight: 300;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  max-width: 900px;
 }
 
 /* Títulos das seções */
 h2 {
-  color: #004080; /* azul escuro */
-  margin-bottom: 15px;
-  border-bottom: 3px solid #0059b3;
-  padding-bottom: 6px;
+  color: #003366;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  font-size: 2.8rem; /* tamanho reduzido para melhor proporção */
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-shadow: none;
 }
 
 /* Subtítulos */
 h3 {
-  color: #0066cc;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  color: #0099ff;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
 }
 
 /* Lista da equipe */
 ul {
   list-style-type: disc;
-  padding-left: 20px;
-  margin-bottom: 20px;
+  padding-left: 24px;
+  margin-bottom: 28px;
+  color: #003366;
+  font-size: 1.1rem;
+  line-height: 1.5;
 }
 
 li strong {
   color: #004080;
+  font-weight: 700;
 }
 
 /* Cards para artigos */
 article {
-  background-color: #e6f0ff; /* azul muito claro */
+  background-color: #e9f2ff; /* azul muito claro */
   border: 1px solid #99c2ff;
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 25px;
-  box-shadow: 0 2px 5px rgba(0, 89, 179, 0.15);
-  max-width: 700px;
-  transition: transform 0.2s ease;
+  border-radius: 14px;
+  padding: 28px 24px;
+  margin-bottom: 32px;
+  box-shadow: 0 4px 12px rgba(0, 89, 179, 0.15);
+  max-width: 720px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   color: #003366;
 }
 
 article:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 89, 179, 0.3);
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
 }
 
 /* Links */
 a {
-  color: #004080;
+  color: #007acc;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
@@ -115,38 +311,50 @@ a {
 
 a:hover,
 a:focus {
-  color: #00264d;
+  color: #004a80;
   text-decoration: underline;
 }
 
 /* Lista dentro dos cards (ex: boas práticas) */
 article ul {
   list-style-type: circle;
-  padding-left: 20px;
-  margin-top: 10px;
+  padding-left: 24px;
+  margin-top: 14px;
+  color: #004080;
+  font-size: 1rem;
 }
 
 article ul li {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 /* Parágrafos */
 p {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 /* Layout responsivo */
 @media (max-width: 768px) {
   body {
-    padding: 15px;
+    padding: 20px 15px;
   }
 
   article {
     max-width: 100%;
-    padding: 15px;
+    padding: 20px 18px;
   }
 
   header h1 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  header nav ul {
+    gap: 0.8rem;
   }
 }

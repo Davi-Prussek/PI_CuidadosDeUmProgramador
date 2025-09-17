@@ -3,18 +3,54 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="CSS/Reset.CSS">
-    <link rel="stylesheet" href="CSS/sobre-o-projeto.css">
+    <link rel="stylesheet" href="CSS/Reset.CSS" />
+    <link rel="stylesheet" href="CSS/sobre-o-projeto.css" />
     <title>Sobre o Projeto</title>
   </head>
   <body>
     <header>
-      <h1>Sobre o Projeto</h1>
-      <p>Esta página armazena o histórico de desenvolvimento do site.</p>
+      <h1>
+        <a href="index.html" id="titulo_sobreNos"
+          ><img src="img/logo_PI-fundo_removido nova.png" alt="Logo"
+        /></a>
+      </h1>
+      <nav>
+        <ul class="direcionar_sobreNos">
+          <li><a href="index.html">Início</a></li>
+          <li><a href="">Organização</a></li>
+          <li>
+            <a href="testeHoras.html">Teste<br />Horas</a>
+          </li>
+          <li class="cuidados">
+            <span class="botao">
+              Cuidados<img src="img/icons/Seta.svg" alt="seta/icon" />
+            </span>
+            <ul class="sub-menus">
+              <li><a href="cuidados-postura.html">Postura</a></li>
+              <li><a href="cuidados-luz-solar.html">Luz Solar</a></li>
+              <li><a href="cuidados-burnout.html">Burn-out</a></li>
+              <li><a href="cuidados-telas.html">Telas</a></li>
+            </ul>
+          </li>
+          <li class="sobre-nos">
+            <a href="sobreNos.html">Sobre nós</a>
+            <ul class="sub-sobre-nos">
+              <li>
+                <a href="sobre-o-projeto.html">Sobre o projeto</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
     </header>
 
-    <main>
-      <!-- Equipe -->
+    <main style="padding-top: 6vw">
+      <!-- para não ficar atrás do header fixo -->
+      <section class="h2">
+        <h2>Sobre o Projeto</h2>
+        <p>Esta página armazena o histórico de desenvolvimento do site.</p>
+      </section>
+
       <section>
         <h2>Equipe</h2>
         <p>
@@ -67,6 +103,7 @@
           <a
             href="https://imprensa.portaldaindustria.com.br/posicionamentos/sesi-saude-responde-como-o-excesso-de-telas-pode-impactar-sua-saude/"
             target="_blank"
+            rel="noopener noreferrer"
             >Fonte</a
           >
         </article>
@@ -80,11 +117,13 @@
           <a
             href="https://clinimedjoinville.com.br/qual-a-postura-correta-no-computador-segundo-a-ergonomia/"
             target="_blank"
+            rel="noopener noreferrer"
             >Fonte</a
           ><br />
           <a
             href="https://hobeirario.com.br/wp-content/uploads/2018/09/como-deve-ser-a-postura-da-pessoa-na-frente-do-computador.jpg"
             target="_blank"
+            rel="noopener noreferrer"
             >Imagem</a
           >
         </article>
@@ -98,6 +137,7 @@
           <a
             href="https://www.loreal-paris.com.br/melhor-horario-para-tomar-sol"
             target="_blank"
+            rel="noopener noreferrer"
             >Fonte</a
           >
         </article>
@@ -111,11 +151,13 @@
           <a
             href="https://ubiminds.com/pt-br/burnout-de-programadores/"
             target="_blank"
+            rel="noopener noreferrer"
             >Fonte</a
           >
           <br /><a
             href="https://youtu.be/7hnmmBxexsg?si=dn3DzaQr75bhYRpr"
             target="_blank"
+            rel="noopener noreferrer"
             >Vídeo</a
           >
         </article>
@@ -128,6 +170,7 @@
               <a
                 href="https://www.geeksforgeeks.org/software-engineering/coding-standards-and-guidelines/"
                 target="_blank"
+                rel="noopener noreferrer"
                 >Fonte</a
               >
             </li>
@@ -137,13 +180,17 @@
               <a
                 href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html"
                 target="_blank"
+                rel="noopener noreferrer"
                 >Fonte</a
               >
             </li>
             <li>
               <strong>Pacotes (Packages):</strong> organizam arquivos em
               módulos.
-              <a href="https://www.baeldung.com/java-packages" target="_blank"
+              <a
+                href="https://www.baeldung.com/java-packages"
+                target="_blank"
+                rel="noopener noreferrer"
                 >Fonte</a
               >
             </li>
