@@ -7,8 +7,7 @@ html {
 
   body {
     background-color: #e6e6e6;
-    text-align: center;
-
+    padding-top: 80px;
     header {
       img {
         height: 3.2rem;
