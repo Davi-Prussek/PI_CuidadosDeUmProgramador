@@ -99,7 +99,18 @@
 
         Todos vieram; 
 
-        ##
+## Nona Reunião 17/09
+
+    ## O que vai ser feito;
+        Complementando algumas coisas do documento do trabalho
+        Ajudar a fazer a pagina de cuidados
+        Criando paginas 
+        Criando os submenus
+
+        ### Quem faltou:
+
+            Maico;
+
 
 
         
