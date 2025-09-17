@@ -14,20 +14,23 @@ body {
 
   /* ========================================= HEADER ========================================= */
   header {
-    /* = img = */
     img {
       height: 3.2rem;
       filter: brightness(1.05) contrast(1.4) saturate(1.2);
     }
+
     align-items: center;
     background: #0056b3;
     display: flex;
     justify-content: space-between;
-    padding: 1vw 2vw;
-    top: 0px;
-    box-sizing: border-box;
+    padding: 0 0 0 2vw;
     position: fixed;
+    top: 0px;
     width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+    flex-grow: 1;
+    height: 6vw;
 
     h1 a {
       font-size: 1.4rem;
@@ -35,65 +38,104 @@ body {
       color: white;
     }
 
-    ul {
-      font-size: 0.9rem;
-      display: flex;
-      gap: 0.4rem;
+    nav {
+      height: 100%;
 
-      a {
-        text-decoration: none;
-        color: white;
-        position: relative;
+      ul {
+        height: 100%;
+        align-items: end;
+        font-size: 1rem;
+        display: flex;
+        gap: 0.4rem;
+
+        .cuidados {
+          .botao {
+            img {
+              width: 22px;
+              display: inline-block;
+              height: auto;
+            }
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+
+            .sub-menus {
+              display: block;
+            }
+          }
+        }
+
+        li {
+          text-align: center;
+          min-width: 5.5rem;
+          height: 100%;
+          padding: 1.5vw 0 0 0;
+          box-sizing: border-box;
+
+          ul {
+            position: absolute;
+            display: none;
+            background-color: rgb(18, 21, 44);
+            height: auto;
+
+            li {
+              margin: 0.7rem 0;
+            }
+          }
+        }
+
+        li:hover {
+          ul {
+            display: block;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
+
+        li:hover {
+          background-color: rgb(18, 21, 44);
+        }
       }
 
-      a::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 2px;
-        background-color: #ffffff;
-        transform: scaleX(0);
-        transform-origin: center;
-        transition: transform 0.5s ease;
+      ul {
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+          transform: scaleX(1);
+        }
       }
-
-      a:hover::after {
-        transform: scaleX(1);
-      }
-    }
-  }
-
-  ul {
-    font-size: 1.2rem;
-    display: flex;
-    gap: 1rem;
-
-    a {
-      text-decoration: none;
-      color: white;
-      position: relative;
-    }
-
-    a::after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: #ffffff;
-      transform: scaleX(0);
-      transform-origin: center;
-      transition: transform 0.3s ease;
-    }
-
-    a:hover::after {
-      transform: scaleX(1);
     }
   }
 }
+
 /*===================== Apresentação 1 ===================*/
 main {
   .apresentacao1 {
@@ -107,11 +149,13 @@ main {
     background-attachment: fixed;
     padding: 100px 20px;
     min-height: 420px;
+
     .ol {
       font-size: 70px;
       font-weight: 900;
       margin-top: 100px;
       margin-bottom: 30px;
+
       .txt1 {
         font-size: 28px;
         font-weight: 600;
@@ -122,10 +166,12 @@ main {
       }
     }
   }
+
   #ol1 {
     font-family: "Press Start 2P", monospace;
     color: limegreen;
   }
+
   /* ==== section 1-2 ==== */
   .ap1-2 {
     display: flex;
@@ -136,11 +182,13 @@ main {
 
     .text-left {
       text-align: center;
+
       p {
         font-size: 18px;
         line-height: 1.6;
       }
     }
+
     .services-title {
       font-size: 24px;
       font-weight: 600;
@@ -148,6 +196,7 @@ main {
       margin: 10px 0;
       text-align: center;
     }
+
     .card {
       background-color: #f9f9f9;
       border: 1px solid #ddd;
@@ -163,26 +212,31 @@ main {
       transition: transform 1s ease;
       transform-origin: center;
     }
+
     .cards-right {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
       gap: 15px;
       max-width: 1000px;
     }
+
     .card:hover {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       transform: rotateY(360deg);
     }
+
     h3 {
       margin-bottom: 10px;
       font-size: 18px;
       color: #0056b3;
     }
+
     p {
       font-size: 14px;
       margin-bottom: 5px;
       flex-grow: 1;
     }
+
     a {
       display: inline-block;
       background-color: white;
@@ -196,6 +250,7 @@ main {
       border: 1px solid #0056b3;
       transition: all 0.3s ease;
     }
+
     a:hover {
       background-color: #0056b3;
       color: white;
@@ -256,6 +311,7 @@ main {
     align-items: center;
     /* Centraliza verticalmente */
   }
+
   /* ================== Titulo dos links rapidos ============ */
   .linkRp {
     font-size: 1.6vw;
