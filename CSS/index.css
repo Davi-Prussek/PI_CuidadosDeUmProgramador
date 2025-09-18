@@ -256,7 +256,7 @@ main {
       flex-direction: column;
       justify-content: space-between;
       min-height: 160px;
-      transition: box-shadow 1.5s ease;
+      transition: transform 0.2s ease, background-color 0.2s ease;
     }
 
     .cards-right {
@@ -267,7 +267,9 @@ main {
     }
 
     .card:hover {
+      background-color: #e6f0ff;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      transform: scale(1.02);
     }
 
     h3 {
