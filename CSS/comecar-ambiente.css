@@ -3,7 +3,7 @@ html {
     font-family: "Open Sans", sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #e6e6e6;
+    background-color: #ffffff;
 
     body {
         header {
@@ -176,6 +176,54 @@ html {
                     }
                 }
             }
+        }
+
+        main {
+            margin-top: 6.5vw;
+
+            h1 {
+                margin: 3vw;
+                text-align: center;
+                color: #003366;
+                font-weight: bolder;
+                font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+                span {
+                    text-align: center;
+                    font-size: 4rem;
+                    border-bottom: 0.5vw solid #0056b3;
+                }
+            }
+            p {
+                text-align: center;
+                margin: 0 15vw;
+                font-size: 1.1vw;
+                line-height: 1.3;
+            }
+            .cards {
+                display: flex;
+                justify-content: center;
+                gap: 3vw;
+                
+                .card-I,.card-II {
+                    border: 2px solid black;
+                    h3 {
+                        display: flex;
+                        .img-certo {
+                            background-color: rgb(31, 126, 31);
+                            width: 30px;
+                            height: 30px;
+                        }
+                        .img-ruim {
+                            background-color: rgb(115, 0, 0);
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+                }
+            }
+
+
         }
     }
 }
