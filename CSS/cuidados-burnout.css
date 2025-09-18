@@ -40,7 +40,7 @@ html {
                     display: flex;
                     gap: 0.4rem;
 
-                    .cuidados, .sobre-nos {
+                    .cuidados {
                         .botao {
                             img {
                                 width: 22px;
@@ -58,7 +58,55 @@ html {
                             font-size: 1rem;
                             cursor: pointer;
 
-                            .sub-menus {
+                            .sub-menus,
+                            .sub-menus,
+                            .sub-menus-II {
+                                display: block;
+                            }
+                        }
+                    }
+                    .comeco {
+                        .botao-II {
+                            img {
+                                width: 22px;
+                                display: inline-block;
+                                height: auto;
+                            }
+
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto;
+                            height: auto;
+                            border: none;
+                            font-size: 1rem;
+                            cursor: pointer;
+
+                            .sub-menus-II {
+                                display: block;
+                            }
+                        }
+                    }
+                    .sobre-nos {
+                        .botao-III {
+                            img {
+                                width: 22px;
+                                display: inline-block;
+                                height: auto;
+                            }
+
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto;
+                            height: auto;
+                            border: none;
+                            font-size: 1rem;
+                            cursor: pointer;
+
+                            .sub-menus-II {
                                 display: block;
                             }
                         }
