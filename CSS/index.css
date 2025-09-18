@@ -257,8 +257,6 @@ main {
       justify-content: space-between;
       min-height: 160px;
       transition: box-shadow 1.5s ease;
-      transition: transform 1s ease;
-      transform-origin: center;
     }
 
     .cards-right {
@@ -270,7 +268,6 @@ main {
 
     .card:hover {
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-      transform: rotateY(360deg);
     }
 
     h3 {
