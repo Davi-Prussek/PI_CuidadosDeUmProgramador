@@ -270,6 +270,7 @@ main {
       background-color: #e6f0ff;
       box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
       transform: scale(1.02);
+      transition: transform 0.7s ease;
     }
 
     h3 {
