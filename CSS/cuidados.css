@@ -1,10 +1,11 @@
 html {
-  font-size: calc(12px + 0.95vw);
-  font-family: "Open Sans", sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-color: #e6e6e6;
-  body {
+    font-size: calc(12px + 0.95vw);
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #ffffff91;
+
+    body {
         header {
             img {
                 height: 3.2rem;
@@ -65,6 +66,7 @@ html {
                             }
                         }
                     }
+
                     .comeco {
                         .botao-II {
                             img {
@@ -88,6 +90,7 @@ html {
                             }
                         }
                     }
+
                     .sobre-nos {
                         .botao-III {
                             img {
@@ -174,203 +177,138 @@ html {
                 }
             }
         }
-  }
-}
 
+        margin-top: 6vw;
+        text-align: center;
+
+
+
+
+    }
+}
 
 /* Aplicar as fontes gerais */
 
 /* Títulos */
 h2,
 h3,
-main-content h4,
+h4,
 h5,
 h6 {
-  font-family: "Montserrat", sans-serif;
-  color: #222;
-  font-weight: 700;
-  padding: 3vw 0 0 3rem;
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+    font-weight: 700;
+    padding: 3vw 0 0 0;
 }
 
 /* Título principal */
 .titulo {
-  font-size: 2.5rem;
-  text-align: center;
-  margin: 1.5rem 0;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
 }
 
 /* Subtítulos */
 h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1vw;
 }
 
 h3 {
-  font-size: 1.5rem;
-  margin-bottom: 0.75rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Parágrafos */
-body main-content p {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  padding: 1vw 0 1vw 1rem;
+body p {
+    font-size: 1rem;
+    margin: 2vw 8vw;
+    text-align: left;
 }
 
-/* Links */
-.btn-link {
-  color: #007bff;
-  text-decoration: none;
-  font-weight: 600;
+p span {
+    font-weight: bold;
 }
 
-.btn-link:hover {
-  color: #0056b3;
+/* Background dos parágrafos */
+p {
+    color: #333;
+    background-color: #f2f2f2;
+    padding: 1vw;
+    border-radius: 15px;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Interação com o background */
+p:hover {
+    background-color: #e6f0ff;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.02);
 }
 
 /* Botão-link */
 .btn-link {
-  display: inline-block;
-  margin-top: 0.5rem;
-  padding: 0.5rem 1rem;
-  background-color: #007bff;
-  color: white;
-  border-radius: 4px;
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 1vw;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-bottom: 2vw;
 }
 
 .btn-link:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
 }
 
-/* Seções e cards */
-main-content .container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 1rem 1rem 0 1rem;
+/* Lista */
+.lista {
+    margin: 2vw 8vw;
+    padding: 1rem;
 }
 
-.container h2 {
-  margin-top: 3rem;
+.lista li {
+    background: #f2f2f2;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    border-left: 5px solid #0056b3;
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
-.card-text p,
-.card-text ul {
-  font-size: 0.95rem;
+.lista li:hover {
+    background-color: #e6f0ff;
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-ul.recomendacoes li,
-ul.dicas-olhos li {
-  margin-bottom: 0.5rem;
-  font-size: 0.95rem;
+.lista li span {
+    font-weight: bold;
+    color: #0056b3;
 }
 
-/* Dicas práticas */
-.dicas-praticas h2 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+/* Imagens */
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    margin: 0 auto;
 }
 
-.dica-item h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 1vw;
 }
 
-.dica-item p {
-  font-size: 0.95rem;
-}
-
-/* Rodapé */
-
-.footer {
-  background: linear-gradient(#0056b3, #002457);
-  color: white;
-  text-align: center;
-  padding: 2vw 0;
-  position: relative;
-
-  /* Footer aparece só no final */
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1.3vw;
-  min-height: 70px;
-  margin-top: auto;
-  box-sizing: border-box;
-  z-index: 10;
-  width: 100%;
-  max-width: auto;
-}
-
-.footer-content {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  /* Centraliza horizontalmente */
-  align-items: center;
-  /* Centraliza verticalmente */
-  margin: 0 auto;
-  width: 100%;
-  max-width: 1000px;
-  padding: 0 2vw;
-}
-
-.footer-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  text-align: left;
-  margin-left: 0;
-}
-
-.logo {
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 700;
-  font-size: 30px;
-  color: white;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* Centraliza verticalmente */
-  margin-left: 310px;
-}
-
-/* Titulo dos links rapidos */
-.linkRp {
-  font-size: 1.6vw;
-  margin-bottom: 0.6vw;
-}
-
-/* ==================== FOOTER LINKS ==================== */
-.links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-right: 0;
-  list-style: none;
-  padding: 0;
-  gap: 0.3vw;
-  /* Espaçamento menor entre os links */
-}
-
-.links a {
-  font-size: 1.3vw;
-  color: #ffffff;
-  text-decoration: none;
-  margin-bottom: 0;
-  display: block;
-  text-align: center;
-}
-
-/* ==================== FOOTER BOTTOM ==================== */
-.footer-direitos {
-  width: 100%;
-  text-align: center;
-  font-size: 1.1vw;
+figcaption {
+    align-self: flex-start;
+    font-size: 0.5rem;
+    margin-top: 0.3rem;
 }
