@@ -59,7 +59,32 @@ html {
                             font-size: 1rem;
                             cursor: pointer;
 
-                            .sub-menus {
+                            .sub-menus,
+                            .sub-menus,
+                            .sub-menus-II {
+                                display: block;
+                            }
+                        }
+                    }
+                    .comeco {
+                        .botao-II {
+                            img {
+                                width: 22px;
+                                display: inline-block;
+                                height: auto;
+                            }
+
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto;
+                            height: auto;
+                            border: none;
+                            font-size: 1rem;
+                            cursor: pointer;
+
+                            .sub-menus-II {
                                 display: block;
                             }
                         }
@@ -127,5 +152,14 @@ html {
                 }
             }
         }
+
+        main {
+
+        }
+
+        footer {
+
+        }
+        
     }
 }
