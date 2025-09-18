@@ -1,4 +1,11 @@
 /* Corpo da página */
+html {
+  font-size: calc(12px + 0.95vw);
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #e6e6e6;
+}
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fbff; /* fundo branco suave */
@@ -8,196 +15,126 @@ body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  header {
+    img {
+      height: 3.2rem;
+      filter: brightness(1.05) contrast(1.4) saturate(1.2);
+    }
 
-/* Estilo da imagem dentro do header */
-header img {
-  height: 3.2rem;
-  filter: brightness(1.1) contrast(1.5) saturate(1.3);
-  transition: filter 0.3s ease;
-}
+    align-items: center;
+    background: #0056b3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+    flex-grow: 1;
+    height: 7vw;
 
-header img:hover {
-  filter: brightness(1.2) contrast(1.6) saturate(1.4);
-}
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
 
-/* Header fixo */
-header {
-  align-items: center;
-  background: linear-gradient(90deg, #004a99, #0066cc);
-  display: flex;
-  justify-content: space-between;
-  padding: 0 2vw;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  box-sizing: border-box;
-  z-index: 1000;
-  height: 6vw;
-  box-shadow: 0 4px 12px rgba(0, 51, 102, 0.3);
-  backdrop-filter: saturate(180%) blur(10px);
-}
+    nav {
+      height: 100%;
 
-/* Link dentro do h1 no header */
-header h1 a {
-  font-size: 1.6rem;
-  font-weight: 700;
-  text-decoration: none;
-  color: #ffffff;
-  letter-spacing: 0.05em;
-  transition: color 0.3s ease;
-}
+      ul {
+        height: 100%;
+        align-items: end;
+        font-size: 1rem;
+        display: flex;
+        gap: 0;
 
-header h1 a:hover {
-  color: #cce6ff;
-}
+        .cuidados,
+        .sobre-nos {
+          .botao {
+            img {
+              width: 22px;
+              display: inline-block;
+              height: auto;
+            }
 
-/* Nav dentro do header */
-header nav {
-  height: 100%;
-  position: relative;
-}
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        }
 
-/* Ul dentro do nav */
-header nav ul {
-  height: 100%;
-  align-items: center;
-  font-size: 1rem;
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
+        li {
+          text-align: center;
+          min-width: 7.5rem;
+          height: 100%;
+          padding: 1.5vw 0 0 0;
+          box-sizing: border-box;
+          position: relative;
 
-/* .cuidados .botao dentro do ul */
-header nav ul .cuidados .botao {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-  user-select: none;
-  font-weight: 600;
-  padding: 0.4rem 0.6rem;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
+          ul {
+            position: absolute;
+            display: none;
+            background-color: rgb(18, 21, 44);
+            height: auto;
 
-header nav ul .cuidados .botao:hover {
-  background-color: rgba(255, 255, 255, 0.15);
-}
+            li {
+              margin: 0.7rem 0;
+            }
+          }
+        }
 
-/* Imagem dentro do .botao */
-header nav ul .cuidados .botao img {
-  width: 22px;
-  height: auto;
-  margin-left: 6px;
-  transition: transform 0.3s ease;
-}
+        li:hover {
+          .sub-menus {
+            display: block;
+          }
+        }
 
-header nav ul .cuidados:hover .botao img {
-  transform: rotate(15deg);
-}
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
 
-/* Submenu */
-header nav ul .cuidados .sub-menus {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #12152c;
-  padding: 0.75rem 0.75rem;
-  border-radius: 8px;
-  margin-top: 0.6rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  z-index: 1001;
-  min-width: 80px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-}
+        li:hover {
+          background-color: rgb(18, 21, 44);
+        }
+      }
 
-/* Mostrar submenu ao passar o mouse */
-header nav ul .cuidados:hover .sub-menus {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-header nav ul .sobre-nos .sub-sobre-nos {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #12152c;
-  padding: 0.75rem 0.75rem;
-  border-radius: 8px;
-  margin-top: 0.6rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
-  z-index: 1001;
-  min-width: 80px;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  opacity: 0;
-  transform: translateY(10px);
-  pointer-events: none;
-}
-header nav ul .sobre-nos:hover .sub-sobre-nos {
-  display: block;
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
+      ul {
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
 
-/* li dentro do ul */
-header nav ul li {
-  text-align: center;
-  min-width: 8rem;
-  height: 100%;
-  padding-top: 1.5vw;
-  box-sizing: border-box;
-  position: relative;
-  border-radius: 6px;
-  transition: background-color 0.3s ease;
-}
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
 
-/* Links dentro do nav */
-header nav ul li a {
-  text-decoration: none;
-  color: white;
-  position: relative;
-  display: block;
-  padding: 0.6rem 1.2rem;
-  font-weight: 600;
-  letter-spacing: 0.03em;
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
 }
-
-/* Hover no li */
-header nav ul li:hover {
-  background-color: #12152c;
-  box-shadow: inset 0 -3px 0 #00aaff;
-}
-
-/* Links com efeito underline animado */
-header nav ul a::after {
-  content: "";
-  position: absolute;
-  bottom: 6px;
-  left: 10%;
-  width: 80%;
-  height: 2px;
-  background-color: #00aaff;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-  border-radius: 2px;
-}
-
-header nav ul a:hover::after {
-  transform: scaleX(1);
-}
-
 /* Seção com fundo de imagem e sobreposição */
 .h2 {
   position: relative;
@@ -270,7 +207,7 @@ h3 {
 
 /* Lista da equipe */
 ul {
-  list-style-type: disc;
+  list-style-type: none;
   padding-left: 24px;
   margin-bottom: 28px;
   color: #003366;
@@ -289,7 +226,7 @@ article {
   border: 1px solid #99c2ff;
   border-radius: 14px;
   padding: 28px 24px;
-  margin-bottom: 32px;
+  margin-bottom: 20px;
   box-shadow: 0 4px 12px rgba(0, 89, 179, 0.15);
   max-width: 720px;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
@@ -309,15 +246,9 @@ a {
   transition: color 0.3s ease;
 }
 
-a:hover,
-a:focus {
-  color: #004a80;
-  text-decoration: underline;
-}
-
 /* Lista dentro dos cards (ex: boas práticas) */
 article ul {
-  list-style-type: circle;
+  list-style-type: none;
   padding-left: 24px;
   margin-top: 14px;
   color: #004080;
@@ -341,20 +272,139 @@ p {
     padding: 20px 15px;
   }
 
-  article {
-    max-width: 100%;
-    padding: 20px 18px;
+  header {
+    height: 8vw; /* Aumenta altura para mobile */
+    padding: 0 1vw;
   }
 
   header h1 {
     font-size: 1.8rem;
   }
 
+  header nav ul {
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  header nav ul li {
+    min-width: 6rem;
+    padding-top: 2vw;
+  }
+
+  main {
+    padding-top: 8vw; /* Ajusta para header maior */
+  }
+
+  .h2 {
+    padding: 40px 20px;
+  }
+
   h2 {
     font-size: 2.2rem;
   }
 
+  article {
+    max-width: 100%;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+}
+
+/* Para telas muito pequenas (mobile pequeno) */
+@media (max-width: 480px) {
+  header {
+    height: 10vw;
+  }
+
   header nav ul {
-    gap: 0.8rem;
+    gap: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  header nav ul li {
+    min-width: 5rem;
+  }
+
+  main {
+    padding-top: 10vw;
+  }
+
+  .h2 {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  article {
+    padding: 15px 12px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Para PC (telas grandes) */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  header {
+    max-width: 1400px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main {
+    padding-top: 4vw;
+  }
+
+  .h2 {
+    padding: 100px 50px;
+  }
+
+  /* Cards lado a lado */
+  main section:not(.h2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  article {
+    max-width: 400px;
+    flex: 1 1 400px;
+    margin: 0;
+    padding: 32px 28px;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+
+  ul {
+    font-size: 1.2rem;
   }
 }

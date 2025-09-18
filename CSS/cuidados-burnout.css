@@ -40,7 +40,7 @@ html {
                     display: flex;
                     gap: 0.4rem;
 
-                    .cuidados {
+                    .cuidados, .sobre-nos {
                         .botao {
                             img {
                                 width: 22px;
