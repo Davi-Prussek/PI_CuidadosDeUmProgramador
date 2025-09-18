@@ -1,0 +1,410 @@
+/* Corpo da página */
+html {
+  font-size: calc(12px + 0.95vw);
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #e6e6e6;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fbff; /* fundo branco suave */
+  color: #003366; /* azul escuro para texto */
+  line-height: 1.7;
+  padding: 24px 20px;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  header {
+    img {
+      height: 3.2rem;
+      filter: brightness(1.05) contrast(1.4) saturate(1.2);
+    }
+
+    align-items: center;
+    background: #0056b3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 2vw;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+    flex-grow: 1;
+    height: 7vw;
+
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    nav {
+      height: 100%;
+
+      ul {
+        height: 100%;
+        align-items: end;
+        font-size: 1rem;
+        display: flex;
+        gap: 0;
+
+        .cuidados,
+        .sobre-nos {
+          .botao {
+            img {
+              width: 22px;
+              display: inline-block;
+              height: auto;
+            }
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        }
+
+        li {
+          text-align: center;
+          min-width: 7.5rem;
+          height: 100%;
+          padding: 1.5vw 0 0 0;
+          box-sizing: border-box;
+          position: relative;
+
+          ul {
+            position: absolute;
+            display: none;
+            background-color: rgb(18, 21, 44);
+            height: auto;
+
+            li {
+              margin: 0.7rem 0;
+            }
+          }
+        }
+
+        li:hover {
+          .sub-menus {
+            display: block;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
+
+        li:hover {
+          background-color: rgb(18, 21, 44);
+        }
+      }
+
+      ul {
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
+}
+/* Seção com fundo de imagem e sobreposição */
+.h2 {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 70px 24px;
+  text-align: center;
+  border-radius: 16px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
+  z-index: 1;
+  transition: box-shadow 0.3s ease;
+}
+
+.h2:hover {
+  box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
+}
+
+/* Sobreposição escura para .h2 */
+.h2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  z-index: -1;
+  border-radius: 16px;
+}
+
+/* Títulos dentro de .h2 devem estar acima da sobreposição */
+.h2 h2,
+.h2 p {
+  position: relative;
+  z-index: 2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+/* Títulos das seções */
+h2 {
+  color: #003366;
+  margin-bottom: 20px;
+  padding-bottom: 8px;
+  font-size: 2.8rem; /* tamanho reduzido para melhor proporção */
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  text-shadow: none;
+}
+
+/* Subtítulos */
+h3 {
+  color: #0099ff;
+  margin-top: 28px;
+  margin-bottom: 14px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+/* Lista da equipe */
+ul {
+  list-style-type: none;
+  padding-left: 24px;
+  margin-bottom: 28px;
+  color: #003366;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+li strong {
+  color: #004080;
+  font-weight: 700;
+}
+
+/* Cards para artigos */
+article {
+  background-color: #e9f2ff; /* azul muito claro */
+  border: 1px solid #99c2ff;
+  border-radius: 14px;
+  padding: 28px 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 89, 179, 0.15);
+  max-width: 720px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  color: #003366;
+}
+
+article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
+}
+
+/* Links */
+a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+/* Lista dentro dos cards (ex: boas práticas) */
+article ul {
+  list-style-type: none;
+  padding-left: 24px;
+  margin-top: 14px;
+  color: #004080;
+  font-size: 1rem;
+}
+
+article ul li {
+  margin-bottom: 10px;
+}
+
+/* Parágrafos */
+p {
+  margin-bottom: 18px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Layout responsivo */
+@media (max-width: 768px) {
+  body {
+    padding: 20px 15px;
+  }
+
+  header {
+    height: 8vw; /* Aumenta altura para mobile */
+    padding: 0 1vw;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  header nav ul {
+    gap: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  header nav ul li {
+    min-width: 6rem;
+    padding-top: 2vw;
+  }
+
+  main {
+    padding-top: 8vw; /* Ajusta para header maior */
+  }
+
+  .h2 {
+    padding: 40px 20px;
+  }
+
+  h2 {
+    font-size: 2.2rem;
+  }
+
+  article {
+    max-width: 100%;
+    padding: 20px 18px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  ul {
+    padding-left: 20px;
+  }
+}
+
+/* Para telas muito pequenas (mobile pequeno) */
+@media (max-width: 480px) {
+  header {
+    height: 10vw;
+  }
+
+  header nav ul {
+    gap: 0.3rem;
+    font-size: 0.8rem;
+  }
+
+  header nav ul li {
+    min-width: 5rem;
+  }
+
+  main {
+    padding-top: 10vw;
+  }
+
+  .h2 {
+    padding: 30px 15px;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  article {
+    padding: 15px 12px;
+  }
+
+  p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Para PC (telas grandes) */
+@media (min-width: 1200px) {
+  body {
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  header {
+    max-width: 1400px;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  main {
+    padding-top: 4vw;
+  }
+
+  .h2 {
+    padding: 100px 50px;
+  }
+
+  /* Cards lado a lado */
+  main section:not(.h2) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  article {
+    max-width: 400px;
+    flex: 1 1 400px;
+    margin: 0;
+    padding: 32px 28px;
+  }
+
+  h2 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+  }
+
+  ul {
+    font-size: 1.2rem;
+  }
+}
