@@ -31,7 +31,7 @@ body {
     box-sizing: border-box;
     z-index: 3;
     flex-grow: 1;
-    height: 6vw;
+    height: 6.5vw;
 
     h1 a {
       font-size: 1.4rem;
@@ -47,8 +47,7 @@ body {
         align-items: end;
         font-size: 1rem;
         display: flex;
-        gap: 0.4rem;
-        margin-right: 15px;
+        margin-right: 20px;
 
         .cuidados {
           .botao {
@@ -420,6 +419,13 @@ main {
 
 /* Para PC (telas grandes) */
 @media (min-width: 720px) {
+  header{
+    nav{
+      ul{
+        gap: 40px;
+      }
+    }
+  }
   .s1 {
     padding: 100px 40px;
   }
@@ -498,6 +504,11 @@ main {
         padding-top: 8px;
       }
     }
+  }
+}
+@media(max-height: 600px){
+  header{
+    height: 100PX;
   }
 }
 
