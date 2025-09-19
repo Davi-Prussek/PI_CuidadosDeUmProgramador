@@ -53,6 +53,7 @@
 ## Quinta Reunião 22/08
 
     ## O que vai ser feito;
+        Conversas e criação de ideias para o site
         Início da base do css 
         Organização das paginas 
         Organização da rede social
@@ -66,6 +67,7 @@
 ## Sexta Reunião 12/09
 
     ## O que vai ser feito;
+        Ideias de cores e elementos nas paginas
         terminando a pagina Cuidados
         Refazer a pagina do index
         Acrescentando conteudo na base do projeto
@@ -88,6 +90,8 @@
 ## Oitava Reunião 16/09
 
     ## O que vai ser feito;
+        Melhorias nas ediçoes
+        Criação de atividades para as redes sociais
         continuação das páginas no canva
         Fazer as edições das redes sociais
         Separação dos conteudos das páginas
@@ -102,6 +106,7 @@
 ## Nona Reunião 17/09
 
     ## O que vai ser feito;
+        Melhorias nas paginas
         Complementando algumas coisas do documento do trabalho
         Ajudar a fazer a pagina de cuidados
         Criando paginas 
@@ -110,6 +115,28 @@
         ### Quem faltou:
 
             Maico;
+
+## Decima Reunoão 18/09
+    ## O que vai ser feito;
+        Complementos e padronizar todos cuidados da paginas 
+        Criações das subpaginas
+        Organizações das paginas e complementar tags
+        Preparação para inaugurar a presentação para amanhã
+
+    ### Dia opcional do site;
+
+## Decimo Primeiro dia 19/09
+    ## O que vai ser feito;
+        Conversas para apresentação
+        Edição no canva da pagina Início
+        Arrumar pequenos erros
+        Edição de paginas
+
+    ### Quem faltou:
+         
+         Todos vieram;
+         
+
 
 
 
