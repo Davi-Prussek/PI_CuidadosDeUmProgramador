@@ -45,6 +45,8 @@
         }
         return parseFloat(valor) || 0;
       }
+      // Avalia rotina
+      const avaliaRotina = document.getElementById("avaliacaoRotina");
 
       // Planejamento do dia
       const planejamento = document.getElementById("planejaAtividades");

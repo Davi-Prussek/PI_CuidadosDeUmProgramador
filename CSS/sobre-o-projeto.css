@@ -455,3 +455,93 @@ main {
     font-size: 1.2rem;
   }
 }
+/* ================= RESPONSIVIDADE DO HEADER ================= */
+
+/* Tablet */
+@media (max-width: 768px) {
+  header {
+    height: 60px; /* aumenta a altura para caber bem no tablet*/
+    padding: 0 15px;
+
+    h1 a {
+      font-size: 1.2rem; /* título proporcionalmente menor*/
+    }
+
+    nav ul {
+      gap: 0.4rem; /* menos espaço entre os itens*/
+      font-size: 0.9rem; /* texto um pouco menor*/
+
+      li {
+        min-width: auto; /* libera largura fixa */
+        padding-top: 10px;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 55px; /* altura ajustada*/
+    padding: 0 10px; /* menos espaçamento lateral*/
+
+    h1 a {
+      font-size: 1rem; /* título menor, mas ainda legível*/
+    }
+
+    nav ul {
+      gap: 0.3rem; /* itens mais próximos*/
+      font-size: 0.85rem; /* texto proporcional*/
+
+      li {
+        min-width: auto; /* libera largura mínima*/
+        padding-top: 8px;
+      }
+    }
+  }
+}
+
+/* Celular médio */
+@media (max-width: 480px) {
+  header {
+    height: 55px;
+    padding: 0 10px;
+
+    h1 a {
+      font-size: 1rem; /* título reduzido*/
+    }
+
+    nav ul {
+      gap: 0.3rem;
+      font-size: 0.8rem;
+
+      li {
+        min-width: auto;
+        padding-top: 8px;
+      }
+    }
+  }
+}
+
+/* Celular pequeno */
+@media (max-width: 360px) {
+  header {
+    flex-direction: column; /*logo em cima, menu embaixo*/
+    justify-content: center;
+    height: auto; /* altura se ajusta automaticamente*/
+    padding: 10px;
+
+    h1 {
+      margin-bottom: 6px; /* espaço entre título e menu*/
+    }
+
+    nav ul {
+      flex-direction: column; /* itens do menu empilhados */
+      gap: 8px;
+
+      li {
+        width: 100%; /* cada item ocupa toda a largura */
+        padding: 5px 0;
+      }
+    }
+  }
+}
