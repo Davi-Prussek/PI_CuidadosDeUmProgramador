@@ -207,6 +207,7 @@ main h6 {
     text-align: center;
     margin: 1.5rem 0;
 }
+
 main {
     margin: 8vw 2vw;
     border-radius: 4vw;
@@ -429,5 +430,107 @@ figcaption {
         width: 100%;
         text-align: center;
         font-size: 1.1vw;
+    }
+}
+
+/* Responsividade mobile */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 15px;
+    }
+
+    header {
+        height: 8vw;
+        /* Aumenta altura para mobile */
+        padding: 0 1vw;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header nav ul {
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    header nav ul li {
+        min-width: 6rem;
+        padding-top: 2vw;
+    }
+
+    main {
+        padding-top: 8vw;
+        /* Ajusta para header maior */
+    }
+
+    .s1 {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        font-size: 2.2rem;
+    }
+
+    article {
+        max-width: 100%;
+        padding: 20px 18px;
+        margin-bottom: 20px;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ul {
+        padding-left: 20px;
+    }
+}
+
+/* Para telas muito pequenas (mobile pequeno) */
+@media (max-width: 480px) {
+    header {
+        height: 10vw;
+    }
+
+    header nav ul {
+        gap: 0.3rem;
+        font-size: 0.8rem;
+    }
+
+    header nav ul li {
+        min-width: 5rem;
+    }
+
+    main {
+        padding-top: 10vw;
+    }
+
+    .s1 {
+        padding: 30px 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    article {
+        padding: 15px 12px;
+    }
+
+    p {
+        font-size: 0.95rem;
+    }
+
+    iframe {
+        width: 70%;
+        height: auto;
+    }
+}
+
+/* Para PC (telas grandes) */
+@media (min-width: 1200px) {
+    .s1 {
+        padding: 100px 50px;
     }
 }
