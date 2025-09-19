@@ -12,203 +12,379 @@ body {
   text-align: center;
 
   /* ========================================= HEADER ========================================= */
-        header {
+  header {
+    img {
+      height: 3.2rem;
+      filter: brightness(1.05) contrast(1.4) saturate(1.2);
+    }
+
+    align-items: center;
+    background: #0056b3;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0 0 2vw;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 3;
+    flex-grow: 1;
+    height: 6vw;
+
+    h1 a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      color: white;
+    }
+
+    nav {
+      height: 100%;
+
+      ul {
+        height: 100%;
+        align-items: end;
+        font-size: 1rem;
+        display: flex;
+        gap: 0.4rem;
+
+        .cuidados {
+          .botao {
             img {
-                height: 3.2rem;
-                filter: brightness(1.05) contrast(1.4) saturate(1.2);
+              width: 22px;
+              display: inline-block;
+              height: auto;
             }
 
-            align-items: center;
-            background: #0056b3;
+            color: white;
             display: flex;
-            justify-content: space-between;
-            padding: 0 0 0 2vw;
-            position: fixed;
-            top: 0px;
-            width: 100%;
-            box-sizing: border-box;
-            z-index: 3;
-            flex-grow: 1;
-            height: 6vw;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
 
-            h1 a {
-                font-size: 1.4rem;
-                text-decoration: none;
-                color: white;
+            .sub-menus,
+            .sub-menus,
+            .sub-menus-II {
+              display: block;
             }
-
-            nav {
-                height: 100%;
-
-                ul {
-                    height: 100%;
-                    align-items: end;
-                    font-size: 1rem;
-                    display: flex;
-                    gap: 0.4rem;
-
-                    .cuidados {
-                        .botao {
-                            img {
-                                width: 22px;
-                                display: inline-block;
-                                height: auto;
-                            }
-
-                            color: white;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: auto;
-                            height: auto;
-                            border: none;
-                            font-size: 1rem;
-                            cursor: pointer;
-
-                            .sub-menus,
-                            .sub-menus,
-                            .sub-menus-II {
-                                display: block;
-                            }
-                        }
-                    }
-                    .comeco {
-                        .botao-II {
-                            img {
-                                width: 22px;
-                                display: inline-block;
-                                height: auto;
-                            }
-
-                            color: white;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: auto;
-                            height: auto;
-                            border: none;
-                            font-size: 1rem;
-                            cursor: pointer;
-
-                            .sub-menus-II {
-                                display: block;
-                            }
-                        }
-                    }
-                    .sobre-nos {
-                        .botao-III {
-                            img {
-                                width: 22px;
-                                display: inline-block;
-                                height: auto;
-                            }
-
-                            color: white;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            width: auto;
-                            height: auto;
-                            border: none;
-                            font-size: 1rem;
-                            cursor: pointer;
-
-                            .sub-menus-II {
-                                display: block;
-                            }
-                        }
-                    }
-
-                    li {
-                        text-align: center;
-                        min-width: 7.5rem;
-                        height: 100%;
-                        padding: 1.5vw 0 0 0;
-                        box-sizing: border-box;
-
-                        ul {
-                            position: absolute;
-                            display: none;
-                            background-color: rgb(18, 21, 44);
-                            height: auto;
-
-                            li {
-                                margin: 0.7rem 0;
-                            }
-                        }
-                    }
-
-                    li:hover {
-                        ul {
-                            display: block;
-                        }
-                    }
-
-                    a {
-                        text-decoration: none;
-                        color: white;
-                        position: relative;
-                    }
-
-                    li:hover {
-                        background-color: rgb(18, 21, 44);
-                    }
-                }
-
-                ul {
-                    a {
-                        text-decoration: none;
-                        color: white;
-                        position: relative;
-                    }
-
-                    a::after {
-                        content: "";
-                        position: absolute;
-                        bottom: 0;
-                        left: 0;
-                        width: 100%;
-                        height: 2px;
-                        background-color: #ffffff;
-                        transform: scaleX(0);
-                        transform-origin: center;
-                        transition: transform 0.3s ease;
-                    }
-
-                    a:hover::after {
-                        transform: scaleX(1);
-                    }
-                }
-            }
+          }
         }
+        .comeco {
+          .botao-II {
+            img {
+              width: 22px;
+              display: inline-block;
+              height: auto;
+            }
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+
+            .sub-menus-II {
+              display: block;
+            }
+          }
+        }
+        .sobre-nos {
+          .botao-III {
+            img {
+              width: 22px;
+              display: inline-block;
+              height: auto;
+            }
+
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: auto;
+            height: auto;
+            border: none;
+            font-size: 1rem;
+            cursor: pointer;
+
+            .sub-menus-II {
+              display: block;
+            }
+          }
+        }
+
+        li {
+          text-align: center;
+          min-width: 7.5rem;
+          height: 100%;
+          padding: 1.5vw 0 0 0;
+          box-sizing: border-box;
+
+          ul {
+            position: absolute;
+            display: none;
+            background-color: rgb(18, 21, 44);
+            height: auto;
+
+            li {
+              margin: 0.7rem 0;
+            }
+          }
+        }
+
+        li:hover {
+          ul {
+            display: block;
+          }
+        }
+
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
+
+        li:hover {
+          background-color: rgb(18, 21, 44);
+        }
+      }
+
+      ul {
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
+        }
+
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
+    }
+  }
 
   main {
     margin-top: 4rem;
 
+    /* ---------- Reset simples ---------- */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* ---------- Fonte e cores ---------- */
+    body {
+      font-family: "Open Sans", sans-serif;
+      background: #f5f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1,
+    h2,
+    h3,
+    legend {
+      font-family: "Montserrat", sans-serif;
+      font-weight: 600;
+      color: #222;
+    }
+
+    /* ---------- Container principal ---------- */
     .container {
-      background-color: #0057b318;
-      margin: 9vw 1.6rem 2rem 1.6rem;
-      border-radius: 30px;
-      padding: 20px;
-      h2 {
-        font-size: 2rem;
-        font-weight: 100;
-      }
-      .intro {
-        margin: 20px 0px 20px 0px;
-      }
-      .horasForm {
-        fieldset {
-          legend {
-            font-size: 40px;
-            font-weight: 20px;
-            margin-bottom: 10px;
-          }
-        }
-        .form-group {
-          text-align: center;
-        }
-      }
+      max-width: 900px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .intro {
+      margin-bottom: 1.5rem;
+      color: #555;
+    }
+
+    /* ---------- Fieldset (caixas das partes) ---------- */
+    fieldset {
+      border: none;
+      margin-bottom: 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: #ededed;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    legend {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      display: block;
+      color: #0066cc;
+    }
+
+    /* ---------- Labels e inputs ---------- */
+    .form-group,
+    label {
+      display: block;
+      margin-bottom: 0.7rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="date"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.6rem 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      border-color: #0066cc;
+      box-shadow: 0 0 4px rgba(0, 102, 204, 0.4);
+      outline: none;
+    }
+
+    /* ---------- Checkbox & Radio ---------- */
+    .checkbox-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .checkbox-item {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ---------- Grupo de botões ---------- */
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 1rem;
+    }
+
+    /* ---------- Botão principal ---------- */
+    .btn-submit {
+      background: #0066cc;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #004d99;
+    }
+
+    /* ---------- Botão limpar ---------- */
+    .btn-reset {
+      background: #dc3545;
+      color: #fff;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: background 0.3s;
+    }
+
+    .btn-reset:hover {
+      background: #c82333;
+    }
+
+    /* ---------- Resultados ---------- */
+    .results-container,
+    .results-section {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      border-radius: 12px;
+      background: #f9fbff;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .result-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      margin-top: 1.2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+    }
+
+    .result-card h3 {
+      color: #333;
+      margin-bottom: 0.8rem;
+    }
+
+    /* ---------- CTA na parte final ---------- */
+    .cta-section {
+      margin-top: 1.2rem;
+      padding: 1rem;
+      background: #eef5ff;
+      border-radius: 8px;
+    }
+
+    .print-btn,
+    .restart-btn {
+      margin-top: 0.8rem;
+      margin-right: 0.8rem;
+      padding: 0.6rem 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .print-btn {
+      background: #009966;
+      color: #fff;
+    }
+
+    .print-btn:hover {
+      background: #007a52;
+    }
+
+    .restart-btn {
+      background: #ff9933;
+      color: #fff;
+    }
+
+    .restart-btn:hover {
+      background: #e67e00;
     }
   }
 
