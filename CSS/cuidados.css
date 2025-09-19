@@ -526,6 +526,16 @@ figcaption {
         width: 70%;
         height: auto;
     }
+
+    figure {
+        width: 70%;
+        height: auto;
+    }
+
+    .btn-link {
+        margin: 5px;
+        border-radius: 4vw;
+    }
 }
 
 /* Para PC (telas grandes) */
