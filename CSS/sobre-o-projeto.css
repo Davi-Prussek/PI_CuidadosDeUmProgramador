@@ -48,6 +48,7 @@ body {
         font-size: 1rem;
         display: flex;
         gap: 0.4rem;
+        margin-right: 15px;
 
         .cuidados {
           .botao {
@@ -125,7 +126,7 @@ body {
 
         li {
           text-align: center;
-          min-width: 7.5rem;
+          min-width: 5rem;
           height: 100%;
           padding: 1.5vw 0 0 0;
           box-sizing: border-box;
@@ -330,7 +331,7 @@ main {
   }
 }
 /* Layout responsivo */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   body {
     padding: 20px 15px;
   }
@@ -350,7 +351,7 @@ main {
   }
 
   header nav ul li {
-    min-width: 6rem;
+    min-width: 3rem;
     padding-top: 2vw;
   }
 
@@ -418,16 +419,16 @@ main {
 }
 
 /* Para PC (telas grandes) */
-@media (min-width: 1200px) {
+@media (min-width: 720px) {
   .s1 {
-    padding: 100px 50px;
+    padding: 100px 40px;
   }
 
   /* Cards lado a lado */
   main section:not(.s1, .s2) {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 0px;
     justify-content: center;
   }
 
