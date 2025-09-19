@@ -1,19 +1,11 @@
-/* Corpo da página */
 html {
-  font-size: calc(12px + 0.95vw);
-  font-family: "Open Sans", sans-serif;
-  color: #333;
-  line-height: 1.6;
-  background-color: #f9fbff;
-}
-body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9fbff; /* fundo branco suave */
-  color: #003366; /* azul escuro para texto */
-  margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-size: calc(12px + 0.95vw);
+    font-family: "Open Sans", sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #ffffff91;
 
+    body {
         header {
             img {
                 height: 3.2rem;
@@ -183,272 +175,102 @@ body {
                 }
             }
         }
-}
-/* Seção com fundo de imagem e sobreposição */
-main {
-  line-height: 1.7;
-  margin-top: 5vw;
-  padding: 24px 20px;
 
-.s1 {
-  position: relative;
-  background-image: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  color: #ffffff;
-  padding: 70px 24px;
-  text-align: center;
-  border-radius: 16px;
-  margin-bottom: 40px;
-  overflow: hidden;
-  box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
-  z-index: 1;
-  transition: box-shadow 0.3s ease;
+        margin-top: 6vw;
+        text-align: center;
+
+
+
+
+    }
 }
 
-.s1:hover {
-  box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
+/* Aplicar as fontes gerais */
+
+/* Títulos */
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    color: #222;
+    font-weight: 700;
+    padding: 3vw 0 0 3rem;
 }
 
-/* Sobreposição escura para .h2 */
-.s1::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
-  z-index: -1;
-  border-radius: 16px;
-}
-
-/* Títulos dentro de .h2 devem estar acima da sobreposição */
-.s1 h2,
-.s1 p {
-  position: relative;
-  z-index: 2;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-  margin: 0 auto;
-  max-width: 900px;
-}
-
-/* Títulos das seções */
-h2 {
-  color: #003366;
-  margin-bottom: 0;
-  padding-bottom: 8px;
-  font-size: 2.8rem; /* tamanho reduzido para melhor proporção */
-  font-weight: 800;
-  letter-spacing: 0.04em;
-  text-transform: none;
-  text-shadow: none;
+/* Título principal */
+.titulo {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 1.5rem 0;
 }
 
 /* Subtítulos */
+h2 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 1vw;
+}
+
 h3 {
-  color: #0099ff;
-  margin-top: 10px;
-  margin-bottom: 14px;
-  font-weight: 700;
-  letter-spacing: 0.03em;
-}
-
-/* Lista da equipe */
-ul {
-  list-style-type: none;
-  padding-left: 24px;
-  margin-bottom: 28px;
-  color: #003366;
-  font-size: 1.1rem;
-  line-height: 1.5;
-}
-
-li strong {
-  color: #004080;
-  font-weight: 700;
-}
-
-/* Cards para artigos */
-article {
-  background-color: #e9f2ff; /* azul muito claro */
-  border: 1px solid #99c2ff;
-  border-radius: 14px;
-  padding: 28px 24px;
-  margin-bottom: 20px;
-  box-shadow: 0 4px 12px rgba(0, 89, 179, 0.15);
-  max-width: 720px;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  color: #003366;
-  word-wrap: break-word;
-}
-
-article:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
-}
-
-/* Links */
-a {
-  color: #007acc;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-/* Lista dentro dos cards (ex: boas práticas) */
-article ul {
-  list-style-type: none;
-  padding-left: 24px;
-  margin-top: 14px;
-  color: #004080;
-  font-size: 1rem;
-}
-
-article ul li {
-  margin-bottom: 10px;
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
 }
 
 /* Parágrafos */
-p {
-  margin-bottom: 18px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-}
-/* Layout responsivo */
-@media (max-width: 768px) {
-  body {
-    padding: 20px 15px;
-  }
-
-  header {
-    height: 8vw; /* Aumenta altura para mobile */
-    padding: 0 1vw;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  header nav ul {
-    gap: 0.5rem;
-    font-size: 0.9rem;
-  }
-
-  header nav ul li {
-    min-width: 6rem;
-    padding-top: 2vw;
-  }
-
-  main {
-    padding-top: 8vw; /* Ajusta para header maior */
-  }
-
-  .h2 {
-    padding: 40px 20px;
-  }
-
-  h2 {
-    font-size: 2.2rem;
-  }
-
-  article {
-    max-width: 100%;
-    padding: 20px 18px;
-    margin-bottom: 20px;
-  }
-
-  p {
+body p {
     font-size: 1rem;
-  }
-
-  ul {
-    padding-left: 20px;
-  }
+    margin: 2vw 8vw;
+    text-align: left;
 }
 
-/* Para telas muito pequenas (mobile pequeno) */
-@media (max-width: 480px) {
-  header {
-    height: 10vw;
-  }
-
-  header nav ul {
-    gap: 0.3rem;
-    font-size: 0.8rem;
-  }
-
-  header nav ul li {
-    min-width: 5rem;
-  }
-
-  main {
-    padding-top: 10vw;
-  }
-
-  .h2 {
-    padding: 30px 15px;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  article {
-    padding: 15px 12px;
-  }
-
-  p {
-    font-size: 0.95rem;
-  }
+p span {
+    font-weight: bold;
+}
+/* Background dos parágrafos */
+p {
+    color: #333;
+    background-color: #3333332d;
+    padding: 1vw;
+    border-radius: 15px;
+    border: 1px solid white;
+    transition: background-color 0.2s ease-in-out;
+    transition: border 0.2s ease-in-out;
+}
+/* Interação com o background */
+p:hover {
+    background-color: #3333333d;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    border: 1px solid grey;
 }
 
-/* Para PC (telas grandes) */
-@media (min-width: 1200px) {
-  main {
-    
-  }
+/* Links */
+.btn-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 600;
 
-  .h2 {
-    padding: 100px 50px;
-  }
+}
 
-  /* Cards lado a lado */
-  main section:not(.h2) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-  }
+.btn-link:hover {
+    color: #0056b3;
+}
 
-  article {
-    max-width: 400px;
-    flex: 1 1 400px;
-    margin: 0;
-    padding: 32px 28px;
-  }
+/* Botão-link */
+.btn-link {
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border-radius: 4px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
 
-  h2 {
-    font-size: 3.5rem;
-  }
-
-  h3 {
-    font-size: 1.8rem;
-  } 
-
-  p {
-    font-size: 1.3rem;
-    line-height: 1.8;
-  }
-
-  ul {
-    font-size: 1.2rem;
-  }
+.btn-link:hover {
+    background-color: #0056b3;
 }
