@@ -210,14 +210,28 @@ main h6 {
 
 /* Subtítulos */
 main h2 {
-    font-weight: bold;
-    font-size: 2rem;
-    margin-bottom: 1vw;
+  font-size: 2rem;
+  margin-bottom: 1vw;
+  position: relative;
+  display: inline-block;
+}
+
+main h2::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: #0056b3;
+  border-radius: 3px;
 }
 
 main h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  color: #0056b3;
 }
 
 /* Parágrafos */
