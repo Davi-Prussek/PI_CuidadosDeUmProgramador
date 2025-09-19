@@ -3,7 +3,7 @@ html {
     font-family: "Open Sans", sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #c6e2ff;
+    background-color: #141f2c;
 
     body {
         header {
@@ -137,6 +137,7 @@ html {
                     li:hover {
                         ul {
                             display: block;
+
                         }
                     }
 
@@ -180,15 +181,25 @@ html {
 
         main {
             background-color: #ffffff;
-            margin: 40px;
+            margin: 60px;
             border-radius: 15px;
             margin-top: 6.5vw;
             padding-bottom: 10px;
 
+            .mini-text {
+                text-align: center;
+                margin: 0 15vw;
+                font-size: 40px;
+                line-height: 1.3;
+                padding: 0px 50px;
+                margin: 10px 50px;
+                color: #003366;
+            }
+
             h1 {
                 margin: 3vw;
                 text-align: center;
-                color: #003366;
+                color: #001f3d;
                 font-weight: bolder;
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
@@ -208,19 +219,11 @@ html {
 
                 span {
                     text-align: center;
-                    font-size: 2rem;
+                    font-size: 70px;
                 }
             }
 
             .parte-I {
-                .mini-text {
-                    text-align: center;
-                    margin: 0 15vw;
-                    font-size: 40px;
-                    line-height: 1.3;
-                    padding: 0px 50px;
-                    margin: 10px 50px;
-                }
 
                 .cards {
                     display: flex;
@@ -299,58 +302,106 @@ html {
             }
 
             .parte-II {
-                .mini-text {
-                    text-align: center;
-                    margin: 0 15vw;
-                    font-size: 40px;
-                    line-height: 1.3;
-                    padding: 0px 50px;
-                    margin: 10px 50px;
-                }
 
                 .aba-I,
                 .aba-II {
+                    text-align: center;
                     transition: transform 0.25s ease, box-shadow 0.25s ease;
                     border-radius: 25px;
                     padding: 25px;
                     margin: 50px;
                     background-color: #c6e2ff;
                     display: flex;
+                    justify-content: center;
+
                     img {
                         border-radius: 20px;
                         width: 700px;
                     }
+
                     .text {
                         padding: 20px 0 20px 20px;
+
                         h3 {
                             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                             color: #003366;
-                        font-size: 40px;
-                        margin-bottom: 30px;
-                        
+                            font-size: 40px;
+                            margin-bottom: 30px;
+
+                        }
+
+                        p {
+                            line-height: 40px;
+                            font-size: 25px;
+
+                        }
                     }
-                    p {
-                        line-height: 40px;
-                        font-size: 25px;
-                        
-                    }
-                    }
+
                     span {
                         transition: transform 0.25s ease;
                         display: inline-block;
                     }
+
                     h3 :hover {
-                            transform: translateY(-10px);
-                            color: #0056b3;
-                        }
+                        transform: translateY(-10px);
+                        color: #0056b3;
+                    }
                 }
-                .aba-I:hover, .aba-II:hover {
+
+                .aba-I:hover,
+                .aba-II:hover {
                     box-shadow: 0 0 15px 10px #c8e3ff;
                     transform: translateY(-25px);
                     box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
                 }
             }
 
+            .parte-III {
+
+                .video {
+                    text-align: center;
+
+                    video {
+                        border-radius: 20px;
+                    }
+                }
+
+                .artigo {
+                    div {
+                        align-items: center;
+                        margin: 70px 0;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        gap: 40px;
+
+                        a {
+                            align-items: center;
+                            background-color: #28a745;
+                            padding: 20px 40px;
+                            border-radius: 25px;
+                            text-align: center;
+                            font-size: 50px;
+                            color: #ffffff;
+                            text-decoration: none;
+                            transition: transform 0.75s ease;
+                        }
+
+                        .arquive {
+                            text-align: center;
+                            font-size: 40px;
+                            line-height: 1.3;
+                        }
+
+                        a:hover {
+                            transform: scale(1.1);
+                        }
+                    }
+
+
+                }
+
+            }
         }
 
         footer {}
