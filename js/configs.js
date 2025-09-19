@@ -1,1 +1,0 @@
-const atoAbrirCuidados = document.getElementById()

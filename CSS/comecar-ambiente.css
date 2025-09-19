@@ -238,7 +238,7 @@ html {
                         background-color: #e3f1ff;
                         border-radius: 23px;
                         padding: 30px 25px;
-                          transition: transform 0.25s ease, box-shadow 0.25s ease;
+                        transition: transform 0.25s ease, box-shadow 0.25s ease;
 
                         h3 {
                             color: #003366;
@@ -310,6 +310,7 @@ html {
 
                 .aba-I,
                 .aba-II {
+                    transition: transform 0.25s ease, box-shadow 0.25s ease;
                     border-radius: 25px;
                     padding: 25px;
                     margin: 50px;
@@ -326,6 +327,7 @@ html {
                             color: #003366;
                         font-size: 40px;
                         margin-bottom: 30px;
+                        
                     }
                     p {
                         line-height: 40px;
@@ -333,6 +335,19 @@ html {
                         
                     }
                     }
+                    span {
+                        transition: transform 0.25s ease;
+                        display: inline-block;
+                    }
+                    h3 :hover {
+                            transform: translateY(-10px);
+                            color: #0056b3;
+                        }
+                }
+                .aba-I:hover, .aba-II:hover {
+                    box-shadow: 0 0 15px 10px #c8e3ff;
+                    transform: translateY(-25px);
+                    box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
                 }
             }
 
