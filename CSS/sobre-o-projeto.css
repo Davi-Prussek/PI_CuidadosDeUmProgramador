@@ -5,9 +5,8 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #f9fbff;
-}
+
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fbff; /* fundo branco suave */
   color: #003366; /* azul escuro para texto */
   margin: 0;
@@ -61,7 +60,7 @@ body {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            width: auto;
+                              width: auto;
                             height: auto;
                             border: none;
                             font-size: 1rem;
@@ -183,11 +182,13 @@ body {
                 }
             }
         }
-}
+
+
 /* Seção com fundo de imagem e sobreposição */
 main {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7;
-  margin-top: 5vw;
+  margin-top: 6vw;
   padding: 24px 20px;
 
   .s1 {
@@ -326,4 +327,6 @@ main {
       word-wrap: break-word;
     }
   }
+}
+}
 }
