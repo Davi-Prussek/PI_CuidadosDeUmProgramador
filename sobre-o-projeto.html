@@ -23,9 +23,7 @@
         <ul class="direcionar_sobreNos">
           <li><a href="index.html">Início</a></li>
           <li class="comeco">
-            <span class="botao-II">
-              Comecar<img src="img/icons/Seta.svg" alt="seta/icon"
-            /></span>
+            <span class="botao-II">Comecar<img src="img/icons/Seta.svg" alt="seta/icon"/></span>
             <ul class="sub-menus-II">
               <li><a href="comecar-ambiente.html">ambiente</a></li>
               <li><a href="comecar-habitos.html">habitos</a></li>
@@ -36,9 +34,7 @@
             <a href="testeHoras.html">Teste<br />Horas</a>
           </li>
           <li class="cuidados">
-            <span class="botao">
-              Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"
-            /></span>
+            <span class="botao">Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"/></span>
             <ul class="sub-menus">
               <li><a href="cuidados-postura.html">Postura</a></li>
               <li><a href="cuidados-luz-solar.html">Luz Solar</a></li>
@@ -108,7 +104,7 @@
       <!-- Referências -->
       <section class="s3">
         <h2>Referências de Conteúdos</h2>
-        <br>
+        <br />
         <article>
           <h3>Uso de Telas</h3>
           <p>
@@ -212,58 +208,7 @@
           </ul>
         </article>
       </section>
+      <section class="atas"></section>
     </main>
-    <script>
-      const menu = document.querySelector('.menu');
-      const nav = document.querySelector('nav');
-      const navUl = document.querySelector('nav ul');
-
-      function checkOverflow() {
-        if (navUl.scrollWidth > navUl.clientWidth || window.innerWidth <= 768) {
-          hamburger.style.display = 'flex';
-          nav.style.position = 'fixed';
-          nav.style.top = '0';
-          nav.style.left = '-250px';
-          nav.style.width = '250px';
-          nav.style.height = '100vh';
-          nav.style.background = '#0056b3';
-          nav.style.zIndex = '4';
-          nav.style.transition = 'left 0.3s ease';
-          nav.style.paddingTop = window.innerWidth <= 360 ? '50px' : window.innerWidth <= 500 ? '55px' : '60px';
-        } else {
-          hamburger.style.display = 'none';
-          nav.style.position = 'static';
-          nav.style.left = 'auto';
-          nav.style.width = 'auto';
-          nav.style.height = 'auto';
-          nav.style.paddingTop = '0';
-        }
-      }
-
-      window.addEventListener('resize', checkOverflow);
-      checkOverflow();
-
-      hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        nav.classList.toggle('active');
-      });
-
-      // Close menu when clicking on a link
-      const navLinks = document.querySelectorAll('nav a');
-      navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          hamburger.classList.remove('active');
-          nav.classList.remove('active');
-        });
-      });
-
-      // Close menu when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
-          hamburger.classList.remove('active');
-          nav.classList.remove('active');
-        }
-      });
-    </script>
   </body>
 </html>
