@@ -10,7 +10,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background-color: #f9fbff; /* fundo branco suave */
   color: #003366; /* azul escuro para texto */
-  margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -31,7 +30,7 @@ body {
     box-sizing: border-box;
     z-index: 3;
     flex-grow: 1;
-    height: 6.5vw;
+    height: 6vw;
 
     h1 a {
       font-size: 1.4rem;
@@ -47,7 +46,7 @@ body {
         align-items: end;
         font-size: 1rem;
         display: flex;
-        margin-right: 20px;
+        gap: 0.4rem;
 
         .cuidados {
           .botao {
@@ -125,7 +124,7 @@ body {
 
         li {
           text-align: center;
-          min-width: 5rem;
+          min-width: 7.5rem;
           height: 100%;
           padding: 1.5vw 0 0 0;
           box-sizing: border-box;
