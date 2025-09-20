@@ -63,12 +63,19 @@ html {
               cursor: pointer;
 
               .sub-menus,
+<<<<<<< HEAD
+=======
+              .sub-menus,
+>>>>>>> d1ee6ad7dfc5d3448d7f7146467e6695c90f02c0
               .sub-menus-II {
                 display: block;
               }
             }
           }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1ee6ad7dfc5d3448d7f7146467e6695c90f02c0
           .comeco {
             .botao-II {
               img {
@@ -92,7 +99,10 @@ html {
               }
             }
           }
+<<<<<<< HEAD
 
+=======
+>>>>>>> d1ee6ad7dfc5d3448d7f7146467e6695c90f02c0
           .sobre-nos {
             .botao-III {
               img {
