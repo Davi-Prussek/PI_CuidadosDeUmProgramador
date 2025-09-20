@@ -1,3 +1,5 @@
+/* ===================== Parte 1 ===================== */
+
 // Avalia rotina
 const avaliaRotina = document.getElementById("avaliacaoRotina");
 const emojiRotina = document.createElement("span");
@@ -5,12 +7,12 @@ avaliaRotina.insertAdjacentElement("afterend", emojiRotina);
 
 avaliaRotina.addEventListener("change", () => {
   const value = avaliaRotina.value;
-  if(value === "muito-boa") emojiRotina.textContent = "🔥";
-  else if(value === "boa") emojiRotina.textContent = "✌️";
-  else if(value === "regular") emojiRotina.textContent = "👌";
-  else if(value === "ruim") emojiRotina.textContent = "👎";
+  if (value === "muito-boa") emojiRotina.textContent = "🔥";
+  else if (value === "boa") emojiRotina.textContent = "✌️";
+  else if (value === "regular") emojiRotina.textContent = "👌";
+  else if (value === "ruim") emojiRotina.textContent = "👎";
   else emojiRotina.textContent = "";
-})
+});
 
 // Planejamento do dia
 const planejamento = document.getElementById("planejaAtividades");
@@ -26,64 +28,34 @@ planejamento.addEventListener("change", () => {
   else emojiPlanejamento.textContent = "";
 });
 
-// Função para bloquear caracteres inválidos (e, E, +, -)
-function bloquearCaracteresInvalidos(input) {
-  input.addEventListener("keydown", (event) => {
-    if (
-      event.key === "e" ||
-      event.key === "E" ||
-      event.key === "+" ||
-      event.key === "-"
-    ) {
-      event.preventDefault();
-    }
-  });
-}
+//Sentir Disposição
+const periodoDisposicao = document.getElementById("periodoDisposicao");
+const emojiDisposicao = document.createElement("span");
+periodoDisposicao.insertAdjacentElement("afterend", emojiDisposicao);
 
-// Selecionar todos os inputs de horas
-const inputsHoras = [
-  document.getElementById("horasSono"),
-  document.getElementById("horasTela"),
-  document.getElementById("horasTrabalho"),
-  document.getElementById("horasEstudo"),
-];
-inputsHoras.forEach((input) => bloquearCaracteresInvalidos(input));
-
-// Função para transformar HH:MM em horas decimais
-function parseHoras(valor) {
-  if (!valor) return 0;
-  const partes = valor.split(":");
-  if (partes.length === 2) {
-    return parseInt(partes[0]) + parseInt(partes[1]) / 60;
-  }
-  return parseFloat(valor) || 0;
-}
-
-// Sono
-const sono = document.getElementById("horasSono");
-const sonoEmoji = document.getElementById("sleepEmoji");
-
-sono.addEventListener("input", () => {
-  const horas = parseHoras(sono.value);
-  if (horas === 0) sonoEmoji.textContent = "";
-  else if (horas < 7) sonoEmoji.textContent = "😴";
-  else if (horas <= 9) sonoEmoji.textContent = "😍";
-  else sonoEmoji.textContent = "😐";
+periodoDisposicao.addEventListener("change", () => {
+  const value = periodoDisposicao.value;
+  if (value === "manha") emojiDisposicao.textContent = "🌞";
+  else if (value === "tarde") emojiDisposicao.textContent = "🌇";
+  else if (value === "noite") emojiDisposicao.textContent = "🌃";
+  else emojiDisposicao.textContent = "";
 });
 
-// Uso de telas
-const horasTela = document.getElementById("horasTela");
-const telaEmoji = document.createElement("span");
-horasTela.insertAdjacentElement("afterend", telaEmoji);
+//Equilibrio trabalho/estudo
+const equilibrioRotina = document.getElementById("equilibrioRotina");
+const emojiEquilibrio = document.createElement("span");
+equilibrioRotina.insertAdjacentElement("afterend", emojiEquilibrio);
 
-horasTela.addEventListener("input", () => {
-  const horas = parseHoras(horasTela.value);
-  if (horas === 0) telaEmoji.textContent = "";
-  else if (horas > 3) telaEmoji.textContent = "👓";
-  else telaEmoji.textContent = "😊";
+equilibrioRotina.addEventListener("change", () => {
+  const value = equilibrioRotina.value;
+  if (value === "sim") emojiEquilibrio.textContent = "👌";
+  else if (value === "parcialmente") emojiEquilibrio.textContent = "😑";
+  else if (value === "nao") emojiEquilibrio.textContent = "👎";
+  else emojiEquilibrio.textContent = "";
 });
 
-// Parte 2 – Atividades
+/* ===================== Parte 2 ===================== */
+
 const trabalho = document.getElementById("trabalho");
 const estudo = document.getElementById("estudar");
 const tempoLivre = document.getElementById("tempoLivre");
@@ -116,6 +88,19 @@ horasTrabalho.addEventListener("input", () => {
   else if (horas <= 10) emojiTrabalho.textContent = "😐";
   else emojiTrabalho.textContent = "😫";
 });
+
+//Pausas
+const pausasTrabalho = document.getElementById("pausasTrabalho");
+const emojiPausas = document.createElement("span");
+pausasTrabalho.insertAdjacentElement("afterend", emojiPausas);
+
+pausasTrabalho.addEventListener("change", ()=> {
+  const value = pausasTrabalho.value;
+  if(value === "sim") emojiPausas.textContent = "👍";
+  else if(value === "nao") emojiPausas.textContent = "👎";
+  else emojiPausas.textContent = "";
+})
+
 
 // Lógica de horas de ESTUDO
 const horasEstudo = document.getElementById("horasEstudo");
@@ -153,3 +138,67 @@ const outrosLivre = document.getElementById("outrosLivre");
     else lazerLivre.nextElementSibling.textContent = "Lazer ao ar livre";
   });
 });
+
+/* ===================== Parte 3 ===================== */
+
+// Sono
+const sono = document.getElementById("horasSono");
+const sonoEmoji = document.getElementById("sleepEmoji");
+
+sono.addEventListener("input", () => {
+  const horas = parseHoras(sono.value);
+  if (horas === 0) sonoEmoji.textContent = "";
+  else if (horas < 7) sonoEmoji.textContent = "😴";
+  else if (horas <= 9) sonoEmoji.textContent = "😍";
+  else sonoEmoji.textContent = "😐";
+});
+
+/* ===================== Parte 4 ===================== */
+
+// Uso de telas
+const horasTela = document.getElementById("horasTela");
+const telaEmoji = document.createElement("span");
+horasTela.insertAdjacentElement("afterend", telaEmoji);
+
+horasTela.addEventListener("input", () => {
+  const horas = parseHoras(horasTela.value);
+  if (horas === 0) telaEmoji.textContent = "";
+  else if (horas > 3) telaEmoji.textContent = "👓";
+  else telaEmoji.textContent = "😊";
+});
+
+/* ===================== Config gerais ===================== */
+//Se adicionar algo, divída comentando 🙏
+
+// Função para bloquear caracteres inválidos (e, E, +, -)
+function bloquearCaracteresInvalidos(input) {
+  input.addEventListener("keydown", (event) => {
+    if (
+      event.key === "e" ||
+      event.key === "E" ||
+      event.key === "+" ||
+      event.key === "-"
+    ) {
+      event.preventDefault();
+    }
+  });
+}
+
+// Selecionar todos os inputs de horas
+const inputsHoras = [
+  document.getElementById("horasSono"),
+  document.getElementById("horasTela"),
+  document.getElementById("horasTrabalho"),
+  document.getElementById("horasEstudo"),
+];
+inputsHoras.forEach((input) => bloquearCaracteresInvalidos(input));
+
+// Função para transformar HH:MM em horas decimais
+function parseHoras(valor) {
+  if (!valor) return 0;
+  const partes = valor.split(":");
+  if (partes.length === 2) {
+    return parseInt(partes[0]) + parseInt(partes[1]) / 60;
+  }
+  return parseFloat(valor) || 0;
+}
