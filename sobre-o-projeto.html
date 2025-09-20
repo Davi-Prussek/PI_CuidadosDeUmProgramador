@@ -14,6 +14,11 @@
           ><img src="img/logo_PI-fundo_removido nova.png" alt=""
         /></a>
       </h1>
+      <button class="menu" aria-label="Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
       <nav>
         <ul class="direcionar_sobreNos">
           <li><a href="index.html">Início</a></li>
@@ -208,5 +213,57 @@
         </article>
       </section>
     </main>
+    <script>
+      const menu = document.querySelector('.menu');
+      const nav = document.querySelector('nav');
+      const navUl = document.querySelector('nav ul');
+
+      function checkOverflow() {
+        if (navUl.scrollWidth > navUl.clientWidth || window.innerWidth <= 768) {
+          hamburger.style.display = 'flex';
+          nav.style.position = 'fixed';
+          nav.style.top = '0';
+          nav.style.left = '-250px';
+          nav.style.width = '250px';
+          nav.style.height = '100vh';
+          nav.style.background = '#0056b3';
+          nav.style.zIndex = '4';
+          nav.style.transition = 'left 0.3s ease';
+          nav.style.paddingTop = window.innerWidth <= 360 ? '50px' : window.innerWidth <= 500 ? '55px' : '60px';
+        } else {
+          hamburger.style.display = 'none';
+          nav.style.position = 'static';
+          nav.style.left = 'auto';
+          nav.style.width = 'auto';
+          nav.style.height = 'auto';
+          nav.style.paddingTop = '0';
+        }
+      }
+
+      window.addEventListener('resize', checkOverflow);
+      checkOverflow();
+
+      hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        nav.classList.toggle('active');
+      });
+
+      // Close menu when clicking on a link
+      const navLinks = document.querySelectorAll('nav a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.classList.remove('active');
+          nav.classList.remove('active');
+        });
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener('click', (e) => {
+        if (!nav.contains(e.target) && !hamburger.contains(e.target)) {
+          hamburger.classList.remove('active');
+          nav.classList.remove('active');
+        }
+      });
+    </script>
   </body>
 </html>
