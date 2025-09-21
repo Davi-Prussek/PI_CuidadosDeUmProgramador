@@ -7,10 +7,9 @@
     <title>Document</title>
     <link rel="stylesheet" href="CSS/Reset.CSS">
     <link rel="stylesheet" href="CSS/comecar-habitos.css">
-        <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+        rel="stylesheet" />
     <link>
 </head>
 
@@ -51,8 +50,15 @@
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="parte-I">
+    <main id="topo">
+        <div class="botoes">
+            <a href="#topo"><button class="seta-voltar"><img src="img/icons/seta voltar.svg" alt="seta/icon"></button></a>
+            <button class="botao-esquerdo" id="botao-esquerdo"><img src="img/icons/seta esquerda.svg"
+                    alt="seta/icon"></button>
+            <button class="botao-direito" id="botao-direito"><img src="img/icons/seta direita.svg"
+                    alt="seta/icon"></button>
+        </div>
+        <section class="parte-I" style="display: block;" id="parte-I">
             <h2><span><span class="numero"><img src="img/numeros/1.svg" alt="icon/1"></span>Hábitos bons para saúde
                     física</span></h2>
             <ul>
@@ -63,9 +69,8 @@
                 <li class="mini-text">5-Evitar consumo excessivo de açúcar e alimentos processados</li>
             </ul>
         </section>
-        <section class="parte-II">
-            <h2><span><span class="numero"><img src="img/numeros/2.svg" alt="icon/2"></span>Hábitos bons para mente e
-                    foco</span></h2>
+        <section class="parte-II" style="display: none;" id="parte-II">
+            <h2><span><span class="numero"><img src="img/numeros/2.svg" alt="icon/2"></span>Hábitos bons para mente e foco</span></h2>
             <ul>
                 <li class="mini-text">1-Meditar ou fazer exercícios de respiração (5-10 minutos/dia)</li>
                 <li class="mini-text">2-Fazer pausas regulares durante o trabalho (ex: técnica Pomodoro)</li>
@@ -74,7 +79,7 @@
                 <li class="mini-text">5-Praticar gratidão: anotar 3 coisas boas ao final do dia</li>
             </ul>
         </section>
-        <section class="parte-III">
+        <section class="parte-III" style="display: none;" id="parte-III">
             <h2><span><span class="numero"><img src="img/numeros/3.svg" alt="icon/3"></span>Hábitos bons para
                     produtividade e organização</span></h2>
             <ul>
@@ -85,7 +90,7 @@
                 <li class="mini-text">5-Revisar semanalmente as metas e ajustes</li>
             </ul>
         </section>
-        <section class="parte-IV">
+        <section class="parte-IV" style="display: none;" id="parte-IV">
             <h2><span><span class="numero"><img src="img/numeros/4.svg" alt="icon/4"></span>Hábitos bons para
                     relacionamentos</span></h2>
             <ul>
@@ -158,6 +163,7 @@
             <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
         </div>
     </footer>
+    <script src="js/comecar-habitos.js"></script>
 </body>
 
 </html>

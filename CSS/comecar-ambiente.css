@@ -180,6 +180,22 @@ html {
         }
 
         main {
+            .seta-voltar {
+                background-color: #0056b3;
+                border-radius: 1000px;
+                cursor: pointer;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                border: none;
+                z-index: 15;
+
+                img {
+                    width: 55px;
+                    height: 60px;
+                }
+            }
+
             background-color: #ffffff;
             margin: 60px 60px 0 60px;
             border-radius: 15px;
@@ -402,7 +418,8 @@ html {
                 }
 
             }
-        }   
+        }
+
         .footer {
             background: linear-gradient(#0057b3c4, #002457);
             color: white;

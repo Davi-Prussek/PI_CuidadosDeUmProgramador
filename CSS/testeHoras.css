@@ -7,6 +7,7 @@ html {
   line-height: 1.6;
   background-color: #e6e6e6;
 }
+
 /* ========================================= BODY ========================================= */
 body {
   text-align: center;
@@ -72,6 +73,7 @@ body {
             }
           }
         }
+
         .comeco {
           .botao-II {
             img {
@@ -95,6 +97,7 @@ body {
             }
           }
         }
+
         .sobre-nos {
           .botao-III {
             img {
@@ -183,6 +186,23 @@ body {
   }
 
   main {
+
+    .seta-voltar {
+      background-color: #0056b3;
+      border-radius: 1000px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border: none;
+      z-index: 15;
+
+      img {
+        width: 55px;
+        height: 60px;
+      }
+    }
+
     margin-top: 4rem;
 
     /* ---------- Reset simples ---------- */
@@ -217,6 +237,7 @@ body {
       background: #fff;
       border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
       h2 {
         font-size: 60px;
         color: #0066cc;
@@ -394,6 +415,5 @@ body {
     }
   }
 
-  @media (max-width: 500px) {
-  }
+  @media (max-width: 500px) {}
 }
