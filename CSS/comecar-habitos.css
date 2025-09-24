@@ -265,19 +265,25 @@ html {
                     cursor: pointer;
                 }
 
-                .seta-voltar {
-                    background-color: #0056b3;
-                    border-radius: 1000px;
-                    cursor: pointer;
-                    position: fixed;
-                    bottom: 20px;
-                    right: 20px;
-                    border: none;
-                    z-index: 15;
-                    img {
-                        width: 55px;
-                        height: 60px;
-                    }
+
+            }
+            .intro {
+                text-align: center;
+                margin: 20px;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 70px;
+                border-radius: 10px;
+                background-color: #ffffff;
+                .mini-text {
+                text-align: center;
+                margin: 0 15vw;
+                font-size: 30px;
+                line-height: 2;
+                padding: 0px 50px;
+                margin: 10px 50px;
+                color: #001f3d;
+                text-align: left;
                 }
             }
 
@@ -376,3 +382,18 @@ html {
         }
     }
 }
+            .seta-voltar {
+                background-color: #0056b3;
+                border-radius: 1000px;
+                cursor: pointer;
+                position: fixed;
+                bottom: 20px;
+                right: 20px;
+                border: none;
+                z-index: 15;
+
+                img {
+                    width: 55px;
+                    height: 60px;
+                }
+            }
