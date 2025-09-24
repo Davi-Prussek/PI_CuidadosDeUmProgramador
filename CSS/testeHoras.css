@@ -200,12 +200,6 @@ body {
                 }
     margin-top: 4rem;
 
-    /* ---------- Reset simples ---------- */
-    * {
-      margin: 0;
-      box-sizing: border-box;
-    }
-
     /* ---------- Fonte e cores ---------- */
     body {
       font-family: "Open Sans", sans-serif;
