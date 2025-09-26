@@ -316,6 +316,8 @@ html {
 
       .s3 {
         display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        flex-wrap: w;
         gap: 20px;
 
         /* Títulos das seções */
@@ -331,7 +333,6 @@ html {
           text-shadow: none;
           text-align: center;
           align-items: center;
-          grid-column: 1 / -1;
         }
 
         /* Subtítulos */
@@ -378,6 +379,9 @@ html {
           }
         }
 
+        .full-width {
+          grid-column: span 2;
+        }
         /* Links */
         a {
           color: #007acc;
