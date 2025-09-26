@@ -18,64 +18,136 @@ html {
     -moz-osx-font-smoothing: grayscale;
 
     header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #0056b3;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 6vw;
-      padding-left: 2vw;
-      box-sizing: border-box;
-      z-index: 3;
-
       img {
         height: 3.2rem;
         filter: brightness(1.05) contrast(1.4) saturate(1.2);
       }
 
-      h1 {
-        a {
-          font-size: 1.4rem;
-          text-decoration: none;
-          color: white;
-        }
+      align-items: center;
+      background: #0056b3;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 0 0 2vw;
+      position: fixed;
+      top: 0px;
+      width: 100%;
+      box-sizing: border-box;
+      z-index: 3;
+      flex-grow: 1;
+      height: 6vw;
+
+      h1 a {
+        font-size: 1.4rem;
+        text-decoration: none;
+        color: white;
       }
 
       nav {
         height: 100%;
 
         ul {
-          display: flex;
-          align-items: flex-end;
-          gap: 0.2rem;
           height: 100%;
+          align-items: end;
           font-size: 1rem;
+          display: flex;
+          gap: 0.2rem;
+
+          .cuidados {
+            .botao {
+              img {
+                width: 22px;
+                display: inline-block;
+                height: auto;
+              }
+
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: auto;
+              height: auto;
+              border: none;
+              font-size: 1rem;
+              cursor: pointer;
+
+              .sub-menus,
+              .sub-menus,
+              .sub-menus-II {
+                display: block;
+              }
+            }
+          }
+
+          .comeco {
+            .botao-II {
+              img {
+                width: 22px;
+                display: inline-block;
+                height: auto;
+              }
+
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: auto;
+              height: auto;
+              border: none;
+              font-size: 1rem;
+              cursor: pointer;
+
+              .sub-menus-II {
+                display: block;
+              }
+            }
+          }
+
+          .sobre-nos {
+            .botao-III {
+              img {
+                width: 22px;
+                display: inline-block;
+                height: auto;
+              }
+
+              color: white;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: auto;
+              height: auto;
+              border: none;
+              font-size: 1rem;
+              cursor: pointer;
+
+              .sub-menus-II {
+                display: block;
+              }
+            }
+          }
 
           li {
             text-align: center;
             min-width: 7.5rem;
             height: 100%;
-            padding-top: 1.5vw;
+            padding: 1.5vw 0 0 0;
             box-sizing: border-box;
 
             ul {
               position: absolute;
               display: none;
               background-color: rgb(18, 21, 44);
+              height: auto;
 
               li {
                 margin: 0.7rem 0;
               }
             }
+          }
 
-            &:hover {
-              background-color: rgb(18, 21, 44);
-
-              ul {
-                display: block;
-              }
+          li:hover {
+            ul {
+              display: block;
             }
           }
 
@@ -83,66 +155,60 @@ html {
             text-decoration: none;
             color: white;
             position: relative;
-
-            &::after {
-              content: "";
-              position: absolute;
-              bottom: 0;
-              left: 0;
-              width: 100%;
-              height: 2px;
-              background-color: #fff;
-              transform: scaleX(0);
-              transform-origin: center;
-              transition: transform 0.3s ease;
-            }
-
-            &:hover::after {
-              transform: scaleX(1);
-            }
           }
 
-          .botao,
-          .botao-II,
-          .botao-III {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            font-size: 1rem;
-            cursor: pointer;
-            border: none;
-
-            img {
-              width: 22px;
-              height: auto;
-              display: inline-block;
-            }
-
-            .sub-menus,
-            .sub-menus-II {
-              display: block;
-            }
+          li:hover {
+            background-color: rgb(18, 21, 44);
           }
 
           .theme {
             background-color: transparent;
             color: white;
+            text-align: center;
             display: flex;
-            align-items: baseline;
             justify-content: center;
-            gap: 5px;
+            align-items: first baseline;
             border: none;
             font-size: 1rem;
             cursor: pointer;
+            gap: 5px;
 
             .buttonOff {
               transform: rotate(180deg);
+              margin: 0;
               height: 35px;
+              vertical-align: middle;
             }
             .buttonOn {
+              margin: 0;
               height: 35px;
+              vertical-align: middle;
             }
+          }
+        }
+
+        ul {
+          a {
+            text-decoration: none;
+            color: white;
+            position: relative;
+          }
+
+          a::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #ffffff;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+          }
+
+          a:hover::after {
+            transform: scaleX(1);
           }
         }
       }
