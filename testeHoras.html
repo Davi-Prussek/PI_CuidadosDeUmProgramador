@@ -61,7 +61,7 @@
     </div>
     <section class="container">
       <h2>Questionário de Rotina, Hábitos e Produtividade</h2>
-      <p class="intro">
+      <p class="intro" id="texto">
         Responda às perguntas abaixo para receber sugestões personalizadas
         sobre sua rotina diária.
       </p>
@@ -70,15 +70,15 @@
         <fieldset>
           <legend>🕑 Parte 1 – Perguntas Gerais</legend>
           <div class="form-group">
-            <label for="nome">Nome:</label>
+            <label for="nome" id="texto">Nome:</label>
             <input type="text" id="nome" name="nome" required />
           </div>
           <div class="form-group">
-            <label for="idade">Idade:</label>
+            <label for="idade" id="texto">Idade:</label>
             <input type="number" id="idade" name="idade" required />
           </div>
           <div class="form-group">
-            <label>1. Como você avalia sua rotina atual?</label>
+            <label id="texto">1. Como você avalia sua rotina atual?</label>
             <select id="avaliacaoRotina" name="avaliacaoRotina" required>
               <option value>Selecione</option>
               <option value="muito-boa">Muito boa</option>
@@ -89,7 +89,7 @@
             <span id="evaluationEmoji"></span>
           </div>
           <div class="form-group">
-            <label>2. Você costuma planejar suas atividades do dia?</label>
+            <label id="texto">2. Você costuma planejar suas atividades do dia?</label>
             <select id="planejaAtividades" name="planejaAtividades" required>
               <option value>Selecione</option>
               <option value="sempre">Sempre</option>
@@ -99,7 +99,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label>3. Qual período do dia você sente mais disposição?</label>
+            <label id="texto">3. Qual período do dia você sente mais disposição?</label>
             <select id="periodoDisposicao" name="periodoDisposicao" required>
               <option value>Selecione</option>
               <option value="manha">Manhã</option>
@@ -108,7 +108,7 @@
             </select>
           </div>
           <div class="form-group">
-            <label>4. Você sente que consegue equilibrar trabalho/estudo com
+            <label id="texto">4. Você sente que consegue equilibrar trabalho/estudo com
               lazer?</label>
             <select id="equilibrioRotina" name="equilibrioRotina" required>
               <option value>Selecione</option>
@@ -123,9 +123,9 @@
         <fieldset>
           <legend>💻 Parte 2 – Rotina Condicional</legend>
           <div class="form-group">
-            <label>O que você costuma fazer no seu dia a dia?</label>
+            <label id="texto">O que você costuma fazer no seu dia a dia?</label>
             <!-- caixa de seleção abaixo da pergunta, alinhamento vertical -->
-            <div class="checkbox-group" style="margin-top: 0.7rem; flex-direction: column">
+            <div class="checkbox-group" style="margin-top: 0.7rem; flex-direction: column" id="texto">
               <div class="checkbox-item">
                 <input type="checkbox" id="trabalho" name="atividade" value="trabalho" />
                 <label for="trabalho">Trabalho/Programar</label>
@@ -146,10 +146,10 @@
             </div>
           </div>
           <div id="trabalhoCondicional" style="display: none">
-            <label>Quantas horas por dia em média você dedica ao
+            <label id="texto">Quantas horas por dia em média você dedica ao
               trabalho/programação?</label>
             <input type="text" id="horasTrabalho" name="horasTrabalho" maxlength="5" placeholder="Ex: 8:00" />
-            <label>Você costuma fazer pausas regulares?</label>
+            <label id="texto">Você costuma fazer pausas regulares?</label>
             <select id="pausasTrabalho" name="pausasTrabalho">
               <option value>Selecione</option>
               <option value="sim">Sim</option>
@@ -157,9 +157,9 @@
             </select>
           </div>
           <div id="estudoCondicional" style="display: none">
-            <label>Quantas horas por dia em média você dedica aos estudos?</label>
+            <label id="texto">Quantas horas por dia em média você dedica aos estudos?</label>
             <input type="text" id="horasEstudo" name="horasEstudo" maxlength="5" placeholder="Ex: 2:30" />
-            <label>Seus horários de estudo são:</label>
+            <label id="texto">Seus horários de estudo são:</label>
             <select id="horarioEstudo" name="horarioEstudo">
               <option value>Selecione</option>
               <option value="fixos">Fixos</option>
@@ -167,7 +167,7 @@
             </select>
           </div>
           <div id="tempoLivreCondicional" style="display: none">
-            <label>Como você costuma ocupar seu tempo livre?</label>
+            <label id="texto">Como você costuma ocupar seu tempo livre?</label>
             <div>
               <input type="checkbox" id="telasLivre" name="tempoLivreOpcao" value="telas" />
               <label for="telasLivre">Uso de telas (filmes, jogos, celular)</label>
@@ -184,7 +184,7 @@
 
         <fieldset>
           <legend>😴 Parte 3 – Sono</legend>
-          <label>Quantas horas você costuma dormir por dia?</label>
+          <label id="texto">Quantas horas você costuma dormir por dia?</label>
           <input type="text" id="horasSono" name="horasSono" maxlength="5" placeholder="Ex: 7:30" required />
           <span id="sleepEmoji"></span>
         </fieldset>
@@ -192,7 +192,7 @@
         <!-- 📱 Parte 4 – Uso de Telas -->
         <fieldset>
           <legend>📱 Parte 4 – Uso de Telas</legend>
-          <label>Quantas horas por dia você usa telas além do
+          <label id="texto">Quantas horas por dia você usa telas além do
             trabalho/estudo?</label>
           <input type="text" id="horasTela" name="horasTela" maxlength="5" placeholder="Ex: 3:00" required />
         </fieldset>
@@ -200,7 +200,7 @@
         <!-- 🧍 Parte 5 – Postura e Ambiente -->
         <fieldset>
           <legend>🧍 Parte 5 – Postura e Ambiente</legend>
-          <label>Você mantém uma boa postura diante das telas?</label>
+          <label id="texto">Você mantém uma boa postura diante das telas?</label>
           <select id="posturaTelas" name="posturaTelas" required>
             <option value>Selecione</option>
             <option value="sim">Sim</option>
@@ -208,20 +208,20 @@
             <option value="nao">Não</option>
           </select>
           <div id="posturaCondicional" style="display: none">
-            <label>Sente dores (costas, pescoço, visão)?</label>
+            <label id="texto">Sente dores (costas, pescoço, visão)?</label>
             <select id="senteDores" name="senteDores">
               <option value>Selecione</option>
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
-            <label>Gostaria de receber dicas de alongamento rápido?</label>
+            <label id="texto">Gostaria de receber dicas de alongamento rápido?</label>
             <select id="dicasAlongamento" name="dicasAlongamento">
               <option value>Selecione</option>
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
           </div>
-          <label>O ambiente em que você trabalha/estuda é saudável (iluminação,
+          <label id="texto">O ambiente em que você trabalha/estuda é saudável (iluminação,
             ventilação, conforto)?</label>
           <select id="ambienteSaudavel" name="ambienteSaudavel" required>
             <option value>Selecione</option>
@@ -233,7 +233,7 @@
         <!-- ⚡ Parte 6 – Fechamento -->
         <fieldset>
           <legend>⚡ Parte 6 – Fechamento</legend>
-          <label>1. Você pratica atividade física?</label>
+          <label id="texto">1. Você pratica atividade física?</label>
           <select id="atividadeFisica" name="atividadeFisica" required>
             <option value>Selecione</option>
             <option value="nenhuma">Nenhuma</option>
@@ -241,14 +241,14 @@
             <option value="3-4">3–4 vezes</option>
             <option value="5+">5+ vezes</option>
           </select>
-          <label>2. Sua alimentação diária é:</label>
+          <label id="texto">2. Sua alimentação diária é:</label>
           <select id="alimentacao" name="alimentacao" required>
             <option value>Selecione</option>
             <option value="equilibrada">Equilibrada</option>
             <option value="parcialmente">Parcialmente equilibrada</option>
             <option value="desequilibrada">Desequilibrada</option>
           </select>
-          <label>3. Principal dificuldade na rotina:</label>
+          <label id="texto">3. Principal dificuldade na rotina:</label>
           <select id="dificuldadeRotina" name="dificuldadeRotina" required>
             <option value>Selecione</option>
             <option value="falta-tempo">Falta de tempo</option>
@@ -257,7 +257,7 @@
             <option value="excesso-telas">Excesso de telas</option>
             <option value="outro">Outro</option>
           </select>
-          <label>4. O que gostaria de melhorar primeiro na sua rotina?</label>
+          <label id="texto">4. O que gostaria de melhorar primeiro na sua rotina?</label>
           <input type="text" id="melhorarRotina" name="melhorarRotina" />
           <label>5. Sugestão ou comentário final:</label>
           <textarea id="comentarioFinal" name="comentarioFinal" rows="2"></textarea>

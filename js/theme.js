@@ -1,9 +1,9 @@
 const HTML = document.getElementById("html");
 const body = document.getElementById("body");
-const main = document.getElementById("main");
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
 const setaVoltar = document.getElementById("setaVoltar");
+
 
 const botaoOff = document.getElementById("themeButtonOff");
 const botaoOn = document.getElementById("themeButtonOn")
