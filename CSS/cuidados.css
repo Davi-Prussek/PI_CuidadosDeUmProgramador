@@ -261,8 +261,22 @@ main h2 {
     color: #003366;
     font-size: 2.5rem;
     margin-bottom: 1vw;
+    margin-top: 1vw;
     position: relative;
     display: inline-block;
+    background-image: url('../img/fundoCuidados.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 5vw 12vw;
+    border-radius: 2vw;
+    box-shadow: 0 8px 16px #000b1a85;
+    border: 1px solid transparent;
+    transition: 
+        background-color 0.2s ease, 
+        transform 0.2s ease, 
+        box-shadow 0.2s ease, 
+        border 0.2s ease;
 }
 
 main h2::after {
@@ -274,6 +288,12 @@ main h2::after {
     height: 3px;
     background: #0056b3;
     border-radius: 3px;
+}
+
+main h2:hover {
+    background-color: #d7eaf7;
+    box-shadow: 0 10px 24px #0352c0a9;
+    border: 1px solid #0056b3;
 }
 
 main h3 {
@@ -482,7 +502,6 @@ figcaption {
 
     header {
         height: 8vw;
-        /* Aumenta altura para mobile */
         padding: 0 1vw;
     }
 
@@ -502,7 +521,6 @@ figcaption {
 
     main {
         padding-top: 8vw;
-        /* Ajusta para header maior */
     }
 
     .s1 {

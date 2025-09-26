@@ -211,28 +211,21 @@ body {
         }
 
   main {
-
-                    .seta-voltar {
-        background-color: #0056b3;
-        border-radius: 1000px;
-        cursor: pointer;
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        border: none;
-        z-index: 15;
-                    img {
-                        width: 55px;
-                        height: 60px;
-                    }
-                }
-    margin-top: 4rem;
-
-    /* ---------- Reset simples ---------- */
-    * {
-      margin: 0;
-      box-sizing: border-box;
+    .seta-voltar {
+      background-color: #0056b3;
+      border-radius: 1000px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border: none;
+      z-index: 15;
+      img {
+        width: 55px;
+        height: 60px;
+      }
     }
+    margin-top: 4rem;
 
     /* ---------- Fonte e cores ---------- */
     body {
