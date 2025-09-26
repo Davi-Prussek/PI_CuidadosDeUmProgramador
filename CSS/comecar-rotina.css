@@ -3,7 +3,7 @@ html {
     font-family: "Open Sans", sans-serif;
     color: #333;
     line-height: 1.6;
-    background-color: #e6e6e6;
+    background-color: #f9fbff;
 
     body {
         header {
@@ -205,6 +205,8 @@ html {
         }
 
         main {
+                margin-top: 6vw;
+
                 .mini-text {
                 text-align: center;
                 margin: 0 15vw;
