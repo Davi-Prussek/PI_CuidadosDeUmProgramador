@@ -14,49 +14,51 @@
 </head>
 
 <body>
-  <header>
-    <h1>
-      <a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido nova.png" alt="" /></a>
-    </h1>
-    <nav>
-      <ul class="direcionar_sobreNos">
-        <li><a href="index.html">Início</a></li>
-        <li class="comeco">
-          <span class="botao-II">Comecar<img src="img/icons/Seta.svg" alt="seta/icon" /></span>
-          <ul class="sub-menus-II">
-            <li><a href="comecar-ambiente.html">ambiente</a></li>
-            <li><a href="comecar-habitos.html">habitos</a></li>
-            <li><a href="comecar-rotina.html">rotina</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="testeHoras.html">Teste<br />Horas</a>
-        </li>
-        <li class="cuidados">
-          <span class="botao">Cuidados<img src="img/icons/Seta.svg" alt="seta/icon" /></span>
-          <ul class="sub-menus">
-            <li><a href="cuidados-postura.html">Postura</a></li>
-            <li><a href="cuidados-luz-solar.html">Luz Solar</a></li>
-            <li><a href="cuidados-burnout.html">Burn-out</a></li>
-            <li><a href="cuidados-telas.html">Telas</a></li>
-          </ul>
-        </li>
-        <li class="sobre-nos">
-          <span class="botao-III">
-            Sobre nós<img src="img/icons/Seta.svg" alt="seta/icon" />
-          </span>
-          <ul class="sub-menus">
-            <li><a href="sobreNos.html">Sobre Nós</a></li>
-            <li><a href="sobre-o-projeto.html">Sobre o Projeto</a></li>
-          </ul>
-        </li>
-      </ul>
-    </nav>
-  </header>
+        <header id="header">
+            <h1><a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido nova.png" alt=""></a></h1>
+            <nav>
+                <ul class="direcionar_sobreNos">
+                    <li><a href="index.html">Início</a></li>
+                    <li class="comeco">
+                        <span class="botao-II">
+                            Começar<img src="img/icons/Seta.svg" alt="seta/icon"></span>
+                        <ul class="sub-menus-II">
+                            <li><a href="comecar-ambiente.html">ambiente</a></li>
+                            <li><a href="comecar-habitos.html">habitos</a></li>
+                            <li><a href="comecar-rotina.html">rotina</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="testeHoras.html">Teste<br>Horas</a></li>
+                    <li class="cuidados">
+                        <span class="botao">
+                            Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"></span>
+                        <ul class="sub-menus">
+                            <li><a href="cuidados-postura.html">Postura</a></li>
+                            <li><a href="cuidados-luz-solar.html">Luz Solar</a></li>
+                            <li><a href="cuidados-burnout.html">Burn-out</a></li>
+                            <li><a href="cuidados-telas.html">Telas</a></li>
+                        </ul>
+                    </li>
+                    <li class="sobre-nos">
+                        <span class="botao-III">
+                            Sobre nós<img src="img/icons/Seta.svg" alt="seta/icon"> </span>
+                        <ul class="sub-menus">
+                            <li><a href="sobreNos.html">Sobre Nós</a></li>
+                            <li><a href="sobre-o-projeto.html">Sobre o Projeto</a></li>
+                        </ul>
+                    </li>
+                    <li class="theme">
+                        <button id="themeButtonOff" class="theme"><span>Light</span><img class="buttonOff" src="img/icons/botao desligado.png" alt="icon/off"></button>
+                        
+                        <button id="themeButtonOn" class="theme" style="display: none;"><span>Dark</span><img class="buttonOn" src="img/icons/botao desligado.png" alt="icon/on"></button>
+                    </li>
+                </ul>
+            </nav>
+        </header>
 
   <main style="padding-top: 6vw" id="topo">
     <div class="botoes">
-      <a href="#topo"><button class="seta-voltar"><img src="img/icons/seta voltar.svg" alt="seta/icon"></button></a>
+      <a href="#topo"><button class="seta-voltar" id="setaVoltar" class><img src="img/icons/seta voltar.svg" alt="seta/icon"></button></a>
     </div>
     <!-- para não ficar atrás do header fixo -->
     <section class="s1">
@@ -175,6 +177,36 @@
     </section>
     <section class="atas"></section>
   </main>
+    <footer id="footer">
+        <div class="parte-I-footer">
+            <ul>
+                <li class="footer-contact">
+                    <h4>Contato</h4>
+                    <div class="midia">
+                        <a href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                            target="_blank"><img src="img/icons/instagram-brands-solid-full.svg" alt="midia/insta"></a>
+                    </div>
+                </li>
+                <li class="logo">
+                    <img src="img/logo_PI-fundo_removido.png" alt="logo-site" width="150px" height="150px">
+                </li>
+                <li class="linkRp">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="Inicio.html">Início</a></li>
+                        <li><a href="testHrs.html">Teste de Horas</a></li>
+                        <li><a href="rotinas.html">Rotinas</a></li>
+                        <li><a href="cuidados.html">Cuidados</a></li>
+                        <li><a href="sobreNos.html">Sobre nós</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <div class="parte-II-footer">
+            <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+        <script src="js/theme.js"></script>
 </body>
 
 </html>

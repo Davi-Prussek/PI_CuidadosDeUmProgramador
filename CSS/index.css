@@ -13,177 +13,203 @@ body {
   padding-top: 80px;
 
   /* ========================================= HEADER ========================================= */
-  header {
-    img {
-      height: 3.2rem;
-      filter: brightness(1.05) contrast(1.4) saturate(1.2);
-    }
-
-    align-items: center;
-    background: #0056b3;
-    display: flex;
-    justify-content: space-between;
-    padding: 0 0 0 2vw;
-    position: fixed;
-    top: 0px;
-    width: 100%;
-    box-sizing: border-box;
-    z-index: 3;
-    flex-grow: 1;
-    height: 6vw;
-
-    h1 a {
-      font-size: 1.4rem;
-      text-decoration: none;
-      color: white;
-    }
-
-    nav {
-      height: 100%;
-
-      ul {
-        height: 100%;
-        align-items: end;
-        font-size: 1rem;
-        display: flex;
-        gap: 0.4rem;
-
-        .cuidados {
-          .botao {
+        header {
             img {
-              width: 22px;
-              display: inline-block;
-              height: auto;
+                height: 3.2rem;
+                filter: brightness(1.05) contrast(1.4) saturate(1.2);
             }
 
-            color: white;
-            display: flex;
-            justify-content: center;
             align-items: center;
-            width: auto;
-            height: auto;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
-
-            .sub-menus,
-            .sub-menus,
-            .sub-menus-II {
-              display: block;
-            }
-          }
-        }
-
-        .comeco {
-          .botao-II {
-            img {
-              width: 22px;
-              display: inline-block;
-              height: auto;
-            }
-
-            color: white;
+            background: #0056b3;
             display: flex;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-            height: auto;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
+            justify-content: space-between;
+            padding: 0 0 0 2vw;
+            position: fixed;
+            top: 0px;
+            width: 100%;
+            box-sizing: border-box;
+            z-index: 3;
+            flex-grow: 1;
+            height: 6vw;
 
-            .sub-menus-II {
-              display: block;
-            }
-          }
-        }
-
-        .sobre-nos {
-          .botao-III {
-            img {
-              width: 22px;
-              display: inline-block;
-              height: auto;
+            h1 a {
+                font-size: 1.4rem;
+                text-decoration: none;
+                color: white;
             }
 
-            color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            width: auto;
-            height: auto;
-            border: none;
-            font-size: 1rem;
-            cursor: pointer;
+            nav {
+                height: 100%;
 
-            .sub-menus-II {
-              display: block;
+                ul {
+                    height: 100%;
+                    align-items: end;
+                    font-size: 1rem;
+                    display: flex;
+                    gap: 0.2rem;
+
+                    .cuidados {
+                        .botao {
+                            img {
+                                width: 22px;
+                                display: inline-block;
+                                height: auto;
+                            }
+
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto;
+                            height: auto;
+                            border: none;
+                            font-size: 1rem;
+                            cursor: pointer;
+
+                            .sub-menus,
+                            .sub-menus,
+                            .sub-menus-II {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .comeco {
+                        .botao-II {
+                            img {
+                                width: 22px;
+                                display: inline-block;
+                                height: auto;
+                            }
+
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto;
+                            height: auto;
+                            border: none;
+                            font-size: 1rem;
+                            cursor: pointer;
+
+                            .sub-menus-II {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    .sobre-nos {
+                        .botao-III {
+                            img {
+                                width: 22px;
+                                display: inline-block;
+                                height: auto;
+                            }
+
+                            color: white;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            width: auto;
+                            height: auto;
+                            border: none;
+                            font-size: 1rem;
+                            cursor: pointer;
+
+                            .sub-menus-II {
+                                display: block;
+                            }
+                        }
+                    }
+
+                    li {
+                        text-align: center;
+                        min-width: 7.5rem;
+                        height: 100%;
+                        padding: 1.5vw 0 0 0;
+                        box-sizing: border-box;
+
+                        ul {
+                            position: absolute;
+                            display: none;
+                            background-color: rgb(18, 21, 44);
+                            height: auto;
+
+                            li {
+                                margin: 0.7rem 0;
+                            }
+                        }
+                    }
+
+                    li:hover {
+                        ul {
+                            display: block;
+
+                        }
+                    }
+
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        position: relative;
+                    }
+
+                    li:hover {
+                        background-color: rgb(18, 21, 44);
+                    }
+
+                    .theme {
+                        background-color: transparent;
+                        color: white;
+                        text-align: center;
+                        display: flex;
+                        justify-content: center;
+                        align-items: first baseline;
+                        border: none;
+                        font-size: 1rem;
+                        cursor: pointer;
+                        gap: 5px;
+
+                        .buttonOff {
+                            transform: rotate(180deg);
+                            margin: 0;
+                            height: 35px;    
+                            vertical-align: middle;                   
+                        }
+                        .buttonOn {
+                            margin: 0;
+                            height: 35px;
+                            vertical-align: middle;
+                        }
+                    }
+                }
+
+                ul {
+                    a {
+                        text-decoration: none;
+                        color: white;
+                        position: relative;
+                    }
+
+                    a::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: #ffffff;
+                        transform: scaleX(0);
+                        transform-origin: center;
+                        transition: transform 0.3s ease;
+                    }
+
+                    a:hover::after {
+                        transform: scaleX(1);
+                    }
+                }
             }
-          }
         }
-
-        li {
-          text-align: center;
-          min-width: 7.5rem;
-          height: 100%;
-          padding: 1.5vw 0 0 0;
-          box-sizing: border-box;
-
-          ul {
-            position: absolute;
-            display: none;
-            background-color: rgb(18, 21, 44);
-            height: auto;
-
-            li {
-              margin: 0.7rem 0;
-            }
-          }
-        }
-
-        li:hover {
-          ul {
-            display: block;
-          }
-        }
-
-        a {
-          text-decoration: none;
-          color: white;
-          position: relative;
-        }
-
-        li:hover {
-          background-color: rgb(18, 21, 44);
-        }
-      }
-
-      ul {
-        a {
-          text-decoration: none;
-          color: white;
-          position: relative;
-        }
-
-        a::after {
-          content: "";
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background-color: #ffffff;
-          transform: scaleX(0);
-          transform-origin: center;
-          transition: transform 0.3s ease;
-        }
-
-        a:hover::after {
-          transform: scaleX(1);
-        }
-      }
-    }
-  }
 }
 
 /*===================== Apresentação 1 ===================*/
@@ -331,96 +357,95 @@ main {
 }
 
 /* ======================== FOOTER ======================== */
-.footer {
-  background: linear-gradient(#0057b3c4, #002457);
-  color: white;
-  text-align: center;
-  padding: 3vw 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.2);
-  position: relative;
-  /* Footer aparece só no final */
-  width: 100%;
-  font-family: "Times New Roman", Times, serif;
-  font-weight: 400;
-  font-size: 1.3vw;
-  min-height: 70px;
-  margin-top: auto;
-  box-sizing: border-box;
-  z-index: 10;
+    footer {
+      background: linear-gradient(#0056b3, #002457);
+      color: white;
+      text-align: center;
+      padding: 2vw 0;
+      position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 400;
+      font-size: 1.3vw;
+      min-height: 70px;
+      margin-top: auto;
+      box-sizing: border-box;
+      z-index: 10;
+      width: 100%;
+      max-width: auto;
 
-  /* ==================== FOOTER CONTENT ==================== */
-  .footer-content {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    /* Centraliza horizontalmente */
-    align-items: center;
-    /* Centraliza verticalmente */
-    margin: 0 auto;
-    width: 100%;
-    max-width: 1000px;
-    padding: 0 2vw;
-  }
+      .parte-I-footer {
+        ul {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          margin: 0 auto;
+          width: 100%;
+          max-width: 1000px;
+          padding: 0 2vw;
 
-  /* ==================== FOOTER CONTACT ==================== */
-  .footer-contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    margin-left: 0;
-  }
+          .footer-contact {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: left;
+            margin-left: 0;
+            display: flex;
 
-  /* ========================= LOGO ========================= */
-  /* = img = */
-  .logo {
-    font-weight: 700;
-    font-size: 30px;
-    color: white;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* Centraliza verticalmente */
-  }
+            .midia {
+              display: flex;
 
-  /* ================== Titulo dos links rapidos ============ */
-  .linkRp {
-    font-size: 1.6vw;
-    margin-bottom: 0.6vw;
-  }
+              img {
+                width: 60px;
+              }
+            }
+          }
 
-  /* ====================== FOOTER LINKS =================== */
-  .links {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-right: 0;
-    list-style: none;
-    padding: 0;
-    gap: 0.3vw;
-    /* Espaçamento menor entre os links */
-  }
+          .logo {
+            font-family: "Times New Roman", Times, serif;
+            font-weight: 700;
+            font-size: 30px;
+            color: white;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 310px;
+          }
 
-  .links a {
-    font-size: 1.3vw;
-    color: #ffffff;
-    text-decoration: none;
-    margin-bottom: 0;
-    display: block;
-    text-align: center;
-    transition: color 0.5s ease;
-  }
+          .linkRp {
+            font-size: 1.6vw;
+            margin-bottom: 0.6vw;
 
-  .links a:hover {
-    color: #e0e0e0;
-  }
+            ul {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              text-align: center;
+              margin-right: 0;
+              list-style: none;
+              padding: 0;
+              gap: 0.3vw;
 
-  /* ====================== FOOTER BOTTOM ================== */
-  .footer-direitos {
-    width: 100%;
-    text-align: center;
-    font-size: 1.1vw;
-  }
-}
+              li a {
+                font-size: 1.3vw;
+                color: #ffffff;
+                text-decoration: none;
+                margin-bottom: 0;
+                display: block;
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+
+      .parte-II-footer {
+        width: 100%;
+        text-align: center;
+        font-size: 1.1vw;
+      }
+    }
