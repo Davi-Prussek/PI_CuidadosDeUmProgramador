@@ -1,64 +1,91 @@
-## Primeira Reunião 11/04
+.title {
 
-    ### O que foi feito:
-    
-        Reunimos o grupo; 
-        Tivemos uma conversa sobre o tema;
-        Começamos a decidir como vai ser o layout;
+font-size: 2.5rem;
 
-    ### Quem faltou:
+margin-bottom: 8.5rem;
 
-        Todos vieram;
+background: linear-gradient
 
-## Segunda Reunião 11/07
+(90deg, var primary),
 
-    ### O que foi feito:
+var(--secondary));
 
-        Decidimos o tema;
-        Fizemos a iniciação do projeto;
-        Definimos o papel de cada um do grupo;
-        Conversas sobre o projeto;
+-webkit-background-clip:
 
-    ### Quem faltou:
-    
-     Maico;
+text;
 
-## Terceira Reunião 18/07
+background-clip: text;
 
-    ## O que foi feito;
+color: transparent;
 
-        Organização dos arquivos;
-        Procurando referencias para o projeto;
-        Divisões de trabalho;
-        Elaboração do nome fantasioso do nosso grupo;
-        Organizações das reuniões;
-        Organizações dos documentos;
-        Iníciação da criação do layout;
+text-shadow: 0 0 15px
 
-    ## Quem faltou:
+rgba(157, 0, 255, 0.5);
 
-        Todos vieram;
-        
-## Quarta Reunião 15/08
+animation: pulse 3s
 
-    ## O que vai ser feito;
-        Início da criação do layout
-        Escolher um nome fictício
-        Criação da rede social 
-    
-    ### Quem faltou: 
+infinite alternate;
 
-        Mateus;
-        
-## Quinta Reunião 22/08
+}
 
-    ## O que vai ser feito;
-        Início da base do css 
-        Organização das paginas 
-        Organização da rede social
-        Início da montantagem 
-        Criação da pagina 
-    
-    ### Quem faltou:
+.carousel {
 
-        Todos vieram;
+position: relative;
+
+width: var(
+
+--carousel-radius);
+
+height: var(
+
+--carousel-radius);
+
+transform-style:
+
+preserve-3d;
+
+transition:
+
+transform 0.5s ease;
+
+}
+
+
+let lastupdateTime -
+
+Date.now();
+
+let colorUpdateTimer = 0.0;
+
+let config = {
+
+SIM_RESOLUTION: 128,
+
+DYE_RESOLUTION: 1440,
+
+CAPTURE_RESOLUTION: 512,
+
+DENSITY DISSIPATION: 3.5,
+
+VELOCITY_DISSIPATION: 2,
+
+PRESSURE: 0.1,
+
+PRESSURE_ITERATIONS: 20,
+
+CURL: 10,
+
+SPLAT RADIUS: 0.5,
+
+SPLAT FORCE: 6000,
+
+SHADING: true,
+
+COLOR_UPDATE_SPEED: 10,
+
+PAUSED: false,
+
+BACK COLOR: {r: 0, g: 0, b; 0),
+
+TRANSPARENT: true,
+}
