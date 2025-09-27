@@ -358,6 +358,7 @@ html {
           font-size: 1.05rem;
           line-height: 1.6;
         }
+
         .cards {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
@@ -396,47 +397,18 @@ html {
             }
 
             p {
-              margin: 4px 0 0;
+              align-items: center;
+              text-align: center;
               font-style: italic;
               color: #002244;
             }
           }
-        }
-        .div2 {
-          align-items: center;
-          margin-top: 20px;
-          text-align: center;
-          h3 {
-            margin-top: 0;
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #002244;
-          }
 
-          h4 {
-            margin: 12px 0 6px;
-            font-weight: 600;
-            color: #004bb4;
-            font-size: 1.1rem;
-          }
-
-          ul {
-            margin: 0;
-            padding-left: 20px;
-          }
-
-          p {
-            font-style: italic;
-            color: #002244;
-          }
-          .card-last {
-            background: #e9f2ff;
-            border: 1px solid #99c2ff;
-            border-radius: 14px;
-            padding: 24px 20px;
-            color: #003366;
-            transition: 0.25s ease;
+          /* força o último card a ocupar a linha inteira */
+          .last-card {
             align-items: center;
+            text-align: center;
+            grid-column: span 2;
           }
         }
       }
