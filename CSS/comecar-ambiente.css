@@ -279,7 +279,6 @@ html {
 
                     .card-I,
                     .card-II {
-                        box-shadow: 0px 8px 10px #c6e2ff;
                         width: 50%;
                         background-color: #e3f1ff;
                         border-radius: 23px;
@@ -413,24 +412,24 @@ html {
                 }
 
                 .artigo {
+                    margin: 30px;
+                    border-radius: 50px;
                     div {
+                        padding: 30px;
                         align-items: center;
-                        margin: 70px 0;
+                        margin: 70px;
                         display: flex;
                         text-align: center;
                         justify-content: center;
                         gap: 40px;
+                        border-radius: 20px;
 
                         a {
-                            align-items: center;
-                            background-color: #28a745;
-                            padding: 20px 40px;
-                            border-radius: 25px;
-                            text-align: center;
-                            font-size: 50px;
-                            color: #ffffff;
                             text-decoration: none;
-                            transition: transform 0.75s ease;
+                            background-color: #001f3d;
+                            color: white;
+                            padding: 5px 10px;
+                            border-radius: 10px;
                         }
 
                         .arquive {
