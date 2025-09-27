@@ -1,4 +1,4 @@
-const HTML = document.getElementById("html");
+const html = document.getElementById("html");
 const body = document.getElementById("body");
 const header = document.getElementById("header");
 const footer = document.getElementById("footer");
