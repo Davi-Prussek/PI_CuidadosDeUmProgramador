@@ -321,7 +321,7 @@ html {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
-          article {
+          div {
             background: #e9f2ff;
             border: 1px solid #99c2ff;
             border-radius: 14px;
@@ -334,7 +334,7 @@ html {
               box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
             }
           }
-          article:last-child {
+          div:last-child {
             grid-column: span 2;
           }
         }
@@ -415,27 +415,43 @@ html {
     }
 
     footer {
+        
       background: linear-gradient(#0056b3, #002457);
       color: white;
       text-align: center;
       padding: 2vw 0;
-      font-family: "Times New Roman", Times, serif;
-      font-size: 1.3vw;
       position: relative;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 400;
+      font-size: 1.3vw;
+      min-height: 70px;
+      margin-top: auto;
+      box-sizing: border-box;
+      z-index: 10;
+      width: 100%;
+      max-width: auto;
 
-      .parte-I-footer {
+
         ul {
           display: flex;
+          flex-direction: row;
           justify-content: center;
           align-items: center;
-          max-width: 1000px;
           margin: 0 auto;
+          width: 100%;
+          max-width: 1000px;
           padding: 0 2vw;
 
           .footer-contact {
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: left;
+            margin-left: 0;
+            display: flex;
 
             .midia {
               display: flex;
@@ -447,34 +463,48 @@ html {
           }
 
           .logo {
-            margin: 0 auto 0 310px;
-            font-size: 30px;
+            font-family: "Times New Roman", Times, serif;
             font-weight: 700;
+            font-size: 30px;
+            color: white;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 310px;
           }
 
           .linkRp {
             font-size: 1.6vw;
+            margin-bottom: 0.6vw;
 
             ul {
               display: flex;
               flex-direction: column;
-              gap: 0.3vw;
+              align-items: center;
+              text-align: center;
+              margin-right: 0;
               list-style: none;
               padding: 0;
+              gap: 0.3vw;
 
               li a {
                 font-size: 1.3vw;
-                color: #fff;
+                color: #ffffff;
                 text-decoration: none;
+                margin-bottom: 0;
+                display: block;
+                text-align: center;
               }
             }
           }
         }
-      }
+      
 
-      .parte-II-footer {
+
+        width: 100%;
+        text-align: center;
         font-size: 1.1vw;
-      }
     }
   }
 }

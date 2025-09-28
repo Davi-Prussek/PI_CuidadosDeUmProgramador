@@ -273,14 +273,11 @@ main {
     padding: 20px;
     gap: 20px;
 
-    .text-left {
-      text-align: center;
-
-      p {
+      .text-left {
+        text-align: center;
         font-size: 18px;
         line-height: 1.6;
       }
-    }
 
     .services-title {
       font-size: 24px;
@@ -358,6 +355,7 @@ main {
 
 /* ======================== FOOTER ======================== */
     footer {
+        
       background: linear-gradient(#0056b3, #002457);
       color: white;
       text-align: center;
@@ -376,7 +374,7 @@ main {
       width: 100%;
       max-width: auto;
 
-      .parte-I-footer {
+
         ul {
           display: flex;
           flex-direction: row;
@@ -441,11 +439,10 @@ main {
             }
           }
         }
-      }
+      
 
-      .parte-II-footer {
+
         width: 100%;
         text-align: center;
         font-size: 1.1vw;
-      }
     }

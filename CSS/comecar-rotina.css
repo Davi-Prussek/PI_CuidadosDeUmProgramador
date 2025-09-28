@@ -261,7 +261,7 @@ html {
         }
 
     footer {
-      margin-top: 40vw;
+        
       background: linear-gradient(#0056b3, #002457);
       color: white;
       text-align: center;
@@ -274,12 +274,13 @@ html {
       font-weight: 400;
       font-size: 1.3vw;
       min-height: 70px;
+      margin-top: auto;
       box-sizing: border-box;
-      z-index: 2;
+      z-index: 10;
       width: 100%;
       max-width: auto;
 
-      .parte-I-footer {
+
         ul {
           display: flex;
           flex-direction: row;
@@ -344,13 +345,12 @@ html {
             }
           }
         }
-      }
+      
 
-      .parte-II-footer {
+
         width: 100%;
         text-align: center;
         font-size: 1.1vw;
-      }
     }
     }
 }

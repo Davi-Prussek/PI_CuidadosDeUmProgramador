@@ -402,6 +402,7 @@ figcaption {
 }
 
     footer {
+        
       background: linear-gradient(#0056b3, #002457);
       color: white;
       text-align: center;
@@ -420,7 +421,7 @@ figcaption {
       width: 100%;
       max-width: auto;
 
-      .parte-I-footer {
+
         ul {
           display: flex;
           flex-direction: row;
@@ -485,13 +486,12 @@ figcaption {
             }
           }
         }
-      }
+      
 
-      .parte-II-footer {
+
         width: 100%;
         text-align: center;
         font-size: 1.1vw;
-      }
     }
 
 /* Responsividade mobile */
