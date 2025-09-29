@@ -1,15 +1,11 @@
-//Parte principal
-const HTML = document.querySelector("html");
 
-//Sub parte principal
+const HTML = document.querySelector("html");
 const body = document.querySelector("body");
 
-//3 partes principais(cabeça, torso e pé)
 const header = document.querySelector("header");
-const main = document.querySelector("main");
 const footer = document.querySelector("footer");
+const main = document.querySelector("main");
 
-//Partes específicas
 const section = document.querySelectorAll("section");
 const div = document.querySelectorAll("div");
 const p = document.querySelectorAll("p");
@@ -20,6 +16,8 @@ const h4 = document.querySelectorAll("h4");
 const h5 = document.querySelectorAll("h5");
 const h6 = document.querySelectorAll("h6");
 const span = document.querySelectorAll("span");
+const gitIcon = document.querySelectorAll(".icon-git")
+const a = document.querySelectorAll(".link-git");
 const subBar = document.getElementById("sub-menu-bar");
 
 const setaVoltar = document.getElementById("setaVoltar");
@@ -48,36 +46,43 @@ const ligaDesliga = () => {
 function light() {
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
+
+    HTML.style.backgroundColor = "rgba(19, 19, 19, 1)";
+    main.style.backgroundColor = "rgba(19, 19, 19, 1)";
     header.style.backgroundColor = "rgb(0, 0, 0)";
     subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
-    setaVoltar.style.backgroundColor = "rgb( 0, 0, 0)";
+    body.style.background = "rgba(19, 19, 19, 1)";
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
-    main.style.backgroundColor = "rgba(19, 19, 19, 1)";
-    HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
-    section.forEach(s => {s.style.color = "#ffffff";});
+
+    section.forEach(s => { s.style.color = "#ffffff"; });
     div.forEach(d => { d.style.color = "#ffffff"; });
     div.forEach(d => { d.style.backgroundColor = "black"; });
-    h3.forEach(h3 => {h3.style.color = "#0052a4"});
-    h2.forEach(h2 => {h2.style.color = "#0052a4"});
-    p.forEach(p => {p.style.color = "#ffffff"});
+
+    gitIcon.forEach(gtiICon => { gtiICon.src = "../img/icons/github-brands-solid-full branco.svg" });
+    setaVoltar.style.backgroundColor = "rgb(0, 0, 0)";
+    h2.forEach(h2 => {h2.style.color = "#ffffff"});
+    a.forEach(a => {a.style.color = "white"});
+
     localStorage.setItem("theme", "light");
 }
 
 function dark() {
     botaoOff.style.display = "none";
     botaoOn.style.display = "block";
-    header.style.backgroundColor = "";
-    setaVoltar.style.backgroundColor = "";
+
+    header.style.backgroundColor = "#0056b3";
     subBar.style.backgroundColor = ""
-    footer.style.background = "";
-    main.style.backgroundColor = "";
-    HTML.style.backgroundColor = "";
+    setaVoltar.style.backgroundColor = "#0056b3";
+    footer.style.background = "linear-gradient( #0057b3c4, #002457)";
+    main.style.backgroundColor = "white";
+    HTML.style.backgroundColor = "white";
     section.forEach(s => {s.style.color = "";});
-    div.forEach(d => { d.style.color = ""; });
-    div.forEach(d => { d.style.backgroundColor = ""; });
-    h3.forEach(h3 => {h3.style.color = ""});
+    gitIcon.forEach(gtiICon => {gtiICon.src = "../img/icons/github-brands-solid-full.svg"});
+    div.forEach(d => { d.style.color = "black"; });
+    div.forEach(d => { d.style.backgroundColor = "white"; });
     h2.forEach(h2 => {h2.style.color = ""});
-    p.forEach(p => {p.style.color = ""});
+    body.style.background = "white";
+    a.forEach(a => {a.style.color = ""});
     localStorage.setItem("theme", "dark");
 }
 
