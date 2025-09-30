@@ -136,7 +136,17 @@
          
          Todos vieram;
          
+## Decimo Segundo dia 26/09
+    ## O que vai ser feito;
+        As 4 Responsabilidade das paginas
+        terminando paginas
+        Arrumando os cardis de referencia de conteudo
+        fazendo as atas do dia  
+        conferindo as paginas para o projeto
 
+    ### Quem faltou:
+
+        Maico
 
 
 
