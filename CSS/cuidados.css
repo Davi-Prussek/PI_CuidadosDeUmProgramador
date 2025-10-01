@@ -281,6 +281,7 @@ main h6 {
 }
 
 main {
+    padding-top: 2vw;
     margin: 8vw 2vw;
     border-radius: 4vw;
     background-color: #f2f2f2;
@@ -303,21 +304,10 @@ main h2 {
     box-shadow: 0 8px 16px #000b1a85;
     border: 1px solid transparent;
     transition: 
-        background-color 0.2s ease, 
-        transform 0.2s ease, 
-        box-shadow 0.2s ease, 
-        border 0.2s ease;
-}
-
-main h2::after {
-    content: "";
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: #0056b3;
-    border-radius: 3px;
+    background-color 0.2s ease, 
+    transform 0.2s ease, 
+    box-shadow 0.2s ease, 
+    border 0.2s ease;
 }
 
 main h2:hover {

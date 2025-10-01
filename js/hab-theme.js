@@ -17,8 +17,12 @@ const h5 = document.querySelectorAll("h5");
 const h6 = document.querySelectorAll("h6");
 const span = document.querySelectorAll("span");
 const subBar = document.getElementById("sub-menu-bar");
-
+const ul = document.querySelectorAll("ul");
+const li = document.querySelectorAll("li");
 const setaVoltar = document.getElementById("setaVoltar");
+const article2 = document.querySelectorAll("article > div")
+const article = document.querySelectorAll("article")
+const article3 = document.getElementsByClassName(".sinais");
 
 const botaoOff = document.getElementById("themeButtonOff");
 const botaoOn = document.getElementById("themeButtonOn")
@@ -44,16 +48,19 @@ const ligaDesliga = () => {
 function light() {
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
+
     header.style.backgroundColor = "rgb(0, 0, 0)";
-    subBar.style.backgroundColor = "rgb(0, 0, 0)"
+    subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
     setaVoltar.style.backgroundColor = "rgb( 0, 0, 0)";
+
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     main.style.backgroundColor = "rgba(5, 0, 23, 1)";
     HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
-    section.forEach(s => {s.style.color = "#ffffff";});
+    article.forEach(article => {article.style.backgroundColor = "#202020ff"});
+    article2.forEach(article2 => {article2.style.backgroundColor = "#202020ff"});
+    ul.forEach(ul => {ul.style.color = "#ffffff";});
+    li.forEach(li => {li.style.color = "white"})
     div.forEach(d => { d.style.color = "#ffffff"; });
-    div.forEach(d => { d.style.backgroundColor = "black"; });
-    h2.forEach(h2 => {h2.style.color = "#3c9effff"});
     p.forEach(p => {p.style.color = "#ffffff"});
     localStorage.setItem("theme", "light");
 }
@@ -67,10 +74,13 @@ function dark() {
     footer.style.background = "linear-gradient( #0057b3c4, #002457)";
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
+    article.forEach(article => {article.style.backgroundColor = ""});
+    ul.forEach(ul => {ul.style.color = "";});
+    li.forEach(li => {li.style.color = ""})
+    div.forEach(d => { d.style.color = ""; });
     section.forEach(s => {s.style.color = "";});
     div.forEach(d => { d.style.color = ""; });
     div.forEach(d => { d.style.backgroundColor = ""; });
-    h2.forEach(h2 => {h2.style.color = ""});
     p.forEach(p => {p.style.color = ""});
     localStorage.setItem("theme", "dark");
 }

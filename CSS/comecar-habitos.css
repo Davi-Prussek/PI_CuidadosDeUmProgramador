@@ -297,7 +297,7 @@ html {
             .parte-IV {
                 font: 30px;
                 padding: 10px;
-                border-radius: 10px;
+                border-radius: 30px;
                 margin: 70px;
                 background-color: #ffffff;
                 color: #001f3d;
@@ -322,13 +322,16 @@ html {
 
 
             }
+            .sinais {
+                border-radius: 30px;
+            }
             .intro {
                 text-align: center;
                 margin: 20px;
                 padding: 10px;
                 border-radius: 10px;
                 margin: 70px;
-                border-radius: 10px;
+                border-radius: 30px;
                 background-color: #ffffff;
                 .mini-text {
                 text-align: center;

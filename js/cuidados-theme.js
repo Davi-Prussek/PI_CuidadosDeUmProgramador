@@ -45,16 +45,16 @@ function light() {
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
     header.style.backgroundColor = "rgb(0, 0, 0)";
-    subBar.style.backgroundColor = "rgb(0, 0, 0)"
+    subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
     setaVoltar.style.backgroundColor = "rgb( 0, 0, 0)";
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
-    main.style.backgroundColor = "rgba(5, 0, 23, 1)";
-    HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
+    main.style.backgroundColor = "rgba(0, 0, 0, 1)";
+    HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
+    h2.forEach(h2 => {h2.style.color = "#3c9effff"});
     section.forEach(s => {s.style.color = "#ffffff";});
     div.forEach(d => { d.style.color = "#ffffff"; });
-    div.forEach(d => { d.style.backgroundColor = "black"; });
-    h2.forEach(h2 => {h2.style.color = "#3c9effff"});
     p.forEach(p => {p.style.color = "#ffffff"});
+    p.forEach(p => {p.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     localStorage.setItem("theme", "light");
 }
 
@@ -67,10 +67,10 @@ function dark() {
     footer.style.background = "linear-gradient( #0057b3c4, #002457)";
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
+    h2.forEach(h2 => {h2.style.color = ""});
     section.forEach(s => {s.style.color = "";});
     div.forEach(d => { d.style.color = ""; });
     div.forEach(d => { d.style.backgroundColor = ""; });
-    h2.forEach(h2 => {h2.style.color = ""});
     p.forEach(p => {p.style.color = ""});
     localStorage.setItem("theme", "dark");
 }

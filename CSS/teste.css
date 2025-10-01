@@ -239,13 +239,6 @@ html {
 
     main {
 
-            background-color: #ffffff;
-            margin: 60px 60px 0 60px;
-            border-radius: 15px;
-            margin-top: 11vw;
-            padding-bottom: 10px;
-            margin-bottom: 5vw;
-
       .seta-voltar {
         background-color: #0056b3;
         border-radius: 1000px;
@@ -261,6 +254,7 @@ html {
           height: 60px;
         }
       }
+
       margin-top: 6vw;
       margin-bottom: 3rem;
 

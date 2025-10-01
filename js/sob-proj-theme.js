@@ -52,7 +52,7 @@ function light() {
     subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
     setaVoltar.style.backgroundColor = "rgb( 0, 0, 0)";
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
-    main.style.backgroundColor = "rgba(19, 19, 19, 1)";
+    main.style.backgroundColor = "rgba(5, 0, 23, 1)";
     HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
     section.forEach(s => {s.style.color = "#ffffff";});
     div.forEach(d => { d.style.color = "#ffffff"; });
