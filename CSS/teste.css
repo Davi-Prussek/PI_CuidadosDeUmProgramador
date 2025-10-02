@@ -142,7 +142,6 @@ html {
           li:hover {
             ul {
               display: block;
-
             }
           }
 
@@ -155,8 +154,6 @@ html {
           li:hover {
             background-color: rgb(18, 21, 44);
           }
-
-
         }
 
         .sub-menu-header {
@@ -211,34 +208,33 @@ html {
           }
         }
       }
-              ul {
-          a {
-            text-decoration: none;
-            color: white;
-            position: relative;
-          }
-
-          a::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #ffffff;
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.3s ease;
-          }
-
-          a:hover::after {
-            transform: scaleX(1);
-          }
+      ul {
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
         }
+
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
+
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
     }
 
     main {
-
       .seta-voltar {
         background-color: #0056b3;
         border-radius: 1000px;
@@ -337,7 +333,6 @@ html {
     }
 
     footer {
-
       background: linear-gradient(#0056b3, #002457);
       color: white;
       text-align: center;
@@ -355,7 +350,6 @@ html {
       z-index: 10;
       width: 100%;
       max-width: auto;
-
 
       ul {
         display: flex;
@@ -422,11 +416,138 @@ html {
         }
       }
 
-
-
       width: 100%;
       text-align: center;
       font-size: 1.1vw;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 3.5vw;
+    h1 a {
+      font-size: 1vw;
+    }
+    nav .direcionar_sobreNos {
+      font-size: 0.8vw;
+      li {
+        min-width: 8vw;
+      }
+    }
+    .sub-menu-header {
+      font-size: 0.6vw;
+      .theme {
+        font-size: 0.7vw;
+        .buttonOff,
+        .buttonOn {
+          height: 1.2vw;
+        }
+      }
+      li {
+        min-width: 6vw;
+      }
+    }
+  }
+  main {
+    margin-top: 15vw;
+    .container {
+      max-width: 95%;
+      padding: 1.5rem;
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .intro {
+      font-size: 20px;
+    }
+    fieldset {
+      padding: 1rem;
+    }
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .card {
+      padding: 20px 15px;
+    }
+  }
+  footer {
+    ul {
+      flex-direction: column;
+      text-align: center;
+      .footer-contact {
+        margin-bottom: 1rem;
+      }
+      .logo {
+        margin: 1rem 0;
+      }
+      .linkRp {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 3vw;
+    h1 a {
+      font-size: 0.9vw;
+    }
+    nav .direcionar_sobreNos {
+      font-size: 0.7vw;
+      li {
+        min-width: 6vw;
+      }
+    }
+    .sub-menu-header {
+      font-size: 0.5vw;
+      .theme {
+        font-size: 0.6vw;
+        .buttonOff,
+        .buttonOn {
+          height: 1.1vw;
+        }
+      }
+      li {
+        min-width: 5vw;
+      }
+    }
+  }
+  main {
+    .container {
+      padding: 1rem;
+      h2 {
+        font-size: 30px;
+      }
+    }
+    .intro {
+      font-size: 18px;
+    }
+    fieldset {
+      padding: 0.8rem;
+    }
+    .card {
+      padding: 15px 10px;
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  footer {
+    padding: 10px 0;
+    ul {
+      padding: 0 10px;
+      .logo {
+        font-size: 20px;
+      }
+      .linkRp {
+        font-size: 12px;
+      }
+    }
+    p {
+      font-size: 10px;
     }
   }
 }

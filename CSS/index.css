@@ -985,26 +985,26 @@ footer {
   ul {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 100%;
+    width: 90%;
     max-width: 1000px;
-    padding: 0 2vw;
+    padding: 0;
 
     .footer-contact {
       display: flex;
       flex-direction: column;
       align-items: center;
-      text-align: left;
-      margin-left: 0;
-      display: flex;
+      text-align: center;
+      flex: 1;
 
       .midia {
         display: flex;
 
         img {
-          width: 60px;
+          width: 3vw;
+          min-width: 40px;
         }
       }
     }
@@ -1012,25 +1012,24 @@ footer {
     .logo {
       font-family: "Times New Roman", Times, serif;
       font-weight: 700;
-      font-size: 30px;
+      font-size: 2.5vw;
       color: white;
-      margin: 0 auto;
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-left: 310px;
+      flex: 1;
     }
 
     .linkRp {
       font-size: 1.6vw;
       margin-bottom: 0.6vw;
+      flex: 1;
 
       ul {
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        margin-right: 0;
         list-style: none;
         padding: 0;
         gap: 0.3vw;
@@ -1047,7 +1046,137 @@ footer {
     }
   }
 
-  width: 100%;
-  text-align: center;
-  font-size: 1.1vw;
+  p {
+    font-size: 1.1vw;
+    margin: 1vw 0 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    height: 3.5vw;
+    h1 a {
+      font-size: 1vw;
+    }
+    nav .direcionar_sobreNos {
+      font-size: 0.8vw;
+      li {
+        min-width: 8vw;
+      }
+    }
+    .sub-menu-header {
+      font-size: 0.6vw;
+      .theme {
+        font-size: 0.7vw;
+        .buttonOff,
+        .buttonOn {
+          height: 1.2vw;
+        }
+      }
+      li {
+        min-width: 6vw;
+      }
+    }
+  }
+  main {
+    margin-top: 15vw;
+    .container {
+      max-width: 95%;
+      padding: 1.5rem;
+      h2 {
+        font-size: 40px;
+      }
+    }
+    .intro {
+      font-size: 20px;
+    }
+    fieldset {
+      padding: 1rem;
+    }
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+    .card {
+      padding: 20px 15px;
+    }
+  }
+  footer {
+    ul {
+      flex-direction: column;
+      text-align: center;
+      .footer-contact {
+        margin-bottom: 1rem;
+      }
+      .logo {
+        margin: 1rem 0;
+      }
+      .linkRp {
+        margin-top: 1rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    height: 3vw;
+    h1 a {
+      font-size: 0.9vw;
+    }
+    nav .direcionar_sobreNos {
+      font-size: 0.7vw;
+      li {
+        min-width: 6vw;
+      }
+    }
+    .sub-menu-header {
+      font-size: 0.5vw;
+      .theme {
+        font-size: 0.6vw;
+        .buttonOff,
+        .buttonOn {
+          height: 1.1vw;
+        }
+      }
+      li {
+        min-width: 5vw;
+      }
+    }
+  }
+  main {
+    .container {
+      padding: 1rem;
+      h2 {
+        font-size: 30px;
+      }
+    }
+    .intro {
+      font-size: 18px;
+    }
+    fieldset {
+      padding: 0.8rem;
+    }
+    .card {
+      padding: 15px 10px;
+      h3 {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  footer {
+    padding: 10px 0;
+    ul {
+      padding: 0 10px;
+      .logo {
+        font-size: 20px;
+      }
+      .linkRp {
+        font-size: 12px;
+      }
+    }
+    p {
+      font-size: 10px;
+    }
+  }
 }

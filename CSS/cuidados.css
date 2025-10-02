@@ -1,11 +1,11 @@
 html {
-    font-size: calc(12px + 0.95vw);
-    font-family: "Open Sans", sans-serif;
-    color: #333;
-    line-height: 1.6;
-    background-color: #ffffff91;
+  font-size: calc(12px + 0.95vw);
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #ffffff91;
 
-    body {
+  body {
     header {
       img {
         height: 2.6rem;
@@ -139,7 +139,6 @@ html {
           li:hover {
             ul {
               display: block;
-
             }
           }
 
@@ -152,8 +151,6 @@ html {
           li:hover {
             background-color: rgb(18, 21, 44);
           }
-
-
         }
 
         .sub-menu-header {
@@ -208,55 +205,51 @@ html {
           }
         }
       }
-              ul {
-          a {
-            text-decoration: none;
-            color: white;
-            position: relative;
-          }
-
-          a::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 2px;
-            background-color: #ffffff;
-            transform: scaleX(0);
-            transform-origin: center;
-            transition: transform 0.3s ease;
-          }
-
-          a:hover::after {
-            transform: scaleX(1);
-          }
-        }
-    }
-
-        .seta-voltar {
-            background-color: #0056b3;
-            border-radius: 1000px;
-            cursor: pointer;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            border: none;
-            z-index: 15;
-
-            img {
-                width: 55px;
-                height: 60px;
-            }
+      ul {
+        a {
+          text-decoration: none;
+          color: white;
+          position: relative;
         }
 
-        margin-top: 11vw;
-        text-align: center;
+        a::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background-color: #ffffff;
+          transform: scaleX(0);
+          transform-origin: center;
+          transition: transform 0.3s ease;
+        }
 
-
-
-
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
     }
+
+    .seta-voltar {
+      background-color: #0056b3;
+      border-radius: 1000px;
+      cursor: pointer;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      border: none;
+      z-index: 15;
+
+      img {
+        width: 55px;
+        height: 60px;
+      }
+    }
+
+    margin-top: 11vw;
+    text-align: center;
+  }
 }
 
 /* Aplicar as fontes gerais */
@@ -267,359 +260,371 @@ main h3,
 main h4,
 main h5,
 main h6 {
-    font-family: "Montserrat", sans-serif;
-    color: #222;
-    font-weight: 700;
-    padding: 3vw 0 0 0;
+  font-family: "Montserrat", sans-serif;
+  color: #222;
+  font-weight: 700;
+  padding: 3vw 0 0 0;
 }
 
 /* Título principal */
 .titulo {
-    font-size: 2.5rem;
-    text-align: center;
-    margin: 1.5rem 0;
+  font-size: 2.5rem;
+  text-align: center;
+  margin: 1.5rem 0;
 }
 
 main {
-    padding-top: 2vw;
-    margin: 8vw 2vw;
-    border-radius: 4vw;
-    background-color: #f2f2f2;
+  padding-top: 2vw;
+  margin: 8vw 2vw;
+  border-radius: 4vw;
+  background-color: #f2f2f2;
 }
 
 /* Subtítulos */
 main h2 {
-    color: #003366;
-    font-size: 2.5rem;
-    margin-bottom: 1vw;
-    margin-top: 1vw;
-    position: relative;
-    display: inline-block;
-    background-image: url('../img/fundoCuidados.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    padding: 5vw 12vw;
-    border-radius: 2vw;
-    box-shadow: 0 8px 16px #000b1a85;
-    border: 1px solid transparent;
-    transition: 
-    background-color 0.2s ease, 
-    transform 0.2s ease, 
-    box-shadow 0.2s ease, 
-    border 0.2s ease;
+  color: #003366;
+  font-size: 2.5rem;
+  margin-bottom: 1vw;
+  margin-top: 1vw;
+  position: relative;
+  display: inline-block;
+  background-image: url("../img/fundoCuidados.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 5vw 12vw;
+  border-radius: 2vw;
+  box-shadow: 0 8px 16px #000b1a85;
+  border: 1px solid transparent;
+  transition: background-color 0.2s ease, transform 0.2s ease,
+    box-shadow 0.2s ease, border 0.2s ease;
 }
 
 main h2:hover {
-    background-color: #d7eaf7;
-    box-shadow: 0 10px 24px #0352c0a9;
-    border: 1px solid #0056b3;
+  background-color: #d7eaf7;
+  box-shadow: 0 10px 24px #0352c0a9;
+  border: 1px solid #0056b3;
 }
 
 main h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
-    text-transform: uppercase;
-    color: #0056b3;
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  color: #0056b3;
 }
 
 /* Parágrafos */
 body main p {
-    font-size: 1rem;
-    margin: 2vw 8vw;
-    text-align: left;
+  font-size: 1rem;
+  margin: 2vw 8vw;
+  text-align: left;
 }
 
 main p span {
-    font-weight: bold;
+  font-weight: bold;
 }
 
 /* Background dos parágrafos */
 main p {
-    color: #333;
-    background-color: #eaf3fb;
-    padding: 1vw;
-    border-radius: 15px;
-    border: 1px solid #002457;
-    transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  color: #333;
+  background-color: #eaf3fb;
+  padding: 1vw;
+  border-radius: 15px;
+  border: 1px solid #002457;
+  transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 /* Interação com o background */
 main p:hover {
-    background-color: #d7eaf7;
-    box-shadow: 0 6px 15px #02295f4d;
-    transform: scale(1.02);
-    border: 2px solid #002457;
+  background-color: #d7eaf7;
+  box-shadow: 0 6px 15px #02295f4d;
+  transform: scale(1.02);
+  border: 2px solid #002457;
 }
 
 /* Botão-link */
 .btn-link {
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #007bff;
-    color: white;
-    border-radius: 1vw;
-    font-family: "Montserrat", sans-serif;
-    font-weight: 600;
-    transition: background-color 0.3s ease;
-    margin-bottom: 2vw;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #007bff;
+  color: white;
+  border-radius: 1vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-bottom: 2vw;
 }
 
 .btn-link:hover {
-    background-color: #0056b3;
+  background-color: #0056b3;
 }
 
 /* Lista */
 .lista {
-    margin: 2vw 8vw;
-    padding: 1rem;
+  margin: 2vw 8vw;
+  padding: 1rem;
 }
 
 .lista li {
-    background: #eaf3fb;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    border-radius: 10px;
-    border-left: 5px solid #0056b3;
-    transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
+  background: #eaf3fb;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  border-left: 5px solid #0056b3;
+  transition: transform 0.2s ease, background-color 0.2s ease, border 0.2s ease;
 }
 
 .lista li:hover {
-    background-color: #e6f0ff;
-    transform: scale(1.02);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-    border-top: 2px solid #0056b3;
-    border-right: 2px solid #0056b3;
-    border-bottom: 2px solid #0056b3;
+  background-color: #e6f0ff;
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  border-top: 2px solid #0056b3;
+  border-right: 2px solid #0056b3;
+  border-bottom: 2px solid #0056b3;
 }
 
 .lista li span {
-    font-weight: bold;
-    color: #0056b3;
+  font-weight: bold;
+  color: #0056b3;
 }
 
 /* Imagens */
 figure {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45%;
-    margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 45%;
+  margin: 0 auto;
 }
 
 figure img {
-    width: 100%;
-    height: auto;
-    border-radius: 1vw;
+  width: 100%;
+  height: auto;
+  border-radius: 1vw;
 }
 
 figcaption {
-    align-self: flex-start;
-    font-size: 0.5rem;
-    margin-top: 0.3rem;
+  align-self: flex-start;
+  font-size: 0.5rem;
+  margin-top: 0.3rem;
 }
 
-    footer {
-        
-      background: linear-gradient(#0056b3, #002457);
-      color: white;
+footer {
+  background: linear-gradient(#0056b3, #002457);
+  color: white;
+  text-align: center;
+  padding: 2vw 0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 400;
+  font-size: 1.3vw;
+  min-height: 70px;
+  margin-top: auto;
+  box-sizing: border-box;
+  z-index: 10;
+  width: 100%;
+  max-width: auto;
+
+  ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 1000px;
+    padding: 0;
+
+    .footer-contact {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       text-align: center;
-      padding: 2vw 0;
-      position: relative;
-      left: 0;
-      bottom: 0;
-      width: 100%;
-      font-family: "Times New Roman", Times, serif;
-      font-weight: 400;
-      font-size: 1.3vw;
-      min-height: 70px;
-      margin-top: auto;
-      box-sizing: border-box;
-      z-index: 10;
-      width: 100%;
-      max-width: auto;
+      flex: 1;
 
+      .midia {
+        display: flex;
 
-        ul {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          margin: 0 auto;
-          width: 100%;
-          max-width: 1000px;
-          padding: 0 2vw;
-
-          .footer-contact {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: left;
-            margin-left: 0;
-            display: flex;
-
-            .midia {
-              display: flex;
-
-              img {
-                width: 60px;
-              }
-            }
-          }
-
-          .logo {
-            font-family: "Times New Roman", Times, serif;
-            font-weight: 700;
-            font-size: 30px;
-            color: white;
-            margin: 0 auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 310px;
-          }
-
-          .linkRp {
-            font-size: 1.6vw;
-            margin-bottom: 0.6vw;
-
-            ul {
-              display: flex;
-              flex-direction: column;
-              align-items: center;
-              text-align: center;
-              margin-right: 0;
-              list-style: none;
-              padding: 0;
-              gap: 0.3vw;
-
-              li a {
-                font-size: 1.3vw;
-                color: #ffffff;
-                text-decoration: none;
-                margin-bottom: 0;
-                display: block;
-                text-align: center;
-              }
-            }
-          }
+        img {
+          width: 3vw;
+          min-width: 40px;
         }
-      
+      }
+    }
 
+    .logo {
+      font-family: "Times New Roman", Times, serif;
+      font-weight: 700;
+      font-size: 2.5vw;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex: 1;
+    }
 
-        width: 100%;
+    .linkRp {
+      font-size: 1.6vw;
+      margin-bottom: 0.6vw;
+      flex: 1;
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         text-align: center;
-        font-size: 1.1vw;
-    }
+        list-style: none;
+        padding: 0;
+        gap: 0.3vw;
 
-/* Responsividade mobile */
+        li a {
+          font-size: 1.3vw;
+          color: #ffffff;
+          text-decoration: none;
+          margin-bottom: 0;
+          display: block;
+          text-align: center;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: 1.1vw;
+    margin: 1vw 0 0 0;
+  }
+}
+
 @media (max-width: 768px) {
-    body {
-        padding: 20px 15px;
+  header {
+    height: 3.5vw;
+    h1 a {
+      font-size: 1vw;
     }
-
-    header {
-        height: 8vw;
-        padding: 0 1vw;
+    nav .direcionar_sobreNos {
+      font-size: 0.8vw;
+      li {
+        min-width: 8vw;
+      }
     }
-
-    header h1 {
-        font-size: 1.8rem;
+    .sub-menu-header {
+      font-size: 0.6vw;
+      .theme {
+        font-size: 0.7vw;
+        .buttonOff,
+        .buttonOn {
+          height: 1.2vw;
+        }
+      }
+      li {
+        min-width: 6vw;
+      }
     }
-
-    header nav ul {
-        gap: 0.5rem;
-        font-size: 0.9rem;
+  }
+  main {
+    margin-top: 15vw;
+    .container {
+      max-width: 95%;
+      padding: 1.5rem;
+      h2 {
+        font-size: 40px;
+      }
     }
-
-    header nav ul li {
-        min-width: 6rem;
-        padding-top: 2vw;
+    .intro {
+      font-size: 20px;
     }
-
-    main {
-        padding-top: 8vw;
+    fieldset {
+      padding: 1rem;
     }
-
-    .s1 {
-        padding: 40px 20px;
+    .cards {
+      grid-template-columns: 1fr;
+      gap: 15px;
     }
-
-    h2 {
-        font-size: 2.2rem;
+    .card {
+      padding: 20px 15px;
     }
-
-    article {
-        max-width: 100%;
-        padding: 20px 18px;
-        margin-bottom: 20px;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
+  }
+  footer {
     ul {
-        padding-left: 20px;
+      flex-direction: column;
+      text-align: center;
+      .footer-contact {
+        margin-bottom: 1rem;
+      }
+      .logo {
+        margin: 1rem 0;
+      }
+      .linkRp {
+        margin-top: 1rem;
+      }
     }
+  }
 }
 
-/* Para telas muito pequenas (mobile pequeno) */
-@media (max-width: 480px) {
-    header {
-        height: 10vw;
+@media (max-width: 500px) {
+  header {
+    height: 3vw;
+    h1 a {
+      font-size: 0.9vw;
     }
-
-    header nav ul {
-        gap: 0.3rem;
-        font-size: 0.8rem;
+    nav .direcionar_sobreNos {
+      font-size: 0.7vw;
+      li {
+        min-width: 6vw;
+      }
     }
-
-    header nav ul li {
-        min-width: 5rem;
+    .sub-menu-header {
+      font-size: 0.5vw;
+      .theme {
+        font-size: 0.6vw;
+        .buttonOff,
+        .buttonOn {
+          height: 1.1vw;
+        }
+      }
+      li {
+        min-width: 5vw;
+      }
     }
-
-    main {
-        padding-top: 10vw;
+  }
+  main {
+    .container {
+      padding: 1rem;
+      h2 {
+        font-size: 30px;
+      }
     }
-
-    .s1 {
-        padding: 30px 15px;
+    .intro {
+      font-size: 18px;
     }
-
-    h2 {
-        font-size: 1.8rem;
+    fieldset {
+      padding: 0.8rem;
     }
-
-    article {
-        padding: 15px 12px;
+    .card {
+      padding: 15px 10px;
+      h3 {
+        font-size: 1.1rem;
+      }
     }
-
+  }
+  footer {
+    padding: 10px 0;
+    ul {
+      padding: 0 10px;
+      .logo {
+        font-size: 20px;
+      }
+      .linkRp {
+        font-size: 12px;
+      }
+    }
     p {
-        font-size: 0.95rem;
+      font-size: 10px;
     }
-
-    iframe {
-        width: 70%;
-        height: auto;
-    }
-
-    figure {
-        width: 70%;
-        height: auto;
-    }
-
-    .btn-link {
-        margin: 5px;
-        border-radius: 4vw;
-    }
-}
-
-/* Para PC (telas grandes) */
-@media (min-width: 1200px) {
-    .s1 {
-        padding: 100px 50px;
-    }
+  }
 }
