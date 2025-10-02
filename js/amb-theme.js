@@ -72,6 +72,7 @@ function dark() {
     div.forEach(d => { d.style.backgroundColor = ""; });
     h1.forEach(h1 => {h1.style.color = ""});
     p.forEach(p => {p.style.color = ""});
+    p.forEach(s => {s.style.backgroundColor = "";});
     localStorage.setItem("theme", "dark");
 }
 

@@ -262,10 +262,9 @@ html {
 
             .mini-text {
                 text-align: center;
-                margin: 0 15vw;
-                font-size: 40px;
-                line-height: 1.3;
-                padding: 0px 50px;
+                font-size: 1rem;
+                line-height: 1.6;
+                padding: 0px 100px;
                 margin: 10px 50px;
                 color: #003366;
             }
@@ -276,12 +275,9 @@ html {
                 color: #001f3d;
                 font-weight: bolder;
                 font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-
-                span {
                     text-align: center;
                     font-size: 4rem;
                     border-bottom: 0.5vw solid #0056b3;
-                }
             }
 
             h2 {
@@ -293,11 +289,17 @@ html {
 
                 span {
                     text-align: center;
-                    font-size: 70px;
+                    font-size: 60px;
                 }
             }
 
             .parte-I {
+
+                .mini-text {
+                  border-radius: 15px;
+                  padding: 1vw 20px;
+                  margin: 0px 10vw;
+                }
 
                 .cards {
                     display: flex;
@@ -358,7 +360,7 @@ html {
 
                         p {
                             color: #003366;
-                            font-size: 33px;
+                            font-size: 1rem;
                             margin: 10px 35px;
                             line-height: 45px;
                         }
@@ -367,7 +369,7 @@ html {
 
                 .card-I:hover,
                 .card-II:hover {
-                    box-shadow: 0 0 15px 10px #c8e3ff;
+                    box-shadow: 0 0 25px 15px #c8e3ff;
                     transform: translateY(-25px);
                     box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
                 }
@@ -405,7 +407,7 @@ html {
 
                         p {
                             line-height: 40px;
-                            font-size: 26px;
+                            font-size: 1rem;
                             text-align: left;
                             padding-left: 8px;
                             border-left: 4px solid #0056b3;

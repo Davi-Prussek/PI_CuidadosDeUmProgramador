@@ -62,7 +62,9 @@ function light() {
 
     gitIcon.forEach(gtiICon => { gtiICon.src = "../img/icons/github-brands-solid-full branco.svg" });
     setaVoltar.style.backgroundColor = "rgb(0, 0, 0)";
+    h1.forEach(h1 => {h1.style.color = "#3c9effff"});
     h2.forEach(h2 => {h2.style.color = "#ffffff"});
+    h3.forEach(h3 => {h3.style.backgroundColor = "rgba(5, 0, 23, 1)"});;
     a.forEach(a => {a.style.color = "white"});
 
     localStorage.setItem("theme", "light");
@@ -81,8 +83,10 @@ function dark() {
     section.forEach(s => {s.style.color = "";});
     gitIcon.forEach(gtiICon => {gtiICon.src = "../img/icons/github-brands-solid-full.svg"});
     div.forEach(d => { d.style.color = "black"; });
-    div.forEach(d => { d.style.backgroundColor = "white"; });
+    h1.forEach(h1 => {h1.style.color = ""});
+    div.forEach(d => { d.style.backgroundColor = ""; });
     h2.forEach(h2 => {h2.style.color = ""});
+    h2.forEach(h2 => {h2.style.backgroundColor = "rgba(5, 0, 23, 1)"});;
     body.style.background = "white";
     a.forEach(a => {a.style.color = ""});
     localStorage.setItem("theme", "dark");
