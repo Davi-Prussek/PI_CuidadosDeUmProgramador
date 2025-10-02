@@ -139,7 +139,6 @@ html {
           li:hover {
             ul {
               display: block;
-
             }
           }
 
@@ -152,8 +151,6 @@ html {
           li:hover {
             background-color: rgb(18, 21, 44);
           }
-
-
         }
 
         .sub-menu-header {
@@ -208,7 +205,6 @@ html {
           }
         }
       }
-
       ul {
         a {
           text-decoration: none;
@@ -425,7 +421,6 @@ figcaption {
 }
 
 footer {
-
   background: linear-gradient(#0056b3, #002457);
   color: white;
   text-align: center;
@@ -444,6 +439,8 @@ footer {
   width: 100%;
   max-width: auto;
 
+      .midia {
+        display: flex;
 
   ul {
     display: flex;
@@ -509,14 +506,11 @@ footer {
       }
     }
   }
-
-
-
   width: 100%;
   text-align: center;
   font-size: 1.1vw;
 }
-
+}
 /* Responsividade mobile */
 @media (max-width: 768px) {
   body {
