@@ -193,6 +193,40 @@ const inputsHoras = [
 ];
 inputsHoras.forEach((input) => bloquearCaracteresInvalidos(input));
 
+// Bloquear letras no campo idade e limitar a 130
+const idadeInput = document.getElementById("idade");
+idadeInput.addEventListener("keydown", (event) => {
+  // Permitir apenas números, backspace, delete, tab, escape, enter, setas, e outras teclas de controle
+  const allowedKeys = [
+    "Backspace", "Delete", "Tab", "Escape", "Enter",
+    "ArrowLeft", "ArrowRight", "ArrowUp", "ArrowDown",
+    "Home", "End", "PageUp", "PageDown"
+  ];
+  const isNumber = event.key >= "0" && event.key <= "9";
+  const isAllowed = allowedKeys.includes(event.key) || isNumber;
+
+  if (!isAllowed) {
+    event.preventDefault();
+  }
+});
+
+// Permitir colar apenas números e limitar a 130
+idadeInput.addEventListener("paste", (event) => {
+  event.preventDefault();
+  const paste = (event.clipboardData || window.clipboardData).getData("text");
+  const numericPaste = paste.replace(/[^0-9]/g, ""); // Remover não numéricos
+  const limitedPaste = Math.min(parseInt(numericPaste) || 0, 130);
+  idadeInput.value = limitedPaste;
+});
+
+// Limitar valor no input a 130
+idadeInput.addEventListener("input", () => {
+  const value = parseInt(idadeInput.value) || 0;
+  if (value > 130) {
+    idadeInput.value = 130;
+  }
+});
+
 // Função para transformar HH:MM em horas decimais
 function parseHoras(valor) {
   if (!valor) return 0;
@@ -338,22 +372,25 @@ form.addEventListener('submit', (e) => {
     </div>
   `;
 
+  // Criar div .cards
+  const cardsContainer = document.createElement('div');
+  cardsContainer.className = 'cards';
+  container.appendChild(cardsContainer);
+
   // Criar cards
   cardContents.forEach(content => {
     const card = document.createElement('div');
-    card.className = 'result-card';
+    card.className = 'card';
     card.innerHTML = `
       <h3>💡 Dica Personalizada</h3>
-      <div class="result-content">
-        <p>${content}</p>
-      </div>
+      <p>${content}</p>
     `;
-    container.appendChild(card);
+    cardsContainer.appendChild(card);
   });
 
   // Adicionar seção de próximos passos
   const nextSteps = document.createElement('div');
-  nextSteps.className = 'result-card';
+  nextSteps.className = 'card last-card';
   nextSteps.innerHTML = `
     <h3>🎯 Próximos Passos</h3>
     <div class="result-content">
@@ -372,7 +409,7 @@ form.addEventListener('submit', (e) => {
       </div>
     </div>
   `;
-  container.appendChild(nextSteps);
+  cardsContainer.appendChild(nextSteps);
 
   // Exibir resultados
   resultadosSection.style.display = 'block';
