@@ -66,7 +66,6 @@ function light() {
     h2.forEach(h2 => {h2.style.color = "#ffffff"});
     h3.forEach(h3 => {h3.style.backgroundColor = "rgba(5, 0, 23, 1)"});;
     a.forEach(a => {a.style.color = "white"});
-
     localStorage.setItem("theme", "light");
 }
 

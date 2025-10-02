@@ -17,7 +17,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    |header {
+    header {
       img {
         height: 2.6rem;
         filter: brightness(1.05) contrast(1.4) saturate(1.2);
