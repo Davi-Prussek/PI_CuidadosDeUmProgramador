@@ -146,7 +146,6 @@ body {
         li:hover {
           ul {
             display: block;
-
           }
         }
 
@@ -159,8 +158,6 @@ body {
         li:hover {
           background-color: rgb(18, 21, 44);
         }
-
-
       }
 
       .sub-menu-header {
@@ -243,6 +240,188 @@ body {
   }
 }
 
+/* ============= RESPONSIVIDADE HEADER ============= */
+@media (max-width: 1000px) {
+  body header {
+    height: 4.5vw;
+    padding: 0 0 0 1.8vw;
+    width: 5rem;
+
+    h1 a {
+      font-size: 1.3rem;
+    }
+
+    nav .direcionar_sobreNos {
+      font-size: 0.95rem;
+      gap: 0.15rem;
+
+      li {
+        min-width: 7rem;
+        padding: 1.3vw 0 0 0;
+      }
+    }
+
+    nav .sub-menu-header {
+      font-size: 0.75rem;
+
+      li {
+        min-width: 5rem;
+        padding: 0.7vw 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  body header {
+    height: 4vw;
+    padding: 0 0 0 1.5vw;
+
+    h1 a {
+      font-size: 1.2rem;
+    }
+
+    nav .direcionar_sobreNos {
+      font-size: 0.9rem;
+      gap: 0.1rem;
+
+      li {
+        min-width: 6.5rem;
+        padding: 1.2vw 0 0 0;
+      }
+    }
+
+    nav .sub-menu-header {
+      font-size: 0.7rem;
+
+      li {
+        min-width: 4.5rem;
+        padding: 0.6vw 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  body header {
+    height: 3.5vw;
+    padding: 0 0 0 1.2vw;
+
+    h1 a {
+      font-size: 1.1rem;
+    }
+
+    nav .direcionar_sobreNos {
+      font-size: 0.85rem;
+      gap: 0.05rem;
+
+      li {
+        min-width: 6rem;
+        padding: 1vw 0 0 0;
+      }
+    }
+
+    nav .sub-menu-header {
+      font-size: 0.65rem;
+
+      li {
+        min-width: 4rem;
+        padding: 0.5vw 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  body header {
+    height: 3vw;
+    padding: 0 0 0 1vw;
+
+    h1 a {
+      font-size: 1rem;
+    }
+
+    nav .direcionar_sobreNos {
+      font-size: 0.8rem;
+      gap: 0rem;
+
+      li {
+        min-width: 5.5rem;
+        padding: 0.8vw 0 0 0;
+      }
+    }
+
+    nav .sub-menu-header {
+      font-size: 0.6rem;
+
+      li {
+        min-width: 3.5rem;
+        padding: 0.4vw 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 350px) {
+  body header {
+    height: 2.5vw;
+    padding: 0 0 0 0.8vw;
+
+    h1 a {
+      font-size: 0.9rem;
+    }
+
+    nav .direcionar_sobreNos {
+      font-size: 0.75rem;
+      gap: 0rem;
+
+      li {
+        min-width: 5rem;
+        padding: 0.6vw 0 0 0;
+      }
+    }
+
+    nav .sub-menu-header {
+      font-size: 0.55rem;
+
+      li {
+        min-width: 3rem;
+        padding: 0.3vw 0;
+      }
+    }
+  }
+}
+
+@media (max-width: 200px) {
+  body header {
+    height: 2vw;
+    padding: 0 0 0 0.5vw;
+
+    h1 a {
+      font-size: 0.8rem;
+    }
+
+    nav .direcionar_sobreNos {
+      font-size: 0.7rem;
+      gap: 0rem;
+
+      li {
+        min-width: 4.5rem;
+        padding: 0.4vw 0 0 0;
+      }
+    }
+
+    nav .sub-menu-header {
+      font-size: 0.5rem;
+
+      li {
+        min-width: 2.5rem;
+        padding: 0.2vw 0;
+      }
+    }
+  }
+}
+
 /*===================== Apresentação 1 ===================*/
 main {
   .seta-voltar {
@@ -264,48 +443,255 @@ main {
   .apresentacao1 {
     align-items: center;
     text-align: center;
-    /* = img = */
-    background-image: url("../img/tech-380x220.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    padding: 100px 20px;
-    min-height: 420px;
+    padding: 60px 20px;
+    min-height: 360px;
 
     article {
-      background-color: rgba(70, 70, 70, 0.35);
+      position: relative;
+      background: url("../img/tech-380x220.jpg") center/cover no-repeat;
       border-radius: 15px;
-      margin: 2vw 4vw 0px 4vw;
-      padding: 0.7vw;
+      margin: 2.5vw 2vw 0px 2vw;
+      padding: 40px 40px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
+      transition: box-shadow 0.3s ease;
+      color: #fff;
+
+      &:hover {
+        box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.6) 0%,
+          rgba(0, 0, 0, 0.4) 100%
+        );
+        z-index: -1;
+        border-radius: 15px;
+      }
 
       h1 {
-        font-size: 7vw;
+        font-size: 6vw;
         font-weight: 900;
-        margin-top: 100px;
-        margin-bottom: 30px;
+        margin-top: 60px;
+        margin-bottom: 25px;
         font-family: "Press Start 2P", monospace;
         color: rgb(39, 203, 39);
+        position: relative;
+        z-index: 2;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
       }
 
       .ol {
-        font-size: 70px;
+        font-size: 60px;
         font-weight: 900;
-        margin-top: 100px;
-        margin-bottom: 30px;
+        margin-top: 60px;
+        margin-bottom: 25px;
 
         .txt1 {
-          font-size: 28px;
+          font-size: 24px;
           font-weight: 600;
           color: #ffffff;
           line-height: 1.4;
           display: block;
-          margin-top: 20px;
+          margin-top: 15px;
+          position: relative;
+          z-index: 2;
+          max-width: 800px;
+          margin-left: auto;
+          margin-right: auto;
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
         }
       }
     }
   }
 
+  /* ============= RESPONSIVIDADE APRESENTAÇÃO ============= */
+  @media (max-width: 1000px) {
+    .apresentacao1 {
+      padding: 50px 15px;
+      min-height: 340px;
+
+      article {
+        margin: 2vw 6vw 0px 6vw;
+        padding: 45px 18px;
+
+        h1 {
+          font-size: 5.5vw;
+          margin-top: 50px;
+          margin-bottom: 20px;
+        }
+
+        .ol {
+          margin-top: 50px;
+          margin-bottom: 20px;
+
+          .txt1 {
+            font-size: 22px;
+            margin-top: 12px;
+            max-width: 700px;
+          }
+        }
+      }
+    }
+    .cards-right {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 30px;
+    }
+  }
+
+  @media (max-width: 800px) {
+    .apresentacao1 {
+      padding: 40px 15px;
+      min-height: 320px;
+
+      article {
+        margin: 2vw 4vw 0px 4vw;
+        padding: 40px 16px;
+
+        h1 {
+          font-size: 7vw;
+          margin-top: 40px;
+          margin-bottom: 18px;
+        }
+
+        .ol {
+          margin-top: 40px;
+          margin-bottom: 18px;
+
+          .txt1 {
+            font-size: 20px;
+            margin-top: 10px;
+            max-width: 600px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .apresentacao1 {
+      padding: 35px 10px;
+      min-height: 300px;
+
+      article {
+        margin: 2vw 2vw 0px 2vw;
+        padding: 35px 14px;
+
+        h1 {
+          font-size: 8vw;
+          margin-top: 30px;
+          margin-bottom: 15px;
+        }
+
+        .ol {
+          margin-top: 30px;
+          margin-bottom: 15px;
+
+          .txt1 {
+            font-size: 18px;
+            margin-top: 8px;
+            max-width: 500px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .apresentacao1 {
+      padding: 30px 8px;
+      min-height: 280px;
+
+      article {
+        margin: 1vw 1vw 0px 1vw;
+        padding: 30px 12px;
+
+        h1 {
+          font-size: 9vw;
+          margin-top: 25px;
+          margin-bottom: 12px;
+        }
+
+        .ol {
+          margin-top: 25px;
+          margin-bottom: 12px;
+
+          .txt1 {
+            font-size: 16px;
+            margin-top: 6px;
+            max-width: 350px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .apresentacao1 {
+      padding: 25px 5px;
+      min-height: 260px;
+
+      article {
+        margin: 1vw 0.5vw 0px 0.5vw;
+        padding: 25px 10px;
+
+        h1 {
+          font-size: 10vw;
+          margin-top: 20px;
+          margin-bottom: 10px;
+        }
+
+        .ol {
+          margin-top: 20px;
+          margin-bottom: 10px;
+
+          .txt1 {
+            font-size: 14px;
+            margin-top: 5px;
+            max-width: 300px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 200px) {
+    .apresentacao1 {
+      padding: 20px 3px;
+      min-height: 240px;
+
+      article {
+        margin: 1vw 0px 0px 0px;
+        padding: 20px 8px;
+
+        h1 {
+          font-size: 12vw;
+          margin-top: 15px;
+          margin-bottom: 8px;
+        }
+
+        .ol {
+          margin-top: 15px;
+          margin-bottom: 8px;
+
+          .txt1 {
+            font-size: 12px;
+            margin-top: 4px;
+            max-width: 180px;
+          }
+        }
+      }
+    }
+  }
 
   /* ==== section 1-2 ==== */
   .ap1-2 {
@@ -331,7 +717,7 @@ main {
       text-align: center;
       color: #004589;
       font-weight: bolder;
-      font-family: 'Times New Roman', Times, serif;
+      font-family: "Times New Roman", Times, serif;
       text-align: center;
       font-size: 70px;
     }
@@ -402,6 +788,178 @@ main {
       color: white;
     }
   }
+
+  /* ============= RESPONSIVIDADE CARDS ============= */
+  @media (max-width: 1000px) {
+    .ap1-2 {
+      .sub-titulo {
+        font-size: 50px;
+        margin: 3vw 0 2vw 0;
+      }
+
+      .cards-right {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        justify-content: center;
+      }
+
+      .card {
+        max-width: 200px;
+        min-width: 150px;
+      }
+    }
+  }
+
+  @media (max-width: 800px) {
+    .ap1-2 {
+      .sub-titulo {
+        font-size: 40px;
+        margin: 2.5vw 0 1.5vw 0;
+      }
+
+      .cards-right {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .card {
+        max-width: 250px;
+        min-width: 180px;
+      }
+
+      h3 {
+        font-size: 16px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+
+      a {
+        font-size: 13px;
+        padding: 7px 14px;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .ap1-2 {
+      .sub-titulo {
+        font-size: 32px;
+        margin: 2vw 0 1vw 0;
+      }
+
+      .cards-right {
+        grid-template-columns: 1fr;
+        gap: 15px;
+      }
+
+      .card {
+        max-width: 300px;
+        min-width: 200px;
+        margin: 0 auto;
+      }
+
+      h3 {
+        font-size: 15px;
+      }
+
+      p {
+        font-size: 12px;
+      }
+
+      a {
+        font-size: 12px;
+        padding: 6px 12px;
+      }
+    }
+  }
+
+  @media (max-width: 400px) {
+    .ap1-2 {
+      .sub-titulo {
+        font-size: 26px;
+        margin: 1.5vw 0 0.8vw 0;
+      }
+
+      .card {
+        max-width: 280px;
+        min-width: 180px;
+        padding: 15px 12px;
+      }
+
+      h3 {
+        font-size: 14px;
+      }
+
+      p {
+        font-size: 11px;
+      }
+
+      a {
+        font-size: 11px;
+        padding: 5px 10px;
+      }
+    }
+  }
+
+  @media (max-width: 350px) {
+    .ap1-2 {
+      .sub-titulo {
+        font-size: 22px;
+        margin: 1vw 0 0.5vw 0;
+      }
+
+      .card {
+        max-width: 250px;
+        min-width: 160px;
+        padding: 12px 10px;
+      }
+
+      h3 {
+        font-size: 13px;
+      }
+
+      p {
+        font-size: 10px;
+      }
+
+      a {
+        font-size: 10px;
+        padding: 4px 8px;
+      }
+    }
+  }
+
+  @media (max-width: 200px) {
+    .ap1-2 {
+      .sub-titulo {
+        font-size: 18px;
+        margin: 0.5vw 0 0.2vw 0;
+      }
+
+      .card {
+        max-width: 180px;
+        min-width: 140px;
+        padding: 10px 8px;
+        min-height: 140px;
+      }
+
+      h3 {
+        font-size: 12px;
+      }
+
+      p {
+        font-size: 9px;
+      }
+
+      a {
+        font-size: 9px;
+        padding: 3px 6px;
+      }
+    }
+  }
 }
 
 /* ======================== FOOTER ======================== */
@@ -423,7 +981,6 @@ footer {
   z-index: 10;
   width: 100%;
   max-width: auto;
-
 
   ul {
     display: flex;
@@ -489,8 +1046,6 @@ footer {
       }
     }
   }
-
-
 
   width: 100%;
   text-align: center;
