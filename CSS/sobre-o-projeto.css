@@ -4,6 +4,7 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #f9fbff;
+
   a {
     text-decoration: none;
     color: #004bb4;
@@ -27,7 +28,7 @@ html {
       background: #0056b3;
       display: flex;
       justify-content: space-between;
-      padding: 0 0 0 ;
+      padding: 0 0 0;
       position: fixed;
       top: 0px;
       width: 100%;
@@ -58,12 +59,14 @@ html {
           .link-base {
             align-items: baseline;
           }
+
           p {
             img {
               width: 22px;
               display: inline-block;
               height: auto;
             }
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -95,14 +98,14 @@ html {
             }
           }
 
-a {
-  display: block;
-  width: 100%;
-  padding: 1.5vw 0;
-  text-decoration: none;
-  color: white;
-  position: relative;
-}
+          a {
+            display: block;
+            width: 100%;
+            padding: 1.5vw 0;
+            text-decoration: none;
+            color: white;
+            position: relative;
+          }
 
 
 
@@ -173,7 +176,7 @@ a {
           position: relative;
         }
 
-/*        p::after {
+        /*        p::after {
           content: "";
           position: absolute;
           bottom: 0;
@@ -191,6 +194,7 @@ a {
         }*/
       }
     }
+
     /* Estado ativo do hambúrguer (vira X) */
     main {
       margin-top: 6vw;
@@ -221,11 +225,11 @@ a {
           margin: 0px 18vw;
           padding: 3vw 0px;
         }
+
         position: relative;
         padding: 70px 24px;
         margin-bottom: 40px;
-        background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80")
-          center/cover no-repeat;
+        background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80") center/cover no-repeat;
         border-radius: 16px;
         text-align: center;
         color: #fff;
@@ -241,22 +245,20 @@ a {
           content: "";
           position: absolute;
           inset: 0;
-          background: linear-gradient(
-            180deg,
-            rgba(0, 0, 0, 0.6) 0%,
-            rgba(0, 0, 0, 0.4) 100%
-          );
+          background: linear-gradient(180deg,
+              rgba(0, 0, 0, 0.6) 0%,
+              rgba(0, 0, 0, 0.4) 100%);
           z-index: -1;
           border-radius: 16px;
         }
 
-        h2 {
+        h1 {
           font-size: 90px;
           font-weight: bold;
           color: #006aff;
         }
 
-        h2,
+        h1,
         p {
           position: relative;
           z-index: 2;
@@ -299,10 +301,18 @@ a {
       }
 
       .s3 {
+        h3 {
+          font-size: 1.3rem;
+          font-weight: 700;
+          color: #0052a4;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
         h2 {
           font-size: 2rem;
           font-weight: 700;
-          color: #0052a4;
+          color: #006aff;
           text-align: center;
           margin-bottom: 20px;
         }
@@ -311,6 +321,7 @@ a {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 20px;
+
           div {
             background: #e9f2ff;
             border: 1px solid #99c2ff;
@@ -324,11 +335,13 @@ a {
               box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
             }
           }
+
           div:last-child {
             grid-column: span 2;
           }
         }
       }
+
       .atas {
         padding: 20px;
         color: #003366;
@@ -498,62 +511,80 @@ a {
 @media (max-width: 768px) {
   header {
     height: 3.5vw;
+
     h1 a {
       font-size: 1vw;
     }
+
     nav .direcionar_sobreNos {
       font-size: 0.8vw;
+
       li {
         min-width: 8vw;
       }
     }
+
     .sub-menu-header {
       font-size: 0.6vw;
+
       .theme {
         font-size: 0.7vw;
+
         .buttonOff,
         .buttonOn {
           height: 1.2vw;
         }
       }
+
       li {
         min-width: 6vw;
       }
     }
   }
+
   main {
     margin-top: 15vw;
+
     .container {
       max-width: 95%;
       padding: 1.5rem;
+
       h2 {
         font-size: 40px;
       }
     }
+
     .intro {
       font-size: 20px;
     }
+
     fieldset {
       padding: 1rem;
     }
+
     .cards {
       grid-template-columns: 1fr;
       gap: 15px;
     }
+
     .card {
       padding: 20px 15px;
     }
   }
+
   footer {
     ul {
       flex-direction: column;
       text-align: center;
+
       .footer-contact {
         margin-bottom: 1rem;
       }
+
       .logo {
         margin: 1rem 0;
       }
+
       .linkRp {
         margin-top: 1rem;
       }
@@ -564,60 +595,78 @@ a {
 @media (max-width: 500px) {
   header {
     height: 3vw;
+
     h1 a {
       font-size: 0.9vw;
     }
+
     nav .direcionar_sobreNos {
       font-size: 0.7vw;
+
       li {
         min-width: 6vw;
       }
     }
+
     .sub-menu-header {
       font-size: 0.5vw;
+
       .theme {
         font-size: 0.6vw;
+
         .buttonOff,
         .buttonOn {
           height: 1.1vw;
         }
       }
+
       li {
         min-width: 5vw;
       }
     }
   }
+
   main {
     .container {
       padding: 1rem;
+
       h2 {
         font-size: 30px;
       }
     }
+
     .intro {
       font-size: 18px;
     }
+
     fieldset {
       padding: 0.8rem;
     }
+
     .card {
       padding: 15px 10px;
+
       h3 {
         font-size: 1.1rem;
       }
     }
   }
+
   footer {
     padding: 10px 0;
+
     ul {
       padding: 0 10px;
+
       .logo {
         font-size: 20px;
       }
+
       .linkRp {
         font-size: 12px;
       }
     }
+
     p {
       font-size: 10px;
     }
