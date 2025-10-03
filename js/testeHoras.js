@@ -84,9 +84,10 @@ horasTrabalho.insertAdjacentElement("afterend", emojiTrabalho);
 horasTrabalho.addEventListener("input", () => {
   const horas = parseHoras(horasTrabalho.value);
   if (horas === 0) emojiTrabalho.textContent = "";
-  else if (horas <= 8) emojiTrabalho.textContent = "💻🙂";
-  else if (horas <= 10) emojiTrabalho.textContent = "😐";
-  else emojiTrabalho.textContent = "😫";
+  else if (horas <= 3) emojiTrabalho.textContent = "💻😊";
+  else if (horas <= 5) emojiTrabalho.textContent = "💻😐";
+  else if (horas <= 8) emojiTrabalho.textContent = "💻⚠️";
+  else emojiTrabalho.textContent = "💻😫";
 });
 
 //Pausas
@@ -110,9 +111,10 @@ horasEstudo.addEventListener("input", () => {
   const horas = parseHoras(horasEstudo.value);
   if (horas === 0) emojiEstudo.textContent = "";
   else if (horas < 1) emojiEstudo.textContent = "😴";
-  else if (horas <= 4) emojiEstudo.textContent = "📚😍";
-  else if (horas <= 7) emojiEstudo.textContent = "😐";
-  else emojiEstudo.textContent = "🤯";
+  else if (horas <= 3) emojiEstudo.textContent = "📚😊";
+  else if (horas <= 5) emojiEstudo.textContent = "📚😐";
+  else if (horas <= 7) emojiEstudo.textContent = "📚⚠️";
+  else emojiEstudo.textContent = "📚🤯";
 });
 
 // Lógica para TEMPO LIVRE
@@ -147,9 +149,12 @@ const sonoEmoji = document.getElementById("sleepEmoji");
 sono.addEventListener("input", () => {
   const horas = parseHoras(sono.value);
   if (horas === 0) sonoEmoji.textContent = "";
-  else if (horas < 7) sonoEmoji.textContent = "😴";
-  else if (horas <= 9) sonoEmoji.textContent = "😍";
-  else sonoEmoji.textContent = "😐";
+  else if (horas < 4) sonoEmoji.textContent = "😵‍💫"; // Muito pouco sono
+  else if (horas < 6) sonoEmoji.textContent = "😴"; // Pouco sono
+  else if (horas < 7) sonoEmoji.textContent = "😪"; // Sono insuficiente
+  else if (horas <= 9) sonoEmoji.textContent = "😴💤"; // Sono ideal
+  else if (horas <= 10) sonoEmoji.textContent = "😐"; // Sono em excesso
+  else sonoEmoji.textContent = "😵"; // Muito sono
 });
 
 /* ===================== Parte 4 ===================== */
@@ -162,8 +167,10 @@ horasTela.insertAdjacentElement("afterend", telaEmoji);
 horasTela.addEventListener("input", () => {
   const horas = parseHoras(horasTela.value);
   if (horas === 0) telaEmoji.textContent = "";
-  else if (horas > 3) telaEmoji.textContent = "👓";
-  else telaEmoji.textContent = "😊";
+  else if (horas <= 2) telaEmoji.textContent = "😊📱";
+  else if (horas <= 3) telaEmoji.textContent = "😐📱";
+  else if (horas <= 5) telaEmoji.textContent = "⚠️👓";
+  else telaEmoji.textContent = "😵‍💫👓";
 });
 
 /* ===================== Config gerais ===================== */
@@ -280,9 +287,10 @@ form.addEventListener("submit", (e) => {
   // Parte 2: Atividades Diárias
   if (data.trabalho === "on") {
     // Verifica se a checkbox de trabalho está marcada
-    if (horasTrabalho <= 8) positivos += 2;
-    else if (horasTrabalho <= 10) negativos += 1;
-    else negativos += 2;
+    if (horasTrabalho <= 3) positivos += 2;
+    else if (horasTrabalho <= 5) positivos += 1; // Tempo considerável
+    else if (horasTrabalho <= 8) negativos += 1; // Ruim
+    else negativos += 3; // Muito ruim
 
     if (data.pausasTrabalho === "sim") positivos += 1;
     else negativos += 1;
@@ -290,9 +298,10 @@ form.addEventListener("submit", (e) => {
 
   if (data.estudar === "on") {
     // Verifica se a checkbox de estudo está marcada
-    if (horasEstudo <= 4) positivos += 2;
-    else if (horasEstudo <= 7) positivos += 1;
-    else negativos += 2;
+    if (horasEstudo <= 3) positivos += 2;
+    else if (horasEstudo <= 5) negativos += 1; // Tempo considerável
+    else if (horasEstudo <= 7) negativos += 2; // Ruim
+    else negativos += 3; // Muito ruim
   }
 
   if (data.tempoLivre === "on") {
@@ -302,15 +311,22 @@ form.addEventListener("submit", (e) => {
     if (data.lazerLivre === "on") positivos += 1;
   }
 
-  // Parte 3: Sono
-  if (horasSono >= 7 && horasSono <= 9) positivos += 3;
-  else if (horasSono >= 6 || horasSono <= 10) positivos += 1;
-  else negativos += 3;
+  // Parte 3: Sono - Desenvolvido com mais critérios
+  if (horasSono >= 7 && horasSono <= 9) positivos += 3; // Sono ideal
+  else if (horasSono >= 6 && horasSono < 7)
+    positivos += 1; // Sono quase suficiente
+  else if (horasSono >= 9.5 && horasSono <= 10)
+    negativos += 1; // Sono em excesso
+  else if (horasSono < 4) negativos += 4; // Sono muito insuficiente - crítico
+  else if (horasSono < 6) negativos += 3; // Sono insuficiente
+  else if (horasSono > 10) negativos += 2; // Sono excessivo
+  else negativos += 1; // Outros casos
 
-  // Parte 4: Hábitos e Saúde
-  if (horasTela <= 3) positivos += 2;
-  else if (horasTela <= 5) negativos += 1;
-  else negativos += 2;
+  // Parte 4: Hábitos e Saúde - Ajustado conforme critérios
+  if (horasTela <= 2) positivos += 2; // Uso saudável
+  else if (horasTela <= 3) positivos += 1; // Uso aceitável
+  else if (horasTela <= 5) negativos += 1; // Tempo considerável
+  else negativos += 3; // Uso ruim/excessivo
 
   if (data.posturaTelas === "sim") positivos += 1;
   else negativos += 1;
@@ -339,84 +355,99 @@ form.addEventListener("submit", (e) => {
       type: "positive",
       title: "Ótima Rotina!",
       content: `Sua rotina é ${data.avaliacaoRotina}, o que é um excelente sinal de bem-estar. Continue com o bom trabalho!`,
+      condition: () => data.avaliacaoRotina === "muito-boa" || data.avaliacaoRotina === "boa"
     },
     {
       type: "positive",
       title: "Planejamento Eficaz",
       content: `Planejar suas atividades ${data.planejaAtividades} é uma chave para a produtividade e redução do estresse. Mantenha esse hábito!`,
+      condition: () => data.planejaAtividades === "sempre"
     },
     {
       type: "positive",
       title: "Equilíbrio Saudável",
       content: `Seu equilíbrio entre vida pessoal e profissional é ${data.equilibrioRotina}. Isso é crucial para evitar o esgotamento.`,
+      condition: () => data.equilibrioRotina === "sim"
     },
     {
       type: "positive",
       title: "Jornada de Trabalho Adequada",
       content: `Com ${horasTrabalho.toFixed(
         1
-      )}h de trabalho, você está em um bom caminho para manter a energia e o foco.`,
+      )}h de trabalho, você mantém uma carga saudável que preserva sua energia e bem-estar.`,
+      condition: () => data.trabalho === "on" && horasTrabalho <= 3
     },
     {
       type: "positive",
       title: "Pausas Inteligentes",
-      content: `Fazer pausas ${
-        data.pausasTrabalho === "sim" ? "regularmente" : "raramente"
-      } é vital para a saúde mental e física. Continue priorizando-as!`,
+      content: `Fazer pausas regularmente é vital para a saúde mental e física. Continue priorizando-as!`,
+      condition: () => data.trabalho === "on" && data.pausasTrabalho === "sim"
     },
     {
       type: "positive",
-      title: "Estudo Focado",
-      content: `Dedicar ${horasEstudo.toFixed(
+      title: "Estudo Equilibrado",
+      content: `Suas ${horasEstudo.toFixed(
         1
-      )}h ao estudo é um tempo produtivo. Lembre-se de intercalar com descansos.`,
+      )}h de estudo representam um tempo produtivo e saudável. Continue intercalando com pausas regulares.`,
+      condition: () => data.estudar === "on" && horasEstudo <= 3
     },
     {
       type: "positive",
       title: "Sono Reparador",
-      content: `Com ${horasSono.toFixed(
+      content: `Suas ${horasSono.toFixed(
         1
-      )}h de sono, você está fornecendo ao seu corpo o descanso necessário para recarregar.`,
+      )}h de sono estão na faixa ideal (7-9h), proporcionando recuperação completa para corpo e mente.`,
+      condition: () => horasSono >= 7 && horasSono <= 9
     },
     {
       type: "positive",
       title: "Uso Consciente de Telas",
-      content: `Seu tempo de tela de ${horasTela.toFixed(
+      content: `Suas ${horasTela.toFixed(
         1
-      )}h é um bom indicativo de uso consciente. Proteja seus olhos!`,
+      )}h de tela demonstram uso moderado e consciente. Excelente para a saúde ocular!`,
+      condition: () => horasTela <= 2
     },
     {
       type: "positive",
       title: "Postura Atenta",
-      content: `Sua atenção à postura (${
-        data.posturaTelas === "sim" ? "sim" : "não"
-      }) é fundamental para prevenir dores e lesões a longo prazo.`,
+      content: `Sua atenção à postura é fundamental para prevenir dores e lesões a longo prazo.`,
+      condition: () => data.posturaTelas === "sim"
     },
     {
       type: "positive",
       title: "Ambiente Propício",
-      content: `Um ambiente ${
-        data.ambienteSaudavel === "sim" ? "saudável" : "não tão saudável"
-      } contribui muito para sua concentração e bem-estar.`,
+      content: `Um ambiente saudável contribui muito para sua concentração e bem-estar.`,
+      condition: () => data.ambienteSaudavel === "sim"
     },
     {
       type: "positive",
       title: "Atividade Física",
       content: `Sua frequência de atividade física (${data.atividadeFisica}) é um pilar importante para sua saúde geral.`,
+      condition: () => data.atividadeFisica === "3-4" || data.atividadeFisica === "5+"
     },
     {
       type: "positive",
       title: "Alimentação Balanceada",
-      content: `Uma alimentação ${data.alimentacao} é a base para ter energia e disposição ao longo do dia.`,
+      content: `Uma alimentação equilibrada é a base para ter energia e disposição ao longo do dia.`,
+      condition: () => data.alimentacao === "equilibrada"
     },
     {
       type: "positive",
       title: "Tempo Livre Bem Aproveitado",
-      content: `É ótimo que você inclua ${
-        data.lazerLivre === "on" ? "lazer ao ar livre" : ""
-      } e ${
-        data.atividadeFisicaLivre === "on" ? "atividade física" : ""
-      } no seu tempo livre.`,
+      content: `É ótimo que você inclua atividades saudáveis como lazer ao ar livre e atividade física no seu tempo livre.`,
+      condition: () => data.tempoLivre === "on" && (data.lazerLivre === "on" || data.atividadeFisicaLivre === "on")
+    },
+    {
+      type: "positive",
+      title: "Qualidade do Sono Excelente",
+      content: `Sua rotina de sono está otimizada! Dormir entre 7-9h é fundamental para consolidação da memória, recuperação muscular e regulação hormonal.`,
+      condition: () => horasSono >= 7 && horasSono <= 9
+    },
+    {
+      type: "positive",
+      title: "Higiene do Sono Adequada",
+      content: `Manter uma quantidade adequada de sono fortalece seu sistema imunológico e melhora sua capacidade de concentração durante o dia.`,
+      condition: () => horasSono >= 7 && horasSono <= 9
     },
   ];
 
@@ -439,10 +470,12 @@ form.addEventListener("submit", (e) => {
     },
     {
       type: "negative",
-      title: "Cuidado com a Jornada",
-      content: `Trabalhar ${horasTrabalho.toFixed(
-        1
-      )}h pode ser exaustivo. Considere otimizar seu tempo ou delegar tarefas.`,
+      title: "Atenção à Jornada de Trabalho",
+      content: `${horasTrabalho.toFixed(1)}h de trabalho ${
+        horasTrabalho > 5
+          ? "é uma carga excessiva que pode prejudicar sua saúde"
+          : "já representa um tempo considerável"
+      }. Considere pausas mais frequentes e otimização de tarefas.`,
     },
     {
       type: "negative",
@@ -453,24 +486,34 @@ form.addEventListener("submit", (e) => {
     },
     {
       type: "negative",
-      title: "Gerencie o Estudo",
-      content: `Dedicar ${horasEstudo.toFixed(
-        1
-      )}h ao estudo pode ser excessivo. Garanta que você não esteja sobrecarregando sua mente.`,
+      title: "Cuidado com o Tempo de Estudo",
+      content: `${horasEstudo.toFixed(1)}h de estudo ${
+        horasEstudo > 5
+          ? "é excessivo e pode causar fadiga mental"
+          : "já é um tempo considerável"
+      }. Intercale com pausas e atividades relaxantes para manter a eficiência.`,
     },
     {
       type: "negative",
-      title: "Invista no Sono",
-      content: `Com apenas ${horasSono.toFixed(
-        1
-      )}h de sono, seu corpo pode não estar se recuperando totalmente. Tente melhorar sua higiene do sono.`,
+      title: "Sono Insuficiente - Atenção!",
+      content: `${horasSono.toFixed(1)}h de sono ${
+        horasSono < 4
+          ? "é criticamente insuficiente e pode afetar gravemente sua saúde"
+          : horasSono < 6
+          ? "está abaixo do recomendado (7-9h)"
+          : horasSono > 10
+          ? "é excessivo e pode indicar outros problemas"
+          : "precisa ser ajustado"
+      }. Priorize uma rotina de sono saudável.`,
     },
     {
       type: "negative",
-      title: "Reduza o Tempo de Tela",
-      content: `Seu tempo de tela de ${horasTela.toFixed(
-        1
-      )}h é alto. Considere limites para proteger sua visão e mente.`,
+      title: "Tempo de Tela Excessivo",
+      content: `${horasTela.toFixed(1)}h de tela ${
+        horasTela > 5
+          ? "é prejudicial para seus olhos e bem-estar mental"
+          : "já representa um tempo considerável"
+      }. Implemente pausas regulares e considere atividades offline.`,
     },
     {
       type: "negative",
@@ -501,6 +544,21 @@ form.addEventListener("submit", (e) => {
       title: "Atenção à Dificuldade",
       content: `A dificuldade que você enfrenta (${data.dificuldadeRotina}) é um sinal. Busque estratégias para lidar com ela.`,
     },
+    {
+      type: "negative",
+      title: "Sono e Produtividade",
+      content: `A falta de sono adequado reduz em até 40% sua capacidade de formar novas memórias e afeta diretamente sua produtividade no trabalho e estudos.`,
+    },
+    {
+      type: "negative",
+      title: "Impactos da Privação do Sono",
+      content: `Dormir menos que o necessário aumenta o risco de problemas cardiovasculares, diabetes e compromete seu sistema imunológico. Priorize seu descanso!`,
+    },
+    {
+      type: "negative",
+      title: "Sono Excessivo - Investigar",
+      content: `Dormir mais de 10h regularmente pode indicar problemas de saúde subjacentes ou má qualidade do sono. Considere avaliar sua rotina noturna.`,
+    },
   ];
 
   // Selecionar um número fixo de cards (ex: 6 cards para ter uma boa variedade)
@@ -514,8 +572,9 @@ form.addEventListener("submit", (e) => {
   const numPositiveCards = Math.round(numberOfCardsToShow * positiveRatio);
   const numNegativeCards = numberOfCardsToShow - numPositiveCards;
 
-  // Adicionar dicas positivas aleatoriamente
-  const shuffledPositiveTips = positiveTipsPool.sort(() => 0.5 - Math.random());
+  // Adicionar dicas positivas aleatoriamente (apenas as que atendem às condições)
+  const validPositiveTips = positiveTipsPool.filter(tip => !tip.condition || tip.condition());
+  const shuffledPositiveTips = validPositiveTips.sort(() => 0.5 - Math.random());
   for (
     let i = 0;
     i < numPositiveCards && i < shuffledPositiveTips.length;
@@ -534,20 +593,16 @@ form.addEventListener("submit", (e) => {
     generatedCards.push(shuffledNegativeTips[i]);
   }
 
-  // Se por algum motivo não gerou cards suficientes (ex: pools pequenos), preenche com o que sobrou
-  while (
-    generatedCards.length < numberOfCardsToShow &&
-    shuffledPositiveTips.length + shuffledNegativeTips.length >
-      generatedCards.length
-  ) {
-    if (generatedCards.length < shuffledPositiveTips.length) {
-      generatedCards.push(shuffledPositiveTips[generatedCards.length]);
-    } else if (generatedCards.length < shuffledNegativeTips.length) {
-      generatedCards.push(
-        shuffledNegativeTips[
-          generatedCards.length - shuffledPositiveTips.length
-        ]
-      );
+  // Se não gerou cards positivos suficientes, ajusta para mais cards negativos
+  const totalValidCards = shuffledPositiveTips.length + shuffledNegativeTips.length;
+  if (generatedCards.length < numberOfCardsToShow && totalValidCards > generatedCards.length) {
+    const remainingSlots = numberOfCardsToShow - generatedCards.length;
+    const additionalNegativeCards = Math.min(remainingSlots, shuffledNegativeTips.length - numNegativeCards);
+    
+    for (let i = numNegativeCards; i < numNegativeCards + additionalNegativeCards; i++) {
+      if (i < shuffledNegativeTips.length) {
+        generatedCards.push(shuffledNegativeTips[i]);
+      }
     }
   }
 
