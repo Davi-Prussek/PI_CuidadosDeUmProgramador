@@ -584,7 +584,7 @@ form.addEventListener("submit", (e) => {
     {
       type: "positive",
       title: "Atividade Física",
-      content: `Sua frequência de atividade física (${data.atividadeFisica}) é um pilar importante para sua saúde geral.`,
+      content: `Sua frequência de atividade física (${data.atividadeFisica}) é um pilar importante para sua saúde em geral.`,
       condition: () => data.atividadeFisica === "3-4" || data.atividadeFisica === "5+"
     },
     {
@@ -686,7 +686,7 @@ form.addEventListener("submit", (e) => {
     {
       type: "negative",
       title: "Ajuste a Postura",
-      content: `Sua postura pode precisar de atenção. Pequenos ajustes evitam grandes dores.`,
+      content: `Sua postura pode precisar de atenção. Pequenos ajustes evitam complicações com a saúde da coluna.`,
       condition: () => data.posturaTelas === "nao"
     },
     {
@@ -710,13 +710,12 @@ form.addEventListener("submit", (e) => {
     {
       type: "negative",
       title: "Atenção à Dificuldade",
-      content: `A dificuldade que você enfrenta (${data.dificuldadeRotina}) é um sinal. Busque estratégias para lidar com ela.`,
+      content: `A dificuldade que você enfrenta (${data.dificuldadeRotina}) é um sinal ruim. Busque estratégias para lidar com ela.`,
     },
     {
       type: "negative",
       title: "Sono e Produtividade",
       content: `A falta de sono adequado reduz em até 40% sua capacidade de formar novas memórias e afeta diretamente sua produtividade no trabalho e estudos.`,
-      condition: () => horasSono < 7
     },
     {
       type: "negative",
@@ -787,7 +786,7 @@ form.addEventListener("submit", (e) => {
     <p>Olá <strong>${
       data.nome || "usuário"
     }</strong>, com base nas suas respostas, geramos ${numberOfCardsToShow} cards de feedback.</p>
-    <p>Sua pontuação indica <strong>${positivos} pontos positivos</strong> e <strong>${negativos} pontos de atenção</strong> em sua rotina.</p>
+    <p>Sua pontuação indica <strong>${positivos} ponto(s) positivo(s)</strong> e <strong>${negativos} ponto(s) de atenção</strong> em sua rotina.</p>
   `;
 
   // Limpar cardsContainer antes de adicionar novos
