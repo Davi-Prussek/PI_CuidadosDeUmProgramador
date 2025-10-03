@@ -190,6 +190,17 @@ function bloquearCaracteresInvalidos(input) {
   });
 }
 
+// Função para limitar horas a 24h
+function limitarHoras(input) {
+  input.addEventListener("input", () => {
+    const valor = parseFloat(input.value);
+    if (valor > 24) {
+      input.value = "24";
+    }
+    validarSomaHoras();
+  });
+}
+
 // Selecionar todos os inputs de horas
 const inputsHoras = [
   document.getElementById("horasSono"),
@@ -197,7 +208,11 @@ const inputsHoras = [
   document.getElementById("horasTrabalho"),
   document.getElementById("horasEstudo"),
 ];
-inputsHoras.forEach((input) => bloquearCaracteresInvalidos(input));
+
+inputsHoras.forEach((input) => {
+  bloquearCaracteresInvalidos(input);
+  limitarHoras(input);
+});
 
 const idadeInput = document.getElementById("idade");
 
@@ -247,6 +262,148 @@ function parseHoras(valor) {
   return parseFloat(valor) || 0;
 }
 
+// Criar modal de erro centralizado
+function criarModalErro() {
+  const modal = document.createElement("div");
+  modal.id = "modalErroHoras";
+  modal.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  `;
+  
+  const modalContent = document.createElement("div");
+  modalContent.style.cssText = `
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    animation: modalSlideIn 0.3s ease-out;
+  `;
+  
+  modalContent.innerHTML = `
+    <div style="color: #e74c3c; font-size: 48px; margin-bottom: 15px;">⚠️</div>
+    <h3 style="color: #e74c3c; margin-bottom: 15px;">Erro de Validação</h3>
+    <p id="mensagemErro" style="margin-bottom: 20px; color: #333; line-height: 1.5;"></p>
+    <button id="fecharModalErro" style="
+      background: #e74c3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    ">Entendi</button>
+  `;
+  
+  modal.appendChild(modalContent);
+  document.body.appendChild(modal);
+  
+  // Adicionar animação CSS
+  const style = document.createElement("style");
+  style.textContent = `
+    @keyframes modalSlideIn {
+      from {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  `;
+  document.head.appendChild(style);
+  
+  // Event listener para fechar modal
+  document.getElementById("fecharModalErro").addEventListener("click", () => {
+    modal.style.display = "none";
+  });
+  
+  // Fechar modal clicando fora
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+  
+  return modal;
+}
+
+// Função para validar soma das horas
+function validarSomaHoras() {
+  const trabalho = document.getElementById("trabalho");
+  const estudo = document.getElementById("estudar");
+  
+  let somaTotal = 0;
+  let atividades = [];
+  
+  // Sempre incluir sono
+  const horasSono = parseHoras(document.getElementById("horasSono").value);
+  if (horasSono > 0) {
+    somaTotal += horasSono;
+    atividades.push(`Sono: ${horasSono.toFixed(1)}h`);
+  }
+  
+  // Sempre incluir telas
+  const horasTela = parseHoras(document.getElementById("horasTela").value);
+  if (horasTela > 0) {
+    somaTotal += horasTela;
+    atividades.push(`Telas: ${horasTela.toFixed(1)}h`);
+  }
+  
+  // Incluir trabalho se checkbox marcada
+  if (trabalho && trabalho.checked) {
+    const horasTrabalho = parseHoras(document.getElementById("horasTrabalho").value);
+    if (horasTrabalho > 0) {
+      somaTotal += horasTrabalho;
+      atividades.push(`Trabalho: ${horasTrabalho.toFixed(1)}h`);
+    }
+  }
+  
+  // Incluir estudo se checkbox marcada
+  if (estudo && estudo.checked) {
+    const horasEstudo = parseHoras(document.getElementById("horasEstudo").value);
+    if (horasEstudo > 0) {
+      somaTotal += horasEstudo;
+      atividades.push(`Estudo: ${horasEstudo.toFixed(1)}h`);
+    }
+  }
+  
+  // Verificar se excede 24h
+  if (somaTotal > 24) {
+    let modal = document.getElementById("modalErroHoras");
+    if (!modal) {
+      modal = criarModalErro();
+    }
+    
+    const mensagem = `
+      <strong>Total de horas: ${somaTotal.toFixed(1)}h</strong><br><br>
+      Um dia tem apenas 24 horas!<br><br>
+      <strong>Suas atividades:</strong><br>
+      ${atividades.join('<br>')}
+      <br><br>
+      Por favor, ajuste os valores para que a soma não exceda 24 horas.
+    `;
+    
+    document.getElementById("mensagemErro").innerHTML = mensagem;
+    modal.style.display = "flex";
+    
+    return false;
+  }
+  
+  return true;
+}
+
 /* ===================== Submissão do Formulário ===================== */
 
 const form = document.querySelector(".horasForm");
@@ -255,6 +412,11 @@ const cardsContainer = resultadosSection.querySelector(".cards-container"); // S
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
+
+  // Validar soma das horas antes de processar
+  if (!validarSomaHoras()) {
+    return; // Impede o envio se as horas excedem 24h
+  }
 
   // Coletar dados
   const data = Object.fromEntries(new FormData(form));
@@ -457,16 +619,19 @@ form.addEventListener("submit", (e) => {
       type: "negative",
       title: "Atenção à Rotina",
       content: `Sua rotina é ${data.avaliacaoRotina}. Pequenas mudanças podem trazer grandes benefícios para seu dia a dia.`,
+      condition: () => data.avaliacaoRotina === "ruim" || data.avaliacaoRotina === "regular"
     },
     {
       type: "negative",
       title: "Melhore o Planejamento",
       content: `Planejar suas atividades ${data.planejaAtividades} pode ser um ponto de melhoria. Tente organizar seu dia com antecedência.`,
+      condition: () => data.planejaAtividades === "nunca" || data.planejaAtividades === "raramente"
     },
     {
       type: "negative",
       title: "Busque Equilíbrio",
       content: `Seu equilíbrio entre vida pessoal e profissional é ${data.equilibrioRotina}. É importante buscar mais harmonia para evitar o esgotamento.`,
+      condition: () => data.equilibrioRotina === "nao" || data.equilibrioRotina === "parcialmente"
     },
     {
       type: "negative",
@@ -476,13 +641,13 @@ form.addEventListener("submit", (e) => {
           ? "é uma carga excessiva que pode prejudicar sua saúde"
           : "já representa um tempo considerável"
       }. Considere pausas mais frequentes e otimização de tarefas.`,
+      condition: () => data.trabalho === "on" && horasTrabalho > 3
     },
     {
       type: "negative",
       title: "Priorize Pausas",
-      content: `Você ${
-        data.pausasTrabalho === "sim" ? "faz pausas" : "não faz pausas"
-      }. Pausas curtas e regulares podem aumentar sua produtividade e bem-estar.`,
+      content: `Você não faz pausas. Pausas curtas e regulares podem aumentar sua produtividade e bem-estar.`,
+      condition: () => data.trabalho === "on" && data.pausasTrabalho === "nao"
     },
     {
       type: "negative",
@@ -492,6 +657,7 @@ form.addEventListener("submit", (e) => {
           ? "é excessivo e pode causar fadiga mental"
           : "já é um tempo considerável"
       }. Intercale com pausas e atividades relaxantes para manter a eficiência.`,
+      condition: () => data.estudar === "on" && horasEstudo > 3
     },
     {
       type: "negative",
@@ -505,6 +671,7 @@ form.addEventListener("submit", (e) => {
           ? "é excessivo e pode indicar outros problemas"
           : "precisa ser ajustado"
       }. Priorize uma rotina de sono saudável.`,
+      condition: () => horasSono < 7 || horasSono > 9
     },
     {
       type: "negative",
@@ -514,30 +681,31 @@ form.addEventListener("submit", (e) => {
           ? "é prejudicial para seus olhos e bem-estar mental"
           : "já representa um tempo considerável"
       }. Implemente pausas regulares e considere atividades offline.`,
+      condition: () => horasTela > 2
     },
     {
       type: "negative",
       title: "Ajuste a Postura",
-      content: `Sua postura (${
-        data.posturaTelas === "sim" ? "sim" : "não"
-      }) pode precisar de atenção. Pequenos ajustes evitam grandes dores.`,
+      content: `Sua postura pode precisar de atenção. Pequenos ajustes evitam grandes dores.`,
+      condition: () => data.posturaTelas === "nao"
     },
     {
       type: "negative",
       title: "Otimize seu Ambiente",
-      content: `Um ambiente ${
-        data.ambienteSaudavel === "sim" ? "saudável" : "não tão saudável"
-      } pode ser melhorado para aumentar seu foco e conforto.`,
+      content: `Seu ambiente pode ser melhorado para aumentar seu foco e conforto.`,
+      condition: () => data.ambienteSaudavel === "nao"
     },
     {
       type: "negative",
       title: "Mais Atividade Física",
       content: `Sua frequência de atividade física (${data.atividadeFisica}) é baixa. Incluir mais movimento pode trazer muitos benefícios.`,
+      condition: () => data.atividadeFisica === "0" || data.atividadeFisica === "1-2"
     },
     {
       type: "negative",
       title: "Revise a Alimentação",
       content: `Sua alimentação ${data.alimentacao} pode ser um ponto de melhoria. Uma dieta balanceada é fundamental para sua energia.`,
+      condition: () => data.alimentacao === "desbalanceada" || data.alimentacao === "parcialmente"
     },
     {
       type: "negative",
@@ -548,16 +716,19 @@ form.addEventListener("submit", (e) => {
       type: "negative",
       title: "Sono e Produtividade",
       content: `A falta de sono adequado reduz em até 40% sua capacidade de formar novas memórias e afeta diretamente sua produtividade no trabalho e estudos.`,
+      condition: () => horasSono < 7
     },
     {
       type: "negative",
       title: "Impactos da Privação do Sono",
       content: `Dormir menos que o necessário aumenta o risco de problemas cardiovasculares, diabetes e compromete seu sistema imunológico. Priorize seu descanso!`,
+      condition: () => horasSono < 6
     },
     {
       type: "negative",
       title: "Sono Excessivo - Investigar",
       content: `Dormir mais de 10h regularmente pode indicar problemas de saúde subjacentes ou má qualidade do sono. Considere avaliar sua rotina noturna.`,
+      condition: () => horasSono > 10
     },
   ];
 
@@ -583,8 +754,9 @@ form.addEventListener("submit", (e) => {
     generatedCards.push(shuffledPositiveTips[i]);
   }
 
-  // Adicionar dicas negativas aleatoriamente
-  const shuffledNegativeTips = negativeTipsPool.sort(() => 0.5 - Math.random());
+  // Adicionar dicas negativas aleatoriamente (apenas as que atendem às condições)
+  const validNegativeTips = negativeTipsPool.filter(tip => !tip.condition || tip.condition());
+  const shuffledNegativeTips = validNegativeTips.sort(() => 0.5 - Math.random());
   for (
     let i = 0;
     i < numNegativeCards && i < shuffledNegativeTips.length;
