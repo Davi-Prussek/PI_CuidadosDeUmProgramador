@@ -64,16 +64,70 @@ const trabalhoCond = document.getElementById("trabalhoCondicional");
 const estudoCond = document.getElementById("estudoCondicional");
 const tempoLivreCond = document.getElementById("tempoLivreCondicional");
 
-trabalho.addEventListener("change", () => {
-  trabalhoCond.style.display = trabalho.checked ? "block" : "none";
-});
+// Helper: mostra/oculta painel com transição suave
+function togglePanel(checkbox, panel) {
+  if (!checkbox || !panel) return;
+  if (checkbox.checked) {
+    panel.style.display = 'block';
+    // forçar reflow para transição
+    void panel.offsetHeight;
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+    panel.classList.add('visible');
+  } else {
+    panel.style.maxHeight = '0px';
+    panel.classList.remove('visible');
+    // esconder depois da transição para evitar tabulação em elementos ocultos
+    setTimeout(() => {
+      if (!panel.classList.contains('visible')) panel.style.display = 'none';
+    }, 350);
+  }
+}
 
-estudo.addEventListener("change", () => {
-  estudoCond.style.display = estudo.checked ? "block" : "none";
-});
+function updateCheckboxVisual(checkbox) {
+  if (!checkbox) return;
+  const item = checkbox.closest('.checkbox-item') || checkbox.closest('.checkbox-item-inline');
+  if (!item) return;
+  if (checkbox.checked) item.classList.add('selected');
+  else item.classList.remove('selected');
+}
 
-tempoLivre.addEventListener("change", () => {
-  tempoLivreCond.style.display = tempoLivre.checked ? "block" : "none";
+function updateFormGroupVisual(checkbox) {
+  if (!checkbox) return;
+  const group = checkbox.closest('.form-group') || checkbox.closest('.checkbox-item');
+  if (!group) return;
+  const checks = Array.from(group.querySelectorAll('input[type="checkbox"]'));
+  const anyChecked = checks.some(c => c.checked);
+  if (anyChecked) group.classList.add('selected');
+  else group.classList.remove('selected');
+}
+
+// ligar listeners com checagem de existência
+if (trabalho) {
+  trabalho.addEventListener('change', () => {
+    togglePanel(trabalho, trabalhoCond);
+    updateCheckboxVisual(trabalho);
+  });
+}
+
+if (estudo) {
+  estudo.addEventListener('change', () => {
+    togglePanel(estudo, estudoCond);
+    updateCheckboxVisual(estudo);
+  });
+}
+
+if (tempoLivre) {
+  tempoLivre.addEventListener('change', () => {
+    togglePanel(tempoLivre, tempoLivreCond);
+    updateCheckboxVisual(tempoLivre);
+  });
+}
+
+// inicializar estado ao carregar a página
+document.addEventListener('DOMContentLoaded', () => {
+  if (trabalho) { togglePanel(trabalho, trabalhoCond); updateCheckboxVisual(trabalho); }
+  if (estudo) { togglePanel(estudo, estudoCond); updateCheckboxVisual(estudo); }
+  if (tempoLivre) { togglePanel(tempoLivre, tempoLivreCond); updateCheckboxVisual(tempoLivre); }
 });
 
 // Lógica de horas de TRABALHO
@@ -171,6 +225,88 @@ horasTela.addEventListener("input", () => {
   else if (horas <= 3) telaEmoji.textContent = "😐📱";
   else if (horas <= 5) telaEmoji.textContent = "⚠️👓";
   else telaEmoji.textContent = "😵‍💫👓";
+});
+
+/* ===================== Parte 5 – Postura & Ambiente (emojis) ===================== */
+const posturaTelas = document.getElementById('posturaTelas');
+const posturaCondicional = document.getElementById('posturaCondicional');
+const senteDores = document.getElementById('senteDores');
+const dicasAlongamento = document.getElementById('dicasAlongamento');
+const ambienteSaudavel = document.getElementById('ambienteSaudavel');
+
+// criar spans de emoji e inserir após os selects (se existirem)
+function createEmojiSpanAfter(el) {
+  if (!el) return null;
+  const span = document.createElement('span');
+  span.className = 'emoji-inline';
+  el.insertAdjacentElement('afterend', span);
+  return span;
+}
+
+const emojiPostura = createEmojiSpanAfter(posturaTelas);
+const emojiSenteDores = createEmojiSpanAfter(senteDores);
+const emojiDicasAlong = createEmojiSpanAfter(dicasAlongamento);
+const emojiAmbiente = createEmojiSpanAfter(ambienteSaudavel);
+
+function updatePosturaUI() {
+  if (!posturaTelas) return;
+  const val = posturaTelas.value;
+  if (val === 'sim') {
+    if (emojiPostura) emojiPostura.textContent = '🧍‍♂️✅';
+    if (posturaCondicional) posturaCondicional.style.display = 'none';
+  } else if (val === 'parcialmente') {
+    if (emojiPostura) emojiPostura.textContent = '🧍‍♀️⚠️';
+    if (posturaCondicional) posturaCondicional.style.display = 'block';
+  } else if (val === 'nao') {
+    if (emojiPostura) emojiPostura.textContent = '🔴❗';
+    if (posturaCondicional) posturaCondicional.style.display = 'block';
+  } else {
+    if (emojiPostura) emojiPostura.textContent = '';
+    if (posturaCondicional) posturaCondicional.style.display = 'none';
+  }
+}
+
+function updateSenteDoresUI() {
+  if (!senteDores) return;
+  const v = senteDores.value;
+  if (v === 'sim') {
+    if (emojiSenteDores) emojiSenteDores.textContent = '😣';
+  } else if (v === 'nao') {
+    if (emojiSenteDores) emojiSenteDores.textContent = '😌';
+  } else if (emojiSenteDores) emojiSenteDores.textContent = '';
+}
+
+function updateDicasAlongUI() {
+  if (!dicasAlongamento) return;
+  const v = dicasAlongamento.value;
+  if (v === 'sim') {
+    if (emojiDicasAlong) emojiDicasAlong.textContent = '🤸‍♂️';
+  } else if (v === 'nao') {
+    if (emojiDicasAlong) emojiDicasAlong.textContent = '🚫';
+  } else if (emojiDicasAlong) emojiDicasAlong.textContent = '';
+}
+
+function updateAmbienteUI() {
+  if (!ambienteSaudavel) return;
+  const v = ambienteSaudavel.value;
+  if (v === 'sim') {
+    if (emojiAmbiente) emojiAmbiente.textContent = '🌿✅';
+  } else if (v === 'precisa-melhorar') {
+    if (emojiAmbiente) emojiAmbiente.textContent = '💡⚠️';
+  } else if (emojiAmbiente) emojiAmbiente.textContent = '';
+}
+
+if (posturaTelas) posturaTelas.addEventListener('change', updatePosturaUI);
+if (senteDores) senteDores.addEventListener('change', updateSenteDoresUI);
+if (dicasAlongamento) dicasAlongamento.addEventListener('change', updateDicasAlongUI);
+if (ambienteSaudavel) ambienteSaudavel.addEventListener('change', updateAmbienteUI);
+
+// inicializar estado
+document.addEventListener('DOMContentLoaded', () => {
+  updatePosturaUI();
+  updateSenteDoresUI();
+  updateDicasAlongUI();
+  updateAmbienteUI();
 });
 
 /* ===================== Config gerais ===================== */
@@ -804,6 +940,58 @@ form.addEventListener("submit", (e) => {
     `;
     cardsContainer.appendChild(card);
   });
+
+  // === Seção separada: Alongamentos / Dicas rápidas (Parte 5) ===
+  // Remover seção anterior, se houver (evita duplicatas)
+  const existingAlongamento = resultadosSection.querySelector('.alongamento-section');
+  if (existingAlongamento) existingAlongamento.remove();
+
+  const alongamentoTips = [];
+  // Se usuário pediu dicas de alongamento
+  if (data.dicasAlongamento === 'sim') {
+    alongamentoTips.push({
+      title: 'Alongamento Rápido: Pescoço',
+      content: 'Incline a cabeça lentamente para cada lado por 15-20s, repetindo 2x. Ajuda a aliviar tensão cervical.'
+    });
+    alongamentoTips.push({
+      title: 'Alongamento Rápido: Ombros',
+      content: 'Eleve os ombros em direção às orelhas e solte; depois puxe um braço sobre o peito por 20s. Repita 2x.'
+    });
+  }
+
+  // Se sente dores, dar sugestões específicas
+  if (data.senteDores === 'sim') {
+    alongamentoTips.push({
+      title: 'Alívio para Costas',
+      content: 'De pé, apoie as mãos na cintura e faça uma extensão suave da coluna por 10-15s. Repita 3x.'
+    });
+  }
+
+  // Se má postura detectada
+  if (data.posturaTelas === 'nao' || data.posturaTelas === 'parcialmente') {
+    alongamentoTips.push({
+      title: 'Ajuste de Postura',
+      content: 'Verifique a altura da tela: ela deve estar ao nível dos olhos. Sente-se com os pés apoiados e o core levemente ativado.'
+    });
+  }
+
+  // Criar e inserir a seção somente se houver dicas
+  if (alongamentoTips.length > 0) {
+    const sec = document.createElement('div');
+    sec.className = 'alongamento-section';
+    sec.innerHTML = `<h2 class="results-title">🧘‍♂️ Alongamentos & Dicas Rápidas</h2>`;
+    const cont = document.createElement('div');
+    cont.className = 'cards-container alongamento-container';
+    alongamentoTips.forEach(tip => {
+      const card = document.createElement('div');
+      card.className = 'card card-positive';
+      card.innerHTML = `<h3>${tip.title}</h3><p>${tip.content}</p>`;
+      cont.appendChild(card);
+    });
+    sec.appendChild(cont);
+    // inserir a seção de alongamento logo após o container principal de cards
+    resultadosSection.appendChild(sec);
+  }
 
   // Adicionar seção de próximos passos (mantida como um card especial)
   const nextStepsCard = document.createElement("div");

@@ -154,29 +154,115 @@
                   <input
                     type="checkbox"
                     id="trabalho"
-                    name="atividade"
-                    value="trabalho"
+                    name="trabalho"
+                    value="on"
                   />
                   <label for="trabalho">Trabalho/Programar</label>
+
+                  <!-- painel condicional agora fica imediatamente abaixo da checkbox -->
+                  <div id="trabalhoCondicional" class="conditional-panel" style="display: none">
+                    <label id="texto">Quantas horas por dia em média você dedica ao trabalho/programação?</label>
+                    <input
+                      type="text"
+                      id="horasTrabalho"
+                      name="horasTrabalho"
+                      maxlength="5"
+                      placeholder="Ex: 8:00"
+                    />
+                    <label id="texto">Você costuma fazer pausas regulares?</label>
+                    <select id="pausasTrabalho" name="pausasTrabalho">
+                      <option value>Selecione</option>
+                      <option value="sim">Sim</option>
+                      <option value="nao">Não</option>
+                    </select>
+                  </div>
                 </div>
+
                 <div class="checkbox-item">
                   <input
                     type="checkbox"
                     id="estudar"
-                    name="atividade"
-                    value="estudar"
+                    name="estudar"
+                    value="on"
                   />
                   <label for="estudar">Estudar</label>
+
+                  <div id="estudoCondicional" class="conditional-panel" style="display: none">
+                    <label id="texto">Quantas horas por dia em média você dedica aos estudos?</label>
+                    <input
+                      type="text"
+                      id="horasEstudo"
+                      name="horasEstudo"
+                      maxlength="5"
+                      placeholder="Ex: 2:30"
+                    />
+                    <label id="texto">Seus horários de estudo são:</label>
+                    <select id="horarioEstudo" name="horarioEstudo">
+                      <option value>Selecione</option>
+                      <option value="fixos">Fixos</option>
+                      <option value="Flexiveis">Flexiveis</option>
+                    </select>
+                  </div>
                 </div>
+
                 <div class="checkbox-item">
                   <input
                     type="checkbox"
                     id="tempoLivre"
-                    name="atividade"
-                    value="tempoLivre"
+                    name="tempoLivre"
+                    value="on"
                   />
                   <label for="tempoLivre">Tempo livre</label>
+
+                  <div id="tempoLivreCondicional" class="conditional-panel" style="display: none">
+                    <label id="texto">Como você costuma ocupar seu tempo livre?</label>
+                    <div class="checkbox-group-inline">
+                      <div class="checkbox-item-inline">
+                        <input
+                            type="checkbox"
+                            id="telasLivre"
+                            name="telasLivre"
+                            value="on"
+                          />
+                        <label for="telasLivre">Uso de telas (filmes, jogos, celular)</label>
+                      </div>
+                      <div class="checkbox-item-inline">
+                        <input
+                          type="checkbox"
+                          id="atividadeFisicaLivre"
+                          name="atividadeFisicaLivre"
+                          value="on"
+                        />
+                        <label for="atividadeFisicaLivre">Atividade física</label>
+                      </div>
+                      <div class="checkbox-item-inline">
+                        <input
+                          type="checkbox"
+                          id="lazerLivre"
+                          name="lazerLivre"
+                          value="on"
+                        />
+                        <label for="lazerLivre">Lazer ao ar livre</label>
+                      </div>
+                      <div class="checkbox-item-inline">
+                        <input
+                          type="checkbox"
+                          id="outrosLivre"
+                          name="outrosLivre"
+                          value="on"
+                        />
+                        <label for="outrosLivre">Outros:</label>
+                        <input
+                          type="text"
+                          id="outrosLivreTexto"
+                          name="outrosLivreTexto"
+                          style="width: 120px"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="checkbox-item">
                   <input
                     type="checkbox"
@@ -192,86 +278,6 @@
                     style="width: 120px"
                   />
                 </div>
-              </div>
-            </div>
-            <div id="trabalhoCondicional" style="display: none">
-              <label id="texto"
-                >Quantas horas por dia em média você dedica ao
-                trabalho/programação?</label
-              >
-              <input
-                type="text"
-                id="horasTrabalho"
-                name="horasTrabalho"
-                maxlength="5"
-                placeholder="Ex: 8:00"
-              />
-              <label id="texto">Você costuma fazer pausas regulares?</label>
-              <select id="pausasTrabalho" name="pausasTrabalho">
-                <option value>Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-            <div id="estudoCondicional" style="display: none">
-              <label id="texto"
-                >Quantas horas por dia em média você dedica aos estudos?</label
-              >
-              <input
-                type="text"
-                id="horasEstudo"
-                name="horasEstudo"
-                maxlength="5"
-                placeholder="Ex: 2:30"
-              />
-              <label id="texto">Seus horários de estudo são:</label>
-              <select id="horarioEstudo" name="horarioEstudo">
-                <option value>Selecione</option>
-                <option value="fixos">Fixos</option>
-                <option value="Flexiveis">Flexiveis</option>
-              </select>
-            </div>
-            <div id="tempoLivreCondicional" style="display: none">
-              <label id="texto"
-                >Como você costuma ocupar seu tempo livre?</label
-              >
-              <div>
-                <input
-                  type="checkbox"
-                  id="telasLivre"
-                  name="tempoLivreOpcao"
-                  value="telas"
-                />
-                <label for="telasLivre"
-                  >Uso de telas (filmes, jogos, celular)</label
-                >
-                <input
-                  type="checkbox"
-                  id="atividadeFisicaLivre"
-                  name="tempoLivreOpcao"
-                  value="atividadeFisica"
-                />
-                <label for="atividadeFisicaLivre">Atividade física</label>
-                <input
-                  type="checkbox"
-                  id="lazerLivre"
-                  name="tempoLivreOpcao"
-                  value="lazerArLivre"
-                />
-                <label for="lazerLivre">Lazer ao ar livre</label>
-                <input
-                  type="checkbox"
-                  id="outrosLivre"
-                  name="tempoLivreOpcao"
-                  value="outros"
-                />
-                <label for="outrosLivre">Outros:</label>
-                <input
-                  type="text"
-                  id="outrosLivreTexto"
-                  name="outrosLivreTexto"
-                  style="width: 120px"
-                />
               </div>
             </div>
           </fieldset>
