@@ -18,7 +18,7 @@ const h6 = document.querySelectorAll("h6");
 const span = document.querySelectorAll("span");
 const subBar = document.getElementById("sub-menu-bar");
 const article = document.querySelectorAll("article");
-const li = document.querySelectorAll("ul > li");
+const li = document.querySelectorAll("main >    ul > li");
 
 const setaVoltar = document.getElementById("setaVoltar");
 
@@ -57,12 +57,12 @@ function light() {
     div.forEach(d => { d.style.color = "#ffffff"; });
     article.forEach(article => {article.style.color = "#ffffff"});
     article.forEach(article => {article.style.backgroundColor = "rgba(10, 3, 36, 1)"});
-    li.forEach(li => {li.style.backgroundColor = "black"});
+    li.forEach(li => {li.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     li.forEach(li => {li.style.color = "white"});
     li.forEach(li => {li.style.borderBottom = "2px solid black"});
     li.forEach(li => {li.style.borderTop = "2px solid black"});
     li.forEach(li => {li.style.borderRight = "2px solid black"});
-    li.forEach(li => {li.style.borderRight = "2px solid black"});
+    li.forEach(li => {li.style.li = "2px solid black"});
     localStorage.setItem("theme", "light");
 }
 
@@ -86,6 +86,7 @@ function dark() {
     li.forEach(li => {li.style.borderTop = "none"});
     li.forEach(li => {li.style.borderRight = "none"});
     li.forEach(li => {li.style.borderRight = "none"});
+    li.forEach(li => {li.style.borderBottom = "none"});
     li.forEach(li => {li.style.color = ""});
     localStorage.setItem("theme", "dark");
 }

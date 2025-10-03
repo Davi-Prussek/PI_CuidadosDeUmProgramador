@@ -16,7 +16,7 @@ html {
       background: #0056b3;
       display: flex;
       justify-content: space-between;
-      padding: 0 0 0 2vw;
+      padding: 0 0 0 ;
       position: fixed;
       top: 0px;
       width: 100%;
@@ -38,90 +38,35 @@ html {
           position: relative;
           z-index: 6;
           height: 100%;
-          align-items: end;
+          align-items: center;
           font-size: 1rem;
           display: flex;
           gap: 0.2rem;
 
-          .cuidados {
-            .botao {
-              img {
-                width: 22px;
-                display: inline-block;
-                height: auto;
-              }
 
-              color: white;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: auto;
-              height: auto;
-              border: none;
-              font-size: 1rem;
-              cursor: pointer;
-
-              .sub-menus,
-              .sub-menus,
-              .sub-menus-II {
-                display: block;
-              }
-            }
+          .link-base {
+            align-items: baseline;
           }
-
-          .comeco {
-            .botao-II {
-              img {
-                width: 22px;
-                display: inline-block;
-                height: auto;
-              }
-
-              color: white;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: auto;
+          p {
+            img {
+              width: 22px;
+              display: inline-block;
               height: auto;
-              border: none;
-              font-size: 1rem;
-              cursor: pointer;
-
-              .sub-menus-II {
-                display: block;
-              }
             }
-          }
-
-          .sobre-nos {
-            .botao-III {
-              img {
-                width: 22px;
-                display: inline-block;
-                height: auto;
-              }
-
-              color: white;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: auto;
-              height: auto;
-              border: none;
-              font-size: 1rem;
-              cursor: pointer;
-
-              .sub-menus-II {
-                display: block;
-              }
-            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+            color: white;
+            cursor: pointer;
+            position: relative;
           }
 
           li {
             text-align: center;
             min-width: 7.5rem;
             height: 100%;
-            padding: 1.5vw 0 0 0;
             box-sizing: border-box;
 
             ul {
@@ -129,28 +74,32 @@ html {
               display: none;
               background-color: rgb(18, 21, 44);
               height: auto;
-
-              li {
-                margin: 0.7rem 0;
-              }
             }
           }
 
           li:hover {
             ul {
               display: block;
+
             }
           }
 
-          a {
-            text-decoration: none;
-            color: white;
-            position: relative;
-          }
+a {
+  display: block;
+  width: 100%;
+  padding: 1.5vw 0;
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+
 
           li:hover {
             background-color: rgb(18, 21, 44);
           }
+
+
         }
 
         .sub-menu-header {
@@ -205,14 +154,15 @@ html {
           }
         }
       }
+
       ul {
-        a {
+        p {
           text-decoration: none;
           color: white;
           position: relative;
         }
 
-        a::after {
+/*        p::after {
           content: "";
           position: absolute;
           bottom: 0;
@@ -225,9 +175,9 @@ html {
           transition: transform 0.3s ease;
         }
 
-        a:hover::after {
+        p:hover::after {
           transform: scaleX(1);
-        }
+        }*/
       }
     }
     main {
