@@ -148,6 +148,19 @@
 
         Maico
 
+## Decimo Terceira dia 03/10
+    ## O que vai ser feito;
+        As paginas no canva
+        Revendo as paginas 
+        Terminando tema escuro
+        Deixando o header responsivo
+        Resolvendo as saidas de dados
+        Arrumando erros de Portugues
+
+    ### Quem faltou:
+
+        Todos vieram;
+
 
 
         
