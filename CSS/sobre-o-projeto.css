@@ -1,9 +1,10 @@
 html {
-  font-size: calc(12px + 0.95vw);
+  font-size: calc(9px + 0.6vw);
   font-family: "Open Sans", sans-serif;
   color: #333;
   line-height: 1.6;
   background-color: #f9fbff;
+
   a {
     text-decoration: none;
     color: #004bb4;
@@ -20,21 +21,21 @@ html {
     header {
       img {
         height: 2.6rem;
-        filter: brightness(1.05) contrast(1.4) saturate(1.2);
+        filter: brightness(-2) contrast(1.4) saturate(1.2);
       }
 
       align-items: center;
       background: #0056b3;
       display: flex;
       justify-content: space-between;
-      padding: 0 0 0 ;
+      padding: 0 0 0;
       position: fixed;
       top: 0px;
       width: 100%;
       box-sizing: border-box;
       z-index: 5;
       flex-grow: 1;
-      height: 5vw;
+      height: 4vw;
 
       h1 a {
         font-size: 1.4rem;
@@ -54,16 +55,17 @@ html {
           display: flex;
           gap: 0.2rem;
 
-
           .link-base {
             align-items: baseline;
           }
+
           p {
             img {
               width: 22px;
               display: inline-block;
               height: auto;
             }
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -91,26 +93,21 @@ html {
           li:hover {
             ul {
               display: block;
-
             }
           }
 
-a {
-  display: block;
-  width: 100%;
-  padding: 1.5vw 0;
-  text-decoration: none;
-  color: white;
-  position: relative;
-}
-
-
+          a {
+            display: block;
+            width: 100%;
+            padding: 1.1vw 0;
+            text-decoration: none;
+            color: white;
+            position: relative;
+          }
 
           li:hover {
             background-color: rgb(18, 21, 44);
           }
-
-
         }
 
         .sub-menu-header {
@@ -173,7 +170,7 @@ a {
           position: relative;
         }
 
-/*        p::after {
+        /*        p::after {
           content: "";
           position: absolute;
           bottom: 0;
@@ -191,6 +188,7 @@ a {
         }*/
       }
     }
+
     /* Estado ativo do hambúrguer (vira X) */
     main {
       margin-top: 6vw;
@@ -215,15 +213,10 @@ a {
       }
 
       .s1 {
-        article {
-          background-color: rgba(109, 109, 109, 0.7);
-          border-radius: 15px;
-          margin: 0px 18vw;
-          padding: 3vw 0px;
-        }
+
         position: relative;
-        padding: 70px 24px;
-        margin-bottom: 40px;
+        padding: 40px 16px;
+        margin-bottom: 30px;
         background: url("https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80")
           center/cover no-repeat;
         border-radius: 16px;
@@ -232,6 +225,7 @@ a {
         overflow: hidden;
         box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
         transition: box-shadow 0.3s ease;
+        filter: brightness(-2);
 
         &:hover {
           box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
@@ -251,7 +245,7 @@ a {
         }
 
         h2 {
-          font-size: 90px;
+          font-size: 56px;
           font-weight: bold;
           color: #006aff;
         }
@@ -269,7 +263,7 @@ a {
       .essa {
         h2 {
           text-align: center;
-          font-size: 30px;
+          font-size: 22px;
         }
 
         ul {
@@ -282,17 +276,17 @@ a {
       }
 
       .s2 {
-        margin-bottom: 40px;
+        margin-bottom: 30px;
         text-align: center;
 
         h2 {
-          font-size: 60px;
+          font-size: 40px;
           font-weight: bold;
           color: #006aff;
         }
 
         h3 {
-          font-size: 40px;
+          font-size: 24px;
           font-weight: bold;
           color: #0052a4;
         }
@@ -310,7 +304,8 @@ a {
         .listaDeArticle {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
-          gap: 20px;
+          gap: 10px;
+
           div {
             background: #e9f2ff;
             border: 1px solid #99c2ff;
@@ -324,13 +319,15 @@ a {
               box-shadow: 0 12px 28px rgba(0, 89, 179, 0.35);
             }
           }
+
           div:last-child {
             grid-column: span 2;
           }
         }
       }
+
       .atas {
-        padding: 20px;
+        padding: 10px;
         color: #003366;
 
         h2 {
@@ -351,8 +348,8 @@ a {
 
         .cards {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-          gap: 20px;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 10px;
 
           .card {
             background: #e9f2ff;
@@ -393,13 +390,6 @@ a {
               color: #002244;
             }
           }
-
-          /* força o último card a ocupar a linha inteira */
-          .last-card {
-            align-items: center;
-            text-align: center;
-            grid-column: span 2;
-          }
         }
       }
     }
@@ -415,7 +405,7 @@ a {
       width: 100%;
       font-family: "Times New Roman", Times, serif;
       font-weight: 400;
-      font-size: 1.3vw;
+      font-size: 1.1vw;
       min-height: 70px;
       margin-top: auto;
       box-sizing: border-box;
@@ -453,7 +443,7 @@ a {
         .logo {
           font-family: "Times New Roman", Times, serif;
           font-weight: 700;
-          font-size: 2.5vw;
+          font-size: 2.1vw;
           color: white;
           display: flex;
           justify-content: center;
@@ -462,7 +452,7 @@ a {
         }
 
         .linkRp {
-          font-size: 1.6vw;
+          font-size: 1.3vw;
           margin-bottom: 0.6vw;
           flex: 1;
 
@@ -476,7 +466,7 @@ a {
             gap: 0.3vw;
 
             li a {
-              font-size: 1.3vw;
+              font-size: 1.1vw;
               color: #ffffff;
               text-decoration: none;
               margin-bottom: 0;
@@ -488,7 +478,7 @@ a {
       }
 
       p {
-        font-size: 1.1vw;
+        font-size: 0.9vw;
         margin: 1vw 0 0 0;
       }
     }
@@ -498,62 +488,80 @@ a {
 @media (max-width: 768px) {
   header {
     height: 3.5vw;
+
     h1 a {
       font-size: 1vw;
     }
+
     nav .direcionar_sobreNos {
       font-size: 0.8vw;
+
       li {
         min-width: 8vw;
       }
     }
+
     .sub-menu-header {
       font-size: 0.6vw;
+
       .theme {
         font-size: 0.7vw;
+
         .buttonOff,
         .buttonOn {
           height: 1.2vw;
         }
       }
+
       li {
         min-width: 6vw;
       }
     }
   }
+
   main {
     margin-top: 15vw;
+
     .container {
       max-width: 95%;
       padding: 1.5rem;
+
       h2 {
-        font-size: 40px;
+        font-size: 30px;
       }
     }
+
     .intro {
       font-size: 20px;
     }
+
     fieldset {
       padding: 1rem;
     }
+
     .cards {
       grid-template-columns: 1fr;
       gap: 15px;
     }
+
     .card {
       padding: 20px 15px;
     }
   }
+
   footer {
     ul {
       flex-direction: column;
       text-align: center;
+
       .footer-contact {
         margin-bottom: 1rem;
       }
+
       .logo {
         margin: 1rem 0;
       }
+
       .linkRp {
         margin-top: 1rem;
       }
@@ -564,60 +572,78 @@ a {
 @media (max-width: 500px) {
   header {
     height: 3vw;
+
     h1 a {
       font-size: 0.9vw;
     }
+
     nav .direcionar_sobreNos {
       font-size: 0.7vw;
+
       li {
         min-width: 6vw;
       }
     }
+
     .sub-menu-header {
       font-size: 0.5vw;
+
       .theme {
         font-size: 0.6vw;
+
         .buttonOff,
         .buttonOn {
           height: 1.1vw;
         }
       }
+
       li {
         min-width: 5vw;
       }
     }
   }
+
   main {
     .container {
       padding: 1rem;
+
       h2 {
         font-size: 30px;
       }
     }
+
     .intro {
       font-size: 18px;
     }
+
     fieldset {
       padding: 0.8rem;
     }
+
     .card {
       padding: 15px 10px;
+
       h3 {
         font-size: 1.1rem;
       }
     }
   }
+
   footer {
     padding: 10px 0;
+
     ul {
       padding: 0 10px;
+
       .logo {
         font-size: 20px;
       }
+
       .linkRp {
         font-size: 12px;
       }
     }
+
     p {
       font-size: 10px;
     }

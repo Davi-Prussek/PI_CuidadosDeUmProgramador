@@ -1,35 +1,61 @@
-/* ========================================= GERAL ========================================= */
+/* ========================================= ESTRUTURA HIERÁRQUICA ========================================= */
 
 html {
-  font-size: calc(12px + 0.95vw);
+  font-size: calc(10px + 0.6vw);
   font-family: "Open Sans", sans-serif;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.5;
   background-color: #f9fbff;
 
-  /* ========================================= BODY ========================================= */
   body {
     text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    /* Media queries para melhorar a responsividade */
+    @media (max-width: 768px) {
+      html {
+        font-size: calc(9px + 0.5vw);
+      }
+
+      .container {
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+
+      .card {
+        padding: 14px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: calc(8px + 0.5vw);
+      }
+    }
 
     /* ========================================= HEADER ========================================= */
     header {
-      img {
-        height: 2.6rem;
-        filter: brightness(1.05) contrast(1.4) saturate(1.2);
-      }
-
       align-items: center;
       background: #0056b3;
       display: flex;
       justify-content: space-between;
-      padding: 0 0 0;
+      padding: 0 0.5rem;
+
+      img {
+        height: 2.2rem;
+        filter: brightness(1.05) contrast(1.4) saturate(1.2);
+      }
+
       position: fixed;
       top: 0px;
       width: 100%;
       box-sizing: border-box;
       z-index: 5;
       flex-grow: 1;
-      height: 5vw;
+      height: 4.5vw;
+      min-height: 50px;
+      max-height: 80px;
 
       h1 a {
         font-size: 1.4rem;
@@ -48,16 +74,21 @@ html {
           font-size: 1rem;
           display: flex;
           gap: 0.2rem;
+          flex-wrap: nowrap;
+          overflow-x: auto;
+          overflow-y: hidden;
 
           .link-base {
             align-items: baseline;
           }
+
           p {
             img {
               width: 22px;
               display: inline-block;
               height: auto;
             }
+
             display: flex;
             align-items: center;
             justify-content: center;
@@ -66,6 +97,7 @@ html {
             color: white;
             cursor: pointer;
             position: relative;
+            white-space: nowrap;
           }
 
           li {
@@ -73,6 +105,7 @@ html {
             min-width: 7.5rem;
             height: 100%;
             box-sizing: border-box;
+            flex-shrink: 0;
 
             ul {
               position: absolute;
@@ -180,8 +213,10 @@ html {
         }*/
       }
     }
-
     main {
+      margin-top: calc(4.5vw + 20px);
+      min-height: calc(100vh - 4.5vw - 20px);
+      
       .seta-voltar {
         background-color: #0056b3;
         border-radius: 1000px;
@@ -191,13 +226,14 @@ html {
         right: 20px;
         border: none;
         z-index: 15;
+        
         img {
           width: 55px;
           height: 60px;
         }
       }
-      margin-top: 11vw;
-
+        
+        
       /* ---------- Fonte e cores ---------- */
       body {
         font-family: "Open Sans", sans-serif;
@@ -214,17 +250,24 @@ html {
         font-weight: 600;
         color: #222;
       }
+
       /* ---------- Container principal ---------- */
       .container {
-        max-width: 900px;
-        margin: 2rem auto;
-        padding: 2rem;
+        max-width: 700px;
+        margin: 1rem auto;
+        padding: 1rem;
         background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
         h2 {
-          font-size: 5vw;
+          font-size: clamp(1.5rem, 2.2vw, 2.5rem);
           color: #0066cc;
+          margin-bottom: 1rem;
+          margin-top: 2rem;
+          line-height: 1.2;
+          word-wrap: break-word;
+          hyphens: auto;
         }
       }
 
@@ -239,17 +282,19 @@ html {
       .checkbox-item {
         display: flex;
         align-items: center;
-        gap: 0.6rem;
-        padding: 0.6rem 0.8rem;
-        border-radius: 8px;
+        gap: 0.5rem;
+        padding: 0.5rem 0.7rem;
+        border-radius: 6px;
         transition: background 0.2s, box-shadow 0.2s;
+        font-size: 0.9rem;
       }
 
       /* Permite que elementos de bloco dentro do item (o painel condicional)
            ocupem a linha inteira e fiquem abaixo do checkbox/label */
       .checkbox-item {
         flex-wrap: wrap;
-        align-items: flex-start; /* alinha o checkbox/label ao topo quando o painel aparece */
+        align-items: flex-start;
+        /* alinha o checkbox/label ao topo quando o painel aparece */
       }
 
       .checkbox-item:hover {
@@ -279,14 +324,16 @@ html {
       }
 
       .form-group.selected label#texto {
-        color: #004a9f; /* cor do texto da pergunta quando selecionado */
+        color: #004a9f;
+        /* cor do texto da pergunta quando selecionado */
         font-weight: 600;
       }
 
       .checkbox-item input[type="checkbox"] {
         width: 18px;
         height: 18px;
-        accent-color: #0066cc; /* modern browsers */
+        accent-color: #0066cc;
+        /* modern browsers */
         cursor: pointer;
       }
 
@@ -338,15 +385,19 @@ html {
       }
 
       .intro {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
         color: #000000;
-        font-size: 3vw;
+        font-size: clamp(1rem, 1.8vw, 1.3rem);
         font-weight: bold;
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto;
       }
 
       /* ---------- Fieldset (caixas das partes) ---------- */
       fieldset {
         border: none;
+        margin-top: 1rem;
         margin-bottom: 2rem;
         padding: 1.5rem;
         border-radius: 12px;
@@ -393,7 +444,8 @@ html {
 
       /* ===== IMC panel styling (mais polido e "à prova de usuário") ===== */
       #imcCondicional {
-        display: none; /* controlado por JS */
+        display: none;
+        /* controlado por JS */
         background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
         border: 1px solid #e6f0ff;
         padding: 0.8rem;
@@ -418,11 +470,24 @@ html {
         box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
       }
 
-      /* Centralizar campos do formulário e limitar larguras para melhor alinhamento */
+      /* Alinhar campos do formulário à esquerda e limitar larguras para melhor alinhamento */
       .container .form-group {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      /* Centralizar apenas a Parte 1 */
+      fieldset:first-of-type .form-group {
         align-items: center;
+        text-align: center;
+      }
+
+      /* Centralizar os inputs da Parte 1 */
+      fieldset:first-of-type input,
+      fieldset:first-of-type select {
+        margin: 0.35rem auto 0.6rem auto;
         text-align: center;
       }
 
@@ -432,8 +497,9 @@ html {
       .container textarea {
         width: 80%;
         max-width: 520px;
-        margin: 0.35rem auto 0.6rem auto;
-        display: inline-block; /* permite emoji na mesma linha */
+        margin: 0.35rem 0 0.6rem 0;
+        display: inline-block;
+        /* permite emoji na mesma linha */
         vertical-align: middle;
         text-align: left;
       }
@@ -455,30 +521,33 @@ html {
         display: inline-block;
         margin-left: 0.6rem;
         vertical-align: middle;
+        font-size: 1.1rem;
       }
 
       /* Centralizar o grupo de botões e estilizar botões do formulário */
       .button-group {
         display: flex;
-        gap: 12px;
+        gap: 10px;
         justify-content: center;
         align-items: center;
-        margin-top: 1rem;
+        margin-top: 0.8rem;
       }
 
       .btn-submit,
       .btn-reset {
-        padding: 0.8rem 1.2rem;
-        border-radius: 8px;
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
         border: none;
         cursor: pointer;
         font-weight: 600;
+        font-size: 0.9rem;
       }
 
       .btn-submit {
         background: #0066cc;
         color: #fff;
       }
+
       .btn-reset {
         background: #999;
         color: #fff;
@@ -488,9 +557,11 @@ html {
       #pesoIMC,
       #alturaIMC,
       input[type="number"].imc-input {
-        -moz-appearance: textfield; /* Firefox */
+        -moz-appearance: textfield;
+        /* Firefox */
         -webkit-appearance: textfield;
-        appearance: textfield; /* padrão moderno para compatibilidade */
+        appearance: textfield;
+        /* padrão moderno para compatibilidade */
       }
 
       /* Webkit browsers (Chrome, Edge, Safari) */
@@ -629,7 +700,8 @@ html {
         margin: 0.6rem auto 1.2rem auto;
         font-size: clamp(0.95rem, 1.6vw, 1.05rem);
         color: #333;
-        max-width: 720px; /* limita largura de leitura em telas muito largas */
+        max-width: 720px;
+        /* limita largura de leitura em telas muito largas */
         padding: 0 0.6rem;
       }
 
@@ -648,11 +720,11 @@ html {
       /* Mini-título para agrupar cards (ocupa toda a largura do grid) */
       .cards-container .mini-title {
         grid-column: 1 / -1;
-        font-size: 1rem;
+        font-size: 0.85rem;
         font-weight: 700;
         color: #0056b3;
         background: transparent;
-        padding: 6px 0 0 6px;
+        padding: 4px 0 0 4px;
         margin: 0;
         align-self: center;
       }
@@ -663,7 +735,8 @@ html {
          não suportam display: contents — nesse caso, o fallback é aceitável. */
       /* Wrappers de grupo: fallback para navegadores que não suportam display:contents */
       .group-block {
-        display: block; /* fallback */
+        display: block;
+        /* fallback */
       }
 
       .group-items {
@@ -676,6 +749,7 @@ html {
         .group-block {
           display: contents;
         }
+
         .group-items {
           display: contents;
           gap: 16px;
@@ -691,10 +765,11 @@ html {
       .card {
         background: #e9f2ff;
         border: 1px solid #99c2ff;
-        border-radius: 14px;
-        padding: 24px 20px;
+        border-radius: 12px;
+        padding: 18px 16px;
         color: #003366;
         transition: transform 0.25s ease, box-shadow 0.25s ease;
+        font-size: 0.9rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
         display: flex;
         flex-direction: column;
@@ -819,8 +894,8 @@ html {
 
         /* Mini-título menor */
         .cards-container .mini-title {
-          font-size: 0.95rem;
-          padding-left: 4px;
+          font-size: 0.8rem;
+          padding-left: 3px;
         }
       }
 
@@ -1076,63 +1151,103 @@ html {
 
   @media (max-width: 768px) {
     header {
-      height: 3.5vw;
-      h1 a {
-        font-size: 1vw;
-      }
-      nav .direcionar_sobreNos {
-        font-size: 0.8vw;
-        li {
-          min-width: 8vw;
+      height: auto;
+      min-height: 60px;
+      flex-direction: column;
+      padding: 0.5rem;
+
+      h1 {
+        margin-bottom: 0.5rem;
+        
+        a {
+          font-size: clamp(1rem, 4vw, 1.4rem);
         }
       }
-      .sub-menu-header {
-        font-size: 0.6vw;
-        .theme {
-          font-size: 0.7vw;
-          .buttonOff,
-          .buttonOn {
-            height: 1.2vw;
+
+      nav {
+        width: 100%;
+        
+        .direcionar_sobreNos {
+          font-size: clamp(0.8rem, 2.5vw, 1rem);
+          gap: 0.1rem;
+          justify-content: center;
+          flex-wrap: wrap;
+
+          li {
+            min-width: auto;
+            flex: 1;
+            min-width: 6rem;
           }
         }
-        li {
-          min-width: 6vw;
+
+        .sub-menu-header {
+          position: static;
+          width: 100%;
+          justify-content: center;
+          font-size: clamp(0.7rem, 2vw, 0.9rem);
+          margin-top: 0.5rem;
+
+          .theme {
+            font-size: clamp(0.7rem, 2vw, 0.9rem);
+
+            .buttonOff,
+            .buttonOn {
+              height: 1rem;
+            }
+          }
+
+          li {
+            min-width: auto;
+            flex: 1;
+          }
         }
       }
     }
+
     main {
-      margin-top: 15vw;
+      margin-top: calc(60px + 40px + 20px); /* altura do header + padding + margem extra */
+      min-height: calc(100vh - 60px - 40px - 20px);
+
       .container {
         max-width: 95%;
         padding: 1.5rem;
+
         h2 {
-          font-size: 40px;
+          font-size: clamp(1.8rem, 8vw, 3rem);
         }
       }
+
       .intro {
-        font-size: 20px;
+        font-size: clamp(1rem, 4vw, 1.3rem);
       }
+
       fieldset {
         padding: 1rem;
       }
+
       .cards-container {
         grid-template-columns: 1fr;
         gap: 15px;
       }
+
       .card {
         padding: 20px 15px;
       }
     }
+
     footer {
       ul {
         flex-direction: column;
         text-align: center;
+
         .footer-contact {
           margin-bottom: 1rem;
         }
+
         .logo {
           margin: 1rem 0;
         }
+
         .linkRp {
           margin-top: 1rem;
         }
@@ -1140,65 +1255,131 @@ html {
     }
   }
 
+  @media (max-width: 600px) {
+    main {
+      margin-top: calc(80px + 30px + 20px); /* altura do header + padding + margem extra */
+      min-height: calc(100vh - 80px - 30px - 20px);
+    }
+  }
+
   @media (max-width: 500px) {
     header {
-      height: 3vw;
+      height: auto;
+      min-height: 80px;
+      padding: 0.3rem;
+
       h1 a {
-        font-size: 0.9vw;
+        font-size: clamp(0.9rem, 5vw, 1.2rem);
       }
+
       nav .direcionar_sobreNos {
-        font-size: 0.7vw;
+        font-size: clamp(0.7rem, 3vw, 0.9rem);
+        gap: 0.05rem;
+
         li {
-          min-width: 6vw;
+          min-width: 5rem;
+          flex: 1;
         }
       }
+
       .sub-menu-header {
-        font-size: 0.5vw;
+        font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+        margin-top: 0.3rem;
+
         .theme {
-          font-size: 0.6vw;
+          font-size: clamp(0.6rem, 2.5vw, 0.8rem);
+
           .buttonOff,
           .buttonOn {
-            height: 1.1vw;
+            height: 0.9rem;
           }
         }
+
         li {
-          min-width: 5vw;
+          min-width: 4rem;
+          flex: 1;
         }
       }
     }
+
     main {
+      margin-top: calc(100px + 20px + 20px); /* altura do header + padding + margem extra */
+      min-height: calc(100vh - 100px - 20px - 20px);
+
       .container {
-        padding: 1rem;
+        padding: 0.8rem;
+        margin: 0.5rem;
+
         h2 {
-          font-size: 5vw;
+          font-size: clamp(1.5rem, 6vw, 2.2rem);
         }
       }
+
       .intro {
-        font-size: 1.4vw;
+        font-size: clamp(0.9rem, 3.5vw, 1.1rem);
       }
+
       fieldset {
         padding: 0.8rem;
       }
+
       .card {
         padding: 15px 10px;
+
         h3 {
           font-size: 1.1rem;
         }
       }
     }
+
     footer {
       padding: 10px 0;
+
       ul {
         padding: 0 10px;
+
         .logo {
           font-size: 20px;
         }
+
         .linkRp {
           font-size: 12px;
         }
       }
+
       p {
         font-size: 10px;
+      }
+    }
+  }
+
+  /* Media query para telas muito pequenas (mobile) */
+  @media (max-width: 360px) {
+    header {
+      min-height: 100px;
+      
+      nav .direcionar_sobreNos {
+        flex-direction: column;
+        gap: 0.2rem;
+        
+        li {
+          min-width: 100%;
+          text-align: center;
+        }
+      }
+    }
+    
+    main {
+      margin-top: calc(120px + 15px + 20px); /* altura do header + padding + margem extra */
+      min-height: calc(100vh - 120px - 15px - 20px);
+      
+      .container {
+        margin: 0.3rem;
+        padding: 0.6rem;
+        
+        h2 {
+          font-size: clamp(1.3rem, 5vw, 1.8rem);
+        }
       }
     }
   }

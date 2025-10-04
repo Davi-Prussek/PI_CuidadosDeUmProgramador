@@ -190,19 +190,41 @@ const lazerLivre = document.getElementById("lazerLivre");
 const outrosLivre = document.getElementById("outrosLivre");
 
 [telasLivre, atividadeFisicaLivre, lazerLivre, outrosLivre].forEach((el) => {
+  // Criar spans para emojis se ainda não existirem
+  if (!el.dataset.hasEmojiSpan) {
+    const emojiSpan = document.createElement("span");
+    emojiSpan.className = "emoji-inline";
+    el.nextElementSibling.insertAdjacentElement("afterend", emojiSpan);
+    el.dataset.hasEmojiSpan = "true";
+    el.emojiSpan = emojiSpan;
+  }
+  
   el.addEventListener("change", () => {
-    if (telasLivre.checked) telasLivre.nextElementSibling.textContent = "📱😐";
-    else
-      telasLivre.nextElementSibling.textContent =
-        "Uso de telas (filmes, jogos, celular)";
-
-    if (atividadeFisicaLivre.checked)
-      atividadeFisicaLivre.nextElementSibling.textContent = "🏃😍";
-    else
-      atividadeFisicaLivre.nextElementSibling.textContent = "Atividade física";
-
-    if (lazerLivre.checked) lazerLivre.nextElementSibling.textContent = "🌳😊";
-    else lazerLivre.nextElementSibling.textContent = "Lazer ao ar livre";
+    // Restaurar os textos originais
+    if (!telasLivre.dataset.originalText) {
+      telasLivre.dataset.originalText = "Uso de telas (filmes, jogos, celular)";
+      telasLivre.nextElementSibling.textContent = telasLivre.dataset.originalText;
+    }
+    
+    if (!atividadeFisicaLivre.dataset.originalText) {
+      atividadeFisicaLivre.dataset.originalText = "Atividade física";
+      atividadeFisicaLivre.nextElementSibling.textContent = atividadeFisicaLivre.dataset.originalText;
+    }
+    
+    if (!lazerLivre.dataset.originalText) {
+      lazerLivre.dataset.originalText = "Lazer ao ar livre";
+      lazerLivre.nextElementSibling.textContent = lazerLivre.dataset.originalText;
+    }
+    
+    // Atualizar apenas os emojis
+    if (telasLivre.checked) telasLivre.emojiSpan.textContent = "📱😐";
+    else telasLivre.emojiSpan.textContent = "";
+    
+    if (atividadeFisicaLivre.checked) atividadeFisicaLivre.emojiSpan.textContent = "🏃😍";
+    else atividadeFisicaLivre.emojiSpan.textContent = "";
+    
+    if (lazerLivre.checked) lazerLivre.emojiSpan.textContent = "🌳😊";
+    else lazerLivre.emojiSpan.textContent = "";
   });
 });
 
@@ -1409,3 +1431,36 @@ form.addEventListener("submit", (e) => {
   resultadosSection.style.display = "block";
   resultadosSection.scrollIntoView({ behavior: "smooth" });
 });
+
+// Função para ajustar dinamicamente o margin-top do main baseado na altura do header
+function adjustMainMargin() {
+  const header = document.getElementById('header');
+  const main = document.querySelector('main');
+  
+  if (header && main) {
+    const headerHeight = header.offsetHeight;
+    const extraMargin = 20; // margem extra para evitar sobreposição
+    const newMarginTop = headerHeight + extraMargin;
+    
+    main.style.marginTop = `${newMarginTop}px`;
+    main.style.minHeight = `calc(100vh - ${newMarginTop}px)`;
+  }
+}
+
+// Ajustar margin quando a página carrega
+document.addEventListener('DOMContentLoaded', adjustMainMargin);
+
+// Ajustar margin quando a janela é redimensionada
+window.addEventListener('resize', adjustMainMargin);
+
+// Ajustar margin quando o conteúdo do header muda (ex: menu dropdown)
+const observer = new MutationObserver(adjustMainMargin);
+const header = document.getElementById('header');
+if (header) {
+  observer.observe(header, { 
+    childList: true, 
+    subtree: true, 
+    attributes: true,
+    attributeFilter: ['style', 'class']
+  });
+}
