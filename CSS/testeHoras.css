@@ -832,6 +832,12 @@ html {
         transition: background 0.3s ease;
       }
 
+      /* Botões do formulário: Ver Resultados e Limpar Respostas */
+      .btn-submit,
+      .btn-reset {
+        font-size: 1.7vw;
+      }
+
       .print-btn {
         background: #009966;
         color: #fff;
