@@ -90,6 +90,14 @@
               />
             </div>
             <div class="form-group">
+              <label for="sexo" id="texto">Sexo:</label>
+              <select id="sexo" name="sexo" required>
+                <option value>Selecione</option>
+                <option value="homem">Homem</option>
+                <option value="mulher">Mulher</option>
+              </select>
+            </div>
+            <div class="form-group">
               <label id="texto">1. Como você avalia sua rotina atual?</label>
               <select id="avaliacaoRotina" name="avaliacaoRotina" required>
                 <option value>Selecione</option>
@@ -379,6 +387,17 @@
               <option value="excesso-telas">Excesso de telas</option>
               <option value="outro">Outro</option>
             </select>
+            <!-- Nova pergunta: calcular IMC antes da pergunta 4 -->
+            <label id="texto">Deseja calcular seu IMC (Índice de Massa Corporal)?</label>
+            <select id="calcularIMC" name="calcularIMC">
+              <option value>Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+            <div id="imcCondicional" style="display: none; margin-top:8px;">
+              <label id="texto">Peso (kg): <input type="number" id="pesoIMC" name="pesoIMC" step="0.1" min="20" max="300" /></label>
+              <label id="texto">Altura (cm): <input type="number" id="alturaIMC" name="alturaIMC" step="0.1" min="50" max="250" /></label>
+            </div>
             <label id="texto"
               >4. O que gostaria de melhorar primeiro na sua rotina?</label
             >
@@ -392,7 +411,7 @@
           </fieldset>
           <div class="button-group">
             <button type="submit" class="btn-submit">Ver Resultados</button>
-            <button type="reset" class="btn-reset">Limpar Respostas</button>
+            <button type="reset" class="btn-reset" onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });">Limpar Respostas</button>
           </div>
         </form>
       </section>
@@ -409,7 +428,7 @@
             </button>
             <button
               type="button"
-              onclick="location.reload()"
+              onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });"
               class="restart-btn"
             >
               🔄 Fazer Teste Novamente
