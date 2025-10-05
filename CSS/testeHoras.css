@@ -1,15 +1,38 @@
-/* ========================================= GERAL ========================================= */
+/* ========================================= ESTRUTURA HIERÁRQUICA ========================================= */
 
 html {
-  font-size: calc(12px + 0.95vw);
+  font-size: calc(12px + 0.96vw);
   font-family: "Open Sans", sans-serif;
   color: #333;
-  line-height: 1.6;
+  line-height: 1.5;
   background-color: #f9fbff;
 
-  /* ========================================= BODY ========================================= */
   body {
     text-align: center;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    /* Media queries para melhorar a responsividade */
+    @media (max-width: 799px) {
+      html {
+        font-size: calc(9px + 0.5vw);
+      }
+
+      .container {
+        padding: 1rem;
+        margin: 1rem auto;
+      }
+
+      .card {
+        padding: 14px 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      html {
+        font-size: calc(8px + 0.5vw);
+      }
+    }
 
     /* ========================================= HEADER ========================================= */
   @media (min-width: 800px) {
@@ -178,6 +201,9 @@ html {
         }
       }
     main {
+      margin-top: calc(4.5vw + 20px);
+      min-height: calc(100vh - 4.5vw - 20px);
+      
       .seta-voltar {
         background-color: #0056b3;
         border-radius: 1000px;
@@ -187,13 +213,14 @@ html {
         right: 20px;
         border: none;
         z-index: 15;
+        
         img {
           width: 55px;
           height: 60px;
         }
       }
-      margin-top: 11vw;
-
+        
+        
       /* ---------- Fonte e cores ---------- */
       body {
         font-family: "Open Sans", sans-serif;
@@ -213,28 +240,151 @@ html {
 
       /* ---------- Container principal ---------- */
       .container {
-        max-width: 900px;
-        margin: 2rem auto;
-        padding: 2rem;
+        max-width: 700px;
+        margin: 1rem auto;
+        padding: 1rem;
         background: #fff;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        border-radius: 12px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+
         h2 {
-          font-size: 60px;
+          font-size: clamp(1.5rem, 2.2vw, 2.5rem);
           color: #0066cc;
+          margin-bottom: 1rem;
+          margin-top: 2rem;
+          line-height: 1.2;
+          word-wrap: break-word;
+          hyphens: auto;
         }
       }
 
+      /* ===== Estilos melhorados para checkboxes e painéis condicionais (Parte 2) ===== */
+      .checkbox-group {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        align-items: stretch;
+      }
+
+      .checkbox-item {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 0.7rem;
+        border-radius: 6px;
+        transition: background 0.2s, box-shadow 0.2s;
+        font-size: 0.9rem;
+      }
+
+      /* Permite que elementos de bloco dentro do item (o painel condicional)
+           ocupem a linha inteira e fiquem abaixo do checkbox/label */
+      .checkbox-item {
+        flex-wrap: wrap;
+        align-items: flex-start;
+        /* alinha o checkbox/label ao topo quando o painel aparece */
+      }
+
+      .checkbox-item:hover {
+        background: #f1f7ff;
+        box-shadow: 0 4px 10px rgba(0, 86, 179, 0.06);
+      }
+
+      /* Estado quando a checkbox está selecionada */
+      .checkbox-item.selected {
+        background: linear-gradient(180deg, #e6f0ff 0%, #d6e8ff 100%);
+        border: 1px solid #93c0ff;
+        box-shadow: 0 6px 18px rgba(13, 77, 153, 0.08);
+      }
+
+      .checkbox-item-inline.selected {
+        background: linear-gradient(180deg, #e6f0ff 0%, #d6e8ff 100%);
+        border: 1px solid #b7d8ff;
+      }
+
+      /* Destaque para a pergunta e caixa quando alguma opção for selecionada */
+      .form-group.selected {
+        background: linear-gradient(180deg, #f4f9ff 0%, #eef6ff 100%);
+        border-radius: 10px;
+        padding: 0.8rem;
+        border: 1px solid #d0e8ff;
+        box-shadow: 0 6px 18px rgba(13, 77, 153, 0.04);
+      }
+
+      .form-group.selected label#texto {
+        color: #004a9f;
+        /* cor do texto da pergunta quando selecionado */
+        font-weight: 600;
+      }
+
+      .checkbox-item input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        accent-color: #0066cc;
+        /* modern browsers */
+        cursor: pointer;
+      }
+
+      .checkbox-item label {
+        cursor: pointer;
+        user-select: none;
+      }
+
+      /* Versão inline para opções dentro do painel de tempo livre */
+      .checkbox-group-inline {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .checkbox-item-inline {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: #fff;
+        padding: 0.4rem 0.6rem;
+        border-radius: 8px;
+        border: 1px solid #e6eefb;
+      }
+
+      /* Painéis condicionais estilizados com transição (slide)
+           Começam com max-height: 0 e overflow hidden; ao mostrar, ajustamos max-height via JS
+        */
+      .conditional-panel {
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.28s ease, opacity 0.2s ease;
+        opacity: 0;
+        margin-top: 0.5rem;
+        background: #f8fbff;
+        padding: 0 0.8rem;
+        border-left: 3px solid #cfe4ff;
+        border-radius: 8px;
+        /* força o painel a ocupar toda a largura abaixo do checkbox */
+        flex-basis: 100%;
+        width: 100%;
+        order: 2;
+      }
+
+      .conditional-panel.visible {
+        opacity: 1;
+        padding: 0.6rem 0.8rem;
+      }
+
       .intro {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.2rem;
         color: #000000;
-        font-size: 30px;
+        font-size: clamp(1rem, 1.8vw, 1.3rem);
         font-weight: bold;
+        line-height: 1.4;
+        word-wrap: break-word;
+        hyphens: auto;
       }
 
       /* ---------- Fieldset (caixas das partes) ---------- */
       fieldset {
         border: none;
+        margin-top: 1rem;
         margin-bottom: 2rem;
         padding: 1.5rem;
         border-radius: 12px;
@@ -277,6 +427,164 @@ html {
         border-color: #0066cc;
         box-shadow: 0 0 4px rgba(0, 102, 204, 0.4);
         outline: none;
+      }
+
+      /* ===== IMC panel styling (mais polido e "à prova de usuário") ===== */
+      #imcCondicional {
+        display: none;
+        /* controlado por JS */
+        background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
+        border: 1px solid #e6f0ff;
+        padding: 0.8rem;
+        border-radius: 10px;
+        box-shadow: 0 6px 18px rgba(13, 77, 153, 0.02);
+        margin-top: 0.6rem;
+      }
+
+      #imcCondicional .imc-row {
+        display: flex;
+        gap: 0.6rem;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .imc-input {
+        width: 140px;
+        padding: 0.55rem 0.75rem;
+        border-radius: 8px;
+        border: 1px solid #dbeefc;
+        background: #fff;
+        box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
+      }
+
+      /* Alinhar campos do formulário à esquerda e limitar larguras para melhor alinhamento */
+      .container .form-group {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+      }
+
+      /* Centralizar apenas a Parte 1 */
+      fieldset:first-of-type .form-group {
+        align-items: center;
+        text-align: center;
+      }
+
+      /* Centralizar os inputs da Parte 1 */
+      fieldset:first-of-type input,
+      fieldset:first-of-type select {
+        margin: 0.35rem auto 0.6rem auto;
+        text-align: center;
+      }
+
+      .container input[type="text"],
+      .container input[type="number"],
+      .container select,
+      .container textarea {
+        width: 80%;
+        max-width: 520px;
+        margin: 0.35rem 0 0.6rem 0;
+        display: inline-block;
+        /* permite emoji na mesma linha */
+        vertical-align: middle;
+        text-align: left;
+      }
+
+      /* Spans de emoji inseridos dinamicamente (com ou sem classe) ficam ao lado dos campos */
+      .container input + span,
+      .container select + span,
+      .container textarea + span,
+      .container input + .emoji-inline,
+      .container select + .emoji-inline {
+        display: inline-block;
+        margin-left: 0.6rem;
+        vertical-align: middle;
+        font-size: 1.1rem;
+      }
+
+      /* Classe usada por createEmojiSpanAfter */
+      .emoji-inline {
+        display: inline-block;
+        margin-left: 0.6rem;
+        vertical-align: middle;
+        font-size: 1.1rem;
+      }
+
+      /* Centralizar o grupo de botões e estilizar botões do formulário */
+      .button-group {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.8rem;
+      }
+
+      .btn-submit,
+      .btn-reset {
+        padding: 0.6rem 1rem;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+        font-weight: 600;
+        font-size: 0.9rem;
+      }
+
+      .btn-submit {
+        background: #0066cc;
+        color: #fff;
+      }
+
+      .btn-reset {
+        background: #999;
+        color: #fff;
+      }
+
+      /* Remover setas (spinners) dos inputs number do IMC para visual mais limpo */
+      #pesoIMC,
+      #alturaIMC,
+      input[type="number"].imc-input {
+        -moz-appearance: textfield;
+        /* Firefox */
+        -webkit-appearance: textfield;
+        appearance: textfield;
+        /* padrão moderno para compatibilidade */
+      }
+
+      /* Webkit browsers (Chrome, Edge, Safari) */
+      #pesoIMC::-webkit-outer-spin-button,
+      #pesoIMC::-webkit-inner-spin-button,
+      #alturaIMC::-webkit-outer-spin-button,
+      #alturaIMC::-webkit-inner-spin-button,
+      input[type="number"].imc-input::-webkit-outer-spin-button,
+      input[type="number"].imc-input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      .imc-input.error {
+        border-color: #e74c3c;
+        box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.06);
+      }
+
+      .imc-error {
+        color: #e74c3c;
+        font-size: 0.85rem;
+        margin-left: 4px;
+        min-height: 1.2em;
+      }
+
+      .imc-hint {
+        font-size: 0.85rem;
+        color: #666;
+        margin-top: 6px;
+      }
+
+      /* header do card de IMC */
+      .alongamento-header,
+      .imc-header {
+        background: linear-gradient(90deg, #f0f8ff, #ffffff);
+        border-left: 4px solid #6fb3ff;
       }
 
       /* ---------- Checkbox & Radio ---------- */
@@ -352,7 +660,7 @@ html {
         background: #f9fbff;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
       }
-  
+
       .results-section .container {
         max-width: 900px;
         margin: 0 auto;
@@ -361,25 +669,33 @@ html {
         border-radius: 16px;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       }
-  
+
+      /* Título responsivo da seção de resultados */
       .results-section h2 {
-        font-size: 2.5rem;
+        /* usa clamp para limitar o tamanho mínimo e máximo */
+        font-size: clamp(1.4rem, 2.6vw, 2rem);
         color: #0066cc;
         text-align: center;
-        margin-bottom: 1.5rem;
+        margin-bottom: 1rem;
+        line-height: 1.15;
+        word-break: keep-all;
       }
-  
+
+      /* Subtítulo / saudação responsiva */
       #saudacaoPersonalizada {
         text-align: center;
-        margin-bottom: 2rem;
-        font-size: 1.1rem;
+        margin: 0.6rem auto 1.2rem auto;
+        font-size: clamp(0.95rem, 1.6vw, 1.05rem);
         color: #333;
+        max-width: 720px;
+        /* limita largura de leitura em telas muito largas */
+        padding: 0 0.6rem;
       }
-  
+
       #saudacaoPersonalizada strong {
         color: #0056b3;
       }
-  
+
       /* Container dos cards */
       .cards-container {
         display: grid;
@@ -387,26 +703,71 @@ html {
         gap: 20px;
         margin-top: 2rem;
       }
-  
+
+      /* Mini-título para agrupar cards (ocupa toda a largura do grid) */
+      .cards-container .mini-title {
+        grid-column: 1 / -1;
+        font-size: 0.85rem;
+        font-weight: 700;
+        color: #0056b3;
+        background: transparent;
+        padding: 4px 0 0 4px;
+        margin: 0;
+        align-self: center;
+      }
+
+      /* Wrappers de grupo: permitem separar título dos cards mantendo os filhos no grid
+         Usamos display: contents para que os elementos filhos participem do grid do container
+         sem adicionar uma caixa extra que quebre o layout. Alguns navegadores antigos
+         não suportam display: contents — nesse caso, o fallback é aceitável. */
+      /* Wrappers de grupo: fallback para navegadores que não suportam display:contents */
+      .group-block {
+        display: block;
+        /* fallback */
+      }
+
+      .group-items {
+        display: block;
+      }
+
+      /* Se o browser suportar display: contents, usamos para manter os filhos no grid sem
+         adicionar uma caixa extra que quebre o layout. */
+      @supports (display: contents) {
+        .group-block {
+          display: contents;
+        }
+
+        .group-items {
+          display: contents;
+          gap: 16px;
+        }
+      }
+
+      /* Garantir pequeno espaçamento após o mini-título antes dos cards */
+      .cards-container .mini-title {
+        margin-bottom: 8px;
+      }
+
       /* Estilo base para cada card */
       .card {
         background: #e9f2ff;
         border: 1px solid #99c2ff;
-        border-radius: 14px;
-        padding: 24px 20px;
+        border-radius: 12px;
+        padding: 18px 16px;
         color: #003366;
         transition: transform 0.25s ease, box-shadow 0.25s ease;
+        font-size: 0.9rem;
         box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
-  
+
       .card:hover {
         transform: translateY(-6px);
         box-shadow: 0 10px 24px rgba(0, 89, 179, 0.25);
       }
-  
+
       .card h3 {
         margin-top: 0;
         font-size: 1.3rem;
@@ -414,35 +775,35 @@ html {
         color: #002244;
         margin-bottom: 0.8rem;
       }
-  
+
       .card p {
         font-size: 1rem;
         line-height: 1.6;
         color: #003366;
         flex-grow: 1;
       }
-  
+
       /* Estilos específicos para cards positivos e negativos */
       .card-positive {
         background: #e6ffe6;
         border-color: #99ff99;
         color: #004d00;
       }
-  
+
       .card-positive h3 {
         color: #003300;
       }
-  
+
       .card-negative {
         background: #ffe6e6;
         border-color: #ff9999;
         color: #4d0000;
       }
-  
+
       .card-negative h3 {
         color: #330000;
       }
-  
+
       /* Estilo para o card de "Próximos Passos" */
       .last-card {
         grid-column: span 2;
@@ -450,23 +811,145 @@ html {
         background: #f0f8ff;
         border-color: #cce0ff;
       }
-  
+
+      /* Quando um grupo possui apenas 1 card, fazê-lo ocupar toda a largura disponível */
+      /* Seletor mais específico para evitar conflitos com outras regras; usar !important
+         garante que o card realmente ocupe toda a linha do grid. */
+      .cards-container .card.full-row {
+        grid-column: 1 / -1 !important;
+        width: 100%;
+        /* Limita a largura para ficar similar a dois cards lado a lado e centraliza */
+        margin: 0 auto;
+        box-sizing: border-box;
+      }
+
+      /* Em telas menores manter full width total para evitar overflow */
+      @media (max-width: 700px) {
+        .cards-container .card.full-row {
+          max-width: 100%;
+          grid-column: 1 / -1 !important;
+        }
+      }
+
+      /* ===================== Regras responsivas para o conteúdo (exceto header/footer) ===================== */
+      /* Aplicadas ao container principal para evitar alterações no header/footer */
+      @media (max-width: 900px) {
+        .container {
+          max-width: 720px;
+          margin: 1rem auto;
+          padding: 1rem;
+        }
+
+        /* Form inputs ocupam toda a largura disponível dentro do container */
+        .container input[type="text"],
+        .container input[type="number"],
+        .container input[type="date"],
+        .container input[type="email"],
+        .container select,
+        .container textarea {
+          width: 80%;
+        }
+
+        /* Ajustes visuais para checkbox items e painéis condicionais */
+        .checkbox-item,
+        .checkbox-item-inline {
+          padding: 0.45rem 0.6rem;
+          gap: 0.45rem;
+        }
+
+        .conditional-panel {
+          padding: 0.5rem 0.6rem;
+        }
+
+        /* Cards: diminuir mínimo dos cartões para caber 2 em telas menores */
+        .cards-container {
+          grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+          gap: 16px;
+        }
+
+        .card {
+          padding: 18px 14px;
+        }
+
+        .card h3 {
+          font-size: 1.15rem;
+        }
+
+        .card p {
+          font-size: 0.95rem;
+        }
+
+        /* Mini-título menor */
+        .cards-container .mini-title {
+          font-size: 0.8rem;
+          padding-left: 3px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          max-width: 100%;
+          margin: 0.6rem;
+          padding: 0.8rem;
+        }
+
+        /* Forçar uma coluna única para melhor leitura em mobile */
+        .cards-container {
+          grid-template-columns: 1fr;
+          gap: 12px;
+        }
+
+        /* Garantir que o full-row ocupe 100% e não ultraponte o container */
+        .cards-container .card.full-row {
+          max-width: 100% !important;
+          margin: 0 !important;
+          grid-column: 1 / -1 !important;
+        }
+
+        /* Inputs, selects e textarea com padding reduzido para caber na tela */
+        .container input[type="text"],
+        .container input[type="number"],
+        .container select,
+        .container textarea {
+          padding: 0.5rem 0.6rem;
+          font-size: 0.95rem;
+        }
+
+        /* Checkbox inline vira bloco para evitar corte */
+        .checkbox-group-inline {
+          flex-direction: column;
+          gap: 0.4rem;
+        }
+
+        /* Ajustes das legendas e títulos para caber melhor */
+        .container h1,
+        .container h2,
+        .container h3 {
+          word-break: break-word;
+        }
+
+        /* Reduzir margens dos cards para mobile */
+        .card {
+          padding: 14px 12px;
+        }
+      }
+
       .last-card h3 {
         text-align: center;
         color: #0056b3;
       }
-  
+
       .last-card ul {
         list-style: disc;
         margin-left: 20px;
         padding: 0;
         color: #003366;
       }
-  
+
       .last-card li {
         margin-bottom: 0.5rem;
       }
-  
+
       /* Seção de botões de ação */
       .cta-section {
         margin-top: 2rem;
@@ -475,7 +958,7 @@ html {
         background: #eef5ff;
         border-radius: 8px;
       }
-  
+
       .print-btn,
       .restart-btn {
         margin: 0.5rem;
@@ -486,24 +969,42 @@ html {
         font-size: 1rem;
         font-weight: 600;
         transition: background 0.3s ease;
+        /* tamanho solicitado pelo usuário */
+        font-size: 1.7vw;
       }
-  
+
       .print-btn {
         background: #009966;
         color: #fff;
       }
-  
+
       .print-btn:hover {
         background: #007a52;
       }
-  
+
       .restart-btn {
         background: #ff9933;
         color: #fff;
       }
-  
+
       .restart-btn:hover {
         background: #e67e00;
+      }
+
+      /* Forçar tamanho dos botões de resultados solicitado pelo usuário
+         Regra específica para a seção de resultados, com !important para
+         garantir que sobrescreva regras colocadas posteriormente. */
+      .results-section .print-btn,
+      .results-section .restart-btn {
+        font-size: 1.7vw !important;
+      }
+
+      /* Fallback: em telas muito pequenas, garantir um tamanho legível */
+      @media (max-width: 420px) {
+        .results-section .print-btn,
+        .results-section .restart-btn {
+          font-size: 12px !important;
+        }
       }
 
       /* ---------- CTA na parte final ---------- */
@@ -1291,36 +1792,47 @@ html {
     main {
       padding-top: 18vw;
       .container {
-        padding: 1rem;
+        padding: 0.8rem;
+        margin: 0.5rem;
+
         h2 {
           font-size: 50px;
           margin-bottom: 5vw;
         }
       }
+
       .intro {
-        font-size: 18px;
+        font-size: clamp(0.9rem, 3.5vw, 1.1rem);
       }
+
       fieldset {
         padding: 0.8rem;
       }
+
       .card {
         padding: 15px 10px;
+
         h3 {
           font-size: 1.1rem;
         }
       }
     }
+
     footer {
       padding: 10px 0;
+
       ul {
         padding: 0 10px;
+
         .logo {
           font-size: 20px;
         }
+
         .linkRp {
           font-size: 12px;
         }
       }
+
       p {
         font-size: 10px;
       }

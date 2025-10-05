@@ -100,7 +100,8 @@
         </p>
 
         <form class="horasForm">
-          <fieldset>
+          <fieldset style="text-align: center;
+          align-items: center;">
             <legend>🕑 Parte 1 – Perguntas Gerais</legend>
             <div class="form-group">
               <label for="nome" id="texto">Nome:</label>
@@ -114,6 +115,14 @@
                 name="idade"
                 required
               />
+            </div>
+            <div class="form-group">
+              <label for="sexo" id="texto">Sexo:</label>
+              <select id="sexo" name="sexo" required>
+                <option value>Selecione</option>
+                <option value="homem">Homem</option>
+                <option value="mulher">Mulher</option>
+              </select>
             </div>
             <div class="form-group">
               <label id="texto">1. Como você avalia sua rotina atual?</label>
@@ -180,29 +189,115 @@
                   <input
                     type="checkbox"
                     id="trabalho"
-                    name="atividade"
-                    value="trabalho"
+                    name="trabalho"
+                    value="on"
                   />
                   <label for="trabalho">Trabalho/Programar</label>
+
+                  <!-- painel condicional agora fica imediatamente abaixo da checkbox -->
+                  <div id="trabalhoCondicional" class="conditional-panel" style="display: none">
+                    <label id="texto">Quantas horas por dia em média você dedica ao trabalho/programação?</label>
+                    <input
+                      type="text"
+                      id="horasTrabalho"
+                      name="horasTrabalho"
+                      maxlength="5"
+                      placeholder="Ex: 8:00"
+                    />
+                    <label id="texto">Você costuma fazer pausas regulares?</label>
+                    <select id="pausasTrabalho" name="pausasTrabalho">
+                      <option value>Selecione</option>
+                      <option value="sim">Sim</option>
+                      <option value="nao">Não</option>
+                    </select>
+                  </div>
                 </div>
+
                 <div class="checkbox-item">
                   <input
                     type="checkbox"
                     id="estudar"
-                    name="atividade"
-                    value="estudar"
+                    name="estudar"
+                    value="on"
                   />
                   <label for="estudar">Estudar</label>
+
+                  <div id="estudoCondicional" class="conditional-panel" style="display: none">
+                    <label id="texto">Quantas horas por dia em média você dedica aos estudos?</label>
+                    <input
+                      type="text"
+                      id="horasEstudo"
+                      name="horasEstudo"
+                      maxlength="5"
+                      placeholder="Ex: 2:30"
+                    />
+                    <label id="texto">Seus horários de estudo são:</label>
+                    <select id="horarioEstudo" name="horarioEstudo">
+                      <option value>Selecione</option>
+                      <option value="fixos">Fixos</option>
+                      <option value="Flexiveis">Flexiveis</option>
+                    </select>
+                  </div>
                 </div>
+
                 <div class="checkbox-item">
                   <input
                     type="checkbox"
                     id="tempoLivre"
-                    name="atividade"
-                    value="tempoLivre"
+                    name="tempoLivre"
+                    value="on"
                   />
                   <label for="tempoLivre">Tempo livre</label>
+
+                  <div id="tempoLivreCondicional" class="conditional-panel" style="display: none">
+                    <label id="texto">Como você costuma ocupar seu tempo livre?</label>
+                    <div class="checkbox-group-inline">
+                      <div class="checkbox-item-inline">
+                        <input
+                            type="checkbox"
+                            id="telasLivre"
+                            name="telasLivre"
+                            value="on"
+                          />
+                        <label for="telasLivre">Uso de telas (filmes, jogos, celular)</label>
+                      </div>
+                      <div class="checkbox-item-inline">
+                        <input
+                          type="checkbox"
+                          id="atividadeFisicaLivre"
+                          name="atividadeFisicaLivre"
+                          value="on"
+                        />
+                        <label for="atividadeFisicaLivre">Atividade física</label>
+                      </div>
+                      <div class="checkbox-item-inline">
+                        <input
+                          type="checkbox"
+                          id="lazerLivre"
+                          name="lazerLivre"
+                          value="on"
+                        />
+                        <label for="lazerLivre">Lazer ao ar livre</label>
+                      </div>
+                      <div class="checkbox-item-inline">
+                        <input
+                          type="checkbox"
+                          id="outrosLivre"
+                          name="outrosLivre"
+                          value="on"
+                        />
+                        <label for="outrosLivre">Outros:</label>
+                        <input
+                          type="text"
+                          id="outrosLivreTexto"
+                          name="outrosLivreTexto"
+                          style="width: 120px"
+                        />
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
                 <div class="checkbox-item">
                   <input
                     type="checkbox"
@@ -218,86 +313,6 @@
                     style="width: 120px"
                   />
                 </div>
-              </div>
-            </div>
-            <div id="trabalhoCondicional" style="display: none">
-              <label id="texto"
-                >Quantas horas por dia em média você dedica ao
-                trabalho/programação?</label
-              >
-              <input
-                type="text"
-                id="horasTrabalho"
-                name="horasTrabalho"
-                maxlength="5"
-                placeholder="Ex: 8:00"
-              />
-              <label id="texto">Você costuma fazer pausas regulares?</label>
-              <select id="pausasTrabalho" name="pausasTrabalho">
-                <option value>Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-            <div id="estudoCondicional" style="display: none">
-              <label id="texto"
-                >Quantas horas por dia em média você dedica aos estudos?</label
-              >
-              <input
-                type="text"
-                id="horasEstudo"
-                name="horasEstudo"
-                maxlength="5"
-                placeholder="Ex: 2:30"
-              />
-              <label id="texto">Seus horários de estudo são:</label>
-              <select id="horarioEstudo" name="horarioEstudo">
-                <option value>Selecione</option>
-                <option value="fixos">Fixos</option>
-                <option value="Flexiveis">Flexiveis</option>
-              </select>
-            </div>
-            <div id="tempoLivreCondicional" style="display: none">
-              <label id="texto"
-                >Como você costuma ocupar seu tempo livre?</label
-              >
-              <div>
-                <input
-                  type="checkbox"
-                  id="telasLivre"
-                  name="tempoLivreOpcao"
-                  value="telas"
-                />
-                <label for="telasLivre"
-                  >Uso de telas (filmes, jogos, celular)</label
-                >
-                <input
-                  type="checkbox"
-                  id="atividadeFisicaLivre"
-                  name="tempoLivreOpcao"
-                  value="atividadeFisica"
-                />
-                <label for="atividadeFisicaLivre">Atividade física</label>
-                <input
-                  type="checkbox"
-                  id="lazerLivre"
-                  name="tempoLivreOpcao"
-                  value="lazerArLivre"
-                />
-                <label for="lazerLivre">Lazer ao ar livre</label>
-                <input
-                  type="checkbox"
-                  id="outrosLivre"
-                  name="tempoLivreOpcao"
-                  value="outros"
-                />
-                <label for="outrosLivre">Outros:</label>
-                <input
-                  type="text"
-                  id="outrosLivreTexto"
-                  name="outrosLivreTexto"
-                  style="width: 120px"
-                />
               </div>
             </div>
           </fieldset>
@@ -399,6 +414,17 @@
               <option value="excesso-telas">Excesso de telas</option>
               <option value="outro">Outro</option>
             </select>
+            <!-- Nova pergunta: calcular IMC antes da pergunta 4 -->
+            <label id="texto">Deseja calcular seu IMC (Índice de Massa Corporal)?</label>
+            <select id="calcularIMC" name="calcularIMC">
+              <option value>Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
+            <div id="imcCondicional" style="display: none; margin-top:8px;">
+              <label id="texto">Peso (kg): <input type="number" id="pesoIMC" name="pesoIMC" step="0.1" min="20" max="300" /></label>
+              <label id="texto">Altura (cm): <input type="number" id="alturaIMC" name="alturaIMC" step="0.1" min="50" max="250" /></label>
+            </div>
             <label id="texto"
               >4. O que gostaria de melhorar primeiro na sua rotina?</label
             >
@@ -412,7 +438,7 @@
           </fieldset>
           <div class="button-group">
             <button type="submit" class="btn-submit">Ver Resultados</button>
-            <button type="reset" class="btn-reset">Limpar Respostas</button>
+            <button type="reset" class="btn-reset" onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });">Limpar Respostas</button>
           </div>
         </form>
       </section>
@@ -429,7 +455,7 @@
             </button>
             <button
               type="button"
-              onclick="location.reload()"
+              onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });"
               class="restart-btn"
             >
               🔄 Fazer Teste Novamente

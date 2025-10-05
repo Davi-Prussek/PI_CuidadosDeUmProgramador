@@ -11,10 +11,13 @@ const p = document.querySelectorAll("p");
 const h1 = document.querySelectorAll("h1");
 const h2 = document.querySelectorAll("h2");
 const subBar = document.getElementById("sub-menu-bar");
-const nav = document.getElementById("nav");
 
 const botaoOff = document.getElementById("themeButtonOff");
+<<<<<<< HEAD
 const botaoOn = document.getElementById("themeButtonOn");
+=======
+const botaoOn = document.getElementById("themeButtonOn")
+>>>>>>> 8b326b61101a53d70461975db1cb49004898e35a
 
 const ligadoDesligado = document.getElementById("desligado");
 
@@ -40,6 +43,10 @@ function light() {
     botaoOff.style.display = "block";
     header.style.backgroundColor = "rgb(0, 0, 0)";
     subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
+<<<<<<< HEAD
+=======
+    footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
+>>>>>>> 8b326b61101a53d70461975db1cb49004898e35a
     main.style.backgroundColor = "rgba(5, 0, 23, 1)";
     HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
     section.forEach(s => {s.style.color = "#ffffff";});
@@ -55,6 +62,10 @@ function dark() {
     botaoOn.style.display = "block";
     header.style.backgroundColor = "#0056b3";
     subBar.style.backgroundColor = ""
+<<<<<<< HEAD
+=======
+    footer.style.background = "linear-gradient( #0057b3c4, #002457)";
+>>>>>>> 8b326b61101a53d70461975db1cb49004898e35a
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
     section.forEach(s => {s.style.color = "";});

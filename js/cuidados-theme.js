@@ -57,10 +57,12 @@ function light() {
     div.forEach(d => { d.style.color = "#ffffff"; });
     article.forEach(article => {article.style.color = "#ffffff"});
     article.forEach(article => {article.style.backgroundColor = "rgba(10, 3, 36, 1)"});
-    article.forEach(article => {article.style.border = "2px solid #0056b3"});
-    h4.forEach(h4 => {h4.style.color = "#3c9effff"});
     li.forEach(li => {li.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     li.forEach(li => {li.style.color = "white"});
+    li.forEach(li => {li.style.borderBottom = "2px solid black"});
+    li.forEach(li => {li.style.borderTop = "2px solid black"});
+    li.forEach(li => {li.style.borderRight = "2px solid black"});
+    li.forEach(li => {li.style.li = "2px solid black"});
     localStorage.setItem("theme", "light");
 }
 
@@ -79,8 +81,6 @@ function dark() {
     div.forEach(d => { d.style.backgroundColor = ""; });
     article.forEach(article => {article.style.color = ""});
     article.forEach(article => {article.style.backgroundColor = ""});
-    h4.forEach(h4 => {h4.style.color = ""});
-    h3.forEach(h3 => {h3.style.color = ""});
     li.forEach(li => {li.style.backgroundColor = ""});
     li.forEach(li => {li.style.Color = ""});
     li.forEach(li => {li.style.borderTop = "none"});
