@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev-Saúde | Quiz</title>
+    <link rel="stylesheet" href="CSS/Reset.CSS" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/quiz.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="header">
+      <button id="menu-responsivo">
+        <img src="img/icons/menu.svg" alt="menu/icon" />
+      </button>
+      <h1>
+        <a href="index.html" id="titulo_sobreNos"
+          ><img src="img/logo_PI-fundo_removido nova.png" alt=""
+        /></a>
+      </h1>
+      <nav id="nav">
+        <div id="segundo-titulo">
+          <h1>
+            <a href="index.html" id="titulo_sobreNos"
+              ><img
+                class="titulo-responsivo"
+                src="img/logo_PI-fundo_removido nova.png"
+                alt="titulo-responsivo"
+            /></a>
+          </h1>
+        </div>
+         <ul class="direcionar_sobreNos">
+           <li>
+             <a href="index.html"><p>Início</p></a>
+           </li>
+           <li class="comeco">
+             <a class="botao" id="botao-I">
+               <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+             </a>
+             <ul class="sub-menus" id="sub-menus-I">
+               <li>
+                 <a href="comecar-ambiente.html">
+                   <p>Ambiente</p>
+                 </a>
+               </li>
+               <li>
+                 <a href="comecar-habitos.html">
+                   <p>Hábitos</p>
+                 </a>
+               </li>
+             </ul>
+           </li>
+           <li>
+             <a href="testeHoras.html">
+               <p class="link-base">Teste de Horas</p>
+             </a>
+           </li>
+           <li>
+             <a href="quiz.html">
+               <p class="link-base">Quiz</p>
+             </a>
+           </li>
+           <li class="cuidados">
+             <a class="botao-II" id="botao-II">
+               <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+             </a>
+             <ul class="sub-menus-II" id="sub-menus-II">
+               <li>
+                 <a href="cuidados-postura.html">
+                   <p>Postura</p>
+                 </a>
+               </li>
+               <li>
+                 <a href="cuidados-luz-solar.html">
+                   <p>Luz Solar</p>
+                 </a>
+               </li>
+               <li>
+                 <a href="cuidados-burnout.html">
+                   <p>Burn-out</p>
+                 </a>
+               </li>
+               <li>
+                 <a href="cuidados-telas.html">
+                   <p>Telas</p>
+                 </a>
+               </li>
+             </ul>
+           </li>
+           <li class="sobre-nos">
+             <a class="botao-III" id="botao-III">
+               <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+             </a>
+             <ul class="sub-menus" id="sub-menus-III">
+               <li>
+                 <a href="sobreNos.html">
+                   <p>Nós</p>
+                 </a>
+               </li>
+               <li>
+                 <a href="sobre-o-projeto.html">
+                   <p>Projeto</p>
+                 </a>
+               </li>
+             </ul>
+           </li>
+         </ul>
+        <ul class="sub-menu-header" id="sub-menu-bar">
+          <li class="theme">
+            <button id="themeButtonOff" class="theme">
+              <span>Light </span
+              ><img
+                class="buttonOff"
+                src="img/icons/botao desligado.png"
+                alt="icon/off"
+              />
+            </button>
+
+            <button id="themeButtonOn" class="theme" style="display: none">
+              <span>Dark</span
+              ><img
+                class="buttonOn"
+                src="img/icons/botao desligado.png"
+                alt="icon/on"
+              />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="topo">
+      <div class="botoes">
+        <a href="#"
+          ><button class="seta-voltar" id="setaVoltar">
+            <img src="img/icons/seta voltar.svg" alt="seta/icon" /></button
+        ></a>
+      </div>
+
+      <section class="container">
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <h1>QUIZ: SAÚDE <span class="plus">+</span> PROGRAMAÇÃO</h1>
+          </div>
+
+          <div class="progress-container">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">1 / 10</span>
+          </div>
+
+          <div class="question-container">
+            <div class="question" id="question">
+              <!-- Pergunta será inserida aqui -->
+            </div>
+
+            <div class="options-container" id="options">
+              <!-- Opções serão inseridas aqui -->
+            </div>
+          </div>
+
+          <div class="feedback-container" id="feedback">
+            <!-- Feedback será mostrado aqui -->
+          </div>
+
+          <div class="controls">
+            <button class="btn btn-primary" id="nextBtn" disabled>
+              PRÓXIMA
+            </button>
+          </div>
+
+          <div class="score-display">
+            <div class="score-item">
+              <span class="score-label">Pontos:</span>
+              <span class="score-value" id="score">0</span>
+            </div>
+            <div class="score-item">
+              <span class="score-label">Acertos:</span>
+              <span class="score-value" id="correct">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="result-container"
+          id="resultContainer"
+          style="display: none"
+        >
+          <div class="result-content">
+            <div class="result-header">
+              <h2>🎉 Quiz Finalizado!</h2>
+            </div>
+            <div class="result-score">
+              <div class="final-score" id="finalScore">0 / 10</div>
+              <div class="result-message" id="resultMessage"></div>
+            </div>
+            <div class="result-details">
+              <div class="detail-item">
+                <span class="detail-icon">✅</span>
+                <span class="detail-text"
+                  >Acertos: <span id="finalCorrect">0</span></span
+                >
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">❌</span>
+                <span class="detail-text"
+                  >Erros: <span id="finalWrong">0</span></span
+                >
+              </div>
+              <div class="detail-item">
+                <span class="detail-icon">🏆</span>
+                <span class="detail-text"
+                  >Pontuação: <span id="finalPoints">0</span></span
+                >
+              </div>
+            </div>
+            <button class="btn btn-primary" id="restartBtn">
+              JOGAR NOVAMENTE
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer">
+      <ul>
+        <li class="footer-contact">
+          <h4>Contato</h4>
+          <section class="midia">
+            <a
+              href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              ><img
+                src="img/icons/instagram-brands-solid-full.svg"
+                alt="midia/insta"
+            /></a>
+          </section>
+        </li>
+        <li class="logo">
+          <img
+            src="img/logo_PI-fundo_removido.png"
+            alt="logo-site"
+            width="150px"
+            height="150px"
+          />
+        </li>
+        <li class="linkRp">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="testeHoras.html">Teste de Horas</a></li>
+            <li><a href="quiz.html">Quiz</a></li>
+            <li><a href="cuidados-postura.html">Cuidados</a></li>
+            <li><a href="sobreNos.html">Sobre nós</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/quiz.js"></script>
+    <script src="js/index-theme.js"></script>
+    <script src="js/header-responsivo.js"></script>
+  </body>
+</html>

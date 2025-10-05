@@ -198,31 +198,31 @@ const outrosLivre = document.getElementById("outrosLivre");
     el.dataset.hasEmojiSpan = "true";
     el.emojiSpan = emojiSpan;
   }
-  
+
   el.addEventListener("change", () => {
     // Restaurar os textos originais
     if (!telasLivre.dataset.originalText) {
       telasLivre.dataset.originalText = "Uso de telas (filmes, jogos, celular)";
       telasLivre.nextElementSibling.textContent = telasLivre.dataset.originalText;
     }
-    
+
     if (!atividadeFisicaLivre.dataset.originalText) {
       atividadeFisicaLivre.dataset.originalText = "Atividade física";
       atividadeFisicaLivre.nextElementSibling.textContent = atividadeFisicaLivre.dataset.originalText;
     }
-    
+
     if (!lazerLivre.dataset.originalText) {
       lazerLivre.dataset.originalText = "Lazer ao ar livre";
       lazerLivre.nextElementSibling.textContent = lazerLivre.dataset.originalText;
     }
-    
+
     // Atualizar apenas os emojis
     if (telasLivre.checked) telasLivre.emojiSpan.textContent = "📱😐";
     else telasLivre.emojiSpan.textContent = "";
-    
+
     if (atividadeFisicaLivre.checked) atividadeFisicaLivre.emojiSpan.textContent = "🏃😍";
     else atividadeFisicaLivre.emojiSpan.textContent = "";
-    
+
     if (lazerLivre.checked) lazerLivre.emojiSpan.textContent = "🌳😊";
     else lazerLivre.emojiSpan.textContent = "";
   });
@@ -918,8 +918,8 @@ form.addEventListener("submit", (e) => {
       type: "negative",
       title: "Atenção à Jornada de Trabalho",
       content: `${horasTrabalho.toFixed(1)}h de trabalho ${horasTrabalho > 5
-          ? "é uma carga excessiva que pode prejudicar sua saúde"
-          : "já representa um tempo considerável"
+        ? "é uma carga excessiva que pode prejudicar sua saúde"
+        : "já representa um tempo considerável"
         }. Considere pausas mais frequentes e otimização de tarefas.`,
       condition: () => data.trabalho === "on" && horasTrabalho > 3,
     },
@@ -933,8 +933,8 @@ form.addEventListener("submit", (e) => {
       type: "negative",
       title: "Cuidado com o Tempo de Estudo",
       content: `${horasEstudo.toFixed(1)}h de estudo ${horasEstudo > 5
-          ? "é excessivo e pode causar fadiga mental"
-          : "já é um tempo considerável"
+        ? "é excessivo e pode causar fadiga mental"
+        : "já é um tempo considerável"
         }. Intercale com pausas e atividades relaxantes para manter a eficiência.`,
       condition: () => data.estudar === "on" && horasEstudo > 3,
     },
@@ -942,12 +942,12 @@ form.addEventListener("submit", (e) => {
       type: "negative",
       title: "Sono Insuficiente - Atenção!",
       content: `${horasSono.toFixed(1)}h de sono ${horasSono < 4
-          ? "é criticamente insuficiente e pode afetar gravemente sua saúde"
-          : horasSono < 6
-            ? "está abaixo do recomendado (7-9h)"
-            : horasSono > 10
-              ? "é excessivo e pode indicar outros problemas"
-              : "precisa ser ajustado"
+        ? "é criticamente insuficiente e pode afetar gravemente sua saúde"
+        : horasSono < 6
+          ? "está abaixo do recomendado (7-9h)"
+          : horasSono > 10
+            ? "é excessivo e pode indicar outros problemas"
+            : "precisa ser ajustado"
         }. Priorize uma rotina de sono saudável.`,
       condition: () => horasSono < 7 || horasSono > 9,
     },
@@ -955,8 +955,8 @@ form.addEventListener("submit", (e) => {
       type: "negative",
       title: "Tempo de Tela Excessivo",
       content: `${horasTela.toFixed(1)}h de tela ${horasTela > 5
-          ? "é prejudicial para seus olhos e bem-estar mental"
-          : "já representa um tempo considerável"
+        ? "é prejudicial para seus olhos e bem-estar mental"
+        : "já representa um tempo considerável"
         }. Implemente pausas regulares e considere atividades offline.`,
       condition: () => horasTela > 2,
     },
@@ -1436,12 +1436,12 @@ form.addEventListener("submit", (e) => {
 function adjustMainMargin() {
   const header = document.getElementById('header');
   const main = document.querySelector('main');
-  
+
   if (header && main) {
     const headerHeight = header.offsetHeight;
     const extraMargin = 20; // margem extra para evitar sobreposição
     const newMarginTop = headerHeight + extraMargin;
-    
+
     main.style.marginTop = `${newMarginTop}px`;
     main.style.minHeight = `calc(100vh - ${newMarginTop}px)`;
   }
@@ -1457,9 +1457,9 @@ window.addEventListener('resize', adjustMainMargin);
 const observer = new MutationObserver(adjustMainMargin);
 const header = document.getElementById('header');
 if (header) {
-  observer.observe(header, { 
-    childList: true, 
-    subtree: true, 
+  observer.observe(header, {
+    childList: true,
+    subtree: true,
     attributes: true,
     attributeFilter: ['style', 'class']
   });
