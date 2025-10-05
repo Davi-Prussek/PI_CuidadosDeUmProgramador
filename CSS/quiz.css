@@ -1,13 +1,13 @@
-/* Estilos específicos do Quiz - sem conflitos com o header */
+ /* Estilos específicos do Quiz - sem conflitos com o header */
 
 /* Container do Quiz */
 .quiz-container {
   width: 100%;
-  max-width: 800px;
-  margin: 120px auto 0 auto;
+  max-width: 620px;
+  margin: 80px auto 0 auto;
   background: rgba(255, 255, 255, 0.95);
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 12px;
+  padding: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   color: #333;
 }
@@ -15,16 +15,16 @@
 /* Header */
 .quiz-header {
   background: #2196f3;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 18px;
   text-align: center;
   border: 2px solid #64b5f6;
   box-shadow: 0 5px 15px rgba(33, 150, 243, 0.3);
 }
 
 .quiz-header h1 {
-  font-size: 1.8em;
+  font-size: 1.35em;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -39,13 +39,13 @@
 .progress-container {
   display: flex;
   align-items: center;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 18px;
 }
 
 .progress-bar {
   flex: 1;
-  height: 8px;
+  height: 4px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
   overflow: hidden;
@@ -62,18 +62,18 @@
 .progress-text {
   font-weight: bold;
   color: #ff9800;
-  font-size: 1.1em;
+  font-size: 0.9em;
 }
 
 /* Pergunta */
 .question {
-  font-size: 1.3em;
-  margin-bottom: 30px;
+  font-size: 0.98em;
+  margin-bottom: 16px;
   text-align: center;
   line-height: 1.6;
   background: rgba(255, 255, 255, 0.1);
-  padding: 25px;
-  border-radius: 15px;
+  padding: 14px;
+  border-radius: 10px;
   border-left: 5px solid #2196f3;
 }
 
@@ -81,21 +81,21 @@
 .options-container {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .option {
   background: #f8f9fa;
   border: 2px solid #e9ecef;
-  border-radius: 15px;
-  padding: 20px;
+  border-radius: 10px;
+  padding: 12px;
   cursor: pointer;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
-  gap: 15px;
-  font-size: 1.1em;
+  gap: 12px;
+  font-size: 0.9em;
   position: relative;
   overflow: hidden;
   color: #333;
@@ -188,19 +188,19 @@
 }
 
 .option-icon {
-  font-size: 1.2em;
-  min-width: 25px;
+  font-size: 1em;
+  min-width: 22px;
 }
 
 /* Feedback */
 .feedback-container {
   background: #f8f9fa;
   border: 2px solid #e9ecef;
-  border-radius: 15px;
-  padding: 20px;
-  margin-bottom: 30px;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 16px;
   text-align: center;
-  min-height: 60px;
+  min-height: 52px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -229,10 +229,10 @@
 
 /* Botões */
 .btn {
-  padding: 15px 30px;
+  padding: 8px 16px;
   border: none;
-  border-radius: 15px;
-  font-size: 1.1em;
+  border-radius: 10px;
+  font-size: 0.9em;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
@@ -266,9 +266,9 @@
   justify-content: space-around;
   background: #f8f9fa;
   border: 2px solid #e9ecef;
-  border-radius: 15px;
-  padding: 20px;
-  margin-top: 30px;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 16px;
 }
 
 .score-item {
@@ -284,7 +284,7 @@
 
 .score-value {
   display: block;
-  font-size: 1.5em;
+  font-size: 1.1em;
   font-weight: bold;
   color: #ff9800;
 }
@@ -296,7 +296,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.9);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -304,41 +304,42 @@
 }
 
 .result-content {
-  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
-  border-radius: 20px;
-  padding: 40px;
+  background: #000;
+  border-radius: 12px;
+  padding: 24px;
   text-align: center;
   max-width: 500px;
   width: 90%;
-  border: 2px solid #2196f3;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-  color: #333;
+  border: 2px solid #fff;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+  color: #fff;
 }
 
 .result-header h2 {
-  color: #4caf50;
-  margin-bottom: 30px;
-  font-size: 2em;
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 1.5em;
 }
 
 .final-score {
-  font-size: 3em;
+  font-size: 2em;
   font-weight: bold;
-  color: #ff9800;
+  color: #fff;
   margin-bottom: 20px;
 }
 
 .result-message {
-  font-size: 1.3em;
-  margin-bottom: 30px;
+  font-size: 0.98em;
+  margin-bottom: 16px;
   line-height: 1.6;
+  color: #fff;
 }
 
 .result-details {
   display: flex;
   flex-direction: column;
-  gap: 15px;
-  margin-bottom: 30px;
+  gap: 12px;
+  margin-bottom: 16px;
 }
 
 .detail-item {
@@ -346,11 +347,11 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  background: #f8f9fa;
-  border: 1px solid #e9ecef;
-  padding: 15px;
-  border-radius: 10px;
-  color: #333;
+  background: transparent;
+  border: 1px solid #fff;
+  padding: 8px;
+  border-radius: 8px;
+  color: #fff;
 }
 
 .detail-icon {
