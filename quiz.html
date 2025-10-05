@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Saúde + Programação</title>
+    <link rel="stylesheet" href="quiz.css">
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <h1>QUIZ: SAÚDE <span class="plus">+</span> PROGRAMAÇÃO</h1>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+            <span class="progress-text" id="progressText">1 / 10</span>
+        </div>
+
+        <div class="question-container">
+            <div class="question" id="question">
+                <!-- Pergunta será inserida aqui -->
+            </div>
+            
+            <div class="options-container" id="options">
+                <!-- Opções serão inseridas aqui -->
+            </div>
+        </div>
+
+        <div class="feedback-container" id="feedback">
+            <!-- Feedback será mostrado aqui -->
+        </div>
+
+        <div class="controls">
+            <button class="btn btn-primary" id="nextBtn" disabled>PRÓXIMA</button>
+        </div>
+
+        <div class="score-display">
+            <div class="score-item">
+                <span class="score-label">Pontos:</span>
+                <span class="score-value" id="score">0</span>
+            </div>
+            <div class="score-item">
+                <span class="score-label">Acertos:</span>
+                <span class="score-value" id="correct">0</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="result-container" id="resultContainer" style="display: none;">
+        <div class="result-content">
+            <div class="result-header">
+                <h2>🎉 Quiz Finalizado!</h2>
+            </div>
+            <div class="result-score">
+                <div class="final-score" id="finalScore">0 / 10</div>
+                <div class="result-message" id="resultMessage"></div>
+            </div>
+            <div class="result-details">
+                <div class="detail-item">
+                    <span class="detail-icon">✅</span>
+                    <span class="detail-text">Acertos: <span id="finalCorrect">0</span></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">❌</span>
+                    <span class="detail-text">Erros: <span id="finalWrong">0</span></span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-icon">🏆</span>
+                    <span class="detail-text">Pontuação: <span id="finalPoints">0</span></span>
+                </div>
+            </div>
+            <button class="btn btn-primary" id="restartBtn">JOGAR NOVAMENTE</button>
+        </div>
+    </div>
+
+    <script src="quiz.js"></script>
+</body>
+</html>
