@@ -169,6 +169,10 @@ function showQuestion() {
         `;
         
         optionElement.addEventListener('click', () => selectAnswer(index));
+        optionElement.addEventListener('dblclick', () => {
+            selectAnswer(index);
+            setTimeout(() => nextQuestion(), 500); // Auto-advance after 0.5s
+        });
         optionsContainer.appendChild(optionElement);
     });
     
