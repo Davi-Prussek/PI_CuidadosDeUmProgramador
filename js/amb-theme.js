@@ -74,7 +74,7 @@ function dark() {
     p.forEach(p => {p.style.color = ""});
     p.forEach(s => {s.style.backgroundColor = "";});
     localStorage.setItem("theme", "dark");
-}
+}   
 
 botaoOff.addEventListener("click", ligaDesliga);
 botaoOn.addEventListener("click", ligaDesliga);

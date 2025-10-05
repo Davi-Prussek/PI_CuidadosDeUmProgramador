@@ -1,4 +1,3 @@
-
 const HTML = document.querySelector("html");
 const body = document.querySelector("body");
 
@@ -16,9 +15,9 @@ const nav = document.getElementById("nav");
 
 const botaoOff = document.getElementById("themeButtonOff");
 const botaoOn = document.getElementById("themeButtonOn");
-const botaoMenu = document.getElementById("menu-responsivo");
 
 const ligadoDesligado = document.getElementById("desligado");
+
 
 window.onload = () => {
     const tema = localStorage.getItem("theme");
@@ -41,7 +40,6 @@ function light() {
     botaoOff.style.display = "block";
     header.style.backgroundColor = "rgb(0, 0, 0)";
     subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
-    //footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     main.style.backgroundColor = "rgba(5, 0, 23, 1)";
     HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
     section.forEach(s => {s.style.color = "#ffffff";});
@@ -57,7 +55,6 @@ function dark() {
     botaoOn.style.display = "block";
     header.style.backgroundColor = "#0056b3";
     subBar.style.backgroundColor = ""
-    //footer.style.background = "linear-gradient( #0057b3c4, #002457)";
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
     section.forEach(s => {s.style.color = "";});
@@ -66,14 +63,6 @@ function dark() {
     p.forEach(p => {p.style.color = ""});
     localStorage.setItem("theme", "dark");
 }
-const menu = () => {
-if (nav.style.display === "block") {
-    nav.style.display = "none";
-} else {
-    nav.style.display = "block";
-    }
-}
 
 botaoOff.addEventListener("click", ligaDesliga);
 botaoOn.addEventListener("click", ligaDesliga);
-botaoMenu.addEventListener("click", menu);
