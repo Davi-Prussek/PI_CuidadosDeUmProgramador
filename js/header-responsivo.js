@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function () {
 const botaoMenu = document.getElementById("menu-responsivo");
 
 
@@ -54,4 +53,3 @@ botaoMenu.addEventListener("click", menu);
 botao_I.addEventListener("click", atoAbrir_I);
 botao_II.addEventListener("click", atoAbrir_II);
 botao_III.addEventListener("click", atoAbrir_III);
-});
