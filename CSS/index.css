@@ -671,9 +671,9 @@ main {
 
     .card:hover {
       background-color: #e6f0ff;
-      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 6px 15px rgba(0, 89, 179, 0.9);
       transform: scale(1.02);
-      transition: transform 0.7s ease;
+      transition: transform 1s ease;
     }
 
     h3 {
