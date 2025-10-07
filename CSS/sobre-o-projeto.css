@@ -1,5 +1,5 @@
   html {
-    font-size: calc(12px + 0.96vw);
+    font-size: calc(12px + 0.95vw);
     font-family: "Open Sans", sans-serif;
     color: #333;
     line-height: 1.6;
@@ -190,6 +190,7 @@
 
       /* Estado ativo do hambúrguer (vira X) */
       main {
+        margin-bottom: 4vw;
         margin-top: 6vw;
         padding: 24px 20px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;

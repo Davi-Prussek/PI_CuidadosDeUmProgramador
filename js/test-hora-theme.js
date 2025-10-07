@@ -1,11 +1,14 @@
 const HTMLTheme = document.querySelector("html");
 const bodyTheme = document.querySelector("body");
 
+const navTheme = document.querySelector("nav");
+const tela = window.screen.width;
 const headerTheme = document.querySelector("header");
 const footerTheme = document.querySelector("footer");    
 const mainTheme = document.querySelector("main"); 
 
 const sectionTheme = document.querySelectorAll("section");
+const fieldsetTheme = document.querySelectorAll("fieldset");
 const divTheme = document.querySelectorAll("div");
 const pTheme = document.querySelectorAll("p");
 const h1Theme = document.querySelectorAll("h1");
@@ -47,10 +50,10 @@ function light() {
     setaVoltarTheme.style.backgroundColor = "rgb( 0, 0, 0)";
     footerTheme.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     mainTheme.style.backgroundColor = "rgba(5, 0, 23, 1)";
-    HTMLTheme.style.backgroundColor = "rgba(16, 16, 16, 1)";
+    HTMLTheme.style.backgroundColor = "rgba(5, 0, 23, 1)";
     sectionTheme.forEach(s => {s.style.color = "#ffffff";});
-    divTheme.forEach(d => { d.style.color = "#ffffff"; });
-    divTheme.forEach(d => { d.style.backgroundColor = "black"; });
+    sectionTheme.forEach(s => {s.style.backgroundColor = "rgb( 0, 0, 0)";});
+    fieldsetTheme.forEach(f => {f.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     h2Theme.forEach(h2 => {h2.style.color = "#3c9effff"});
     pTheme.forEach(p => {p.style.color = "#ffffff"});
     localStorage.setItem("theme", "light");
@@ -66,6 +69,8 @@ function dark() {
     mainTheme.style.backgroundColor = "";
     HTMLTheme.style.backgroundColor = "";
     sectionTheme.forEach(s => {s.style.color = "";});
+    sectionTheme.forEach(s => {s.style.backgroundColor = "";});
+    fieldsetTheme.forEach(f => {f.style.backgroundColor = ""})
     divTheme.forEach(d => { d.style.color = ""; });
     divTheme.forEach(d => { d.style.backgroundColor = ""; });
     h2Theme.forEach(h2 => {h2.style.color = ""});

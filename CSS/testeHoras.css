@@ -1,13 +1,14 @@
 /* ========================================= ESTRUTURA HIERÁRQUICA ========================================= */
 
 html {
-  font-size: calc(12px + 0.96vw);
+  font-size: calc(12px + 0.95vw);
   font-family: "Open Sans", sans-serif;
   color: #333;
   line-height: 1.5;
   background-color: #f9fbff;
 
   body {
+    margin-top: 11vw;
     text-align: center;
     max-width: 100%;
     overflow-x: hidden;
@@ -123,7 +124,7 @@ html {
             right: 0;
             display: flex;
             justify-content: right;
-            background-color: #0056b3;
+            background-color: rgb(18, 21, 44);
             margin: 0px 0px;
             text-align: right;
             font-size: 0.8rem;
@@ -174,7 +175,7 @@ html {
           color: white;
         }
 
-        background: #0056b3;
+        background: rgb(18, 21, 44);
         display: flex;
         justify-content: space-between;
         padding: 0 0 0 0;
