@@ -63,7 +63,7 @@ function dark() {
     botaoOffTheme.style.display = "none";
     botaoOnTheme.style.display = "block";
     headerTheme.style.backgroundColor = "#0056b3";
-    subBarTheme.style.backgroundColor = ""
+    subBarTheme.style.backgroundColor = "#2196f3"
     setaVoltarTheme.style.backgroundColor = "#0056b3";
     footerTheme.style.background = "linear-gradient( #0057b3c4, #002457)";
     mainTheme.style.backgroundColor = "";
