@@ -286,7 +286,7 @@
           }
 
           h3 {
-            font-size: 24px;
+            font-size: 40px;
             font-weight: bold;
             color: #0052a4;
           }
@@ -349,7 +349,7 @@
           .cards {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
-            gap: 10px;
+            gap: 15px;
 
             .card {
               background: #e9f2ff;
