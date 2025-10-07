@@ -62,7 +62,7 @@ function dark() {
     botaoOff.style.display = "none";
     botaoOn.style.display = "block";
     header.style.backgroundColor = "#0056b3";
-    subBar.style.backgroundColor = ""
+    subBar.style.backgroundColor = "#0056b3"
     setaVoltar.style.backgroundColor = "#0056b3";
     footer.style.background = "linear-gradient( #0057b3c4, #002457)";
     main.style.backgroundColor = "";
