@@ -137,6 +137,7 @@ let correctAnswers = 0;
 let wrongAnswers = 0;
 let selectedAnswer = null;
 let questionsOrder = [];
+let questionLocked = false;
 
 // Elementos DOoM
 const questionElement = document.getElementById("question");
@@ -193,15 +194,12 @@ function showQuestion() {
         `;
 
     optionElement.addEventListener("click", () => selectAnswer(index));
-    optionElement.addEventListener("dblclick", () => {
-      selectAnswer(index);
-      setTimeout(() => nextQuestion(), 500); // Auto-advance after 0.5s
-    });
     optionsContainer.appendChild(optionElement);
   });
 
   // Resetar estado
   selectedAnswer = null;
+  questionLocked = false;
   nextBtn.disabled = true;
   nextBtn.style.display = ""; // Mostrar o botão novamente ao carregar nova pergunta
   feedbackContainer.classList.remove("show");
@@ -210,7 +208,7 @@ function showQuestion() {
 
 // Selecionar resposta
 function selectAnswer(answerIndex) {
-  if (selectedAnswer !== null) return; // Prevenir múltiplas seleções
+  if (questionLocked) return; // Impedir alterações após confirmação
 
   selectedAnswer = answerIndex;
 
@@ -238,6 +236,9 @@ function checkAnswer() {
   const questionIndex = questionsOrder[currentQuestion];
   const questionData = questions[questionIndex];
   const isCorrect = selectedAnswer === questionData.correct;
+
+  // Travar a questão após a confirmação
+  questionLocked = true;
 
   // Atualizar pontuação
   if (isCorrect) {
@@ -407,7 +408,7 @@ document.addEventListener("DOMContentLoaded", init);
 
 // Adicionar teclas de atalho
 document.addEventListener("keydown", (e) => {
-  if (e.key >= "1" && e.key <= "4" && selectedAnswer === null) {
+  if (e.key >= "1" && e.key <= "4" && !questionLocked) {
     const answerIndex = parseInt(e.key) - 1;
     if (answerIndex >= 0 && answerIndex < 4) {
       selectAnswer(answerIndex);
