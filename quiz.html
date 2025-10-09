@@ -259,5 +259,41 @@
     <script src="js/quiz.js"></script>
     <script src="js/header-responsivo.js"></script>
     <script src="js/quiz-theme.js"></script>
+
+    <!-- Script ajustado: ao clicar numa opção, apenas habilita o botão "PRÓXIMA" -->
+    <script>
+    (function () {
+      document.addEventListener('DOMContentLoaded', function () {
+        const optionsContainer = document.getElementById('options');
+        const nextBtn = document.getElementById('nextBtn');
+        const questionContainer = document.getElementById('question');
+
+        if (!optionsContainer || !nextBtn || !questionContainer) return;
+
+        // Ao clicar em uma opção (delegação), apenas habilitar o botão (não esconder/auto-avançar)
+        optionsContainer.addEventListener('click', function (e) {
+          const option = e.target.closest('.option, button, [data-option], .option-item, li');
+          if (!option || !optionsContainer.contains(option)) return;
+
+          // Habilita o botão para que o usuário confirme, mas NÃO o esconde automaticamente
+          nextBtn.disabled = false;
+          // não executar nextBtn.click() nem alterar nextBtn.style.display aqui
+        });
+
+        // Quando a próxima pergunta for carregada, mostrar novamente o botão e deixá-lo desabilitado
+        const observer = new MutationObserver(function () {
+          nextBtn.style.display = '';
+          nextBtn.disabled = true;
+        });
+        observer.observe(questionContainer, { childList: true, subtree: true });
+      });
+    })();
+    </script>
+  </body>
+</html>
+        observer.observe(questionContainer, { childList: true, subtree: true });
+      });
+    })();
+    </script>
   </body>
 </html>

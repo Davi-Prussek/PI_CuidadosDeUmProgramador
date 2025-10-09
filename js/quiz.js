@@ -179,6 +179,7 @@ function showQuestion() {
     // Resetar estado
     selectedAnswer = null;
     nextBtn.disabled = true;
+    nextBtn.style.display = ''; // Mostrar o botão novamente ao carregar nova pergunta
     feedbackContainer.classList.remove('show');
     feedbackContainer.innerHTML = '';
 }
@@ -197,8 +198,9 @@ function selectAnswer(answerIndex) {
     // Marcar opção selecionada
     document.querySelectorAll('.option')[answerIndex].classList.add('selected');
     
-    // Habilitar botão próxima
+    // Habilitar botão próxima (mostrar ao usuário que pode confirmar)
     nextBtn.disabled = false;
+    // nextBtn.style.display = 'none'; // removido: agora o botão só some quando o usuário clicar nele
     
     // Adicionar animação
     document.querySelectorAll('.option')[answerIndex].classList.add('pulse');
@@ -260,6 +262,10 @@ function showFeedback(isCorrect, explanation) {
 function nextQuestion() {
     if (selectedAnswer === null) return;
     
+    // Esconder o botão imediatamente ao confirmar e prevenir novos cliques
+    nextBtn.style.display = 'none';
+    nextBtn.disabled = true;
+    
     checkAnswer();
     
     setTimeout(() => {
@@ -313,12 +319,15 @@ function showResults() {
     // Mostrar resultado com animação
     resultContainer.style.display = 'flex';
     resultContainer.classList.add('fade-in-up');
+
+    nextBtn.style.display = 'none'; // Garantir que o botão fique oculto ao finalizar
 }
 
 // Reiniciar quiz
 function restartQuiz() {
     resultContainer.style.display = 'none';
     resultContainer.classList.remove('fade-in-up');
+    nextBtn.style.display = ''; // Restaurar visual do botão ao reiniciar
     init();
 }
 
