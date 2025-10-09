@@ -1,6 +1,5 @@
 const botaoMenu = document.getElementById("menu-responsivo");
 
-
 const botao_I = document.getElementById("botao-I");
 const botao_II = document.getElementById("botao-II");
 const botao_III = document.getElementById("botao-III");

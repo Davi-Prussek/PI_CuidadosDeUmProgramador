@@ -7,7 +7,7 @@ html {
 
   body {
     background-color: #f9fbff;
-    background:radial-gradient(circle at bottom left, rgba(116, 181, 255, 0.393), transparent 50%),radial-gradient(circle at top right, rgb(116, 181, 255, 0.393), transparent 50%);
+    background:radial-gradient(circle at bottom left, rgb(0, 51, 110), transparent 50%),radial-gradient(circle at top right, rgb(0, 51, 110), transparent 50%);
     padding-top: 80px;
 
     @media (min-width: 800px) {
@@ -360,8 +360,14 @@ html {
         margin-top: 8vw;
 
         .titulo {
+          background-color: transparent;
+          border:0.459vw solid white;
+          border-radius: 2vw;
+          margin: 0px 20vw;
+          padding: 3vw 5vw;
           text-align: center;
-          font-size: 3rem;
+          font-size: 6vw;
+          color: white;
         }
 
 .lista {
@@ -432,6 +438,7 @@ html {
       p {
         margin: 0px 2vw;
         color: #000000;
+        font-size: 2vw;
       }
       .email {
         margin: 0px 2vw;
@@ -478,7 +485,6 @@ html {
           align-items: center;
           border-radius: 5vw;
           background: linear-gradient(#7805e3, #e25d1b, #ffcc15);
-
           img {
             width: 5vw;
           }

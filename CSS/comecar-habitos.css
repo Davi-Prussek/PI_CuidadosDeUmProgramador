@@ -390,7 +390,7 @@ html {
       }
     }
     main {
-      background-color: #d8d8d8;
+      background-color: #fcfcfc;
       margin: 60px 60px 0px 60px;
       border-radius: 15px;
       margin-top: 11vw;
@@ -423,17 +423,34 @@ html {
       }
 
       h2 {
-        margin: 4vw 0 2vw 0;
+        margin: 7vw 20vw 2vw 20vw;
+        border: 5px solid #0056b3;
+        padding: 3vw 4vw;
+        border-radius: 3vw;
         text-align: center;
-        color: #004589;
+        span {
+        color: #0056b3;
         font-weight: bolder;
         font-family: "Times New Roman", Times, serif;
-
-        span {
           text-align: center;
           font-size: 55px;
+            }
         }
 
+        h3 {
+        margin: 7vw 20vw 2vw 20vw;
+        border: 5px solid #001c43;
+        padding: 3vw 4vw;
+        border-radius: 3vw;
+        text-align: center;
+        span {
+        color: #001c43;
+        font-weight: bolder;
+        font-family: "Times New Roman", Times, serif;
+          text-align: center;
+          font-size: 55px;
+            }
+        }
         .numero {
           margin-right: 5px;
           border-radius: 1000px;
@@ -588,7 +605,7 @@ html {
       }
     }
   }
-}
+
 .seta-voltar {
   background-color: #0056b3;
   border-radius: 1000px;
