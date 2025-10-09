@@ -59,8 +59,6 @@ function light() {
     
     div.forEach(d => { d.style.color = "#ffffff"; });
     div.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
-
-    gitIcon.forEach(gtiICon => { gtiICon.src = "../img/icons/github-brands-solid-full branco.svg" });
     setaVoltar.style.backgroundColor = "rgb(0, 0, 0)";
     h1.forEach(h1 => {h1.style.color = "#3c9effff"});
     h2.forEach(h2 => {h2.style.color = "#ffffff"});
@@ -80,7 +78,6 @@ function dark() {
     main.style.backgroundColor = "white";
     HTML.style.backgroundColor = "white";
     section.forEach(s => {s.style.color = "";});
-    gitIcon.forEach(gtiICon => {gtiICon.src = "../img/icons/github-brands-solid-full.svg"});
     div.forEach(d => { d.style.color = "black"; });
     h1.forEach(h1 => {h1.style.color = ""});
     div.forEach(d => { d.style.backgroundColor = ""; });

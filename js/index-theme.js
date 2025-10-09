@@ -6,6 +6,10 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const main = document.querySelector("main");
 
+const navTheme = document.getElementById("nav");
+const li = document.querySelectorAll("nav > ul > li");
+const liMenor = document.querySelectorAll("nav > ul > li > ul > li");
+
 const section = document.querySelectorAll("section");
 const div = document.querySelectorAll("div");
 const p = document.querySelectorAll("p");
@@ -42,6 +46,8 @@ const ligaDesliga = () => {
     }   }   
 
 function light() {
+    let tela = window.innerWidth;
+    
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
     header.style.backgroundColor = "rgb(0, 0, 0)";
@@ -49,7 +55,10 @@ function light() {
     setaVoltar.style.backgroundColor = "rgb( 0, 0, 0)";
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     main.style.backgroundColor = "rgba(5, 0, 23, 1)";
-    HTML.style.backgroundColor = "rgba(16, 16, 16, 1)";
+    HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
+    if (tela < 800) {li.forEach(li => {li.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = "black"})};
+    if (tela < 800) {navTheme.style.backgroundColor = "rgba(5, 0, 23, 1)"} else {navTheme.style.backgroundColor = ""};
+    if (tela < 800) {liMenor.forEach(liMenor => {liMenor.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = ""})};
     section.forEach(s => {s.style.color = "#ffffff";});
     div.forEach(d => { d.style.color = "#ffffff"; });
     div.forEach(d => { d.style.backgroundColor = "black"; });
@@ -67,6 +76,9 @@ function dark() {
     footer.style.background = "linear-gradient( #0057b3c4, #002457)";
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
+    li.forEach(li => {li.style.backgroundColor = ""});
+    navTheme.style.backgroundColor = "";
+    liMenor.forEach(liMenor => {liMenor.style.backgroundColor = ""});
     section.forEach(s => {s.style.color = "";});
     div.forEach(d => { d.style.color = ""; });
     div.forEach(d => { d.style.backgroundColor = ""; });
