@@ -65,14 +65,15 @@ function light() {
 }
 
 function dark() {
-    botaoOff.style.display = "none";
-    botaoOn.style.display = "block";
+    botaoOn.style.display = "none";
+    botaoOff.style.display = "block";
     header.style.backgroundColor = "";
-    setaVoltar.style.backgroundColor = "";
     subBar.style.backgroundColor = ""
+    setaVoltar.style.backgroundColor = "";
     footer.style.background = "";
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
+    body.style.backgroundColor = "";
     section.forEach(s => {s.style.color = "";});
     div.forEach(d => { d.style.color = ""; });
     div.forEach(d => { d.style.backgroundColor = ""; });

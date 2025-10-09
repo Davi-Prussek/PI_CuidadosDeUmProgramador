@@ -138,7 +138,7 @@ let wrongAnswers = 0;
 let selectedAnswer = null;
 let questionsOrder = [];
 
-// Elementos DOM
+// Elementos DOoM
 const questionElement = document.getElementById("question");
 const optionsContainer = document.getElementById("options");
 const feedbackContainer = document.getElementById("feedback");

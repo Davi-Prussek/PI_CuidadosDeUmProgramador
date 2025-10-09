@@ -28,6 +28,7 @@ html {
 
     @media (min-width: 800px) {
       header {
+        
         #menu-responsivo {
           display: none;
         }
@@ -182,11 +183,7 @@ html {
         box-sizing: border-box;
         z-index: 5;
         flex-grow: 1;
-
-
-
-
-
+        
         ul {
           p {
             text-decoration: none;

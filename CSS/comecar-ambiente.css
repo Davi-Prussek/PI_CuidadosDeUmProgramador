@@ -9,6 +9,7 @@ html {
     @media (min-width: 800px) {
 
       header {
+        padding-left: 2vw;
         #menu-responsivo {
           display: none;
         }
@@ -75,13 +76,6 @@ html {
               }
             }
 
-            li:hover {
-              ul {
-                display: block;
-
-              }
-            }
-
             a {
               display: block;
               width: 100%;
@@ -139,6 +133,9 @@ html {
               }
             }
 
+            li:hover {
+              background-color: rgb(18, 21, 44);
+            }
 
             li {
               text-align: center;
@@ -167,7 +164,7 @@ html {
         box-sizing: border-box;
         z-index: 5;
         flex-grow: 1;
-
+        
         ul {
           p {
             text-decoration: none;

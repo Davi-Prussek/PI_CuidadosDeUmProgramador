@@ -39,6 +39,7 @@ html {
     @media (min-width: 800px) {
     
       header {
+        padding-left: 2vw;
         #menu-responsivo {
           display: none;
         }
