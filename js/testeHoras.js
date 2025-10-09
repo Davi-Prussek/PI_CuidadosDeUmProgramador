@@ -401,18 +401,82 @@ function validarCampoIMC() {
   }
 
   if (alturaIMCEl.value !== "") {
-    if (isNaN(altura) || altura < 50 || altura > 250) {
+    if (isNaN(altura)) {
       alturaIMCEl.classList.add("error");
-      alturaMsg.textContent = "Insira uma altura entre 50 e 250 cm.";
+      alturaMsg.textContent = "Insira uma altura válida entre 0 e 250 cm.";
       ok = false;
+    } else if (altura > 250) {
+      // clampa automaticamente para 250 sem mensagem
+      alturaIMCEl.value = '250';
     }
   }
 
   return ok;
 }
 
-if (pesoIMCEl) pesoIMCEl.addEventListener("input", validarCampoIMC);
-if (alturaIMCEl) alturaIMCEl.addEventListener("input", validarCampoIMC);
+if (pesoIMCEl) {
+  pesoIMCEl.addEventListener("input", validarCampoIMC);
+  // Bloquear caracteres inválidos (apenas números e controles)
+  pesoIMCEl.addEventListener("keydown", (event) => {
+    if (
+      (event.key >= "0" && event.key <= "9") ||
+      [
+        "Backspace",
+        "Delete",
+        "Tab",
+        "Enter",
+        "ArrowLeft",
+        "ArrowRight",
+        "Home",
+        "End",
+      ].includes(event.key)
+    ) {
+      return; // deixa passar
+    }
+    event.preventDefault(); // bloqueia o resto
+  });
+  // Permitir colar só números, limitando até 300 e min 20
+  pesoIMCEl.addEventListener("paste", (event) => {
+    event.preventDefault();
+    const paste = (event.clipboardData || window.clipboardData).getData("text");
+    const numericPaste = paste.replace(/\D/g, "");
+    const parsed = parseInt(numericPaste) || 0;
+    const limitedPaste = Math.max(20, Math.min(parsed, 300));
+    pesoIMCEl.value = limitedPaste;
+  });
+}
+
+if (alturaIMCEl) {
+  alturaIMCEl.addEventListener("input", validarCampoIMC);
+  // Bloquear caracteres inválidos (apenas números e controles)
+  alturaIMCEl.addEventListener("keydown", (event) => {
+    if (
+      (event.key >= "0" && event.key <= "9") ||
+      [
+        "Backspace",
+        "Delete",
+        "Tab",
+        "Enter",
+        "ArrowLeft",
+        "ArrowRight",
+        "Home",
+        "End",
+      ].includes(event.key)
+    ) {
+      return; // deixa passar
+    }
+    event.preventDefault(); // bloqueia o resto
+  });
+  // Permitir colar só números, limitando até 250 e min 100
+  alturaIMCEl.addEventListener("paste", (event) => {
+    event.preventDefault();
+    const paste = (event.clipboardData || window.clipboardData).getData("text");
+    const numericPaste = paste.replace(/\D/g, "");
+    const parsed = parseInt(numericPaste) || 0;
+    const limitedPaste = Math.max(100, Math.min(parsed, 250));
+    alturaIMCEl.value = limitedPaste;
+  });
+}
 
 // inicializar estado
 document.addEventListener("DOMContentLoaded", () => {
