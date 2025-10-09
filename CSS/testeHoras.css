@@ -2658,7 +2658,7 @@ html {
           border: none;
           border-radius: 10px;
           cursor: pointer;
-          font-size: 0.9vw;
+          font-size: 2vw;
           font-weight: 600;
           transition: background 0.3s;
         }
@@ -2675,7 +2675,7 @@ html {
           border: none;
           border-radius: 10px;
           cursor: pointer;
-          font-size: 0.9vw;
+          font-size: 2vw;
           font-weight: 600;
           transition: background 0.3s;
         }
