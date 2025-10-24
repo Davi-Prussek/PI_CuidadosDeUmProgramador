@@ -98,6 +98,7 @@ body main article {
   font-size: 1rem;
   margin: 2vw 8vw;
   text-align: left;
+  text-indent: 20px;
 }
 
 main article span {
@@ -134,12 +135,13 @@ main article:hover {
   border-radius: 1vw;
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, box-shadow 0.2s ease;
   margin-bottom: 2vw;
 }
 
 .btn-link:hover {
   background-color: #0056b3;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Lista */
@@ -185,6 +187,10 @@ figure img {
   width: 100%;
   height: auto;
   border-radius: 1vw;
+  transition: box-shadow 0.2s ease;
+}
+figure img:hover {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
 figcaption {
