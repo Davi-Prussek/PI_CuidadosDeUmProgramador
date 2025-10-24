@@ -1,5 +1,5 @@
  <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,16 +15,16 @@
 <body>
     <header id="header">
         <button id="menu-responsivo"><img src="img/icons/menu.svg" alt="menu/icon"></button>
-        <h1><a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido nova.png" alt=""></a></h1>
+        <h1><a href="index.html"><img src="img/logo_PI-fundo_removido nova.png" alt="Dev-Saúde"></a></h1>
         <nav id="nav">
             <div id="segundo-titulo">
-                <h1><a href="index.html" id="titulo_sobreNos"><img class="titulo-responsivo" src="img/logo_PI-fundo_removido nova.png" alt="titulo-responsivo"></a>
+                <h1><a href="index.html"><img class="titulo-responsivo" src="img/logo_PI-fundo_removido nova.png" alt="Dev-Saúde"></a>
                 </h1>
             </div>
             <ul class="direcionar_sobreNos">
                 <li><a href="index.html"><p>Início</p></a></li>
                 <li class="comeco">
-                    <a class="botao" id="botao-I">
+                    <a class="botao" id="botao-I" href="#" role="button" aria-haspopup="true" aria-controls="sub-menus-I" aria-expanded="false">
                         <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon"></p>
                     </a>
                     <ul class="sub-menus" id="sub-menus-I">
@@ -45,7 +45,7 @@
                       </a>
                     </li>
                 <li class="cuidados">
-                    <a class="botao-II" id="botao-II">
+                    <a class="botao-II" id="botao-II" href="#" role="button" aria-haspopup="true" aria-controls="sub-menus-II" aria-expanded="false">
                         <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"></p>
                     </a>
                     <ul class="sub-menus-II" id="sub-menus-II">
@@ -64,7 +64,7 @@
                     </ul>
                 </li>
                 <li class="sobre-nos">
-                    <a class="botao-III" id="botao-III">
+                    <a class="botao-III" id="botao-III" href="#" role="button" aria-haspopup="true" aria-controls="sub-menus-III" aria-expanded="false">
                         <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon"></p>
                     </a>
                     <ul class="sub-menus" id="sub-menus-III">
@@ -90,7 +90,7 @@
     </header>
   <main id="topo">  
     <div class="botoes">
-      <a href="#"><button class="seta-voltar" id="setaVoltar" class><img src="img/icons/seta voltar.svg" alt="seta/icon"></button></a>
+      <a href="#topo" id="setaVoltar" class="seta-voltar" aria-label="Voltar ao topo"><img src="img/icons/seta voltar.svg" alt="Voltar ao topo"></a>
     </div>
     <section class="apresentacao1">
       <section>
@@ -107,11 +107,11 @@
     </section>
     <section class="ap1-2">
       <article>
-        <p class="text-left" id="texto">
+        <p class="text-left">
           Nosso site te guia para organizar melhor sua vida profissional e pessoal. Parece simples, mas a organização é
           essencial para saúde, foco e produtividade.
         </p>
-        <p class="text-left" id="texto">
+        <p class="text-left">
           Além disso, você terá acesso a conteúdos que vão te ajudar a entender como hábitos, ambiente e telas
           influenciam seu dia a dia, complementando o planejamento da sua rotina.
         </p>
@@ -120,30 +120,30 @@
       <section class="cards-right">
         <div class="card">
           <h3>Teste de Horas</h3>
-          <p id="texto">
+          <p>
             Comece aqui seu planejamento da sua rotina com base nas perguntas
             respondidas pelo usuário.
-          </p id="texto">
+          </p>
           <a href="testeHoras.html">Acesse</a>
         </div>
         <div class="card">
           <h3>Cuidados com Postura</h3>
-          <p id="texto">Dicas essenciais para manter uma boa postura no trabalho.</p>
+          <p>Dicas essenciais para manter uma boa postura no trabalho.</p>
           <a href="cuidados-postura.html">Acesse</a>
         </div>
         <div class="card">
           <h3>Sobre Nós</h3>
-          <p id="texto">Conheça a equipe por trás do Dev-Saúde.</p>
+          <p>Conheça a equipe por trás do Dev-Saúde.</p>
           <a href="sobreNos.html">Acesse</a>
         </div>
         <div class="card">
           <h3>Sobre o Projeto</h3>
-          <p id="texto">Saiba mais sobre o objetivo e missão do projeto.</p>
+          <p>Saiba mais sobre o objetivo e missão do projeto.</p>
           <a href="sobre-o-projeto.html">Acesse</a>
         </div>
         <div class="card">
           <h3>Quiz</h3>
-          <p id="texto">Venha testar seu conhecimento técnico aqui!</p>
+          <p>Venha testar seu conhecimento técnico aqui!</p>
           <a href="quiz.html">Acesse</a>
         </div>
       </section>
@@ -158,7 +158,7 @@
                     <h4>Contato</h4>
                     <section class="midia">
                         <a href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank"><img src="img/icons/instagram-brands-solid-full.svg" alt="midia/insta"></a>
+                            target="_blank" rel="noopener noreferrer"><img src="img/icons/instagram-brands-solid-full.svg" alt="Instagram do Dev-Saúde"></a>
                     </section>
                 </li>
                 <li class="logo">
@@ -167,8 +167,8 @@
                 <li class="linkRp">
                     <h4>Links Rápidos</h4>
                     <ul>
-                        <li><a href="Inicio.html">Início</a></li>
-                        <li><a href="testHrs.html">Teste de Horas</a></li>
+                        <li><a href="index.html">Início</a></li>
+                        <li><a href="testeHoras.html">Teste de Horas</a></li>
                         <li><a href="rotinas.html">Rotinas</a></li>
                         <li><a href="cuidados.html">Cuidados</a></li>
                         <li><a href="sobreNos.html">Sobre nós</a></li>
