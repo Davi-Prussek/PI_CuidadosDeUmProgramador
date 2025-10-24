@@ -161,6 +161,19 @@
 
         Todos vieram;
 
+## Decimo quarta dia 24/10 
+    ## O que vai ser feito;
+     Revendo melhorias para o site 
+     Revisão das paginas 
+     Corrigindo os erros do Html e css
+     Selecionando a ata do dia 
+     Verificando o site por geral
+
+
+    ### Quem faltou:
+
+        Todos Vieram;
+
 
 
         
