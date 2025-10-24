@@ -23,6 +23,7 @@ const divB = document.querySelectorAll(".option option-b");
 const divC = document.querySelectorAll(".option option-c");
 const divD = document.querySelectorAll(".option option-d");
 const option = document.querySelectorAll(".option");
+const passar = document.getElementById("nextBtn");
 
 const setaVoltar = document.getElementById("setaVoltar");
 
@@ -53,7 +54,7 @@ const aplicarTemaOpcaoPreto = () => {
         option.style.color = "white";
     });
 }
-const aplicarTemaOpcaoReturn = () => {
+const aplicarTemaOpcaoBranco = () => {
     document.querySelectorAll(".option").forEach(option => {
         option.style.backgroundColor = "";
         option.style.color = "";
@@ -74,10 +75,6 @@ function light() {
     div.forEach(d => { d.style.backgroundColor = "black"; });
     h2.forEach(h2 => {h2.style.color = "#3c9effff"});
     p.forEach(p => {p.style.color = "#ffffff"});
-    divA.forEach(divA => {divA.style.backgroundColor = "rgba(5, 0, 23, 1)"});
-    divB.forEach(divB => {divB.style.backgroundColor = "rgba(5, 0, 23, 1)"});
-    divC.forEach(divC => {divC.style.backgroundColor = "rgba(5, 0, 23, 1)"});
-    divD.forEach(divD => {divD.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     option.forEach(option => {option.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     aplicarTemaOpcaoPreto();
     localStorage.setItem("theme", "light");
@@ -97,8 +94,16 @@ function dark() {
     div.forEach(d => { d.style.backgroundColor = ""; });
     h2.forEach(h2 => {h2.style.color = ""});
     p.forEach(p => {p.style.color = ""});
-    aplicarTemaOpcaoReturn();
+    aplicarTemaOpcaoBranco();
     localStorage.setItem("theme", "dark");
+}
+export const opcaoCor = () => {
+const Verificar = localStorage.getItem("theme");
+if (Verificar == "light") {
+    aplicarTemaOpcaoPreto();
+} else {
+    aplicarTemaOpcaoBranco();
+}
 }
 
 botaoOff.addEventListener("click", ligaDesliga);

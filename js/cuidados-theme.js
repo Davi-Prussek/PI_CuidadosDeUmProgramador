@@ -28,6 +28,7 @@ const botaoOn = document.getElementById("themeButtonOn")
 const ligadoDesligado = document.getElementById("desligado");
 
 window.onload = () => {
+    
     const tema = localStorage.getItem("theme");
     if (tema == "light") {
         light();

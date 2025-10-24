@@ -1,3 +1,5 @@
+import { opcaoCor } from "./quiz-theme.js";
+
 // Dados das perguntas do quiz
 const questions = [
   {
@@ -204,6 +206,7 @@ function showQuestion() {
   nextBtn.style.display = ""; // Mostrar o botão novamente ao carregar nova pergunta
   feedbackContainer.classList.remove("show");
   feedbackContainer.innerHTML = "";
+  opcaoCor();
 }
 
 // Selecionar resposta
