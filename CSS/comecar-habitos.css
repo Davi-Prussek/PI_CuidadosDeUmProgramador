@@ -223,21 +223,13 @@ html {
     }
   }
 
-.seta-voltar {
-  background-color: #0056b3;
-  border-radius: 1000px;
-  cursor: pointer;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  border: none;
-  z-index: 15;
+
 
   img {
     width: 55px;
     height: 60px;
   }
-}
+
 
 @media (max-width: 768px) {
   header {

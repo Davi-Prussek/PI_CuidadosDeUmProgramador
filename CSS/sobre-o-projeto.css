@@ -25,21 +25,13 @@
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
         line-height: 1.7;
 
-        .seta-voltar {
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          background-color: #0056b3;
-          border-radius: 1000px;
-          border: none;
-          cursor: pointer;
-          z-index: 15;
+        
 
           img {
             width: 55px;
             height: 60px;
           }
-        }
+        
 
         .s1 {
 
