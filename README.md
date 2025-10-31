@@ -161,7 +161,7 @@
 
         Todos vieram;
 
-## Decimo quarta dia 24/10 
+## Decimo quarto dia 24/10 
     ## O que vai ser feito;
      Revendo melhorias para o site 
      Revisão das paginas 
@@ -174,6 +174,8 @@
 
         Todos Vieram;
 
-
+## DEcimo quinto dia 31/10
+    ## O que vai ser feito;
+        Arrumando os erros do validador (Todos)
 
         
