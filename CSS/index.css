@@ -10,11 +10,12 @@ html {
 /* ========================================= BODY ========================================= */
 body {
   text-align: center;
-  padding-top: 80px;
+  padding-top: 5vw;
+  background-color: white;
 }
 /*===================== Apresentação 1 ===================*/
 main {
-
+  background-color: white;
   .apresentacao1 {
     align-items: center;
     text-align: center;
@@ -124,7 +125,7 @@ main {
     .apresentacao1 {
       padding: 40px 15px;
       min-height: 320px;
-
+e
       article {
         margin: 2vw 4vw 0px 4vw;
         padding: 40px 16px;

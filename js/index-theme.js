@@ -48,6 +48,7 @@ const ligaDesliga = () => {
 function light() {
     let tela = window.innerWidth;
     
+    body.style.backgroundColor = "rgba(5, 0, 23, 1)";
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
     header.style.backgroundColor = "rgb(0, 0, 0)";
@@ -68,6 +69,7 @@ function light() {
 }
 
 function dark() {
+    body.style.backgroundColor = "";
     botaoOff.style.display = "none";
     botaoOn.style.display = "block";
     header.style.backgroundColor = "#0056b3";

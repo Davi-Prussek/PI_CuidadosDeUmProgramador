@@ -361,6 +361,9 @@
   }
 
   @media (max-width: 799px) {
+::-webkit-scrollbar {
+display: none;
+}
   .seta-voltar {
     background-color: #0056b3;
     border-radius: 1000px;
@@ -383,10 +386,14 @@
           position: fixed;
           top: 0px;
           display: flex;
-          padding: 3vw 6vw 0 1vw;
+          padding-top: 4vw;
           justify-content: space-between;
           align-items: baseline;
           z-index: 20;
+          a img {
+            margin-right: 2vw;
+            height: 10vw;
+          }
 
           #nav {
               display: none;
