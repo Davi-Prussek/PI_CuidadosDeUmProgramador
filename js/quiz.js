@@ -52,7 +52,80 @@ const questions = [
     ],
     correct: 1,
     explanation:
-      "Funções gigantes e confusas são o 'junk food' da programação - podem até funcionar, mas prejudicam a saúde do projeto!",
+    question:
+      "O que se assemelha ao exercício físico regular no mundo da programação?",
+    options: [
+      "Refatorar e revisar código",
+      "Ficar sem versionamento",
+      "Usar console.log em tudo",
+      "Nunca atualizar o sistema",
+    ],
+    correct: 0,
+    explanation:
+      "Refatorar e revisar código é como fazer exercícios regulares - mantém o código 'em forma' e saudável!",
+  },
+  {
+    question:
+      "O corpo humano precisa de hidratação constante. Qual seria a 'água' da programação?",
+    options: [
+      "Internet",
+      "Comentários no código",
+      "Atualizações de software",
+      "Boas práticas de versionamento",
+    ],
+    correct: 3,
+    explanation:
+      "Boas práticas de versionamento são como a água para o projeto - essenciais para manter tudo funcionando e organizado!",
+  },
+  {
+    question: "O que pode causar um 'burnout digital' no programador?",
+    options: [
+      "Pausas regulares",
+      "Boa ergonomia",
+      "Trabalhar horas seguidas sem descanso",
+      "Estudo com moderação",
+    ],
+    correct: 2,
+    explanation:
+      "Trabalhar horas seguidas sem descanso é o caminho certo para o burnout - tanto físico quanto digital!",
+  },
+  {
+    question:
+      "Se vitaminas ajudam o corpo, o que ajuda o código a ficar 'forte'?",
+    options: [
+      "Documentação clara",
+      "Código duplicado",
+      "Falta de testes",
+      "Ignorar bugs",
+    ],
+    correct: 0,
+    explanation:
+      "Documentação clara é como as vitaminas para o código - fortalece o entendimento e facilita a manutenção!",
+  },
+  {
+    question: "Qual a semelhança entre alongamento físico e debugging?",
+    options: [
+      "Ambos são perda de tempo",
+      "Ambos previnem problemas maiores",
+      "Não têm utilidade prática",
+      "São feitos apenas no início",
+    ],
+    correct: 1,
+    explanation:
+      "Assim como alongamento previne lesões, debugging previne problemas maiores no futuro - ambos são investimentos em saúde!",
+  },
+  {
+    question:
+      "Em saúde, o excesso faz mal. Em programação, o excesso de quê pode 'adoecer' o projeto?",
+    options: [
+      "Testes automatizados",
+      "Comentários explicativos",
+      "Dependências externas desnecessárias",
+      "Planejamento",
+    ],
+    correct: 2,
+    explanation:
+      "Dependências desnecessárias são como o excesso de medicamentos - podem causar mais problemas do que soluções!"    "Funções gigantes e confusas são o 'junk food' da programação - podem até funcionar, mas prejudicam a saúde do projeto!",
   },
   {
     question:
