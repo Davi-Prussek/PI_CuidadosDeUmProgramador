@@ -17,9 +17,7 @@
   }
 
       header {
-          padding-left: 2vw;
-
-          h1 > a > img {
+          h1 > a {
             margin: 0.6vw;
             margin-left: 2vw;
           }
@@ -324,29 +322,17 @@
                   display: flex;
 
                   .midia {
-                      display: flex;
-
-                      img {
-                          width: 60px;
-                      }
+                    width: 60px;
                   }
               }
 
               .logo {
-                  font-family: "Times New Roman", Times, serif;
-                  font-weight: 700;
-                  font-size: 30px;
-                  color: white;
-                  margin: 0 auto;
-                  display: flex;
-                  justify-content: center;
-                  align-items: center;
+                width: 170px;
               }
 
               .linkRp {
                   font-size: 1.6vw;
                   margin-bottom: 0.6vw;
-
                   ul {
                       display: flex;
                       flex-direction: column;
@@ -355,7 +341,6 @@
                       margin-right: 0;
                       list-style: none;
                       padding: 0;
-                      gap: 0.3vw;
 
                       li a {
                           font-size: 1.3vw;
@@ -376,6 +361,9 @@
   }
 
   @media (max-width: 799px) {
+::-webkit-scrollbar {
+display: none;
+}
   .seta-voltar {
     background-color: #0056b3;
     border-radius: 1000px;
@@ -398,10 +386,14 @@
           position: fixed;
           top: 0px;
           display: flex;
-          padding: 3vw 6vw 0 1vw;
+          padding-top: 4vw;
           justify-content: space-between;
           align-items: baseline;
           z-index: 20;
+          a img {
+            margin-right: 2vw;
+            height: 10vw;
+          }
 
           #nav {
               display: none;
@@ -844,6 +836,8 @@ footer {
             flex: 1;
 
             .midia {
+               width:150px; 
+               height:150px;
               display: flex;
 
               img {
@@ -862,6 +856,10 @@ footer {
             justify-content: center;
             align-items: center;
             flex: 1;
+            img {
+              width:150px; 
+              height:150px;
+            }
           }
 
           .linkRp {
