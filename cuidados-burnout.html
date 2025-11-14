@@ -1,164 +1,253 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev-Saúde | Burnout em programadores</title>
+    <link rel="stylesheet" href="CSS/Reset.CSS" />
+    <link rel="stylesheet" href="CSS/cuidados.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/header-footer-global.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dev-Saúde | Burnout em programadores</title>
-  <link rel="stylesheet" href="CSS/Reset.CSS">
-  <link rel="stylesheet" href="CSS/cuidados.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet">
-    <link rel="stylesheet" href="CSS/header-footer-global.css">
-</head>
-
-<body>
+  <body>
     <header id="header">
-        <button id="menu-responsivo"><img src="img/icons/menu.svg" alt="menu/icon"></button>
-        <h1><a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido-nova.png" alt=""></a></h1>
-        <nav id="nav">
-            <div id="segundo-titulo">
-                <h1><a href="index.html" id="titulo_sobreNos"><img class="titulo-responsivo" src="img/logo_PI-fundo_removido-nova.png" alt="titulo-responsivo"></a>
-                </h1>
-            </div>
-            <ul class="direcionar_sobreNos">
-                <li><a href="index.html"><p>Início</p></a></li>
-                <li class="comeco">
-                    <a class="botao" id="botao-I">
-                        <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-                    </a>
-                    <ul class="sub-menus" id="sub-menus-I">
-                        <li><a href="comecar-ambiente.html">
-                                <p>Ambiente</p>
-                            </a></li>
-                        <li><a href="comecar-habitos.html">
-                                <p>Hábitos</p>
-                            </a></li>
-                    </ul>
-                </li>
-                <li><a href="testeHoras.html">
-                        <p class="link-base">Teste de Horas</p>
-                    </a></li>
-                    <li>
-                      <a href="quiz.html">
-                        <p class="link-base">Quiz</p>
-                      </a>
-                    </li>
-                <li class="cuidados">
-                    <a class="botao-II" id="botao-II">
-                        <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-                    </a>
-                    <ul class="sub-menus-II" id="sub-menus-II">
-                        <li><a href="cuidados-postura.html">
-                                <p>Postura</p>
-                            </a></li>
-                        <li><a href="cuidados-luz-solar.html">
-                                <p>Luz Solar</p>
-                            </a></li>
-                        <li><a href="cuidados-burnout.html">
-                                <p>Burn-out</p>
-                            </a></li>
-                        <li><a href="cuidados-telas.html">
-                                <p>Telas</p>
-                            </a></li>
-                    </ul>
-                </li>
-                <li class="sobre-nos">
-                    <a class="botao-III" id="botao-III">
-                        <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-                    </a>
-                    <ul class="sub-menus" id="sub-menus-III">
-                        <li><a href="sobreNos.html">
-                                <p>Nós</p>
-                            </a></li>
-                        <li><a href="sobre-o-projeto.html">
-                                <p>Projeto</p>
-                            </a></li>
-                    </ul>
-                </li>
+      <button id="menu-responsivo">
+        <img src="img/icons/menu.svg" alt="menu/icon" />
+      </button>
+      <h1>
+        <a href="index.html" id="titulo_sobreNos"
+          ><img src="img/logo_PI-fundo_removido-nova.png" alt=""
+        /></a>
+      </h1>
+      <nav id="nav">
+        <div id="segundo-titulo">
+          <h1>
+            <a href="index.html" id="titulo_sobreNos"
+              ><img
+                class="titulo-responsivo"
+                src="img/logo_PI-fundo_removido-nova.png"
+                alt="titulo-responsivo"
+            /></a>
+          </h1>
+        </div>
+        <ul class="direcionar_sobreNos">
+          <li>
+            <a href="index.html"><p>Início</p></a>
+          </li>
+          <li class="comeco">
+            <a class="botao" id="botao-I">
+              <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            </a>
+            <ul class="sub-menus" id="sub-menus-I">
+              <li>
+                <a href="comecar-ambiente.html">
+                  <p>Ambiente</p>
+                </a>
+              </li>
+              <li>
+                <a href="comecar-habitos.html">
+                  <p>Hábitos</p>
+                </a>
+              </li>
             </ul>
-            <ul class="sub-menu-header" id="sub-menu-bar">
-                <li class="theme">
-                    <button id="themeButtonOff" class="theme"><span>Light </span><img class="buttonOff"
-                            src="img/icons/botao-desligado.png" alt="icon/off"></button>
+          </li>
+          <li>
+            <a href="testeHoras.html">
+              <p class="link-base">Teste de Horas</p>
+            </a>
+          </li>
+          <li>
+            <a href="quiz.html">
+              <p class="link-base">Quiz</p>
+            </a>
+          </li>
+          <li class="cuidados">
+            <a class="botao-II" id="botao-II">
+              <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            </a>
+            <ul class="sub-menus-II" id="sub-menus-II">
+              <li>
+                <a href="cuidados-postura.html">
+                  <p>Postura</p>
+                </a>
+              </li>
+              <li>
+                <a href="cuidados-luz-solar.html">
+                  <p>Luz Solar</p>
+                </a>
+              </li>
+              <li>
+                <a href="cuidados-burnout.html">
+                  <p>Burn-out</p>
+                </a>
+              </li>
+              <li>
+                <a href="cuidados-telas.html">
+                  <p>Telas</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sobre-nos">
+            <a class="botao-III" id="botao-III">
+              <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            </a>
+            <ul class="sub-menus" id="sub-menus-III">
+              <li>
+                <a href="sobreNos.html">
+                  <p>Nós</p>
+                </a>
+              </li>
+              <li>
+                <a href="sobre-o-projeto.html">
+                  <p>Projeto</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-menu-header" id="sub-menu-bar">
+          <li class="theme">
+            <button id="themeButtonOff" class="theme">
+              <span>Light </span
+              ><img
+                class="buttonOff"
+                src="img/icons/botao-desligado.png"
+                alt="icon/off"
+              />
+            </button>
 
-                    <button id="themeButtonOn" class="theme" style="display: none;"><span>Dark</span><img
-                            class="buttonOn" src="img/icons/botao-desligado.png" alt="icon/on"></button>
-                </li>
-            </ul>
-        </nav>
+            <button id="themeButtonOn" class="theme" style="display: none">
+              <span>Dark</span
+              ><img
+                class="buttonOn"
+                src="img/icons/botao-desligado.png"
+                alt="icon/on"
+              />
+            </button>
+          </li>
+        </ul>
+      </nav>
     </header>
-  <main id="topo">
-    <div class="botoes">
-      <a href="#"><button class="seta-voltar" id="setaVoltar" class><img src="img/icons/seta-voltar.svg" alt="seta/icon"></button></a>
-    </div>
-    <h2>Burnout em<br>programadores</h2>
+    <main id="topo">
+      <div class="botoes">
+        <a href="#"
+          ><button class="seta-voltar" id="setaVoltar" class>
+            <img src="img/icons/seta-voltar.svg" alt="seta/icon" /></button
+        ></a>
+      </div>
+      <h2>Burnout em<br />programadores</h2>
 
-    <article id="texto">O burnout é causado por excesso de carga, longas jornadas e pressão constante, levando ao esgotamento físico e
-      mental. Pausas, hábitos saudáveis e equilíbrio entre vida pessoal e profissional são essenciais para prevenção.
-    </article>
+      <article id="texto">
+        O burnout é causado por excesso de carga, longas jornadas e pressão
+        constante, levando ao esgotamento físico e mental. Pausas, hábitos
+        saudáveis e equilíbrio entre vida pessoal e profissional são essenciais
+        para prevenção.
+      </article>
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/7hnmmBxexsg?si=zJ32SYjXavuDFANy"
-      title="YouTube video player" frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/7hnmmBxexsg?si=zJ32SYjXavuDFANy"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
 
-    <article id="texto">O burnout de programadores é um problema generalizado que pode impactar significativamente a produtividade, a
-      satisfação no trabalho e o bem-estar geral. Os desenvolvedores frequentemente se encontram presos em um ciclo
-      vicioso de longas horas, projetos exigentes e pressão constante para entregar. Isso pode levar a um estresse
-      avassalador, exaustão e declínio na qualidade do trabalho.</article>
+      <article id="texto">
+        O burnout de programadores é um problema generalizado que pode impactar
+        significativamente a produtividade, a satisfação no trabalho e o
+        bem-estar geral. Os desenvolvedores frequentemente se encontram presos
+        em um ciclo vicioso de longas horas, projetos exigentes e pressão
+        constante para entregar. Isso pode levar a um estresse avassalador,
+        exaustão e declínio na qualidade do trabalho.
+      </article>
 
-    <hr>
+      <hr />
 
-    <article id="texto">Este guia abrangente explorará as causas do esgotamento do desenvolvedor de software, fornecerá dicas práticas
-      para prevenção e discutirá o papel dos empregadores em promover um ambiente de trabalho saudável. Ao implementar
-      essas estratégias, você pode superar efetivamente o esgotamento da codificação e manter uma carreira sustentável
-      como desenvolvedor de software.</article>
+      <article id="texto">
+        Este guia abrangente explorará as causas do esgotamento do desenvolvedor
+        de software, fornecerá dicas práticas para prevenção e discutirá o papel
+        dos empregadores em promover um ambiente de trabalho saudável. Ao
+        implementar essas estratégias, você pode superar efetivamente o
+        esgotamento da codificação e manter uma carreira sustentável como
+        desenvolvedor de software.
+      </article>
 
-    <h3>Causas do Burnout em Programadores</h3>
-    <ul class="lista">
-      <li id="texto"><span>Cultura de trabalho tóxica:</span> Um ambiente de trabalho negativo ou hostil pode criar estresse e
-        ansiedade.</li>
-      <li id="texto"><span>Longas horas:</span> Trabalhar muito tempo sem pausas pode causar fadiga e esgotamento.</li>
-      <li id="texto"><span>Alta carga de trabalho:</span> Excesso de tarefas e prazos irreais aumentam o estresse.</li>
-      <li id="texto"><span>Falta de reconhecimento:</span> A desvalorização leva à queda de motivação e satisfação.</li>
-      <li id="texto"><span>Estilo de vida pouco saudável:</span> Sono ruim, má alimentação e falta de exercícios pioram <br>a situação.
-      </li>
-    </ul>
+      <h3>Causas do Burnout em Programadores</h3>
+      <ul class="lista">
+        <li id="texto">
+          <span>Cultura de trabalho tóxica:</span> Um ambiente de trabalho
+          negativo ou hostil pode criar estresse e ansiedade.
+        </li>
+        <li id="texto">
+          <span>Longas horas:</span> Trabalhar muito tempo sem pausas pode
+          causar fadiga e esgotamento.
+        </li>
+        <li id="texto">
+          <span>Alta carga de trabalho:</span> Excesso de tarefas e prazos
+          irreais aumentam o estresse.
+        </li>
+        <li id="texto">
+          <span>Falta de reconhecimento:</span> A desvalorização leva à queda de
+          motivação e satisfação.
+        </li>
+        <li id="texto">
+          <span>Estilo de vida pouco saudável:</span> Sono ruim, má alimentação
+          e falta de exercícios pioram <br />a situação.
+        </li>
+      </ul>
 
-    <a href="https://ubiminds.com/pt-br/burnout-de-programadores/" class="btn-link" target="_blank">🔗 Saiba mais sobre
-      o burnout em programadores</a>
-
-  </main>
+      <a
+        href="https://ubiminds.com/pt-br/burnout-de-programadores/"
+        class="btn-link"
+        target="_blank"
+        >🔗 Saiba mais sobre o burnout em programadores</a
+      >
+    </main>
     <footer id="footer">
-            <ul>
-                <li class="footer-contact">
-                    <h4>Contato</h4>
-                    <section class="midia">
-                        <a href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-                            target="_blank"><img src="img/icons/instagram-brands-solid-full.svg" alt="midia/insta"></a>
-                    </section>
-                </li>
-                <li class="logo">
-                    <img src="img/logo_PI-fundo_removido.png" alt="logo-site" width="150px" height="150px">
-                </li>
-                <li class="linkRp">
-                    <h4>Links Rápidos</h4>
-                    <ul>
-                        <li><a href="Inicio.html">Início</a></li>
-                        <li><a href="testHrs.html">Teste de Horas</a></li>
-                        <li><a href="rotinas.html">Rotinas</a></li>
-                        <li><a href="cuidados.html">Cuidados</a></li>
-                        <li><a href="sobreNos.html">Sobre nós</a></li>
-                    </ul>
-                </li>
-            </ul>
+      <ul>
+        <li class="footer-contact">
+          <h4>Contato</h4>
+          <section class="midia">
+            <a
+              href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+              target="_blank"
+              ><img
+                src="img/icons/instagram-brands-solid-full.svg"
+                alt="midia/insta"
+            /></a>
+          </section>
+        </li>
+        <li class="logo">
+          <img
+            src="img/logo_PI-fundo_removido.png"
+            alt="logo-site"
+            width="150px"
+            height="150px"
+          />
+        </li>
+        <li class="linkRp">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="Inicio.html">Início</a></li>
+            <li><a href="testHrs.html">Teste de Horas</a></li>
+            <li><a href="rotinas.html">Rotinas</a></li>
+            <li><a href="cuidados.html">Cuidados</a></li>
+            <li><a href="sobreNos.html">Sobre nós</a></li>
+          </ul>
+        </li>
+      </ul>
 
-            <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
     </footer>
-  <script src="js/cuidados-theme.js"></script>
-  <script src="js/header-responsivo.js"></script>
-</body>
-
+    <script src="js/cuidados-theme.js"></script>
+    <script src="js/header-responsivo.js"></script>
+  </body>
 </html>
