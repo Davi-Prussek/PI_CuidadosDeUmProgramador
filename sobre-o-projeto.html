@@ -1,499 +1,462 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Reset.CSS">
+    <link rel="stylesheet" href="CSS/sobre-o-projeto.css">
+    <title>Sobre o Projeto</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="CSS/header-footer-global.css">
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="CSS/Reset.CSS" />
-  <link rel="stylesheet" href="CSS/sobre-o-projeto.css" />
-  <title>Sobre o Projeto</title>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="CSS/header-footer-global.css">
-</head>
+  <body>
+    <header id="header">
+      <button id="menu-responsivo"><img src="img/icons/menu.svg"
+          alt="menu/icon"></button>
+      <a href="index.html" id="titulo_sobreNos"><img
+          src="img/logo_PI-fundo_removido-nova.png" alt></a>
+      <nav id="nav">
+        <div id="segundo-titulo">
+          <h1><a href="index.html" id="titulo_sobreNos-II"><img
+                class="titulo-responsivo"
+                src="img/logo_PI-fundo_removido-nova.png"
+                alt="titulo-responsivo"></a>
+          </h1>
+        </div>
+        <ul class="direcionar_sobreNos">
+          <li><a href="index.html"><p>Início</p></a></li>
+          <li class="comeco">
+            <a class="botao" id="botao-I">
+              <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon"></p>
+            </a>
+            <ul class="sub-menus" id="sub-menus-I">
+              <li><a href="comecar-ambiente.html">
+                  <p>Ambiente</p>
+                </a></li>
+              <li><a href="comecar-habitos.html">
+                  <p>Hábitos</p>
+                </a></li>
+            </ul>
+          </li>
+          <li><a href="testeHoras.html">
+              <p class="link-base">Teste de Horas</p>
+            </a></li>
+          <li>
+            <a href="quiz.html">
+              <p class="link-base">Quiz</p>
+            </a>
+          </li>
+          <li class="cuidados">
+            <a class="botao-II" id="botao-II">
+              <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"></p>
+            </a>
+            <ul class="sub-menus-II" id="sub-menus-II">
+              <li><a href="cuidados-postura.html">
+                  <p>Postura</p>
+                </a></li>
+              <li><a href="cuidados-luz-solar.html">
+                  <p>Luz Solar</p>
+                </a></li>
+              <li><a href="cuidados-burnout.html">
+                  <p>Burn-out</p>
+                </a></li>
+              <li><a href="cuidados-telas.html">
+                  <p>Telas</p>
+                </a></li>
+            </ul>
+          </li>
+          <li class="sobre-nos">
+            <a class="botao-III" id="botao-III">
+              <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon"></p>
+            </a>
+            <ul class="sub-menus" id="sub-menus-III">
+              <li><a href="sobreNos.html">
+                  <p>Nós</p>
+                </a></li>
+              <li><a href="sobre-o-projeto.html">
+                  <p>Projeto</p>
+                </a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-menu-header" id="sub-menu-bar">
+          <li class="theme">
+            <button id="themeButtonOff" class="theme"><span>Light </span><img
+                class="buttonOff"
+                src="img/icons/botao-desligado.png" alt="icon/off"></button>
 
-<body>
-  <header id="header">
-    <button id="menu-responsivo"><img src="img/icons/menu.svg" alt="menu/icon"></button>
-    <h1><a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido-nova.png" alt=""></a></h1>
-    <nav id="nav">
-      <div id="segundo-titulo">
-        <h1><a href="index.html" id="titulo_sobreNos"><img class="titulo-responsivo"
-              src="img/logo_PI-fundo_removido nova.png" alt="titulo-responsivo"></a>
-        </h1>
+            <button id="themeButtonOn" class="theme"
+              style="display: none;"><span>Dark</span><img
+                class="buttonOn" src="img/icons/botao-desligado.png"
+                alt="icon/on"></button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main style="padding: 6vw 3vw 0px 3vw;" id="topo">
+      <div class="botoes">
+        <a href="#" class="seta-voltar" id="setaVoltar"><img
+            src="img/icons/seta-voltar.svg" alt="seta/icon"></a>
       </div>
-      <ul class="direcionar_sobreNos">
-        <li><a href="index.html">
-            <p>Início</p>
-          </a></li>
-        <li class="comeco">
-          <a class="botao" id="botao-I">
-            <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-          </a>
-          <ul class="sub-menus" id="sub-menus-I">
-            <li><a href="comecar-ambiente.html">
-                <p>Ambiente</p>
-              </a></li>
-            <li><a href="comecar-habitos.html">
-                <p>Hábitos</p>
-              </a></li>
-          </ul>
-        </li>
-        <li><a href="testeHoras.html">
-            <p class="link-base">Teste de Horas</p>
-          </a></li>
-        <li>
-          <a href="quiz.html">
-            <p class="link-base">Quiz</p>
-          </a>
-        </li>
-        <li class="cuidados">
-          <a class="botao-II" id="botao-II">
-            <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-          </a>
-          <ul class="sub-menus-II" id="sub-menus-II">
-            <li><a href="cuidados-postura.html">
-                <p>Postura</p>
-              </a></li>
-            <li><a href="cuidados-luz-solar.html">
-                <p>Luz Solar</p>
-              </a></li>
-            <li><a href="cuidados-burnout.html">
-                <p>Burn-out</p>
-              </a></li>
-            <li><a href="cuidados-telas.html">
-                <p>Telas</p>
-              </a></li>
-          </ul>
-        </li>
-        <li class="sobre-nos">
-          <a class="botao-III" id="botao-III">
-            <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-          </a>
-          <ul class="sub-menus" id="sub-menus-III">
-            <li><a href="sobreNos.html">
-                <p>Nós</p>
-              </a></li>
-            <li><a href="sobre-o-projeto.html">
-                <p>Projeto</p>
-              </a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="sub-menu-header" id="sub-menu-bar">
-        <li class="theme">
-          <button id="themeButtonOff" class="theme"><span>Light </span><img class="buttonOff"
-              src="img/icons/botao-desligado.png" alt="icon/off"></button>
-
-          <button id="themeButtonOn" class="theme" style="display: none;"><span>Dark</span><img class="buttonOn"
-              src="img/icons/botao-desligado.png" alt="icon/on"></button>
-        </li>
-      </ul>
-    </nav>
-  </header>
-  <main style="padding: 6vw 3vw 0px 3vw;" id="topo">
-    <div class="botoes">
-      <a href="#"><button class="seta-voltar" id="setaVoltar" class><img src="img/icons/seta-voltar.svg"
-            alt="seta/icon"></button></a>
-    </div>
-    <!-- para não ficar atrás do header fixo -->
-    <section class="s1">
-      <h2>Sobre o Projeto</h2>
-      <p>Esta página armazena o histórico de desenvolvimento do site.</p>
-    </section>
-
-    <section class="s2" style="text-align: start;">
-      <h2 style="text-align: center;">Equipe</h2>
-      <p id="texto">
-        Entre os desenvolvedores, os papéis foram divididos conforme a
-        necessidade do projeto:
-      </p>
-      <ul>
-        <li id="texto">
-          <strong style="font-weight: 600;">Programação:</strong> Mateus – O lider do projeto e programador principal.
-        </li>
-        <li id="texto">
-          <strong style="font-weight: 600;">Programação:</strong> Davi – Vice-lider do projeto e programador principal.
-        </li>
-        <li id="texto">
-          <strong style="font-weight: 600;">Programação:</strong> Felipe – cuidou da programação do site.
-        </li>
-        <li id="texto">
-          <strong style="font-weight: 600;">Organização:</strong> Bruno – cuidou do conteúdo e de como
-          ele seria encaixado no site.
-        </li>
-        <li id="texto">
-          <strong style="font-weight: 600;">Design:</strong> Maico – cuidou do design do site e organizador das redes
-          sociais.
-        </li>
-        <li id="texto">
-          <strong style="font-weight: 600;">Design:</strong> Camilly – cuidou do design do site e secretária.
-        </li>
-      </ul>
-    </section>
-
-    <!-- Cores e Layout -->
-    <section class="s2">
-      <h2>Cores e Layout</h2>
-      <h3>Cores</h3>
-      <p id="texto">
-        A cor principal escolhida foi <strong>azul</strong>, decidida por
-        Camilly e Felipe, pois combinava com o cabeçalho, rodapé e
-        transmitia
-        a ideia de saúde. O fundo permaneceu <strong>branco</strong>.
-      </p>
-
-      <h3>Layout</h3>
-      <p id="texto">
-        Foi definido ao longo do desenvolvimento, alinhando imagens, vídeos
-        e
-        textos para manter harmonia visual.
-      </p>
-    </section>
-
-    <!-- Referências -->
-    <section class="s3">
-      <h2>Referências de Conteúdos</h2>
-      <section class="listaDeArticle">
-
-        <div>
-          <h3>Uso de Telas</h3>
-          <p id="texto">
-            O uso excessivo pode causar insônia, fadiga ocular, sedentarismo
-            e
-            problemas de concentração.
-          </p>
-          <a href="https://imprensa.portaldaindustria.com.br/posicionamentos/sesi-saude-responde-como-o-excesso-de-telas-pode-impactar-sua-saude/"
-            target="_blank" rel="noopener noreferrer">Fonte</a>
-        </div>
-
-        <div>
-          <h3>Postura Correta</h3>
-          <p id="texto">
-            Coluna apoiada, pés no chão, joelhos a 90°, tela na altura dos
-            olhos
-            e pulsos alinhados.
-          </p id="texto">
-          <a href="https://clinimedjoinville.com.br/qual-a-postura-correta-no-computador-segundo-a-ergonomia/"
-            target="_blank" rel="noopener noreferrer">Fonte</a><br />
-          <a href="https://hobeirario.com.br/wp-content/uploads/2018/09/como-deve-ser-a-postura-da-pessoa-na-frente-do-computador.jpg"
-            target="_blank" rel="noopener noreferrer">Imagem</a>
-        </div>
-
-        <div>
-          <h3>Saúde Física – Tomar Sol</h3>
-          <p id="texto">
-            Exposição antes das 10h ou após as 16h, com protetor solar,
-            garante
-            vitamina D sem riscos.
-          </p>
-          <a href="https://www.loreal-paris.com.br/melhor-horario-para-tomar-sol" target="_blank"
-            rel="noopener noreferrer">Fonte</a>
-        </div>
-
-        <div>
-          <h3>Burnout em Programadores</h3>
-          <p id="texto">
-            O excesso de carga e pressão leva ao esgotamento físico e
-            mental.
-            Pausas e equilíbrio são essenciais.
-          </p>
-          <a href="https://ubiminds.com/pt-br/burnout-de-programadores/" target="_blank" rel="noopener noreferrer"
-            id="texto">Fonte</a>
-          <br /><a href="https://youtu.be/7hnmmBxexsg?si=dn3DzaQr75bhYRpr" target="_blank" rel="noopener noreferrer"
-            id="texto">Vídeo</a>
-        </div>
-
-        <div>
-          <h3>Boas Práticas de Programação</h3>
-          <ul>
-            <li id="texto">
-              <strong>Indentação:</strong> garante legibilidade e
-              manutenção.
-              <a href="https://www.geeksforgeeks.org/software-engineering/coding-standards-and-guidelines/"
-                target="_blank" rel="noopener noreferrer" id="texto">Fonte</a>
-            </li>
-            <li id="texto">
-              <strong>Comentários e Documentação:</strong> facilitam
-              entendimento e colaboração.
-              <a href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html" target="_blank"
-                rel="noopener noreferrer" id="texto">Fonte</a>
-            </li>
-            <li id="texto">
-              <strong>Pacotes (Packages):</strong> organizam arquivos em
-              módulos.
-              <a href="https://www.baeldung.com/java-packages" target="_blank" rel="noopener noreferrer"
-                id="texto">Fonte</a>
-            </li>
-          </ul>
-        </div>
-        </div>
+      <!-- para não ficar atrás do header fixo -->
+      <section class="s1">
+        <h2>Sobre o Projeto</h2>
+        <p>Esta página armazena o histórico de desenvolvimento do site.</p>
       </section>
-      <section class="atas">
-        <h2>Atas da Equipe</h2>
-        <p>
-          As atas são os registros dos encontros da equipe, deixando claro o
-          que foi discutido,
-          quem está contribuindo, quem está faltando e outros pontos
-          importantes sobre o andamento do grupo.
+
+      <section class="s2" style="text-align: start;">
+        <h2 style="text-align: center;">Equipe</h2>
+        <p class="texto">
+          Entre os desenvolvedores, os papéis foram divididos conforme a
+          necessidade do projeto:
+        </p>
+        <ul>
+          <li class="texto">
+            <strong style="font-weight: 600;">Programação:</strong> Mateus – O
+            lider do projeto e programador principal.
+          </li>
+          <li class="texto">
+            <strong style="font-weight: 600;">Programação:</strong> Davi –
+            Vice-lider do projeto e programador principal.
+          </li>
+          <li class="texto">
+            <strong style="font-weight: 600;">Programação:</strong> Felipe –
+            cuidou da programação do site.
+          </li>
+          <li class="texto">
+            <strong style="font-weight: 600;">Organização:</strong> Bruno –
+            cuidou do conteúdo e de como
+            ele seria encaixado no site.
+          </li>
+          <li class="texto">
+            <strong style="font-weight: 600;">Design:</strong> Maico – cuidou do
+            design do site e organizador das redes sociais.
+          </li>
+          <li class="texto">
+            <strong style="font-weight: 600;">Design:</strong> Camilly – cuidou
+            do design do site e secretária.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Cores e Layout -->
+      <section class="s2">
+        <h2>Cores e Layout</h2>
+        <h3>Cores</h3>
+        <p class="texto">
+          A cor principal escolhida foi <strong>azul</strong>, decidida por
+          Camilly e Felipe, pois combinava com o cabeçalho, rodapé e
+          transmitia
+          a ideia de saúde. O fundo permaneceu <strong>branco</strong>.
         </p>
 
-        <section class="cards">
-          <div class="card">
-            <h3>Primeira Reunião – 11/04</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Reunimos o grupo</li>
-              <li>Tivemos uma conversa sobre o tema</li>
-              <li>Começamos a decidir como vai ser o layout</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram</p>
+        <h3>Layout</h3>
+        <p class="texto">
+          Foi definido ao longo do desenvolvimento, alinhando imagens, vídeos
+          e
+          textos para manter harmonia visual.
+        </p>
+      </section>
+
+      <!-- Referências -->
+      <section class="s3">
+        <h2>Referências de Conteúdos</h2>
+        <section class="listaDeArticle">
+
+          <div>
+            <h3>Uso de Telas</h3>
+            <p class="texto">
+              O uso excessivo pode causar insônia, fadiga ocular, sedentarismo
+              e
+              problemas de concentração.
+            </p>
+            <a
+              href="https://imprensa.portaldaindustria.com.br/posicionamentos/sesi-saude-responde-como-o-excesso-de-telas-pode-impactar-sua-saude/"
+              target="_blank" rel="noopener noreferrer">Fonte</a>
           </div>
 
-          <div class="card">
-            <h3>Segunda Reunião – 11/07</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Decidimos o tema</li>
-              <li>Fizemos a iniciação do projeto</li>
-              <li>Definimos o papel de cada um do grupo</li>
-              <li>Conversas sobre o projeto</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Maico</p>
+          <div>
+            <h3>Postura Correta</h3>
+            <p class="texto">
+              Coluna apoiada, pés no chão, joelhos a 90°, tela na altura dos
+              olhos
+              e pulsos alinhados.
+            </p>
+            <a
+              href="https://clinimedjoinville.com.br/qual-a-postura-correta-no-computador-segundo-a-ergonomia/"
+              target="_blank" rel="noopener noreferrer">Fonte</a><br>
+            <a
+              href="https://hobeirario.com.br/wp-content/uploads/2018/09/como-deve-ser-a-postura-da-pessoa-na-frente-do-computador.jpg"
+              target="_blank" rel="noopener noreferrer">Imagem</a>
           </div>
 
-          <div class="card">
-            <h3>Terceira Reunião – 18/07</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Organização dos arquivos</li>
-              <li>Procurando referências para o projeto</li>
-              <li>Divisões de trabalho</li>
-              <li>Elaboração do nome fantasioso do nosso grupo</li>
-              <li>Organizações das reuniões</li>
-              <li>Organizações dos documentos</li>
-              <li>Iniciação da criação do layout</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram</p>
+          <div>
+            <h3>Saúde Física – Tomar Sol</h3>
+            <p class="texto">
+              Exposição antes das 10h ou após as 16h, com protetor solar,
+              garante
+              vitamina D sem riscos.
+            </p>
+            <a
+              href="https://www.loreal-paris.com.br/melhor-horario-para-tomar-sol"
+              target="_blank"
+              rel="noopener noreferrer">Fonte</a>
           </div>
 
-          <div class="card">
-            <h3>Quarta Reunião – 15/08</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Início da criação do layout</li>
-              <li>Escolher um nome fictício</li>
-              <li>Criação da rede social</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Mateus</p>
+          <div>
+            <h3>Burnout em Programadores</h3>
+            <p class="texto">
+              O excesso de carga e pressão leva ao esgotamento físico e
+              mental.
+              Pausas e equilíbrio são essenciais.
+            </p>
+            <a href="https://ubiminds.com/pt-br/burnout-de-programadores/"
+              target="_blank"
+              rel="noopener noreferrer" class="texto">Fonte</a>
+            <br><a href="https://youtu.be/7hnmmBxexsg?si=dn3DzaQr75bhYRpr"
+              target="_blank"
+              rel="noopener noreferrer" class="texto">Vídeo</a>
           </div>
 
-          <div class="card">
-            <h3>Quinta Reunião – 22/08</h3>
-            <h4>O que foi feito:</h4>
+          <div>
+            <h3>Boas Práticas de Programação</h3>
             <ul>
-              <li>Conversas e criação de ideias para o site</li>
-              <li>Início da base do CSS</li>
-              <li>Organização das páginas</li>
-              <li>Organização da rede social</li>
-              <li>Início da montagem</li>
-              <li>Criação da página</li>
+              <li class="texto">
+                <strong>Indentação:</strong> garante legibilidade e
+                manutenção.
+                <a
+                  href="https://www.geeksforgeeks.org/software-engineering/coding-standards-and-guidelines/"
+                  target="_blank" rel="noopener noreferrer"
+                  class="texto">Fonte</a>
+              </li>
+              <li class="texto">
+                <strong>Comentários e Documentação:</strong> facilitam
+                entendimento e colaboração.
+                <a
+                  href="https://docs.oracle.com/javase/8/docs/technotes/tools/windows/javadoc.html"
+                  target="_blank"
+                  rel="noopener noreferrer" class="texto">Fonte</a>
+              </li>
+              <li class="texto">
+                <strong>Pacotes (Packages):</strong> organizam arquivos em
+                módulos.
+                <a href="https://www.baeldung.com/java-packages"
+                  target="_blank" rel="noopener noreferrer"
+                  class="texto">Fonte</a>
+              </li>
             </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram</p>
           </div>
-
-          <div class="card">
-            <h3>Sexta Reunião – 12/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Ideias de cores e elementos nas páginas</li>
-              <li>Terminando a página Cuidados</li>
-              <li>Refazer a página do index</li>
-              <li>Acrescentando conteúdo na base do projeto</li>
-              <li>Fazer as páginas do HTML no Canva</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Davi</p>
-          </div>
-
-          <div class="card">
-            <h3>Sétima Reunião – 13/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Codação do index</li>
-              <li>Continuação das páginas</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Camilly, Felipe e Bruno</p>
-          </div>
-
-          <div class="card">
-            <h3>Oitava Reunião – 16/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Melhorias nas edições</li>
-              <li>Criação de atividades para as redes sociais</li>
-              <li>Continuação das páginas no Canva</li>
-              <li>Fazer as edições das redes sociais</li>
-              <li>Separação dos conteúdos das páginas</li>
-              <li>Ajudar e cuidar das páginas</li>
-              <li>Fazer o burnout</li>
-              <li>Página da luz solar</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram</p>
-          </div>
-
-          <div class="card">
-            <h3>Nona Reunião – 17/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Melhorias nas páginas</li>
-              <li>Complementando algumas coisas do documento do trabalho</li>
-              <li>Ajudar a fazer a página de cuidados</li>
-              <li>Criando páginas</li>
-              <li>Criando os submenus</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Maico</p>
-          </div>
-
-          <div class="card">
-            <h3>Décima Reunião – 18/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Complementos e padronizar todos cuidados das páginas</li>
-              <li>Criações das subpáginas</li>
-              <li>Organizações das páginas e complementar tags</li>
-              <li>Preparação para inaugurar a apresentação para amanhã</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram</p>
-          </div>
-
-          <div class="card">
-            <h3>Décima Primeira Reunião – 19/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>Conversas para apresentação</li>
-              <li>Edição no Canva da página Início</li>
-              <li>Arrumar pequenos erros</li>
-              <li>Edição de páginas</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram</p>
-          </div>
-
-          <div class="card">
-            <h3>Décima Segunda Reunião – 26/09</h3>
-            <h4>O que foi feito:</h4>
-            <ul>
-              <li>As 4 Responsabilidades das páginas</li>
-              <li>Terminando páginas</li>
-              <li>Arrumando os cards de referência de conteúdo</li>
-              <li>Fazendo as atas do dia</li>
-              <li>Conferindo as páginas para o projeto</li>
-              <li>Finalizando o projeto</li>
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Maico</p>
-          </div>
-
-          <div class="card">
-            <h3>Decimo Terceira dia 03/10</h3>
-            <h4> O que vai ser feito:</h4>
-            <ul>
-
-              <li>As paginas no canva</li>
-              <li>Revendo as paginas</li>
-              <li>Terminando tema escuro</li>
-              <li>Deixando o header responsivo</li>
-              <li>Resolvendo as saidas de dados</li>
-              <li>Arrumando erros de Portugues</li>
-
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram;</p>
-          </div>
-
-          <div class="card">
-            <h3>Decimo quarto dia 24/10 </h3>
-            <h4>O que vai ser feito:</h4>
-            <ul>
-
-              <li>Revendo melhorias para o site</li>
-              <li>Revisão das paginas</li>
-              <li>Corrigindo os erros do Html e css</li>
-              <li>Selecionando a ata do dia </li>
-              <li>Verificando o site por geral</li>
-
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram;</p>
-          </div>
-
-          <div class="card">
-            <h3>Decimo quinto dia 31/10</h3>
-            <h4>O que vai ser feito;</h4>
-            <ul>
-
-              <li>Arrumando os erros do validador (Todos)</li>
-
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram;</p>
-          </div>
-
-          <div class="card">
-            <h3>Decimo sexto dia 14/11</h3>
-            <h4>O que vai ser feito;</h4>
-            <ul>
-
-              <li>Sexta passada arrumamos e validamos erros pequenos.</li>
-              <li>hoje fizemos a mesma coisa na aula passada.</li>
-
-            </ul>
-            <h4>Quem faltou:</h4>
-            <p>Todos vieram;</p>
-          </div>
-          
         </section>
       </section>
-  </main>
-  <footer id="footer">
-    <ul>
-      <li class="footer-contact">
-        <h4>Contato</h4>
-        <section class="midia">
-          <a href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
-            target="_blank"><img src="img/icons/instagram-brands-solid-full.svg" alt="midia/insta"></a>
+        <section class="atas">
+          <h2>Atas da Equipe</h2>
+          <p>
+            As atas são os registros dos encontros da equipe, deixando claro o
+            que foi discutido,
+            quem está contribuindo, quem está faltando e outros pontos
+            importantes sobre o andamento do grupo.
+          </p>
+
+          <section class="cards">
+            <div class="card">
+              <h3>Primeira Reunião – 11/04</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Reunimos o grupo</li>
+                <li>Tivemos uma conversa sobre o tema</li>
+                <li>Começamos a decidir como vai ser o layout</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Todos vieram</p>
+            </div>
+
+            <div class="card">
+              <h3>Segunda Reunião – 11/07</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Decidimos o tema</li>
+                <li>Fizemos a iniciação do projeto</li>
+                <li>Definimos o papel de cada um do grupo</li>
+                <li>Conversas sobre o projeto</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Maico</p>
+            </div>
+
+            <div class="card">
+              <h3>Terceira Reunião – 18/07</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Organização dos arquivos</li>
+                <li>Procurando referências para o projeto</li>
+                <li>Divisões de trabalho</li>
+                <li>Elaboração do nome fantasioso do nosso grupo</li>
+                <li>Organizações das reuniões</li>
+                <li>Organizações dos documentos</li>
+                <li>Iniciação da criação do layout</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Todos vieram</p>
+            </div>
+
+            <div class="card">
+              <h3>Quarta Reunião – 15/08</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Início da criação do layout</li>
+                <li>Escolher um nome fictício</li>
+                <li>Criação da rede social</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Mateus</p>
+            </div>
+
+            <div class="card">
+              <h3>Quinta Reunião – 22/08</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Conversas e criação de ideias para o site</li>
+                <li>Início da base do CSS</li>
+                <li>Organização das páginas</li>
+                <li>Organização da rede social</li>
+                <li>Início da montagem</li>
+                <li>Criação da página</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Todos vieram</p>
+            </div>
+
+            <div class="card">
+              <h3>Sexta Reunião – 12/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Ideias de cores e elementos nas páginas</li>
+                <li>Terminando a página Cuidados</li>
+                <li>Refazer a página do index</li>
+                <li>Acrescentando conteúdo na base do projeto</li>
+                <li>Fazer as páginas do HTML no Canva</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Davi</p>
+            </div>
+
+            <div class="card">
+              <h3>Sétima Reunião – 13/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Codação do index</li>
+                <li>Continuação das páginas</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Camilly, Felipe e Bruno</p>
+            </div>
+
+            <div class="card">
+              <h3>Oitava Reunião – 16/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Melhorias nas edições</li>
+                <li>Criação de atividades para as redes sociais</li>
+                <li>Continuação das páginas no Canva</li>
+                <li>Fazer as edições das redes sociais</li>
+                <li>Separação dos conteúdos das páginas</li>
+                <li>Ajudar e cuidar das páginas</li>
+                <li>Fazer o burnout</li>
+                <li>Página da luz solar</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Todos vieram</p>
+            </div>
+
+            <div class="card">
+              <h3>Nona Reunião – 17/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Melhorias nas páginas</li>
+                <li>Complementando algumas coisas do documento do trabalho</li>
+                <li>Ajudar a fazer a página de cuidados</li>
+                <li>Criando páginas</li>
+                <li>Criando os submenus</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Maico</p>
+            </div>
+
+            <div class="card">
+              <h3>Décima Reunião – 18/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Complementos e padronizar todos cuidados das páginas</li>
+                <li>Criações das subpáginas</li>
+                <li>Organizações das páginas e complementar tags</li>
+                <li>Preparação para inaugurar a apresentação para amanhã</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Todos vieram</p>
+            </div>
+
+            <div class="card">
+              <h3>Décima Primeira Reunião – 19/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>Conversas para apresentação</li>
+                <li>Edição no Canva da página Início</li>
+                <li>Arrumar pequenos erros</li>
+                <li>Edição de páginas</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Todos vieram</p>
+            </div>
+
+            <div class="card">
+              <h3>Décima Segunda Reunião – 26/09</h3>
+              <h4>O que foi feito:</h4>
+              <ul>
+                <li>As 4 Responsabilidades das páginas</li>
+                <li>Terminando páginas</li>
+                <li>Arrumando os cards de referência de conteúdo</li>
+                <li>Fazendo as atas do dia</li>
+                <li>Conferindo as páginas para o projeto</li>
+                <li>Finalizando o projeto</li>
+              </ul>
+              <h4>Quem faltou:</h4>
+              <p>Maico</p>
+            </div>
+          </section>
         </section>
-      </li>
-      <li class="logo">
-        <img src="img/logo_PI-fundo_removido.png" alt="logo-site" width="150px" height="150px">
-      </li>
-      <li class="linkRp">
-        <h4>Links Rápidos</h4>
-        <ul>
-          <li><a href="Inicio.html">Início</a></li>
-          <li><a href="testHrs.html">Teste de Horas</a></li>
-          <li><a href="rotinas.html">Rotinas</a></li>
-          <li><a href="cuidados.html">Cuidados</a></li>
-          <li><a href="sobreNos.html">Sobre nós</a></li>
-        </ul>
-      </li>
-    </ul>
+        <footer id="footer">
+          <ul>
+            <li class="footer-contact">
+              <h4>Contato</h4>
+              <a
+                href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                target="_blank" rel="noopener noreferrer"><img
+                  src="img/icons/instagram-brands-solid-full.svg"
+                  alt="Instagram do Dev-Saúde" class="midia"></a>
+            </li>
+            <li>
+              <img src="img/logo_PI-fundo_removido-nova.png" alt="logo-site"
+                class="logo">
+            </li>
+            <li class="linkRp">
+              <h4>Links Rápidos</h4>
+              <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="testeHoras.html">Teste de Horas</a></li>
+                <li><a href="rotinas.html">Rotinas</a></li>
+                <li><a href="cuidados.html">Cuidados</a></li>
+                <li><a href="sobreNos.html">Sobre nós</a></li>
+              </ul>
+            </li>
+          </ul>
 
-    <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
-  </footer>
-  <script src="js/sob-proj-theme.js"></script>
-  <script src="js/header-responsivo.js"></script>
-</body>
-
-</html>
+          <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
+        </footer>
+        <script src="js/sob-proj-theme.js"></script>
+        <script src="js/header-responsivo.js"></script>
+      </main>
+    </body>
+  </html>
