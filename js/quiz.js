@@ -52,6 +52,7 @@ const questions = [
     ],
     correct: 1,
     explanation:
+      "Funções gigantes e confusas são o 'junk food' da programação - podem até funcionar, mas prejudicam a saúde do projeto!",
     question:
       "O que se assemelha ao exercício físico regular no mundo da programação?",
     options: [
@@ -125,7 +126,7 @@ const questions = [
     ],
     correct: 2,
     explanation:
-      "Dependências desnecessárias são como o excesso de medicamentos - podem causar mais problemas do que soluções!"    "Funções gigantes e confusas são o 'junk food' da programação - podem até funcionar, mas prejudicam a saúde do projeto!",
+      "Dependências desnecessárias são como o excesso de medicamentos - podem causar mais problemas do que soluções!",
   },
   {
     question:
