@@ -388,10 +388,11 @@ display: none;
           display: flex;
           padding-top: 4vw;
           justify-content: space-between;
-          align-items: baseline;
+          align-items: center;
           z-index: 20;
+          padding-bottom: 4vw;
           a img {
-            margin-right: 2vw;
+            margin-right: 3vw;
             height: 10vw;
           }
 

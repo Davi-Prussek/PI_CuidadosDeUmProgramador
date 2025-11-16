@@ -76,16 +76,8 @@ html {
               color: #003366;
               font-size: 90px;
               display: flex;
-              gap: 5px;
-              margin-bottom: 20px;
+              gap: 40px;
 
-              .ruim {
-                color: rgb(115, 0, 0);
-              }
-
-              .bom {
-                color: rgb(31, 126, 31);
-              }
 
               .img-certo {
                 background-color: rgb(31, 126, 31);
@@ -101,6 +93,15 @@ html {
                 border-radius: 10px;
               }
             }
+              .ruim {
+                font-size: 90px;
+                color: rgb(115, 0, 0);
+              }
+              .bom {
+                font-size: 90px;
+                color: rgb(31, 126, 31);
+              }
+
 
             .amb-bom,
             .amb-ruim {

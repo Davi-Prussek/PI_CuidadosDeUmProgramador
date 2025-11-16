@@ -1,0 +1,121 @@
+html {
+  font-size: calc(12px + 0.95vw);
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #0056b3;
+
+  scrollbar-width: none;
+
+  body {
+    background-color: #f9fbff;
+    main {
+      .main-top {
+        div {
+          position: relative;
+          padding-top: 10vw;
+          color: white;
+          background-color: rgba(0, 0, 0, 0.5);
+          background-image: url(https://img.freepik.com/free-photo/panoramic-view-river_1359-769.jpg?semt=ais_hybrid&w=740&q=80);
+          background-blend-mode: multiply;
+          background-size: 100%;
+          background-repeat: no-repeat;
+          h2 {
+            text-align: center;
+            font-size: 13vw;
+            font-family: "Courier New", Courier, monospace;
+          }
+          p {
+            text-align: center;
+            font-size: 1.4vw;
+            padding-inline: 15vw;
+            line-height: 2vw;
+            padding-bottom: 10vw;
+          }
+        }
+        .decoration {
+          position: absolute;
+          bottom: 0px;
+          background: transparent;
+          #router-pages {
+            border-top-right-radius: 10vw;
+            width: fit-content;
+            padding: 0.3vw 3vw;
+            padding-top: 0.8vw;
+            background-color: white;
+            justify-content: left;
+            display: flex;
+            gap: 6vw;
+            li button {
+              cursor: pointer;
+              border: none;
+              background-color: transparent;
+              font-size: 2vw;
+              display: flex;
+              gap: 0.2vw;
+              align-items: center;
+              padding: 0.3vw 1vw;
+              img {
+                height: 2.5vw;
+              }
+            }
+            li button:hover {
+              background-color: #4882bf;
+              border-radius: 15px;
+            }
+          }
+        }
+      }
+      .main {
+        .main-content {
+          #postura,
+          #luz-solar,
+          #burn-out,
+          #telas {
+            background-color: white;
+            h2 {
+              text-align: center;
+              font-size: 3vw;
+              padding: 3vw 3vw;
+              color: #0056b3;
+              /*background: linear-gradient(90deg, #0056b3, #00bfff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;*/
+            }
+            .template-I {
+              display: flex;
+              justify-content: center;
+              gap: 5vw;
+              margin-inline: 10vw;
+              .card-text {
+                p {
+                  text-align: center;
+                  background: linear-gradient(#0056b3, #004996);
+                  color: white;
+                  border-radius: 2vw;
+                  padding: 1vw 2vw;
+                  margin-bottom: 2vw;
+                  line-height: 2.3vw;
+                }
+              }
+              .card-img {
+                background-color: #4882bf;
+                padding: 2vw 3vw;
+                border-radius: 10px;
+                height: fit-content;
+                h3 {
+                  color: white;
+                  font-size: 3vw;
+                  padding: 2vw 0;
+                }
+                img {
+                  border-radius: 20px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

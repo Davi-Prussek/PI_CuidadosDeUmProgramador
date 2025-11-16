@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev-Saúde | Início</title>
+    <link rel="stylesheet" href="CSS/Reset.CSS" />
+    <link rel="stylesheet" href="CSS/cuidados-II.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/header-footer-global.css" />
+  </head>
+
+  <body>
+    <!-- header -->
+    <header id="header">
+      <button id="menu-responsivo">
+        <img src="img/icons/menu.svg" alt="menu/icon" />
+      </button>
+      <a href="index.html" id="titulo_sobreNos"
+        ><img src="img/logo_PI-fundo_removido-nova.png" alt=""
+      /></a>
+      <nav id="nav">
+        <div id="segundo-titulo">
+          <h1>
+            <a href="index.html" id="titulo_sobreNos-II"
+              ><img
+                class="titulo-responsivo"
+                src="img/logo_PI-fundo_removido-nova.png"
+                alt="titulo-responsivo"
+            /></a>
+          </h1>
+        </div>
+        <ul class="direcionar_sobreNos">
+          <li>
+            <a href="index.html">
+              <p>Início</p>
+            </a>
+          </li>
+          <li class="comeco">
+            <a class="botao" id="botao-I">
+              <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            </a>
+            <ul class="sub-menus" id="sub-menus-I">
+              <li>
+                <a href="comecar-ambiente.html">
+                  <p>Ambiente</p>
+                </a>
+              </li>
+              <li>
+                <a href="comecar-habitos.html">
+                  <p>Hábitos</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="testeHoras.html">
+              <p class="link-base">Teste de Horas</p>
+            </a>
+          </li>
+          <li>
+            <a href="quiz.html">
+              <p class="link-base">Quiz</p>
+            </a>
+          </li>
+          <li class="cuidados">
+            <a class="botao-II" id="botao-II">
+              <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            </a>
+            <ul class="sub-menus-II" id="sub-menus-II">
+              <li>
+                <a href="cuidados-postura.html">
+                  <p>Postura</p>
+                </a>
+              </li>
+              <li>
+                <a href="cuidados-luz-solar.html">
+                  <p>Luz Solar</p>
+                </a>
+              </li>
+              <li>
+                <a href="cuidados-burnout.html">
+                  <p>Burn-out</p>
+                </a>
+              </li>
+              <li>
+                <a href="cuidados-telas.html">
+                  <p>Telas</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li class="sobre-nos">
+            <a class="botao-III" id="botao-III">
+              <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            </a>
+            <ul class="sub-menus" id="sub-menus-III">
+              <li>
+                <a href="sobreNos.html">
+                  <p>Nós</p>
+                </a>
+              </li>
+              <li>
+                <a href="sobre-o-projeto.html">
+                  <p>Projeto</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="sub-menu-header" id="sub-menu-bar">
+          <li class="theme">
+            <button id="themeButtonOff" class="theme">
+              <span>Light </span
+              ><img
+                class="buttonOff"
+                src="img/icons/botao-desligado.png"
+                alt="icon/off"
+              />
+            </button>
+
+            <button id="themeButtonOn" class="theme" style="display: none">
+              <span>Dark</span
+              ><img
+                class="buttonOn"
+                src="img/icons/botao-desligado.png"
+                alt="icon/on"
+              />
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- main -->
+    <main>
+      <section class="main-top">
+        <div>
+          <h2>Cuidados</h2>
+          <p>
+            Aprenda um pouco o que pode ser prejudicial para seu corpo e mente e
+            descubra formas de melhorar hábitos ruins
+          </p>
+                <div class="decoration">
+          <ul id="router-pages">
+            <li>
+              <button id="postura-router">
+                <img src="img/icons/postura.png" alt="postura/icon" />Postura
+              </button>
+            </li>
+            <li>
+              <button id="luz-solar-router">
+                <img src="img/icons/luz-solar.svg" alt="luz/icon" />Luz Solar
+              </button>
+            </li>
+            <li>
+              <button id="burn-out-router">
+                <img src="img/icons/burnOut.svg" alt="burn-out/icon" />Burn Out
+              </button>
+            </li>
+            <li>
+              <button id="telas-router">
+                <img src="img/icons/telinha.svg" alt="tela/icon" />Telas
+              </button>
+            </li>
+          </ul>
+        </div>
+        </div>
+      </section>
+      <section class="main">
+        <div class="main-content">
+          <div id="postura">
+            <h2>Postura correta no computador</h2>
+
+            <div>
+              <div class="template-I">
+                <div class="card-text">
+                <p id="texto">
+                  Uma postura adequada inclui coluna apoiada, pés no chão,
+                  joelhos a 90°, tela na altura dos olhos e pulsos alinhados.
+                  Além disso, alongamentos regulares ajudam a prevenir dores e
+                  lesões.
+                </p>
+                <p id="texto">
+                  Manter a postura correta no computador é essencial para evitar
+                  dores e preservar a saúde ao longo do tempo. Confira algumas
+                  orientações práticas que ajudam a manter o corpo alinhado
+                  durante o uso do computador:
+                </p>
+                </div>
+                <div class="card-img">
+                <h3>Exemplo de postura correta</h3>
+                <img
+                  src="img/postura-computador.jpg"
+                  alt="Exemplo de postura correta no computador"
+                />
+                </div>
+              </div>
+              <div class="template-II">
+              <h3>Dicas para manter a postura</h3>
+              <ul class="lista">
+                <li id="texto">
+                  <span>Coluna apoiada:</span> mantenha as costas retas e
+                  encostadas no encosto da cadeira.
+                </li>
+                <li id="texto">
+                  <span>Pés firmes no chão:</span> as solas devem estar apoiadas
+                  no chão ou em um suporte.
+                </li>
+                <li id="texto">
+                  <span>Joelhos a 90°:</span> mantenha o ângulo reto para não
+                  sobrecarregar a lombar.
+                </li>
+                <li id="texto">
+                  <span>Altura da mesa e cadeira:</span> ajuste para que fiquem
+                  niveladas, sem forçar o corpo.
+                </li>
+                <li id="texto">
+                  <span>Monitor na altura dos olhos:</span> posicione a tela a
+                  um braço de distância, sem precisar abaixar ou levantar a
+                  cabeça.
+                </li>
+                <li id="texto">
+                  <span>Pulsos e cotovelos:</span> mantenha os pulsos alinhados
+                  e cotovelos apoiados para reduzir a sobrecarga.
+                </li>
+                <li id="texto">
+                  <span>Cuidados extras:</span> faça pausas de 10 a 15 minutos
+                  por hora, alongue-se e movimente o corpo.
+                </li>
+              </ul>
+              <a
+                href="https://clinimedjoinville.com.br/qual-a-postura-correta-no-computador-segundo-a-ergonomia/"
+                class="btn-link"
+                target="_blank"
+                >🔗 Saiba mais sobre postura no computador</a
+              >
+              </div>
+            </div>
+          </div>
+
+          <div id="luz-solar">
+            <h2>Luz Solar</h2>
+
+            <div id="texto">
+              A exposição solar antes das 10h ou após as 16h, com protetor
+              solar, é ideal para síntese de vitamina D sem riscos excessivos à
+              pele. Pessoas com pele mais escura precisam de mais tempo de
+              exposição para obter o mesmo benefício.
+            </div>
+
+            <div id="texto">
+              A dermatologista destaca o melhor horário para tomar sol. “O
+              melhor horário para tomar sol é antes das 10h ou após as 16h. Mas
+              mesmo assim tem que estar com o protetor solar”, alerta. Esses
+              horários são os mais recomendados, pois são aqueles que o sol é
+              mais brando e menos prejudicial à pele.
+              <span>Das 10h às 16h</span> há uma maior incidência de raios UVB
+              na atmosfera o que faz com que esses raios atinjam a pele com
+              maior intensidade, sendo prejudicial para a saúde do rosto.
+            </div>
+
+            <div id="texto">
+              Além disso, é importante encaixar na sua rotina pequenos momentos
+              para tomar sol e garantir os benefícios para sua pele. O
+              recomendado é que isso seja feito aos poucos e não um longo
+              período de exposição de uma vez, numa tentativa de correr atrás do
+              prejuízo dos últimos dias, o que pode ser prejudicial para a pele
+              pelo sol em excesso em um curto período de tempo.
+            </div>
+
+            <div id="texto">
+              Por isso, encaixe intervalos de 15 a 20 minutos para tomar sol e
+              garantir que a sua pele recebe os benefícios dessa prática. Para
+              pessoas com pele negra, o indicado é de 30 a 40 minutos, isso
+              porque a pele negra tem maior educativa com as crianças.
+            </div>
+
+            <a
+              href="https://www.loreal-paris.com.br/melhor-horario-para-tomar-sol"
+              class="btn-link"
+              target="_blank"
+            >
+              🔗 Saiba mais sobre a importância da luz solar
+            </a>
+          </div>
+
+          <div id="burn-out">
+            <h2>Burnout em programadores</h2>
+
+            <div id="texto">
+              O burnout é causado por excesso de carga, longas jornadas e
+              pressão constante, levando ao esgotamento físico e mental. Pausas,
+              hábitos saudáveis e equilíbrio entre vida pessoal e profissional
+              são essenciais para prevenção.
+            </div>
+
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/7hnmmBxexsg?si=zJ32SYjXavuDFANy"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+
+            <div id="texto">
+              O burnout de programadores é um problema generalizado que pode
+              impactar significativamente a produtividade, a satisfação no
+              trabalho e o bem-estar geral. Os desenvolvedores frequentemente se
+              encontram presos em um ciclo vicioso de longas horas, projetos
+              exigentes e pressão constante para entregar. Isso pode levar a um
+              estresse avassalador, exaustão e declínio na qualidade do
+              trabalho.
+            </div>
+
+            <div id="texto">
+              Este guia abrangente explorará as causas do esgotamento do
+              desenvolvedor de software, fornecerá dicas práticas para prevenção
+              e discutirá o papel dos empregadores em promover um ambiente de
+              trabalho saudável. Ao implementar essas estratégias, você pode
+              superar efetivamente o esgotamento da codificação e manter uma
+              carreira sustentável como desenvolvedor de software.
+            </div>
+
+            <h3>Causas do Burnout em Programadores</h3>
+            <ul class="lista">
+              <li id="texto">
+                <span>Cultura de trabalho tóxica:</span> Um ambiente de trabalho
+                negativo ou hostil pode criar estresse e ansiedade.
+              </li>
+              <li id="texto">
+                <span>Longas horas:</span> Trabalhar muito tempo sem pausas pode
+                causar fadiga e esgotamento.
+              </li>
+              <li id="texto">
+                <span>Alta carga de trabalho:</span> Excesso de tarefas e prazos
+                irreais aumentam o estresse.
+              </li>
+              <li id="texto">
+                <span>Falta de reconhecimento:</span> A desvalorização leva à
+                queda de motivação e satisfação.
+              </li>
+              <li id="texto">
+                <span>Estilo de vida pouco saudável:</span> Sono ruim, má
+                alimentação e falta de exercícios pioram <br />a situação.
+              </li>
+            </ul>
+
+            <a
+              href="https://ubiminds.com/pt-br/burnout-de-programadores/"
+              class="btn-link"
+              target="_blank"
+              >🔗 Saiba mais sobre o burnout em programadores</a
+            >
+          </div>
+
+          <div id="telas">
+            <h2>Uso de Telas e seus impactos</h2>
+
+            <div id="texto">
+              O uso excessivo de telas é cada vez mais comum no dia a dia e pode
+              afetar tanto crianças quanto adultos. Ele pode causar insônia,
+              fadiga ocular, sedentarismo, queda de concentração e até
+              alterações de humor e comportamento. Por outro lado, quando usado
+              de forma equilibrada, o uso de dispositivos digitais traz
+              benefícios, como acesso à informação, educação, comunicação e
+              entretenimento.
+            </div>
+
+            <h3>Principais cuidados e impactos do uso de telas</h3>
+            <ul class="lista">
+              <li id="texto">
+                <span>Impactos na saúde:</span> insônia, fadiga ocular,
+                estresse, sedentarismo e redução da concentração.
+              </li>
+              <li id="texto">
+                <span>Quando se preocupar:</span> se o tempo de tela atrapalha
+                sono, estudos, trabalho ou convívio social.
+              </li>
+              <li id="texto">
+                <span>Trabalho/estudo x lazer:</span> uso moderado para estudo
+                pode ser útil; lazer excessivo aumenta riscos psicológicos.
+              </li>
+              <li id="texto">
+                <span>Proteção do sono:</span> evitar telas 1-2 horas antes de
+                dormir e usar filtros de luz <br />azul.
+              </li>
+              <li id="texto">
+                <span>Saúde ocular:</span> manter distância mínima de 30 cm,
+                piscar com frequência e fazer pausas regulares.
+              </li>
+              <li id="texto">
+                <span>Concentração e humor:</span> uso contínuo de conteúdos
+                digitais pode reduzir foco e aumentar irritabilidade e
+                ansiedade.
+              </li>
+              <li id="texto">
+                <span>Socialização:</span> excesso de telas prejudica interações
+                presenciais e habilidades interpessoais.
+              </li>
+              <li id="texto">
+                <span>Equilíbrio:</span> definir horários sem telas, criar
+                ambientes offline e substituir o tempo digital por atividades
+                alternativas.
+              </li>
+            </ul>
+
+            <a
+              href="https://imprensa.portaldaindustria.com.br/posicionamentos/sesi-saude-responde-como-o-excesso-de-telas-pode-impactar-sua-saude/"
+              class="btn-link"
+              target="_blank"
+              >🔗 Saiba mais sobre o uso de telas</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer id="footer">
+      <ul>
+        <li class="footer-contact">
+          <h4>Contato</h4>
+          <a
+            href="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noopener noreferrer"
+            ><img
+              src="img/icons/instagram-brands-solid-full.svg"
+              alt="Instagram do Dev-Saúde"
+              class="midia"
+          /></a>
+        </li>
+        <li>
+          <img
+            src="img/logo_PI-fundo_removido-nova.png"
+            alt="logo-site"
+            class="logo"
+          />
+        </li>
+        <li class="linkRp">
+          <h4>Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="testeHoras.html">Teste de Horas</a></li>
+            <li><a href="rotinas.html">Rotinas</a></li>
+            <li><a href="cuidados.html">Cuidados</a></li>
+            <li><a href="sobreNos.html">Sobre nós</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
+    </footer>
+    <script src="js/cuidados-router.js"></script>
+    <script src="js/header-responsivo.js"></script>
+  </body>
+</html>
