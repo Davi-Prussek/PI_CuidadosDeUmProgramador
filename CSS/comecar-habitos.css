@@ -40,10 +40,7 @@ html {
       }
 
       h2 {
-        margin: 7vw 20vw 2vw 20vw;
-        border: 5px solid #0056b3;
         padding: 3vw 4vw;
-        border-radius: 3vw;
         text-align: center;
         span {
         color: #0056b3;
@@ -90,6 +87,7 @@ html {
         margin: 70px;
         background-color: #ffffff;
         color: #001f3d;
+        background-color: #001c43;
       }
 
       .botoes {

@@ -4,7 +4,7 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #f4f4f4;
-
+  scrollbar-width: none;
   body {
     main {
 
@@ -224,11 +224,8 @@ html {
               line-height: 1.3;
             }
           }
-
-
         }
-
       }
     }
-}
+  }
 }

@@ -174,8 +174,22 @@
 
         Todos Vieram;
 
-## DEcimo quinto dia 31/10
+## Decimo quinto dia 31/10
     ## O que vai ser feito;
         Arrumando os erros do validador (Todos)
+
+    ### Quem faltou:
+
+        Todos vieram;
+
+## Decimo sexto dia 14/11
+    ## O que vai ser feito;
+        Sexta passada, arrumamos e validamos erros pequenos.
+        hoje fizemos a mesma coisa na aula passada.
+
+    ### Quem faltou:
+
+        Todos vieram;
+
 
         

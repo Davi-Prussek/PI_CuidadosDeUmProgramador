@@ -1,95 +1,101 @@
-    <!DOCTYPE html>
-    <html lang="pt-br" id="desligado">
+<!DOCTYPE html>
+<html lang="pt-br" id="desligado">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/Reset.CSS" />
+    <link rel="stylesheet" href="CSS/comecar-ambiente.css" />
+    <link rel="stylesheet" href="CSS/header-global.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="CSS/header-footer-global.css" />
+  </head>
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="CSS/Reset.CSS">
-        <link rel="stylesheet" href="CSS/comecar-ambiente.css">
-        <link rel="stylesheet" href="CSS/header-global.css">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="CSS/header-footer-global.css">
-    </head>
+  <body id="body">
+  <header id="header">
+    <button id="menu-responsivo">
+      <img src="img/icons/menu.svg" alt="menu/icon" />
+    </button>
+    <a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido-nova.png" alt="" /></a>
+    <nav id="nav">
+      <div id="segundo-titulo">
+        <h1>
+          <a href="index.html" id="titulo_sobreNos-II"><img class="titulo-responsivo"
+              src="img/logo_PI-fundo_removido-nova.png" alt="titulo-responsivo" /></a>
+        </h1>
+      </div>
+      <ul class="direcionar_sobreNos">
+        <li>
+          <a href="index.html">
+            <p>Início</p>
+          </a>
+        </li>
+        <li class="comeco">
+          <a class="botao" id="botao-I">
+            <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+          </a>
+          <ul class="sub-menus" id="sub-menus-I">
+            <li>
+              <a href="comecar-ambiente.html">
+                <p>Ambiente</p>
+              </a>
+            </li>
+            <li>
+              <a href="comecar-habitos.html">
+                <p>Hábitos</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="testeHoras.html">
+            <p class="link-base">Teste de Horas</p>
+          </a>
+        </li>
+        <li>
+          <a href="quiz.html">
+            <p class="link-base">Quiz</p>
+          </a>
+        </li>
+        <li class="sobre-nos">
+          <a class="botao-III" id="botao-III">
+            <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+          </a>
+          <ul class="sub-menus" id="sub-menus-III">
+            <li>
+              <a href="sobreNos.html">
+                <p>Nós</p>
+              </a>
+            </li>
+            <li>
+              <a href="sobre-o-projeto.html">
+                <p>Projeto</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="cuidados.html">
+            <p>Cuidados</p>
+          </a>
+        </li>
+      </ul>
+      <ul class="sub-menu-header" id="sub-menu-bar">
+        <li class="theme">
+          <button id="themeButtonOff" class="theme">
+            <span>Light </span><img class="buttonOff" src="img/icons/botao-desligado.png" alt="icon/off" />
+          </button>
 
-    <body id="body">
-    <header id="header">
-        <button id="menu-responsivo"><img src="img/icons/menu.svg" alt="menu/icon"></button>
-        <a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido-nova.png" alt=""></a>
-        <nav id="nav">
-            <div id="segundo-titulo">
-                <h1><a href="index.html" id="titulo_sobreNos-II"><img class="titulo-responsivo" src="img/logo_PI-fundo_removido-nova.png" alt="titulo-responsivo"></a>
-                </h1>
-            </div>
-            <ul class="direcionar_sobreNos">
-                <li><a href="index.html"><p>Início</p></a></li>
-                <li class="comeco">
-                    <a class="botao" id="botao-I">
-                        <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-                    </a>
-                    <ul class="sub-menus" id="sub-menus-I">
-                        <li><a href="comecar-ambiente.html">
-                                <p>Ambiente</p>
-                            </a></li>
-                        <li><a href="comecar-habitos.html">
-                                <p>Hábitos</p>
-                            </a></li>
-                    </ul>
-                </li>
-                <li><a href="testeHoras.html">
-                        <p class="link-base">Teste de Horas</p>
-                    </a></li>
-                    <li>
-                      <a href="quiz.html">
-                        <p class="link-base">Quiz</p>
-                      </a>
-                    </li>
-                <li class="cuidados">
-                    <a class="botao-II" id="botao-II">
-                        <p>Cuidados<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-                    </a>
-                    <ul class="sub-menus-II" id="sub-menus-II">
-                        <li><a href="cuidados-postura.html">
-                                <p>Postura</p>
-                            </a></li>
-                        <li><a href="cuidados-luz-solar.html">
-                                <p>Luz Solar</p>
-                            </a></li>
-                        <li><a href="cuidados-burnout.html">
-                                <p>Burn-out</p>
-                            </a></li>
-                        <li><a href="cuidados-telas.html">
-                                <p>Telas</p>
-                            </a></li>
-                    </ul>
-                </li>
-                <li class="sobre-nos">
-                    <a class="botao-III" id="botao-III">
-                        <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon"></p>
-                    </a>
-                    <ul class="sub-menus" id="sub-menus-III">
-                        <li><a href="sobreNos.html">
-                                <p>Nós</p>
-                            </a></li>
-                        <li><a href="sobre-o-projeto.html">
-                                <p>Projeto</p>
-                            </a></li>
-                    </ul>
-                </li>
-            </ul>
-            <ul class="sub-menu-header" id="sub-menu-bar">
-                <li class="theme">
-                    <button id="themeButtonOff" class="theme"><span>Light </span><img class="buttonOff"
-                            src="img/icons/botao-desligado.png" alt="icon/off"></button>
-
-                    <button id="themeButtonOn" class="theme" style="display: none;"><span>Dark</span><img
-                            class="buttonOn" src="img/icons/botao-desligado.png" alt="icon/on"></button>
-                </li>
-            </ul>
-        </nav>
-    </header>
+          <button id="themeButtonOn" class="theme" style="display: none">
+            <span>Dark</span><img class="buttonOn" src="img/icons/botao-desligado.png" alt="icon/on" />
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
         <main id="main">
             <div class="botoes">
       <a href="#"  class="seta-voltar" id="setaVoltar"><img src="img/icons/seta-voltar.svg" alt="seta/icon"></a>
@@ -134,45 +140,56 @@
                         link da imagem
                         https://br.freepik.com/fotos-gratis/superficie-de-mesa-de-escritorio-com-notebooks-e-laptop_12079310.htm#fromView=search&page=1&position=10&uuid=57ae12bd-e651-4a14-8249-91c1852b2803&query=ambiente+organizado+mesa+trabalho
                         -->
-                        <p class="mini-text">
-                            Ambientes organizados ajudam a melhorar a concentração, a organização mental e física, reduz a
-                            sobrecarga mental. Aumenta a produtividade e reduz as chances de problemas como dor de cabeça.
-                        </p>
-                    </div>
-                </section>
-            </section>
+            <p class="mini-text">
+              Ambientes organizados ajudam a melhorar a concentração, a
+              organização mental e física, reduz a sobrecarga mental. Aumenta a
+              produtividade e reduz as chances de problemas como dor de cabeça.
+            </p>
+          </div>
+        </section>
+      </section>
 
-            <!--Fim da parte-I-->
+      <!--Fim da parte-I-->
 
-            <section class="parte-II">
-                <h2><span>Pequenas atitudes, grandes impactos</span></h2>
-                <p class="mini-text">
-                    Nossas ações do dia a dia, por menores que pareçam, transformam o ambiente ao nosso redor. A forma como
-                    nos relacionamos com os espaços e com as pessoas influencia diretamente o nosso bem-estar e o equilíbrio
-                    emocional.
-                </p>
+      <section class="parte-II">
+        <h2><span>Pequenas atitudes, grandes impactos</span></h2>
+        <p class="mini-text">
+          Nossas ações do dia a dia, por menores que pareçam, transformam o
+          ambiente ao nosso redor. A forma como nos relacionamos com os espaços
+          e com as pessoas influencia diretamente o nosso bem-estar e o
+          equilíbrio emocional.
+        </p>
 
-                <section class="acoes-cotidianas">
-                    <div class="aba-I">
-                        <div>
-                            <img src="img/photo-pages/socializar.jpg" alt="socializar/photoPages">
-                            <!--
+        <section class="acoes-cotidianas">
+          <div class="aba-I">
+            <div>
+              <img
+                src="img/photo-pages/socializar.jpg"
+                alt="socializar/photoPages"
+              />
+              <!--
                             link da imagem
                             https://www.google.com/url?sa=i&url=https%3A%2F%2Foglobo.globo.com%2Fsaude%2Fnoticia%2F2023%2F12%2F07%2Fcoisa-de-louco-cumprimentar-estranhos-na-rua-aumenta-os-niveis-de-felicidade-pessoal-afirma-estudo-entenda.ghtml&psig=AOvVaw2HEnqSxrfurkUP9TqOojRI&ust=1758320819931000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCIjx_9Gt448DFQAAAAAdAAAAABAE
                             -->
-                        </div>
-                        <div class="text">
-                            <h3 class="sub-titulo">
-                                <span>C</span><span>u</span><span>m</span><span>p</span><span>r</span><span>i</span><span>m</span><span>e</span><span>n</span><span>t</span><span>e&nbsp;</span><span>a</span><span>s&nbsp;</span><span>p</span><span>e</span><span>s</span><span>s</span><span>o</span><span>a</span><span>s</span><span>🤝</span>
-                            </h3>
-                            <p>
-                                Um simples aperto de mãos, um cumprimento, aquele clássico "Bom Dia!", tudo isso já melhora
-                                o clima entre as pessoas ao seu redos. Às vezes, a única coisa que alguém queria ouvir era
-                                um "Tá tudo bem?" e isso não mata ninguém. e um ambiente social bom é muito importante pra
-                                saúde mental.
-                            </p>
-                        </div>
-                    </div>
+            </div>
+            <div class="text">
+              <h3 class="sub-titulo">
+                <span>C</span><span>u</span><span>m</span><span>p</span
+                ><span>r</span><span>i</span><span>m</span><span>e</span
+                ><span>n</span><span>t</span><span>e&nbsp;</span><span>a</span
+                ><span>s&nbsp;</span><span>p</span><span>e</span><span>s</span
+                ><span>s</span><span>o</span><span>a</span><span>s</span
+                ><span>🤝</span>
+              </h3>
+              <p>
+                Um simples aperto de mãos, um cumprimento, aquele clássico "Bom
+                Dia!", tudo isso já melhora o clima entre as pessoas ao seu
+                redos. Às vezes, a única coisa que alguém queria ouvir era um
+                "Tá tudo bem?" e isso não mata ninguém. e um ambiente social bom
+                é muito importante pra saúde mental.
+              </p>
+            </div>
+          </div>
 
                     <div class="aba-II">
                         <div>
@@ -235,10 +252,9 @@
                 </li>
             </ul>
 
-            <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
+      <p>&copy; 2025 Dev-Saúde. Todos os direitos reservados.</p>
     </footer>
-        <script src="js/amb-theme.js"></script>
-        <script src="js/header-responsivo.js"></script>
-    </body>
-
-    </html>
+    <script src="js/amb-theme.js"></script>
+    <script src="js/header-responsivo.js"></script>
+  </body>
+</html>

@@ -5,7 +5,6 @@ const botao_II = document.getElementById("botao-II");
 const botao_III = document.getElementById("botao-III");
 
 const sub_menus_I = document.getElementById("sub-menus-I");
-const sub_menus_II = document.getElementById("sub-menus-II");
 const sub_menus_III = document.getElementById("sub-menus-III");
 
 /* const li = document.querySelectorAll("nav > ul li"); */
@@ -13,7 +12,6 @@ const sub_menus_III = document.getElementById("sub-menus-III");
 const tamanhoTela = window.innerWidth;
 
 sub_menus_I.style.display = "none";
-sub_menus_II.style.display = "none";
 sub_menus_III.style.display = "none";
 
 const menu = () => {
@@ -64,5 +62,4 @@ botao_III.setAttribute("aria-expanded", sub_menus_III.style.display === "block" 
 botaoMenu.addEventListener("click", menu);
 
 botao_I.addEventListener("click", atoAbrir_I);
-botao_II.addEventListener("click", atoAbrir_II);
 botao_III.addEventListener("click", atoAbrir_III);

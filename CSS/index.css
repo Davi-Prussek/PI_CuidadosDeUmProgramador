@@ -5,6 +5,7 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #ffffff91;
+  scrollbar-width: none;
 }
 
 /* ========================================= BODY ========================================= */

@@ -4,7 +4,7 @@
     color: #333;
     line-height: 1.6;
     background-color: #f9fbff;
-
+    scrollbar-width: none;
     a {
       text-decoration: none;
       color: #004bb4;

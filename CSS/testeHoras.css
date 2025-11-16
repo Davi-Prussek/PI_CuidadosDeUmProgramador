@@ -6,7 +6,7 @@ html {
   color: #333;
   line-height: 1.5;
   background-color: #f9fbff;
-
+  scrollbar-width: none;
   body {
     margin-top: 11vw;
     text-align: center;

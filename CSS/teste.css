@@ -4,7 +4,7 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #e6e6e6;
-
+  scrollbar-width: none;
   body {
     background-color: #f9fbff;
     padding-top: 80px;

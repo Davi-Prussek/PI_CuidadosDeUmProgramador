@@ -4,7 +4,7 @@ html {
   color: #333;
   line-height: 1.6;
   background-color: #e6e6e6;
-
+  scrollbar-width: none;
   body {
     background-color: #f9fbff;
     background:radial-gradient(circle at bottom left, rgb(0, 51, 110), transparent 50%),radial-gradient(circle at top right, rgb(0, 51, 110), transparent 50%);
