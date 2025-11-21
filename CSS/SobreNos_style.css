@@ -84,6 +84,7 @@ html {
         border: 8px solid rgb(232, 232, 232);
         position: relative;
         z-index: 1;
+        width: 20vw;
         height: 20vw;
         border-radius: 3000px;
         margin-top: 20px;
@@ -124,7 +125,7 @@ html {
           color: white;
           font-size: 3vw;
           align-items: center;
-          border-radius: 5vw;
+          border-radius: 15px;
           background-color: #000000;
 
           img {
@@ -144,7 +145,7 @@ html {
           color: white;
           font-size: 3vw;
           align-items: center;
-          border-radius: 5vw;
+          border-radius: 15px;
           background: linear-gradient(#7805e3, #e25d1b, #ffcc15);
           img {
             width: 5vw;

@@ -21,6 +21,11 @@
             margin: 0.6vw;
             margin-left: 2vw;
           }
+          #titulo_sobreNos {
+            padding-left: 1vw;
+            margin-top: 0.2vw;
+            margin-bottom: 0.2vw;
+          }
 
           #menu-responsivo {
               display: none;
@@ -40,7 +45,6 @@
           }
 
           nav {
-
               .direcionar_sobreNos {
                   position: relative;
                   z-index: 6;
@@ -364,21 +368,6 @@
 ::-webkit-scrollbar {
 display: none;
 }
-  .seta-voltar {
-    background-color: #0056b3;
-    border-radius: 1000px;
-    cursor: pointer;
-    position: fixed;
-    bottom: 20px;
-    right: 0px;
-    border: none;
-    z-index: 15;
-
-    img {
-      width: 60px;
-      height: 60px;
-    }
-  }
       header {
           background-color: #0056b3;
           width: 100%;
@@ -546,7 +535,17 @@ display: none;
             }
           }
           }
-
+/* ========================= MAIN ========================= */
+main {
+        .botoes {
+        .seta-voltar {
+          img {
+            width: 4.5vw;
+            height: 4.5vw;
+          }
+        }
+      }
+}
 /* ======================== FOOTER ======================== */
 footer {
   background: linear-gradient(#0056b3, #002457);

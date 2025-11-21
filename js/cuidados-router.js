@@ -8,7 +8,8 @@ const buttonLuzSolar = document.getElementById("luz-solar-router");
 const buttonBurnOut = document.getElementById("burn-out-router");
 const buttonTelas = document.getElementById("telas-router");
 
-luzSolar.style.display = "none";
+postura.style.display = "none";
+luzSolar.style.display = "block";
 burnOut.style.display = "none";
 telas.style.display = "none";
 

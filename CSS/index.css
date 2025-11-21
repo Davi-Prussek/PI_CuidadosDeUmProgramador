@@ -18,15 +18,15 @@ body {
 main {
   background-color: white;
   .apresentacao1 {
-    align-items: center;
-    text-align: center;
+/*     align-items: center;
+        text-align: center; */
     padding: 60px 20px;
     min-height: 360px;
       position: relative;
       background: url("../img/tech-380x220.jpg") center/cover no-repeat;
       border-radius: 15px;
-      margin: 2.5vw 2vw 0px 2vw;
-      padding: 35px 35px;
+      margin: 2.5vw 2vw;
+      padding: 2vw auto;
       overflow: hidden;
       box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
       transition: box-shadow 0.3s ease;
@@ -52,15 +52,12 @@ main {
       #ol1 {
         font-size: 15vw;
         font-weight: 900;
-        margin-top: 50px;
-        margin-bottom: 20px;
+        margin-top: 2vw;
+        margin-bottom: 1.6px;
         font-family: "Press Start 2P", monospace;
         color: rgb(39, 203, 39);
         position: relative;
         z-index: 2;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
       }
 

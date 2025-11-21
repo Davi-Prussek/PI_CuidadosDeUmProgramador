@@ -13,19 +13,12 @@
     body {
       background-color: #f9fbff;
       color: #003366;
-      margin: 0;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
 
       /* Estado ativo do hambúrguer (vira X) */
       main {
-        margin-bottom: 4vw;
-        margin-top: 6vw;
-        padding: 24px 20px;
         font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-        line-height: 1.7;
-
-        
 
           img {
             width: 55px;
@@ -34,7 +27,6 @@
         
 
         .s1 {
-
           position: relative;
           padding: 40px 16px;
           margin-bottom: 30px;
@@ -97,6 +89,7 @@
         }
 
         .s2 {
+          line-height: 1.7;
           margin-bottom: 30px;
           text-align: center;
 
@@ -126,6 +119,7 @@
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 10px;
+            line-height: 1.7;
 
             div {
               background: #e9f2ff;
@@ -148,6 +142,7 @@
         }
 
         .atas {
+          line-height: 1.7;
           padding: 10px;
           color: #003366;
 
@@ -217,38 +212,6 @@
     }
 
   @media (max-width: 500px) {
-    header {
-      height: 3vw;
-
-      h1 a {
-        font-size: 0.9vw;
-      }
-
-      nav .direcionar_sobreNos {
-        font-size: 0.7vw;
-
-        li {
-          min-width: 6vw;
-        }
-      }
-
-      .sub-menu-header {
-        font-size: 0.5vw;
-
-        .theme {
-          font-size: 0.6vw;
-
-          .buttonOff,
-          .buttonOn {
-            height: 1.1vw;
-          }
-        }
-
-        li {
-          min-width: 5vw;
-        }
-      }
-    }
 
     main {
       .container {
