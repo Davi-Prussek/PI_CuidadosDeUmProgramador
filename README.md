@@ -186,10 +186,33 @@
     ## O que vai ser feito;
         Sexta passada, arrumamos e validamos erros pequenos.
         hoje fizemos a mesma coisa na aula passada.
-
+        Felipe não esta se esforçando no site, com nenhum apoio e nenhuma ajuda. 
     ### Quem faltou:
 
         Todos vieram;
+
+## Decimo Setimo dia 21/11
+    ## O que vai ser feito;
+        Deixar o site mais em forma
+        Organizar o site com designer
+        Validar os erros de HTML
+        Ajeitar pequenos detalhes
+
+    ### Quem faltou:
+
+        Felipe;
+
+## Decimo oitavo dia 22/11
+    ## O que vai ser feito;
+       Organização da exponsividade
+       Deixar as atas atualizadas 
+       Ajeitaremos o header e o footer
+       Validar os erros do Html
+
+    ### Quem faltou:
+
+        Maico, Felipe e Bruno;
+      
 
 
         
