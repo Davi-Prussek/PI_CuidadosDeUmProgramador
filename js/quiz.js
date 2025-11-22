@@ -1,6 +1,7 @@
 import { opcaoCor } from "./quiz-theme.js";
 
 // Dados das perguntas do quiz
+//#region PERGUNTAS
 const questions = [
   {
     question:
@@ -205,7 +206,7 @@ const questions = [
       "Dependências desnecessárias são como o excesso de medicamentos - podem causar mais problemas do que soluções!",
   },
 ];
-
+//#endregion
 // Variáveis globais
 let currentQuestion = 0;
 let score = 0;
@@ -381,7 +382,7 @@ function nextQuestion() {
     } else {
       showResults();
     }
-  }, 2000);
+  }, 6000);
 }
 
 // Atualizar progresso

@@ -18,73 +18,73 @@ body {
 main {
   background-color: white;
   .apresentacao1 {
-/*     align-items: center;
+    /*     align-items: center;
         text-align: center; */
     padding: 60px 20px;
     min-height: 360px;
-      position: relative;
-      background: url("../img/tech-380x220.jpg") center/cover no-repeat;
+    position: relative;
+    background: url("../img/tech-380x220.jpg") center/cover no-repeat;
+    border-radius: 15px;
+    margin: 2.5vw 2vw;
+    padding: 2vw auto;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
+    transition: box-shadow 0.3s ease;
+    color: #fff;
+
+    &:hover {
+      box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0.6) 0%,
+        rgba(0, 0, 0, 0.4) 100%
+      );
+      z-index: -1;
       border-radius: 15px;
-      margin: 2.5vw 2vw;
-      padding: 2vw auto;
-      overflow: hidden;
-      box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
-      transition: box-shadow 0.3s ease;
-      color: #fff;
+    }
 
-      &:hover {
-        box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
-      }
+    #ol1 {
+      font-size: 15vw;
+      font-weight: 900;
+      margin-top: 2vw;
+      margin-bottom: 1.6px;
+      font-family: "Press Start 2P", monospace;
+      color: rgb(39, 203, 39);
+      position: relative;
+      z-index: 2;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+    }
 
-      &::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          180deg,
-          rgba(0, 0, 0, 0.6) 0%,
-          rgba(0, 0, 0, 0.4) 100%
-        );
-        z-index: -1;
-        border-radius: 15px;
-      }
+    .ol {
+      font-size: 60px;
+      font-weight: 900;
+      margin-top: 50px;
+      margin-bottom: 20px;
+      margin: auto 10vw;
 
-      #ol1 {
-        font-size: 15vw;
-        font-weight: 900;
-        margin-top: 2vw;
-        margin-bottom: 1.6px;
-        font-family: "Press Start 2P", monospace;
-        color: rgb(39, 203, 39);
+      .txt1 {
+        font-size: 24px;
+        font-weight: 600;
+        color: #ffffff;
+        line-height: 1.7;
+        display: block;
+        margin-top: 15px;
         position: relative;
         z-index: 2;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
         text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-      }
-
-      .ol {
-        font-size: 60px;
-        font-weight: 900;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        margin: auto 10vw;
-
-        .txt1 {
-          font-size: 24px;
-          font-weight: 600;
-          color: #ffffff;
-          line-height: 1.7;
-          display: block;
-          margin-top: 15px;
-          position: relative;
-          z-index: 2;
-          max-width: 800px;
-          margin-left: auto;
-          margin-right: auto;
-          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
-          color: rgb(255, 255, 255);
-        }
+        color: rgb(255, 255, 255);
       }
     }
+  }
 
   /* ============= RESPONSIVIDADE APRESENTAÇÃO ============= */
   @media (max-width: 1000px) {
@@ -125,7 +125,7 @@ main {
     .apresentacao1 {
       padding: 40px 15px;
       min-height: 320px;
-      
+
       article {
         margin: 2vw 4vw 0px 4vw;
         padding: 40px 16px;
@@ -247,11 +247,11 @@ main {
     padding: 0 8vw;
     margin-top: 10vw;
 
-      .text-left {
-        padding: auto 20px ;
-        text-align: center;
-        font-size: 1rem;
-        line-height: 1.6; 
+    .text-left {
+      padding: auto 20px;
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
     }
 
     .sub-titulo {
@@ -369,6 +369,11 @@ main {
         max-width: 250px;
         min-width: 180px;
       }
+      .cards-right{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+      }
 
       h3 {
         font-size: 16px;
@@ -424,7 +429,6 @@ main {
         font-size: 26px;
         margin: 1.5vw 0 0.8vw 0;
       }
-
       .card {
         max-width: 280px;
         min-width: 180px;
@@ -458,6 +462,7 @@ main {
         min-width: 160px;
         padding: 12px 10px;
       }
+      
 
       h3 {
         font-size: 13px;
@@ -504,7 +509,6 @@ main {
   }
 }
 @media (max-width: 799px) {
-
   main {
     margin-top: 15vw;
     .container {
@@ -526,11 +530,11 @@ main {
     }
     .card {
       padding: 20px 15px;
-    }}
+    }
+  }
 }
 
 @media (max-width: 500px) {
-
   main {
     .container {
       padding: 1rem;
@@ -549,5 +553,6 @@ main {
       h3 {
         font-size: 1.1rem;
       }
-    }}
+    }
+  }
 }
