@@ -382,7 +382,7 @@ function nextQuestion() {
     } else {
       showResults();
     }
-  }, 2000);
+  }, 6000);
 }
 
 // Atualizar progresso
