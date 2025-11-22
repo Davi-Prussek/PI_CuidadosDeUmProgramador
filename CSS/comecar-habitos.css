@@ -9,7 +9,6 @@
 
 /* ====== CSS VARIABLES (Design Tokens) ====== */
 :root {
-  /* Cores principais - Paleta aprimorada com tons mais vibrantes e suaves */
   --azul-escuro: #001f3d;
   --azul-medio: #0056b3;
   --azul-claro: #4a90e2;
@@ -19,23 +18,20 @@
   --cinza-claro: #e5e5e5;
   --fundo-claro: #f6f7f9;
   --card-branco: #ffffff;
-  --accent-gold: #ffd700; /* Novo: para destaques sutis */
-  /* Escala de espaçamento (8px base) - Mantida consistente */
-  --space-xs: 0.5rem; /* 8px */
-  --space-sm: 1rem; /* 16px */
-  --space-md: 1.5rem; /* 24px */
-  --space-lg: 2rem; /* 32px */
-  --space-xl: 3rem; /* 48px */
-  --space-2xl: 4rem; /* 64px */
-  --space-3xl: 6rem; /* 96px */
-  /* Tipografia fluida - Ajustada para melhor legibilidade */
+  --accent-gold: #ffd700;
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+  --space-3xl: 6rem;
   --font-base: clamp(1rem, 0.8rem + 0.5vw, 1.125rem);
   --font-sm: clamp(0.875rem, 0.75rem + 0.4vw, 1rem);
   --font-lg: clamp(1.125rem, 0.9rem + 0.6vw, 1.25rem);
   --font-xl: clamp(1.5rem, 1.2rem + 1vw, 2rem);
   --font-2xl: clamp(2rem, 1.5rem + 1.5vw, 2.8rem);
   --font-3xl: clamp(2.5rem, 2rem + 2vw, 3.5rem);
-  /* Raio e sombras - Sombras mais profundas e dinâmicas */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -45,15 +41,12 @@
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
   --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.15);
-  --shadow-glow: 0 0 20px rgba(74, 144, 226, 0.3); /* Novo: brilho sutil */
-  /* Transições - Mais suaves */
+  --shadow-glow: 0 0 20px rgba(74, 144, 226, 0.3);
   --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-base: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
-  /* Grid & Layout */
   --container-max: 1200px;
   --content-max: 65ch;
-  /*Mini Text*/
   .mini-text {
     text-align: justify;
     text-justify: inter-word;
@@ -72,7 +65,6 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  /* Novo: Background pattern sutil para textura */
   background-image: radial-gradient(
       circle at 25% 25%,
       rgba(74, 144, 226, 0.05) 0%,
@@ -85,6 +77,14 @@ html {
     );
   background-size: 400px 400px;
 }
+html {
+    font-size: calc(12px + 0.95vw);
+  font-family: "Open Sans", sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  scrollbar-width: none;
+}
 
 /* ====== ESTRUTURA PRINCIPAL ====== */
 body {
@@ -92,7 +92,6 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  /* Novo: Gradiente sutil no body para profundidade */
   background: linear-gradient(
     180deg,
     rgb(194, 194, 194) 0%,
@@ -150,6 +149,7 @@ main {
   right: 20%;
   left: 20%;
   top: 30%;
+  font-size: 4vw;
 }
 
 h1 {
@@ -459,112 +459,6 @@ h3:hover {
   outline: 3px solid var(--azul-claro);
   outline-offset: 4px;
 }
-
-/* ====== FOOTER MODERNO ====== */
-footer {
-  margin-top: auto;
-  background: linear-gradient(
-    135deg,
-    var(--azul-medio) 0%,
-    var(--azul-escuro) 100%
-  );
-  color: white;
-  padding: clamp(2rem, 4vw, 3rem) var(--space-md);
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-  /* Novo: Borda superior com gradiente */
-  border-top: 2px solid transparent;
-  background: linear-gradient(var(--azul-medio), var(--azul-escuro)) padding-box,
-    linear-gradient(90deg, var(--azul-claro), var(--accent-gold)) border-box;
-}
-
-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: -50%;
-  width: 200%;
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.05),
-    transparent
-  );
-  animation: shimmer 8s infinite;
-}
-
-@keyframes shimmer {
-  0%,
-  100% {
-    transform: translateX(-50%);
-  }
-  50% {
-    transform: translateX(50%);
-  }
-}
-
-footer .logo {
-  font-size: var(--font-2xl);
-  font-weight: 700;
-  margin-bottom: var(--space-md);
-  letter-spacing: -0.01em;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer ul {
-  list-style: none;
-  padding: 0;
-  margin: var(--space-md) 0;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: var(--space-md);
-}
-
-footer li {
-  margin: 0;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-  font-size: var(--font-lg);
-  position: relative;
-  padding: var(--space-xs) var(--space-sm);
-  transition: all var(--transition-base);
-  border-radius: var(--radius-sm);
-}
-
-footer a::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 2px;
-  background: var(--accent-gold);
-  transform: translateX(-50%);
-  transition: width var(--transition-base);
-}
-
-footer a:hover {
-  background: rgba(255, 255, 255, 0.1);
-  transform: translateY(-2px);
-  color: var(--azul-pastel);
-}
-
-footer a:hover::after {
-  width: 80%;
-}
-
-footer a:focus-visible {
-  outline: 2px solid white;
-  outline-offset: 4px;
-}
-/* ===== RESPONSIVIDADE ===== */
-
 /* ------- TABLET (768px a 1023px) ------- */
 @media (max-width: 1023px) {
   main {
