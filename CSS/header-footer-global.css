@@ -572,7 +572,7 @@ footer {
     justify-content: space-between;
     align-items: center;
     margin: 0 auto;
-    width: 90%;
+    width: 100%;
     max-width: 1000px;
     padding: 0;
 
@@ -593,15 +593,9 @@ footer {
       }
     }
 
-    .logo {
-      font-family: "Times New Roman", Times, serif;
-      font-weight: 700;
-      font-size: 2.5vw;
-      color: white;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex: 1;
+    .logo img {
+      width: 160px;
+      text-align: center;
     }
 
     .linkRp {
