@@ -1,4 +1,3 @@
-
 const HTML = document.querySelector("html");
 const body = document.querySelector("body");
 
