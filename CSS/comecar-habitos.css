@@ -53,6 +53,11 @@
   /* Grid & Layout */
   --container-max: 1200px;
   --content-max: 65ch;
+  /*Mini Text*/
+  .mini-text {
+    text-align: justify;
+    text-justify: inter-word;
+  }
 }
 
 /* ====== FONTE & TIPOGRAFIA ====== */
@@ -68,8 +73,16 @@ html {
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   /* Novo: Background pattern sutil para textura */
-  background-image: radial-gradient(circle at 25% 25%, rgba(74, 144, 226, 0.05) 0%, transparent 50%),
-                    radial-gradient(circle at 75% 75%, rgba(0, 86, 179, 0.05) 0%, transparent 50%);
+  background-image: radial-gradient(
+      circle at 25% 25%,
+      rgba(74, 144, 226, 0.05) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 75% 75%,
+      rgba(0, 86, 179, 0.05) 0%,
+      transparent 50%
+    );
   background-size: 400px 400px;
 }
 
@@ -80,7 +93,11 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
   /* Novo: Gradiente sutil no body para profundidade */
-  background: linear-gradient(180deg, rgb(194, 194, 194) 0%, rgba(58, 58, 58, 0.8) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(194, 194, 194) 0%,
+    rgba(58, 58, 58, 0.8) 100%
+  );
 }
 
 main {
@@ -93,7 +110,6 @@ main {
   margin: clamp(3rem, 8vw, 6rem) auto clamp(2rem, 4vw, 3rem);
   padding: clamp(2rem, 5vw, 4rem);
   animation: fadeInUp var(--transition-slow) ease-out;
-
 }
 
 @keyframes fadeInUp {
@@ -107,10 +123,11 @@ main {
   }
 }
 
-.title{
+.title {
   position: relative;
   margin-inline: 2vw;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbINhsDGriGx1y-UccsTd1-jSrIYBiqii4kw&s) center;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbINhsDGriGx1y-UccsTd1-jSrIYBiqii4kw&s)
+    center;
   padding: 5vw 0px;
   border: 5px solid var(--azul-claro);
   border-radius: 23px;
@@ -119,15 +136,15 @@ main {
   overflow: hidden;
 }
 
-.title::before{
+.title::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 0;
 }
 
-.title span{
+.title span {
   position: absolute;
   z-index: 2;
   right: 20%;
@@ -189,9 +206,16 @@ h2 {
 h2::after {
   content: "";
   display: block;
-  width: 700px;
+  width: 52vw;
   height: 4px;
-  background: linear-gradient(90deg, var(--azul-medio), rgb(40, 13, 58), var(--azul-medio), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--azul-claro),
+    rgb(40, 13, 58),
+    var(--azul-medio),
+    transparent
+  );
   margin: var(--space-sm) auto 0;
   border-radius: var(--radius-full);
   /* Novo: Animação de expansão */
@@ -256,13 +280,17 @@ h3:hover {
 
 /* ====== TEXTO & PARÁGRAFOS ====== */
 .mini-text {
-  margin: clamp(1.5rem, 3vw, 2rem, 0);
+  margin: clamp(1.5rem, 3vw, 2rem);
   font-size: 25px;
   line-height: 1.8;
-  color: var(--cinza-texto);
-  max-width: var(--content-max);
+  overflow-wrap: break-word;
+  text-align: justify;
+  text-justify: inter-word;
   text-indent: 1em;
+  max-width: var(--content-max);
+  color: var(--cinza-texto);
 }
+
 
 .mini-text + .mini-text {
   margin-top: var(--space-lg);
@@ -347,7 +375,8 @@ h3:hover {
   padding: var(--space-xs);
   margin-right: var(--space-xs);
   box-shadow: var(--shadow-sm);
-  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition: transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .numero:hover {
@@ -356,8 +385,8 @@ h3:hover {
 }
 
 .numero img {
-  width: 50px;
-  height: 50px;
+  width: 2.2vw;
+  height: 2.2vw;
   object-fit: contain;
   filter: brightness(0) invert(1);
   /* Novo: Animação de rotação sutil */
@@ -447,7 +476,7 @@ footer {
   /* Novo: Borda superior com gradiente */
   border-top: 2px solid transparent;
   background: linear-gradient(var(--azul-medio), var(--azul-escuro)) padding-box,
-              linear-gradient(90deg, var(--azul-claro), var(--accent-gold)) border-box;
+    linear-gradient(90deg, var(--azul-claro), var(--accent-gold)) border-box;
 }
 
 footer::before {
@@ -533,4 +562,124 @@ footer a:hover::after {
 footer a:focus-visible {
   outline: 2px solid white;
   outline-offset: 4px;
+}
+/* ===== RESPONSIVIDADE ===== */
+
+/* ------- TABLET (768px a 1023px) ------- */
+@media (max-width: 1023px) {
+  main {
+    padding: 6vw;
+    margin: 6vw 2vw;
+  }
+
+  h1 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+  }
+
+  h2 {
+    font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  }
+
+  .mini-text {
+    font-size: 20px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .botao-esquerdo,
+  .botao-direito {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+/* ------- CELULARES MÉDIOS (500px – 767px) ------- */
+@media (max-width: 767px) {
+  .title {
+    padding: 18vw 0 22vw;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .title span {
+    font-size: 6vw;
+    top: 35%;
+  }
+
+  .numero img {
+    width: 4vw;
+    height: 4vw;
+  }
+  .mini-text {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .botao-esquerdo,
+  .botao-direito {
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .botoes {
+    justify-content: center;
+    gap: 6vw;
+  }
+}
+
+/* ------- CELULARES COMPACTOS (350px – 499px) ------- */
+@media (max-width: 499px) {
+  .title {
+    padding: 22vw 0 28vw;
+  }
+
+  .title span {
+    font-size: 7vw;
+  }
+
+  h1 {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .mini-text {
+    font-size: 18px;
+    text-align: justify;
+    text-justify: inter-word;
+  }
+
+  .numero img {
+    width: 5vw;
+    height: 5vw;
+  }
+
+  .botao-esquerdo,
+  .botao-direito {
+    width: 22vw;
+    height: 22vw;
+  }
+}
+
+/* ------- TELAS MUITO PEQUENAS (≤ 349px) ------- */
+@media (max-width: 349px) {
+  .title {
+    padding: 26vw 0 32vw;
+  }
+
+  .title span {
+    font-size: 8vw;
+  }
+
+  .numero img {
+    width: 5vw;
+    height: 5vw;
+  }
+  .mini-text {
+    text-align: justify;
+    text-justify: inter-word;
+  }
+  .botao-esquerdo,
+  .botao-direito {
+    width: 25vw;
+    height: 25vw;
+  }
 }
