@@ -23,7 +23,6 @@ const face = document.querySelectorAll(".face");
 
 const github = document.querySelectorAll(".github > a");
 
-const p = document.querySelectorAll("p");
 const span = document.querySelectorAll("span");
 
 
@@ -40,7 +39,8 @@ const gitIcon = document.querySelectorAll(".icon-git");
 
 const setaVoltar = document.getElementById("setaVoltar");
 const botaoOff = document.getElementById("themeButtonOff");
-const botaoOn = document.getElementById("themeButtonOn")
+const botaoOn = document.getElementById("themeButtonOn");
+
 const ligadoDesligado = document.getElementById("desligado");
 
 window.onload = () => {

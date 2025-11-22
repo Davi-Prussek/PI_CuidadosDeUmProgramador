@@ -7,8 +7,9 @@ const footer = document.querySelector("footer");
 const main = document.querySelector("main");
 
 const section = document.querySelectorAll("section");
-const div = document.querySelectorAll("div");
-const p = document.querySelectorAll("p");
+const div1 = document.querySelectorAll(".cards > div");
+const div2 = document.querySelectorAll(".acoes-cotidianas > div");
+const p1 = document.querySelectorAll("p");
 const h1 = document.querySelectorAll("h1");
 const h2 = document.querySelectorAll("h2");
 const h3 = document.querySelectorAll("h3");
@@ -51,10 +52,12 @@ function light() {
     main.style.backgroundColor = "rgba(0, 0, 0, 1)";
     HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
     section.forEach(s => {s.style.color = "#ffffff";});
-    div.forEach(d => { d.style.color = "#ffffff"; });
-    div.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
+    div1.forEach(d => { d.style.color = "#ffffff"; });
+    div1.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
+    div2.forEach(d => { d.style.color = "#ffffff"; });
+    div2.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
     h1.forEach(h1 => {h1.style.color = "#3c9effff"});
-    p.forEach(p => {p.style.color = "#ffffff"});
+    p1.forEach(p => {p.style.color = "#ffffff"});
     localStorage.setItem("theme", "light");
 }
 
@@ -68,11 +71,13 @@ function dark() {
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
     section.forEach(s => {s.style.color = "";});
-    div.forEach(d => { d.style.color = ""; });
-    div.forEach(d => { d.style.backgroundColor = ""; });
+    div1.forEach(d => { d.style.color = ""; });
+    div1.forEach(d => { d.style.backgroundColor = ""; });
+    div2.forEach(d => { d.style.color = ""; });
+    div2.forEach(d => { d.style.backgroundColor = ""; });
     h1.forEach(h1 => {h1.style.color = ""});
-    p.forEach(p => {p.style.color = ""});
-    p.forEach(s => {s.style.backgroundColor = "";});
+    p1.forEach(p => {p.style.color = ""});
+    p1.forEach(s => {s.style.backgroundColor = "";});
     localStorage.setItem("theme", "dark");
 }   
 

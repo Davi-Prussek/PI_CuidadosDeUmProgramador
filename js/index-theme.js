@@ -12,7 +12,7 @@ const liMenor = document.querySelectorAll("nav > ul > li > ul > li");
 
 const section = document.querySelectorAll("section");
 const div = document.querySelectorAll("div");
-const p = document.querySelectorAll("p");
+const p1 = document.querySelectorAll("p");
 const h1 = document.querySelectorAll("h1");
 const h2 = document.querySelectorAll("h2");
 const h3 = document.querySelectorAll("h3");
@@ -64,7 +64,7 @@ function light() {
     div.forEach(d => { d.style.color = "#ffffff"; });
     div.forEach(d => { d.style.backgroundColor = "black"; });
     h2.forEach(h2 => {h2.style.color = "#3c9effff"});
-    p.forEach(p => {p.style.color = "#ffffff"});
+    p1.forEach(p => {p.style.color = "#ffffff"});
     localStorage.setItem("theme", "light");
 }
 
@@ -85,7 +85,7 @@ function dark() {
     div.forEach(d => { d.style.color = ""; });
     div.forEach(d => { d.style.backgroundColor = ""; });
     h2.forEach(h2 => {h2.style.color = ""});
-    p.forEach(p => {p.style.color = ""});
+    p1.forEach(p => {p.style.color = ""});
     localStorage.setItem("theme", "dark");
 }
 
