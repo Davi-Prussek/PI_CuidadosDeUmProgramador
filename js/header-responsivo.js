@@ -24,8 +24,10 @@ const atoAbrir_I = (event) => {
 if (event && event.preventDefault) event.preventDefault();
 if (sub_menus_I.style.display == "none") {
     sub_menus_I.style.display = "block";
+    botao_I.style.backgroundColor = "rgb(18, 21, 44)";
 } else {
     sub_menus_I.style.display = "none";
+    botao_I.style.backgroundColor = "";
     botao_I.style.backgroundColor = "";
 }
 }
