@@ -7,8 +7,6 @@ const botao_III = document.getElementById("botao-III");
 const sub_menus_I = document.getElementById("sub-menus-I");
 const sub_menus_III = document.getElementById("sub-menus-III");
 
-/* const li = document.querySelectorAll("nav > ul li"); */
-
 const tamanhoTela = window.innerWidth;
 
 sub_menus_I.style.display = "none";
@@ -22,8 +20,6 @@ if (nav.style.display === "block") {
     
 } else {
     nav.style.display = "block";
-/*     nav.style.backgroundColor = "rgb(18, 21, 44)";
-    li.forEach(li => {li.style.backgroundColor = "rgb(18, 21, 44)"}); */
     }
 }
 const atoAbrir_I = (event) => {
@@ -59,7 +55,13 @@ if (sub_menus_III.style.display == "none") {
 }
 botao_III.setAttribute("aria-expanded", sub_menus_III.style.display === "block" ? "true" : "false");    
 }
+const fecharMenu = (event) => {
+  if (!nav.contains(event.target) && !botaoMenu.contains(event.target)) {
+    nav.style.display = "none";
+    nav.style.backgroundColor = "";
+  }
+}
 botaoMenu.addEventListener("click", menu);
-
+document.addEventListener("click", fecharMenu);
 botao_I.addEventListener("click", atoAbrir_I);
 botao_III.addEventListener("click", atoAbrir_III);
