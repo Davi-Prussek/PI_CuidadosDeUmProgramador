@@ -66,6 +66,7 @@ function light() {
     div2.forEach(d => { d.style.color = "#ffffff"; });
     div2.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
     h1.forEach(h1 => {h1.style.color = "#3c9effff"});
+    h3.forEach(h3 => {h3.style.color = "white"});
     p1.forEach(p => {p.style.color = "#ffffff"});
     titulo.style.backgroundColor = "rgba(5, 0, 23, 1)"; 
     localStorage.setItem("theme", "light");
@@ -89,6 +90,7 @@ function dark() {
     div2.forEach(d => { d.style.color = ""; });
     div2.forEach(d => { d.style.backgroundColor = ""; });
     h1.forEach(h1 => {h1.style.color = ""});
+    h3.forEach(h3 => {h3.style.color = ""});
     p1.forEach(p => {p.style.color = ""});
     p1.forEach(s => {s.style.backgroundColor = "";});
     titulo.style.backgroundColor = ""; 
