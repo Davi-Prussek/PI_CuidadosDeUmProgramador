@@ -1,3 +1,4 @@
+/* ===== Footer ===== */
 const footer1 = document.createElement("footer");
 document.querySelector("body").appendChild(footer1);
 
@@ -5,133 +6,100 @@ const ul1 = document.createElement("ul");
 ul1.classList.add("lista-principal");
 footer1.appendChild(ul1);
 
-let li1 = "";
-let h41 = "";
-let a = "";
-let img = "";
-for (let i = 0; i < 3; i++) {
-  li1 = document.createElement("li");
-  if (i == 0) {
-    li1.classList.add("footer-contact");
-    h41 = document.createElement("h4");
-    h41.innerHTML = "Contato";
-    li1.appendChild(h41);
-    a = document.createElement("a");
-    a.href ="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
-    a.target = "_blank";
-    a.rel = "noopener noreferrer";
-    img = document.createElement("img");
-    img.src = "img/icons/instagram-brands-solid-full.svg";
+// ===== Contato =====
+let li1 = document.createElement("li");
+li1.classList.add("footer-contact");
 
-    a.appendChild(img);
-    img.alt = "Instagram do Dev-Saúde";
-    img.classList.add("midia");
-    li1.appendChild(a);
-  } 
-  else if (i == 1) {
-    li1 = document.createElement("li");
-    li1.classList.add("logo");
+let h41 = document.createElement("h4");
+h41.innerHTML = "Contato";
+li1.appendChild(h41);
 
-    const img = document.createElement("img");
-    img.src = "img/logo_PI-fundo_removido-nova.png";
-    li1.appendChild(img);
-  } 
-  else if (i == 2) {
-    li1.classList.add("linkRp");
-    h41 = document.createElement("h4");
-    h41.innerText = "Links Rápidos";
-    li1.appendChild(h41);
-    let div = document.createElement("div");
-    div.classList.add("links");
-    li1.appendChild(div);
-    let divMenor = "";
+let a = document.createElement("a");
+a.href ="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==";
+a.target = "_blank";
+a.rel = "noopener noreferrer";
 
-    for (let i = 0; i < 3; i++) {
-      let ul = "";
-      if (i == 0) {
-        h41 = document.createElement("h4");
-        h41.innerText = "Principais";
-        divMenor = document.createElement("div");
-        divMenor.appendChild(h41);
-        ul = document.createElement("ul");
-        divMenor.appendChild(ul);
-        div.appendChild(divMenor);
-        const links = {
-          inicio: { text: "Início", href: "index.html" },
-          teste: { text: "Teste de Horas", href: "testeHoras.html" },
-          rotinas: { text: "Quiz", href: "quiz.html" },
-          cuidados: { text: "Cuidados", href: "cuidados.html" },
-        };
-        for (const key in links) {
-          const li = document.createElement("li");
-          const a = document.createElement("a");
-          a.href = links[key].href;
-          a.innerText = links[key].text;
-          li.appendChild(a);
-          ul.appendChild(li);
-          
-        }
-      } 
-      else if (i == 1) {
-        divMenor = document.createElement("div");
-        div.appendChild(divMenor);
-        h41 = document.createElement("h4");
-        h41.innerText = "Começar";
-        li1.appendChild(h41);
-        ul = document.createElement("ul");
-        divMenor.appendChild(h41);
-        divMenor.appendChild(ul);
-        for (let i = 0; i < 2; i++) {
-          let li = document.createElement("li");
-          if (i == 0) {
-            li = document.createElement("li");
-            ul.appendChild(li);
-            a = document.createElement("a");
-            a.href = "comecar-ambiente.html";
-            a.innerText = "Ambiente";
-            li.appendChild(a);
-          } else {
-            li = document.createElement("li");
-            ul.appendChild(li);
-            a = document.createElement("a");
-            a.href = "comecar-habitos.html";
-            a.innerText = "Hábitos";
-            li.appendChild(a);
-          }
-        }
-      } 
-      else {
-        divMenor = document.createElement("div");
-        div.appendChild(divMenor);
-        h41 = document.createElement("h4");
-        h41.innerText = "Sobre";
-        ul = document.createElement("ul");
-        divMenor.appendChild(h41);
-        divMenor.appendChild(ul);
-        for (let i = 0; i < 2; i++) {
+let img = document.createElement("img");
+img.src = "img/icons/instagram-brands-solid-full.svg";
+img.alt = "Instagram do Dev-Saúde";
+img.classList.add("midia");
 
-          if (i == 0) {
-            li = document.createElement("li");
-            ul.appendChild(li);
-            a = document.createElement("a");
-            a.href = "sobreNos.html";
-            a.innerText = "Nós";
-            li.appendChild(a);
-          } 
-          else {
-            li = document.createElement("li");
-            ul.appendChild(li);
-            a = document.createElement("a");
-            a.href = "sobre-o-projeto.html";
-            a.innerText = "Projeto";
-            li.appendChild(a);
-          }
-        }
-      }
-    }
+a.appendChild(img);
+li1.appendChild(a);
+
+ul1.appendChild(li1);
+
+
+// ===== Logo =====
+let li2 = document.createElement("li");
+li2.classList.add("logo");
+
+let img2 = document.createElement("img");
+img2.src = "img/logo_PI-fundo_removido-nova.png";
+
+li2.appendChild(img2);
+
+ul1.appendChild(li2);
+
+
+/* ===== Links Rápidos ===== */
+let li3 = document.createElement("li");
+li3.classList.add("linkRp");
+ul1.appendChild(li3);
+
+let h42 = document.createElement("h4");
+h42.innerText = "Links Rápidos";
+li3.appendChild(h42);
+
+const divLinks = document.createElement("div");
+divLinks.classList.add("links");
+li3.appendChild(divLinks);
+
+
+const links = [
+  {titulo: "Principais",
+    links: [
+      { href: "index.html", texto: "Início" },
+      { href: "testeHoras.html", texto: "Teste de horas" },
+      { href: "quiz.html", texto: "Quiz" },
+      { href: "cuidados.html", texto: "Cuidados" }
+    ]},
+  {titulo: "Começar",
+    links: [
+      { href: "comecar-ambiente.html", texto: "Ambiente" },
+      { href: "comecar-habitos.html", texto: "Hábitos" }
+    ]},
+  {titulo: "Sobre",
+    links: [
+      { href: "sobreNos.html", texto: "Sobre nós" },
+      { href: "sobre-o-projeto.html", texto: "Sobre o projeto" }
+    ]}];
+
+for (let item of links) {
+
+  let div = document.createElement("div");
+  divLinks.appendChild(div);
+
+  let h4 = document.createElement("h4");
+  h4.innerText = item.titulo;
+  div.appendChild(h4);
+
+  let ul1 = document.createElement("ul");
+  div.appendChild(ul1);
+
+  for (let i = 0; i < item.links.length; i++) {
+
+    let li1 = document.createElement("li");
+    let a1 = document.createElement("a");
+
+    ul1.appendChild(li1);
+    li1.appendChild(a1);
+
+    a1.href = item.links[i].href;
+    a1.innerText = item.links[i].texto;
   }
-  ul1.appendChild(li1);
 }
+
 const p = document.createElement("p");
 p.innerHTML = "&copy; 2025 Dev-Saúde. Todos os direitos reservados.";
 footer1.appendChild(p);
