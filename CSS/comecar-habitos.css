@@ -1,7 +1,7 @@
 /* ====== RESET & BASE ====== */
-*,
-*::before,
-*::after {
+main,
+main::before,
+main::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
