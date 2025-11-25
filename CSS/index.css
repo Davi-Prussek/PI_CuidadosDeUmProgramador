@@ -353,7 +353,7 @@ main {
     }
   }
 
-  @media (max-width: 800px) {
+  @media (max-width: 1180px) {
     .ap1-2 {
       .sub-titulo {
         font-size: 40px;
