@@ -45,8 +45,8 @@ const ligaDesliga = () => {
     }   }   
 
 function light() {
-    let tela = window.innerWidth;
-    
+    header.classList.add("light");
+    header.classList.remove("dark");
     body.style.backgroundColor = "rgba(5, 0, 23, 1)";
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
@@ -56,6 +56,7 @@ function light() {
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     main.style.backgroundColor = "rgba(5, 0, 23, 1)";
     HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
+    let tela = window.innerWidth;
     if (tela < 800) {li.forEach(li => {li.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = "black"})};
     if (tela < 800) {navTheme.style.backgroundColor = "rgba(5, 0, 23, 1)"} else {navTheme.style.backgroundColor = ""};
     if (tela < 800) {liMenor.forEach(liMenor => {liMenor.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = ""})};
@@ -68,6 +69,8 @@ function light() {
 }
 
 function dark() {
+    header.classList.add("dark");
+    header.classList.remove("light");
     body.style.backgroundColor = "";
     botaoOff.style.display = "none";
     botaoOn.style.display = "block";

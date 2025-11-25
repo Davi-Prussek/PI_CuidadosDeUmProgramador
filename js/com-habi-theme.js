@@ -1,6 +1,8 @@
 const HTML = document.querySelector("html");
 const body = document.querySelector("body");
 
+const titulo = document.getElementById("segundo-titulo");
+
 const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const main = document.querySelector("main");
@@ -22,6 +24,7 @@ const span = document.querySelectorAll("span");
 const subBar = document.getElementById("sub-menu-bar");
 const article = document.querySelectorAll("article");
 const li4 = document.querySelectorAll("li");
+let tela = window.innerWidth;
 
 const setaVoltar = document.getElementById("setaVoltar");
 
@@ -47,7 +50,7 @@ const ligaDesliga = () => {
     }   }   
 
 function light() {
-    let tela = window.innerWidth;
+    tela = window.innerWidth;
     article.forEach(article => {article.style.backgroundColor = "rgba(8, 0, 39, 1)"});
     li4.forEach(li4 => {li4.style.color = "white"});
     body.style.backgroundImage = "linear-gradient(180deg, rgba(15, 12, 45, 1) 0%, rgba(6, 0, 32, 0.8) 100%)";
@@ -68,6 +71,7 @@ function light() {
     div.forEach(d => { d.style.color = "#ffffff"; });
     h2.forEach(h2 => {h2.style.color = "#3c9effff"});
     p1.forEach(p => {p.style.color = "#ffffff"});
+    titulo.style.backgroundColor = "rgba(5, 0, 23, 1)"; 
     localStorage.setItem("theme", "light");
 }
 
@@ -93,6 +97,7 @@ function dark() {
     div.forEach(d => { d.style.backgroundColor = ""; });
     h2.forEach(h2 => {h2.style.color = ""});
     p1.forEach(p => {p.style.color = ""});
+    titulo.style.backgroundColor = "";
     localStorage.setItem("theme", "dark");
 }
 

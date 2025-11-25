@@ -6,6 +6,8 @@ const header = document.querySelector("header");
 const footer = document.querySelector("footer");
 const main = document.querySelector("main");
 
+const titulo = document.getElementById("segundo-titulo");
+
 const section = document.querySelectorAll("section");
 const div1 = document.querySelectorAll(".cards > div");
 const div2 = document.querySelectorAll(".acoes-cotidianas > div");
@@ -18,6 +20,9 @@ const h5 = document.querySelectorAll("h5");
 const h6 = document.querySelectorAll("h6");
 const span = document.querySelectorAll("span");
 const subBar = document.getElementById("sub-menu-bar");
+const li = document.querySelectorAll("li");
+const liMenor = document.querySelectorAll("nav > ul > li > ul > li");
+const navTheme = document.querySelector("nav");
 
 const setaVoltar = document.getElementById("setaVoltar");
 
@@ -51,6 +56,10 @@ function light() {
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     main.style.backgroundColor = "rgba(0, 0, 0, 1)";
     HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
+    let tela = window.innerWidth;
+    if (tela < 800) {li.forEach(li => {li.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = "black"})};
+    if (tela < 800) {navTheme.style.backgroundColor = "rgba(5, 0, 23, 1)"} else {navTheme.style.backgroundColor = ""};
+    if (tela < 800) {liMenor.forEach(liMenor => {liMenor.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = ""})};
     section.forEach(s => {s.style.color = "#ffffff";});
     div1.forEach(d => { d.style.color = "#ffffff"; });
     div1.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
@@ -58,6 +67,7 @@ function light() {
     div2.forEach(d => { d.style.backgroundColor = "rgba(5, 0, 23, 1)"; });
     h1.forEach(h1 => {h1.style.color = "#3c9effff"});
     p1.forEach(p => {p.style.color = "#ffffff"});
+    titulo.style.backgroundColor = "rgba(5, 0, 23, 1)"; 
     localStorage.setItem("theme", "light");
 }
 
@@ -70,6 +80,9 @@ function dark() {
     footer.style.background = "linear-gradient( #0057b3c4, #002457)";
     main.style.backgroundColor = "";
     HTML.style.backgroundColor = "";
+    li.forEach(li => {li.style.backgroundColor = ""});
+    navTheme.style.backgroundColor = "";
+    liMenor.forEach(liMenor => {liMenor.style.backgroundColor = ""});
     section.forEach(s => {s.style.color = "";});
     div1.forEach(d => { d.style.color = ""; });
     div1.forEach(d => { d.style.backgroundColor = ""; });
@@ -78,6 +91,7 @@ function dark() {
     h1.forEach(h1 => {h1.style.color = ""});
     p1.forEach(p => {p.style.color = ""});
     p1.forEach(s => {s.style.backgroundColor = "";});
+    titulo.style.backgroundColor = ""; 
     localStorage.setItem("theme", "dark");
 }   
 

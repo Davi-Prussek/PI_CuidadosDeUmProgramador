@@ -685,3 +685,130 @@
       }
     }
   }
+
+  /*Tema escuro config*/
+
+  @media (max-width: 799px) {
+  .light {
+  background-color: black;
+
+
+#nav {
+  background-color: black;
+}
+
+.direcionar_sobreNos > li {
+  background-color: black;
+  color: #ffffff;
+  ul > li {
+  background-color: rgba(5, 0, 23, 1);
+  color: #ffffff;
+  }
+}
+
+#sub-menu-bar {
+  background-color: black;
+}
+
+ #setaVoltar {
+  background-color: black;
+}
+
+.direcionar_sobreNos > li a p,
+.direcionar_sobreNos > li > ul > li a p {
+  color: #ffffff;
+}}
+
+  .dark {
+  background-color: #0056b3;
+
+
+#nav {
+  background-color: #002457;
+}
+
+.direcionar_sobreNos > li {
+  background-color: #002457;
+  color: #ffffff;
+  ul > li {
+  background-color: #001b42;
+  color: #ffffff;
+  }
+}
+
+#sub-menu-bar {
+  background-color: #0056b3;
+}
+
+#setaVoltar {
+  background-color: #0056b3;
+}
+
+.direcionar_sobreNos > li a p,
+.direcionar_sobreNos > li > ul > li a p {
+  color: #ffffff;
+}
+  }
+  }
+  @media (min-width: 800px) {
+  .light {
+  background-color: black;
+
+
+#nav {
+  background-color: black;
+}
+
+.direcionar_sobreNos > li {
+  background-color: black;
+  color: #ffffff;
+  ul > li {
+  background-color: rgb(18, 21, 44);
+  color: #ffffff;
+  }
+}
+
+#sub-menu-bar {
+  background-color: black;
+}
+
+ #setaVoltar {
+  background-color: black;
+}
+
+.direcionar_sobreNos > li a p,
+.direcionar_sobreNos > li > ul > li a p {
+  color: #ffffff;
+}}
+
+  .dark {
+  background-color: #0056b3;
+
+
+#nav {
+  background-color: #0056b3;
+}
+
+.direcionar_sobreNos > li {
+  background-color: #0056b3;
+  color: #a08c8c;
+  ul > li {
+  background-color: rgb(18, 21, 44);
+  color: #ffffff;
+  }
+}
+
+#sub-menu-bar {
+  background-color: #0056b3;
+}
+
+#setaVoltar {
+  background-color: #0056b3;
+}
+
+.direcionar_sobreNos > li a p,
+.direcionar_sobreNos > li > ul > li a p {
+  color: #ffffff;
+}
+  }
+  }

@@ -7,16 +7,14 @@ const botao_III = document.getElementById("botao-III");
 const sub_menus_I = document.getElementById("sub-menus-I");
 const sub_menus_III = document.getElementById("sub-menus-III");
 
-const tamanhoTela = window.innerWidth;
 let testeTamanho = window.innerWidth;
+
 sub_menus_I.style.display = "none";
 sub_menus_III.style.display = "none";
 
 const menu = () => {
 if (nav.style.display === "block") {
     nav.style.display = "none";
-    nav.style.backgroundColor = "";
-    li.forEach(li => {li.style.backgroundColor = ""});
     
 } else {
     nav.style.display = "block";
@@ -26,12 +24,10 @@ const atoAbrir_I = (event) => {
 if (event && event.preventDefault) event.preventDefault();
 if (sub_menus_I.style.display == "none") {
     sub_menus_I.style.display = "block";
-    botao_I.style.backgroundColor = "rgb(18, 21, 44)";
 } else {
     sub_menus_I.style.display = "none";
     botao_I.style.backgroundColor = "";
 }
-botao_I.setAttribute("aria-expanded", sub_menus_I.style.display === "block" ? "true" : "false");
 }
 const atoAbrir_III = (event) => {
 if (event && event.preventDefault) event.preventDefault();
