@@ -8,7 +8,7 @@ const sub_menus_I = document.getElementById("sub-menus-I");
 const sub_menus_III = document.getElementById("sub-menus-III");
 
 const tamanhoTela = window.innerWidth;
-
+let testeTamanho = window.innerWidth;
 sub_menus_I.style.display = "none";
 sub_menus_III.style.display = "none";
 
@@ -33,17 +33,6 @@ if (sub_menus_I.style.display == "none") {
 }
 botao_I.setAttribute("aria-expanded", sub_menus_I.style.display === "block" ? "true" : "false");
 }
-const atoAbrir_II = (event) => {
-if (event && event.preventDefault) event.preventDefault();
-if (sub_menus_II.style.display == "none") {
-    sub_menus_II.style.display = "block";
-    botao_II.style.backgroundColor = "rgb(18, 21, 44)";
-} else {
-    sub_menus_II.style.display = "none";
-    botao_II.style.backgroundColor = "";
-}
-botao_II.setAttribute("aria-expanded", sub_menus_II.style.display === "block" ? "true" : "false");    
-}
 const atoAbrir_III = (event) => {
 if (event && event.preventDefault) event.preventDefault();
 if (sub_menus_III.style.display == "none") {
@@ -56,7 +45,8 @@ if (sub_menus_III.style.display == "none") {
 botao_III.setAttribute("aria-expanded", sub_menus_III.style.display === "block" ? "true" : "false");    
 }
 const fecharMenu = (event) => {
-  if (!nav.contains(event.target) && !botaoMenu.contains(event.target)) {
+    testeTamanho = window.innerWidth;
+  if (!nav.contains(event.target) && !botaoMenu.contains(event.target) && testeTamanho < 500) {
     nav.style.display = "none";
     nav.style.backgroundColor = "";
   }
