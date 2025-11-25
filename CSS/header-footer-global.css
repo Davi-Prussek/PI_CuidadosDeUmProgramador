@@ -696,11 +696,11 @@
 
 
 #nav {
-  background-color: black;
+  background-color: rgba(5, 0, 23, 1);
 }
 
 .direcionar_sobreNos > li {
-  background-color: black;
+  background-color: rgba(5, 0, 23, 1);
   color: #ffffff;
   ul > li {
   background-color: rgba(5, 0, 23, 1);
@@ -709,6 +709,9 @@
 }
 
 #sub-menu-bar {
+  background-color: black;
+}
+#segundo-titulo {
   background-color: black;
 }
 
@@ -787,7 +790,7 @@
   background-color: #0056b3;
 
 
-#nav {
+nav {
   background-color: #0056b3;
 }
 

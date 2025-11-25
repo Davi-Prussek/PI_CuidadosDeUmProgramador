@@ -1,5 +1,5 @@
 const headerTodos = document.querySelector("header");
-header.innerHTML = `    <button id="menu-responsivo">
+header.innerHTML = `<button id="menu-responsivo">
       <img src="img/icons/menu.svg" alt="menu/icon"/>
     </button>
     <a href="index.html" id="titulo_sobreNos"><img src="img/logo_PI-fundo_removido-nova.png" alt="" /></a>

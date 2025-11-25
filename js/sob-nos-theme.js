@@ -60,6 +60,8 @@ const ligaDesliga = () => {
     }   }   
 
 function light() {
+    header.classList.add("light");
+    header.classList.remove("dark");
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
     HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
@@ -88,6 +90,8 @@ function light() {
 }
 
 function dark() {
+    header.classList.add("dark");
+    header.classList.remove("light");
     botaoOff.style.display = "none";
     botaoOn.style.display = "block";
     HTML.style.backgroundColor = "";

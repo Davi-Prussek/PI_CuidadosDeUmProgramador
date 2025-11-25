@@ -45,6 +45,10 @@ const ligaDesliga = () => {
     }   }   
 
 function light() {
+    header.classList.add("dark");
+    header.classList.remove("light");
+    header.classList.add("light");
+    header.classList.remove("dark");
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
     header.style.backgroundColor = "rgb(0, 0, 0)";

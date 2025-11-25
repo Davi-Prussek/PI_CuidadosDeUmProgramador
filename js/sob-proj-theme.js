@@ -46,6 +46,8 @@
         }   }   
 
     function light() {
+        header.classList.add("light");
+        header.classList.remove("dark");
         botaoOn.style.display = "none";
         botaoOff.style.display = "block";
         
@@ -66,6 +68,8 @@
     }
 
     function dark() {
+        header.classList.add("dark");
+        header.classList.remove("light");
         botaoOn.style.display = "block";
         botaoOff.style.display = "none";
         header.style.backgroundColor = "";

@@ -50,6 +50,8 @@ const ligaDesliga = () => {
     }   }   
 
 function light() {
+    header.classList.add("light");
+    header.classList.remove("dark");
     tela = window.innerWidth;
     article.forEach(article => {article.style.backgroundColor = "rgba(8, 0, 39, 1)"});
     li4.forEach(li4 => {li4.style.color = "white"});
@@ -76,6 +78,8 @@ function light() {
 }
 
 function dark() {
+    header.classList.add("dark");
+    header.classList.remove("light");
     article.forEach(article => {article.style.backgroundColor = ""});
     li4.forEach(li4 => {li4.style.color = ""});
     body.style.backgroundImage = "";
