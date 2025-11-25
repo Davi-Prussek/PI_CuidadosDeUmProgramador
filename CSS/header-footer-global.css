@@ -356,8 +356,8 @@
       border-radius: 50%;
       cursor: pointer;
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 35px;
+      right: 10px;
       border: none;
       z-index: 15;
       img {
@@ -385,7 +385,8 @@
 
       a img {
         margin-right: 3vw;
-        height: 10vw;
+        height: 13vw;
+        width: auto;
       }
 
       #nav {
@@ -417,6 +418,7 @@
           border: 1.5px solid white;
           border-radius: 10px;
           background-color: transparent;
+          margin-left: 1vw;
         }
       }
 

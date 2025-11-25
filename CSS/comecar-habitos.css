@@ -290,14 +290,12 @@ h3:hover {
 .parte-IV,
 .intro {
   background: var(--card-branco);
-  padding: clamp(1.5rem, 4vw, 2.5rem);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
-  margin: clamp(2rem, 5vw, 4rem) 0;
   border-left: 4px solid var(--azul-medio);
   transition: all var(--transition-base);
-  /* Novo: Gradiente de fundo mais sutil e brilho */
   position: relative;
+  padding-bottom: 0.5vw;
 }
 
 .parte-I:hover,
@@ -306,7 +304,7 @@ h3:hover {
 .parte-IV:hover,
 .intro:hover {
   box-shadow: var(--shadow-md), var(--shadow-glow);
-  transform: translateX(4px);
+  transform: translateY(4px);
   border-left-color: var(--azul-claro);
 }
 
@@ -523,9 +521,7 @@ h3:hover {
   }
 
   .mini-text {
-    font-size: 18px;
-    text-align: justify;
-    text-justify: inter-word;
+    font-size: 15px;
   }
 
   .numero img {

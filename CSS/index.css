@@ -469,41 +469,12 @@ main {
       }
 
       p {
-        font-size: 10px;
+        font-size: 4.5vw;
       }
 
       a {
         font-size: 10px;
         padding: 4px 8px;
-      }
-    }
-  }
-
-  @media (max-width: 200px) {
-    .ap1-2 {
-      .sub-titulo {
-        font-size: 18px;
-        margin: 0.5vw 0 0.2vw 0;
-      }
-
-      .card {
-        max-width: 180px;
-        min-width: 140px;
-        padding: 10px 8px;
-        min-height: 140px;
-      }
-
-      h3 {
-        font-size: 12px;
-      }
-
-      p {
-        font-size: 9px;
-      }
-
-      a {
-        font-size: 9px;
-        padding: 3px 6px;
       }
     }
   }
