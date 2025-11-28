@@ -1,401 +1,301 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="img/logo-icon.jpeg">
-    <title>Dev-Saúde | Teste de Horas</title>
-    <link rel="stylesheet" href="CSS/reset.css">
-    <link rel="stylesheet" href="CSS/testeHoras.css">
-    <link rel="stylesheet" href="CSS/header-footer-global.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet">
-  </head>
 
-  <body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="img/logo-icon.jpeg">
+  <title>Dev-Saúde | Teste de Horas</title>
+  <link rel="stylesheet" href="CSS/reset.css">
+  <link rel="stylesheet" href="CSS/testeHoras.css">
+  <link rel="stylesheet" href="CSS/header-footer-global.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
   <header id="header">
   </header>
-    <main id="topo">
-      <div class="botoes">
-      <a href="#"  class="seta-voltar" id="setaVoltar"><img src="img/icons/seta-voltar.svg" alt="seta/icon"></a>
+  <main id="topo">
+    <div class="botoes">
+      <a href="#" class="seta-voltar" id="setaVoltar"><img src="img/icons/seta-voltar.svg" alt="seta/icon"></a>
     </div>
 
-      <section class="container">
-        <h2>Questionário de Rotina, Hábitos e Produtividade</h2>
-        <p class="intro" id="texto">
-          Responda às perguntas abaixo para receber sugestões personalizadas
-          sobre sua rotina diária.
-        </p>
+    <section class="container">
+      <h2>Questionário de Rotina, Hábitos e Produtividade</h2>
+      <p class="intro" id="texto">
+        Responda às perguntas abaixo para receber sugestões personalizadas
+        sobre sua rotina diária.
+      </p>
 
-        <form class="horasForm">
-          <fieldset style="text-align: center;
+      <form class="horasForm">
+        <fieldset style="text-align: center;
           align-items: center;">
-            <legend>🕑 Parte 1 – Perguntas Gerais</legend>
-            <div class="form-group">
-              <label for="nome" id="texto">Nome:</label>
-              <input type="text" id="nome" name="nome" required>
-            </div>
-            <div class="form-group">
-              <label for="idade" id="texto">Idade:</label>
-              <input
-                type="text"
-                id="idade"
-                name="idade"
-                required
-              >
-            </div>
-            <div class="form-group">
-              <label for="sexo" id="texto">Sexo:</label>
-              <select id="sexo" name="sexo" required>
-                <option value>Selecione</option>
-                <option value="homem">Homem</option>
-                <option value="mulher">Mulher</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label id="texto">1. Como você avalia sua rotina atual?</label>
-              <select id="avaliacaoRotina" name="avaliacaoRotina" required>
-                <option value>Selecione</option>
-                <option value="muito-boa">Muito boa</option>
-                <option value="boa">Boa</option>
-                <option value="regular">Regular</option>
-                <option value="ruim">Ruim</option>
-              </select>
-              <span id="evaluationEmoji"></span>
-            </div>
-            <div class="form-group">
-              <label id="texto"
-                >2. Você costuma planejar suas atividades do dia?</label
-              >
-              <select id="planejaAtividades" name="planejaAtividades" required>
-                <option value>Selecione</option>
-                <option value="sempre">Sempre</option>
-                <option value="as-vezes">Às vezes</option>
-                <option value="raramente">Raramente</option>
-                <option value="nunca">Nunca</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label id="texto"
-                >3. Qual período do dia você sente mais disposição?</label
-              >
-              <select id="periodoDisposicao" name="periodoDisposicao" required>
-                <option value>Selecione</option>
-                <option value="manha">Manhã</option>
-                <option value="tarde">Tarde</option>
-                <option value="noite">Noite</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label id="texto"
-                >4. Você sente que consegue equilibrar trabalho/estudo com
-                lazer?</label
-              >
-              <select id="equilibrioRotina" name="equilibrioRotina" required>
-                <option value>Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="parcialmente">Parcialmente</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-          </fieldset>
-
-          <!-- 💻 Parte 2 – Rotina Condicional -->
-          <fieldset>
-            <legend>💻 Parte 2 – Rotina Condicional</legend>
-            <div class="form-group">
-              <label id="texto"
-                >O que você costuma fazer no seu dia a dia?</label
-              >
-              <!-- caixa de seleção abaixo da pergunta, alinhamento vertical -->
-              <div
-                class="checkbox-group"
-                style="margin-top: 0.7rem; flex-direction: column"
-                id="texto"
-              >
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="trabalho"
-                    name="trabalho"
-                    value="on"
-                  >
-                  <label for="trabalho">Trabalho/Programar</label>
-
-                  <!-- painel condicional agora fica imediatamente abaixo da checkbox -->
-                  <div id="trabalhoCondicional" class="conditional-panel" style="display: none">
-                    <label id="texto">Quantas horas por dia em média você dedica ao trabalho/programação?</label>
-                    <input
-                      type="text"
-                      id="horasTrabalho"
-                      name="horasTrabalho"
-                      maxlength="5"
-                      placeholder="Ex: 8:00"
-                    >
-                    <label id="texto">Você costuma fazer pausas regulares?</label>
-                    <select id="pausasTrabalho" name="pausasTrabalho">
-                      <option value>Selecione</option>
-                      <option value="sim">Sim</option>
-                      <option value="nao">Não</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="estudar"
-                    name="estudar"
-                    value="on"
-                  >
-                  <label for="estudar">Estudar</label>
-
-                  <div id="estudoCondicional" class="conditional-panel" style="display: none">
-                    <label id="texto">Quantas horas por dia em média você dedica aos estudos?</label>
-                    <input
-                      type="text"
-                      id="horasEstudo"
-                      name="horasEstudo"
-                      maxlength="5"
-                      placeholder="Ex: 2:30"
-                    >
-                    <label id="texto">Seus horários de estudo são:</label>
-                    <select id="horarioEstudo" name="horarioEstudo">
-                      <option value>Selecione</option>
-                      <option value="fixos">Fixos</option>
-                      <option value="Flexiveis">Flexiveis</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="tempoLivre"
-                    name="tempoLivre"
-                    value="on"
-                  >
-                  <label for="tempoLivre">Tempo livre</label>
-
-                  <div id="tempoLivreCondicional" class="conditional-panel" style="display: none">
-                    <label id="texto">Como você costuma ocupar seu tempo livre?</label>
-                    <div class="checkbox-group-inline">
-                      <div class="checkbox-item-inline">
-                        <input
-                            type="checkbox"
-                            id="telasLivre"
-                            name="telasLivre"
-                            value="on"
-                          >
-                        <label for="telasLivre">Uso de telas (filmes, jogos, celular)</label>
-                      </div>
-                      <div class="checkbox-item-inline">
-                        <input
-                          type="checkbox"
-                          id="atividadeFisicaLivre"
-                          name="atividadeFisicaLivre"
-                          value="on"
-                        >
-                        <label for="atividadeFisicaLivre">Atividade física</label>
-                      </div>
-                      <div class="checkbox-item-inline">
-                        <input
-                          type="checkbox"
-                          id="lazerLivre"
-                          name="lazerLivre"
-                          value="on"
-                        >
-                        <label for="lazerLivre">Lazer ao ar livre</label>
-                      </div>
-                      <div class="checkbox-item-inline">
-                        <input
-                          type="checkbox"
-                          id="outrosLivre"
-                          name="outrosLivre"
-                          value="on"
-                        >
-                        <label for="outrosLivre">Outros:</label>
-                        <input
-                          type="text"
-                          id="outrosLivreTexto"
-                          name="outrosLivreTexto"
-                          style="width: 120px"
-                        >
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div class="checkbox-item">
-                  <input
-                    type="checkbox"
-                    id="outros"
-                    name="atividade"
-                    value="outros"
-                  >
-                  <label for="outros">Outros:</label>
-                  <input
-                    type="text"
-                    id="outrosTexto"
-                    name="outrosTexto"
-                    style="width: 120px"
-                  >
-                </div>
-              </div>
-            </div>
-          </fieldset>
-
-          <fieldset>
-            <legend>😴 Parte 3 – Sono</legend>
-            <label id="texto">Quantas horas você costuma dormir por dia?</label>
-            <input
-              type="text"
-              id="horasSono"
-              name="horasSono"
-              maxlength="5"
-              placeholder="Ex: 7:30"
-              required
-            >
-            <span id="sleepEmoji"></span>
-          </fieldset>
-
-          <!-- 📱 Parte 4 – Uso de Telas -->
-          <fieldset>
-            <legend>📱 Parte 4 – Uso de Telas</legend>
-            <label id="texto"
-              >Quantas horas por dia você usa telas além do
-              trabalho/estudo?</label
-            >
-            <input
-              type="text"
-              id="horasTela"
-              name="horasTela"
-              maxlength="5"
-              placeholder="Ex: 3:00"
-              required
-            >
-          </fieldset>
-
-          <!-- 🧍 Parte 5 – Postura e Ambiente -->
-          <fieldset>
-            <legend>🧍 Parte 5 – Postura e Ambiente</legend>
-            <label id="texto"
-              >Você mantém uma boa postura diante das telas?</label
-            >
-            <select id="posturaTelas" name="posturaTelas" required>
+          <legend>🕑 Parte 1 – Perguntas Gerais</legend>
+          <div class="form-group">
+            <label for="nome" id="texto">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="form-group">
+            <label for="idade" id="texto">Idade:</label>
+            <input type="text" id="idade" name="idade" required>
+          </div>
+          <div class="form-group">
+            <label for="sexo" id="texto">Sexo:</label>
+            <select id="sexo" name="sexo" required>
+              <option value>Selecione</option>
+              <option value="homem">Homem</option>
+              <option value="mulher">Mulher</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="texto">1. Como você avalia sua rotina atual?</label>
+            <select id="avaliacaoRotina" name="avaliacaoRotina" required>
+              <option value>Selecione</option>
+              <option value="muito-boa">Muito boa</option>
+              <option value="boa">Boa</option>
+              <option value="regular">Regular</option>
+              <option value="ruim">Ruim</option>
+            </select>
+            <span id="evaluationEmoji"></span>
+          </div>
+          <div class="form-group">
+            <label id="texto">2. Você costuma planejar suas atividades do dia?</label>
+            <select id="planejaAtividades" name="planejaAtividades" required>
+              <option value>Selecione</option>
+              <option value="sempre">Sempre</option>
+              <option value="as-vezes">Às vezes</option>
+              <option value="raramente">Raramente</option>
+              <option value="nunca">Nunca</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="texto">3. Qual período do dia você sente mais disposição?</label>
+            <select id="periodoDisposicao" name="periodoDisposicao" required>
+              <option value>Selecione</option>
+              <option value="manha">Manhã</option>
+              <option value="tarde">Tarde</option>
+              <option value="noite">Noite</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label id="texto">4. Você sente que consegue equilibrar trabalho/estudo com
+              lazer?</label>
+            <select id="equilibrioRotina" name="equilibrioRotina" required>
               <option value>Selecione</option>
               <option value="sim">Sim</option>
               <option value="parcialmente">Parcialmente</option>
               <option value="nao">Não</option>
             </select>
-            <div id="posturaCondicional" style="display: none">
-              <label id="texto">Sente dores (costas, pescoço, visão)?</label>
-              <select id="senteDores" name="senteDores">
-                <option value>Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-              <label id="texto"meuForm
-                >Gostaria de receber dicas de alongamento rápido?</label
-              >
-              <select id="dicasAlongamento" name="dicasAlongamento">
-                <option value>Selecione</option>
-                <option value="sim">Sim</option>
-                <option value="nao">Não</option>
-              </select>
-            </div>
-            <label id="texto"
-              >O ambiente em que você trabalha/estuda é saudável (iluminação,
-              ventilação, conforto)?</label
-            >
-            <select id="ambienteSaudavel" name="ambienteSaudavel" required>
-              <option value>Selecione</option>
-              <option value="sim">Sim</option>
-              <option value="precisa-melhorar">Precisa melhorar</option>
-            </select>
-          </fieldset>
+          </div>
+        </fieldset>
 
-          <!-- ⚡ Parte 6 – Fechamento -->
-          <fieldset>
-            <legend>⚡ Parte 6 – Fechamento</legend>
-            <label id="texto">1. Você pratica atividade física?</label>
-            <select id="atividadeFisica" name="atividadeFisica" required>
-              <option value>Selecione</option>
-              <option value="nenhuma">Nenhuma</option>
-              <option value="1-2">1–2 vezes</option>
-              <option value="3-4">3–4 vezes</option>
-              <option value="5+">5+ vezes</option>
-            </select>
-            <label id="texto">2. Sua alimentação diária é:</label>
-            <select id="alimentacao" name="alimentacao" required>
-              <option value>Selecione</option>
-              <option value="equilibrada">Equilibrada</option>
-              <option value="parcialmente">Parcialmente equilibrada</option>
-              <option value="desequilibrada">Desequilibrada</option>
-            </select>
-            <label id="texto">3. Principal dificuldade na rotina:</label>
-            <select id="dificuldadeRotina" name="dificuldadeRotina" required>
-              <option value>Selecione</option>
-              <option value="falta-tempo">Falta de tempo</option>
-              <option value="procrastinacao">Procrastinação</option>
-              <option value="sono-ruim">Sono ruim</option>
-              <option value="excesso-telas">Excesso de telas</option>
-              <option value="outro">Outro</option>
-            </select>
-            <!-- Nova pergunta: calcular IMC antes da pergunta 4 -->
-            <label id="texto">Deseja calcular seu IMC (Índice de Massa Corporal)?</label>
-            <select id="calcularIMC" name="calcularIMC">
+        <!-- 💻 Parte 2 – Rotina Condicional -->
+        <fieldset>
+          <legend>💻 Parte 2 – Rotina Condicional</legend>
+          <div class="form-group">
+            <label id="texto">O que você costuma fazer no seu dia a dia?</label>
+            <div class="checkbox-group" style="margin-top: 0.7rem; flex-direction: column" id="texto">
+              <div class="checkbox-item">
+                <input type="checkbox" id="trabalho" name="trabalho" value="on">
+                <label for="trabalho">Trabalho/Programar</label>
+
+                <!-- painel condicional agora fica imediatamente abaixo da checkbox -->
+                <div id="trabalhoCondicional" class="conditional-panel" style="display: none">
+                  <label id="texto">Quantas horas por dia em média você dedica ao trabalho/programação?</label>
+                  <input type="text" id="horasTrabalho" name="horasTrabalho" maxlength="5" placeholder="Ex: 8:00">
+                  <label id="texto">Você costuma fazer pausas regulares?</label>
+                  <select id="pausasTrabalho" name="pausasTrabalho">
+                    <option value>Selecione</option>
+                    <option value="sim">Sim</option>
+                    <option value="nao">Não</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="checkbox-item">
+                <input type="checkbox" id="estudar" name="estudar" value="on">
+                <label for="estudar">Estudar</label>
+
+                <div id="estudoCondicional" class="conditional-panel" style="display: none">
+                  <label id="texto">Quantas horas por dia em média você dedica aos estudos?</label>
+                  <input type="text" id="horasEstudo" name="horasEstudo" maxlength="5" placeholder="Ex: 2:30">
+                  <label id="texto">Seus horários de estudo são:</label>
+                  <select id="horarioEstudo" name="horarioEstudo">
+                    <option value>Selecione</option>
+                    <option value="fixos">Fixos</option>
+                    <option value="Flexiveis">Flexiveis</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="checkbox-item">
+                <input type="checkbox" id="tempoLivre" name="tempoLivre" value="on">
+                <label for="tempoLivre">Tempo livre</label>
+
+                <div id="tempoLivreCondicional" class="conditional-panel" style="display: none">
+                  <label id="texto">Como você costuma ocupar seu tempo livre?</label>
+                  <div class="checkbox-group-inline">
+                    <div class="checkbox-item-inline">
+                      <input type="checkbox" id="telasLivre" name="telasLivre" value="on">
+                      <label for="telasLivre">Uso de telas (filmes, jogos, celular)</label>
+                    </div>
+                    <div class="checkbox-item-inline">
+                      <input type="checkbox" id="atividadeFisicaLivre" name="atividadeFisicaLivre" value="on">
+                      <label for="atividadeFisicaLivre">Atividade física</label>
+                    </div>
+                    <div class="checkbox-item-inline">
+                      <input type="checkbox" id="lazerLivre" name="lazerLivre" value="on">
+                      <label for="lazerLivre">Lazer ao ar livre</label>
+                    </div>
+                    <div class="checkbox-item-inline">
+                      <input type="checkbox" id="outrosLivre" name="outrosLivre" value="on">
+                      <div><label for="outrosLivre">Outros:</label>
+                      <input type="text" id="outrosLivreTexto" name="outrosLivreTexto" style="width: 120px">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="checkbox-item">
+                <input type="checkbox" id="outros" name="atividade" value="outros">
+                <label for="outros">Outros:</label>
+                <input type="text" id="outrosTexto" name="outrosTexto" style="width: 120px">
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>😴 Parte 3 – Sono</legend>
+          <label id="texto">Quantas horas você costuma dormir por dia?</label>
+          <input type="text" id="horasSono" name="horasSono" maxlength="5" placeholder="Ex: 7:30" required>
+          <span id="sleepEmoji"></span>
+        </fieldset>
+
+        <!-- 📱 Parte 4 – Uso de Telas -->
+        <fieldset>
+          <legend>📱 Parte 4 – Uso de Telas</legend>
+          <label id="texto">Quantas horas por dia você usa telas além do
+            trabalho/estudo?</label>
+          <input type="text" id="horasTela" name="horasTela" maxlength="5" placeholder="Ex: 3:00" required>
+        </fieldset>
+
+        <!-- 🧍 Parte 5 – Postura e Ambiente -->
+        <fieldset>
+          <legend>🧍 Parte 5 – Postura e Ambiente</legend>
+          <label id="texto">Você mantém uma boa postura diante das telas?</label>
+          <select id="posturaTelas" name="posturaTelas" required>
+            <option value>Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="parcialmente">Parcialmente</option>
+            <option value="nao">Não</option>
+          </select>
+          <div id="posturaCondicional" style="display: none">
+            <label id="texto">Sente dores (costas, pescoço, visão)?</label>
+            <select id="senteDores" name="senteDores">
               <option value>Selecione</option>
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
-            <div id="imcCondicional" style="display: none; margin-top:8px;">
-              <label id="texto">Peso (kg): <input type="number" id="pesoIMC" name="pesoIMC" step="0.1" min="20" max="300" ></label>
-              <label id="texto">Altura (cm): <input type="number" id="alturaIMC" name="alturaIMC" step="0.1" min="50" max="250"></label>
-            </div>
-            <label id="texto"
-              >4. O que gostaria de melhorar primeiro na sua rotina?</label
-            >
-            <input type="text" id="melhorarRotina" name="melhorarRotina">
-            <label>5. Sugestão ou comentário final:</label>
-            <textarea
-              id="comentarioFinal"
-              name="comentarioFinal"
-              rows="2"
-            ></textarea>
-          </fieldset>
-          <div class="button-group">
-            <button type="submit" class="btn-submit"><p>Ver Resultados</p></button>
-            <button type="reset" class="btn-reset" onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });"><p>Limpar Respostas</p></button>
+            <label id="texto" meuForm>Gostaria de receber dicas de alongamento rápido?</label>
+            <select id="dicasAlongamento" name="dicasAlongamento">
+              <option value>Selecione</option>
+              <option value="sim">Sim</option>
+              <option value="nao">Não</option>
+            </select>
           </div>
-        </form>
-      </section>
-      <section class="results-section" style="display: none">
-        <div class="container">
-          <h2>📊 Seus Resultados Personalizados</h2>
-          <div id="saudacaoPersonalizada"></div>
-          <div class="cards-container">
-            <!-- Os cards serão inseridos aqui pelo JavaScript -->
+          <label id="texto">O ambiente em que você trabalha/estuda é saudável (iluminação,
+            ventilação, conforto)?</label>
+          <select id="ambienteSaudavel" name="ambienteSaudavel" required>
+            <option value>Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="precisa-melhorar">Precisa melhorar</option>
+          </select>
+        </fieldset>
+
+        <!-- ⚡ Parte 6 – Fechamento -->
+        <fieldset>
+          <legend>⚡ Parte 6 – Fechamento</legend>
+          <label id="texto">1. Você pratica atividade física?</label>
+          <select id="atividadeFisica" name="atividadeFisica" required>
+            <option value>Selecione</option>
+            <option value="nenhuma">Nenhuma</option>
+            <option value="1-2">1–2 vezes</option>
+            <option value="3-4">3–4 vezes</option>
+            <option value="5+">5+ vezes</option>
+          </select>
+          <label id="texto">2. Sua alimentação diária é:</label>
+          <select id="alimentacao" name="alimentacao" required>
+            <option value>Selecione</option>
+            <option value="equilibrada">Equilibrada</option>
+            <option value="parcialmente">Parcialmente equilibrada</option>
+            <option value="desequilibrada">Desequilibrada</option>
+          </select>
+          <label id="texto">3. Principal dificuldade na rotina:</label>
+          <select id="dificuldadeRotina" name="dificuldadeRotina" required>
+            <option value>Selecione</option>
+            <option value="falta-tempo">Falta de tempo</option>
+            <option value="procrastinacao">Procrastinação</option>
+            <option value="sono-ruim">Sono ruim</option>
+            <option value="excesso-telas">Excesso de telas</option>
+            <option value="outro">Outro</option>
+          </select>
+          <!-- Nova pergunta: calcular IMC antes da pergunta 4 -->
+          <label id="texto">Deseja calcular seu IMC (Índice de Massa Corporal)?</label>
+          <select id="calcularIMC" name="calcularIMC">
+            <option value>Selecione</option>
+            <option value="sim">Sim</option>
+            <option value="nao">Não</option>
+          </select>
+          <div id="imcCondicional" style="display: none; margin-top:8px;">
+            <label id="texto">Peso (kg): <input type="number" id="pesoIMC" name="pesoIMC" step="0.1" min="20"
+                max="300"></label>
+            <label id="texto">Altura (cm): <input type="number" id="alturaIMC" name="alturaIMC" step="0.1" min="50"
+                max="250"></label>
           </div>
-          <div class="cta-section">
-            <button type="button" onclick="window.print()" class="print-btn">
-              🖨️ Imprimir Resultados
-            </button>
-            <button
-              type="button"
-              onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });"
-              class="restart-btn"
-            >
-              🔄 Fazer Teste Novamente
-            </button>
-          </div>
+          <label id="texto">4. O que gostaria de melhorar primeiro na sua rotina?</label>
+          <input type="text" id="melhorarRotina" name="melhorarRotina">
+          <label>5. Sugestão ou comentário final:</label>
+          <textarea id="comentarioFinal" name="comentarioFinal" rows="2"></textarea>
+        </fieldset>
+        <div class="button-group">
+          <button type="submit" class="btn-submit">
+            <p>Ver Resultados</p>
+          </button>
+          <button type="reset" class="btn-reset"
+            onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });">
+            <p>Limpar Respostas</p>
+          </button>
         </div>
-      </section>
-    </main>
-    <script src="js/header.js"></script>
-    <script src="js/footer.js"></script>
-    <script src="js/testeHoras.js"></script>
-    <script src="js/test-hora-theme.js"></script>
-    <script src="js/header-responsivo.js"></script>
-  </body>
+      </form>
+    </section>
+    <section class="results-section" style="display: none">
+      <div class="container">
+        <h2>📊 Seus Resultados Personalizados</h2>
+        <div id="saudacaoPersonalizada"></div>
+        <div class="cards-container">
+          <!-- Os cards serão inseridos aqui pelo JavaScript -->
+        </div>
+        <div class="cta-section">
+          <button type="button" onclick="window.print()" class="print-btn">
+            🖨️ Imprimir Resultados
+          </button>
+          <button type="button"
+            onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });"
+            class="restart-btn">
+            🔄 Fazer Teste Novamente
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="js/header.js"></script>
+  <script src="js/footer.js"></script>
+  <script src="js/testeHoras.js"></script>
+  <script src="js/test-hora-theme.js"></script>
+  <script src="js/header-responsivo.js"></script>
+</body>
+
 </html>
