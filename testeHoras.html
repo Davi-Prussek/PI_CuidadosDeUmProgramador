@@ -165,7 +165,7 @@
               </div>
             </div>
           </div>
-        </fieldset>
+        
 
         <fieldset>
           <legend>😴 Parte 3 – Sono</legend>
@@ -199,7 +199,7 @@
               <option value="sim">Sim</option>
               <option value="nao">Não</option>
             </select>
-            <label id="texto" meuForm>Gostaria de receber dicas de alongamento rápido?</label>
+            <label id="texto">Gostaria de receber dicas de alongamento rápido?</label>
             <select id="dicasAlongamento" name="dicasAlongamento">
               <option value>Selecione</option>
               <option value="sim">Sim</option>
@@ -265,7 +265,7 @@
             <p>Ver Resultados</p>
           </button>
           <button type="reset" class="btn-reset"
-            onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });">
+            onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });" id="resetButton">
             <p>Limpar Respostas</p>
           </button>
         </div>
