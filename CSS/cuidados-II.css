@@ -76,10 +76,10 @@ html {
         }
       }
 
-      .main {
+      
         background-color: white;
 
-        .main-content {
+        
           #postura,
           #luz-solar,
           #burn-out,
@@ -426,8 +426,8 @@ html {
               }
             }
           }
-        }
-      }
+        
+      
     }
   }
 }
