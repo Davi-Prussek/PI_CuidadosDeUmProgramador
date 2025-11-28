@@ -145,7 +145,7 @@
         As 4 Responsabilidade das paginas
         terminando paginas
         Arrumando os cardis de referencia de conteudo
-        fazendo as atas do dia  
+        fazendo as atas do dia  ,
         conferindo as paginas para o projeto
 
     ### Quem faltou:
@@ -216,6 +216,17 @@
     ### Quem faltou:
 
         Maico, Felipe e Bruno;
+
+## Decimo nono dia 28/11
+    ## O que vai ser feito;
+        Ajustar pequenos erros 
+        validar erros de HTML
+        Ajeitar um pouco sobre o designer
+        Reforçar uma página e ajustar erros
+
+    ### Quem faltou:
+
+        Davi;
       
 
 
