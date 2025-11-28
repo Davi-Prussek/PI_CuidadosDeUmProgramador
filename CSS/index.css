@@ -210,8 +210,7 @@ main {
 
   @media (max-width: 350px) {
     .apresentacao1 {
-      padding: 25px 5px;
-      min-height: 260px;
+
 
       article {
         margin: 1vw 0.5vw 0px 0.5vw;
@@ -228,7 +227,6 @@ main {
           margin-bottom: 10px;
 
           .txt1 {
-            font-size: 14px;
             margin-top: 5px;
             max-width: 300px;
           }
@@ -265,7 +263,7 @@ main {
     }
 
     .card {
-      background-color: #f4f4f4;
+      background-color: #e5e5e5;
       border: 1px solid #f5f5f5;
       border-radius: 8px;
       padding: 20px 15px;
@@ -479,6 +477,8 @@ main {
     }
   }
 }
+
+/*===== RESPONSIVIDADE DAVI =====*/
 @media (max-width: 799px) {
   main {
     margin-top: 15vw;
@@ -504,9 +504,23 @@ main {
     }
   }
 }
-
 @media (max-width: 500px) {
   main {
+    .apresentacao1 {
+      margin-inline: 3vw;
+      margin-top: 25vw;
+      padding: 7.5vw 2vw;
+      min-height: fit-content;
+      #ol1 {
+        margin-top: 5vw;
+        font-size: 12vw;
+      }
+      .ol .txt1 {
+        line-height: 8vw;
+          margin-top: 7vw;
+          font-size: 5vw;
+      }
+    }
     .container {
       padding: 1rem;
       h2 {
@@ -522,7 +536,13 @@ main {
     .card {
       padding: 15px 10px;
       h3 {
-        font-size: 1.1rem;
+        font-size: 7vw;
+      }
+      p {
+        font-size: 5vw;
+      }
+      a {
+        font-size: 6vw;
       }
     }
   }

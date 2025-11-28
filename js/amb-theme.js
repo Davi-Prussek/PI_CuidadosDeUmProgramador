@@ -20,7 +20,7 @@ const h5 = document.querySelectorAll("h5");
 const h6 = document.querySelectorAll("h6");
 const span = document.querySelectorAll("span");
 const subBar = document.getElementById("sub-menu-bar");
-const li = document.querySelectorAll("li");
+const li = document.querySelectorAll(" nav > li");
 const liMenor = document.querySelectorAll("nav > ul > li > ul > li");
 const navTheme = document.querySelector("nav");
 

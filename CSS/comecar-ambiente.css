@@ -237,22 +237,20 @@ html {
       main {
         padding-top: 15vw;
         margin-inline: 2vw;
-
         h1 {
-          font-size: 10vw;
-        }
-
-        h2 {
+          font-size: 10vw;} 
+          h2 {
           margin-top: 2vw;
-
           span {
-            font-size: 8vw;
-          }
+            font-size: 8vw;}
         }
 
         .parte-I {
+          border-bottom: 2px solid #0056b3;
+          padding-bottom: 5vw;
+          margin-bottom: 7vw;
           .mini-text {
-            font-size: 5vw;
+            font-size: 5.5vw;
             border-radius: 15px;
             margin: 7vw 3vw 9vw 3vw;
           }
@@ -266,13 +264,16 @@ html {
 
             .card-I,
             .card-II {
+              margin-top: 3vw;
               margin-inline: 3vw;
               width: 100%;
+              padding-inline: 5vw;
               background-color: #e3f1ff;
               border-radius: 23px;
-              transition: transform 0.25s ease, box-shadow 0.25s ease;
+              transition: transform 0.5s ease, box-shadow 0.5s ease;
 
               h3 {
+                margin-top: 2vw;
                 color: #003366;
                 font-size: 10vw;
                 display: flex;
@@ -308,6 +309,7 @@ html {
                 text-align: center;
 
                 img {
+                  margin-top: 3vw;
                   width: 75vw;
                   border-radius: 20px;
                 }
@@ -318,7 +320,7 @@ html {
                 color: #003366;
                 font-size: 5vw;
                 line-height: 8.5vw;
-                margin: 0;
+                margin: 2vw auto;
               }
             }
           }
@@ -327,10 +329,9 @@ html {
         
         .parte-II {
         .mini-text {
-          border-radius: 15px;
-          padding: 1vw 20px;
-          margin: 0px 10vw;
-          font-size: 5vw;
+            font-size: 5.5vw;
+            border-radius: 15px;
+            margin: 7vw 1vw 0vw 1vw;
         }
           h2 span {
             margin-inline: 4vw;
@@ -363,21 +364,18 @@ html {
             }
 
             .text {
-              padding: 20px 0 20px 20px;
-
+              margin-right: 4vw;
               h3 {
                 font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
                 color: #003366;
-                font-size: 7vw;
-                margin-bottom: 30px;
-
+                font-size: 6.5vw;
+                margin-bottom: 3vw;
+                text-align: center;
               }
-
               p {
                 line-height: 8vw;
-                font-size: 5vw;
+                font-size: 5.5vw;
                 text-align: left;
-                padding-left: 8px;
                 border-left: 4px solid #0056b3;
               }
             }
@@ -402,15 +400,20 @@ html {
         }
       .parte-III {
           h2 span {
+            font-size: 8vw;
             margin-inline: 4vw;
           }
         p {
+            border: 2px solid #0056b3;
             padding-top: 4vw;
+            padding-bottom: 3vw;
             color: #003366;
-            font-size: 5vw;
+            font-size: 5.5vw;
             line-height: 8.5vw;
             margin: 0;
+            margin-bottom: 5vw;
             padding-inline: 7vw;
+            margin-inline: 2.5vw;
         }
         padding-bottom: 2vw;
 
@@ -441,6 +444,7 @@ html {
           }
 
           .arquive {
+            border: none;
             text-align: center;
             font-size: 5vw;
           }
