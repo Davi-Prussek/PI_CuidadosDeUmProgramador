@@ -39,7 +39,7 @@ html {
         box-shadow: 0 8px 20px rgba(0, 89, 179, 0.7);
         transition: 0.3s ease;
         filter: brightness(-2);
-        margin-top: 25vw;
+        margin-top: 5vw;
 
         &:hover {
           box-shadow: 0 12px 30px rgba(0, 89, 179, 0.9);
