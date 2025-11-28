@@ -25,6 +25,8 @@ const setaVoltarTheme = document.getElementById("setaVoltar");
 const botaoOffTheme = document.getElementById("themeButtonOff");
 const botaoOnTheme = document.getElementById("themeButtonOn")
 
+const resetButton = document.getElementById("resetButton");
+
 const ligadoDesligado = document.getElementById("desligado");
 window.onload = () => {
     const tema = localStorage.getItem("theme");
@@ -41,14 +43,14 @@ const ligaDesliga = () => {
     } else {
         light();
     }   }   
-
-function light() {
-    header.classList.add("light");
-    header.classList.remove("dark");
-    botaoOnTheme.style.display = "none";
-    botaoOffTheme.style.display = "block";
-    headerTheme.style.backgroundColor = "rgb(0, 0, 0)";
-    subBarTheme.style.backgroundColor = "rgb(0, 0, 0)"
+    
+    function light() {
+        header.classList.add("light");
+        header.classList.remove("dark");
+        botaoOnTheme.style.display = "none";
+        botaoOffTheme.style.display = "block";
+        headerTheme.style.backgroundColor = "rgb(0, 0, 0)";
+        subBarTheme.style.backgroundColor = "rgb(0, 0, 0)"
     setaVoltarTheme.style.backgroundColor = "rgb( 0, 0, 0)";
     footerTheme.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     mainTheme.style.backgroundColor = "rgba(5, 0, 23, 1)";
@@ -57,8 +59,10 @@ function light() {
     sectionTheme.forEach(s => {s.style.backgroundColor = "rgb( 0, 0, 0)";});
     fieldsetTheme.forEach(f => {f.style.backgroundColor = "rgba(5, 0, 23, 1)"});
     h2Theme.forEach(h2 => {h2.style.color = "#3c9effff"});
-    pTheme.forEach(p => {p.style.color = "#ffffff"});
+    pTheme.forEach(p => {p.style.color = "#ffffffff"});
     localStorage.setItem("theme", "light");
+    resetButton.style.background = "#ffffffff";
+
 }
 
 function dark() {
@@ -80,6 +84,7 @@ function dark() {
     h2Theme.forEach(h2 => {h2.style.color = ""});
     pTheme.forEach(p => {p.style.color = ""});
     localStorage.setItem("theme", "dark");
+    resetButton.style.background = "#5e5e5eff";
 }
 
 botaoOffTheme.addEventListener("click", ligaDesliga);
