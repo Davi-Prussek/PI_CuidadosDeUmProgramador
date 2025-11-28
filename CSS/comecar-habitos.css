@@ -74,7 +74,7 @@ html {
   background-size: 400px 400px;
 }
 html {
-    font-size: calc(12px + 0.95vw);
+  font-size: calc(12px + 0.95vw);
   font-family: "Open Sans", sans-serif;
   color: #333;
   line-height: 1.6;
@@ -262,13 +262,12 @@ h3:hover {
 
 /* ====== TEXTO & PARÁGRAFOS ====== */
 .mini-text {
-  font-size: 2vw;
-  line-height: 7vw;
-  overflow-wrap: break-word;
-  text-indent: 1em;
-  max-width: var(--content-max);
-  color: var(--cinza-texto);
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  line-height: 1.5;
+  overflow-wrap: normal;
+  padding-left: 2vw;
 }
+
 /* ====== SEÇÕES DE CONTEÚDO ====== */
 
 .sinais {
@@ -277,13 +276,12 @@ h3:hover {
   flex-direction: column;
   justify-content: flex-start;
   gap: 10vw;
-
 }
 .parte-I,
 .parte-II,
 .parte-III,
 .parte-IV,
-.intro {  
+.intro {
   background: var(--card-branco);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
