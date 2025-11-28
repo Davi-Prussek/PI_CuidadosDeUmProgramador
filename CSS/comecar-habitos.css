@@ -147,8 +147,8 @@ main {
 .title span {
   position: absolute;
   z-index: 2;
-  right: 20%;
-  left: 20%;
+  right: 15%;
+  left: 15%;
   top: 30%;
   font-size: 3.5vw;
 }
