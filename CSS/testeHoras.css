@@ -37,14 +37,11 @@ html {
 
     /* ========================================= HEADER ========================================= */
     @media (min-width: 800px) {
-    
       main {
-        
-          img {
-            width: 55px;
-            height: 60px;
-          }
-        
+        img {
+          width: 55px;
+          height: 60px;
+        }
 
         margin-top: 6vw;
         margin-bottom: 3rem;
@@ -129,7 +126,6 @@ html {
       main {
         margin-top: calc(4.5vw + 20px);
         min-height: calc(100vh - 4.5vw - 20px);
-
 
         /* ---------- Fonte e cores ---------- */
         body {
@@ -445,7 +441,6 @@ html {
         .btn-submit {
           background: #0066cc;
           color: #fff;
-          
         }
 
         .btn-reset {
@@ -1377,7 +1372,6 @@ html {
         }
       }
       main {
-
         margin-top: 11vw;
 
         /* ---------- Fonte e cores ---------- */
@@ -1729,7 +1723,6 @@ html {
           background: #e67e00;
         }
       }
-
     }
     @media (max-width: 400px) {
       main {
@@ -1744,7 +1737,7 @@ html {
             font-size: 7vw;
             line-height: 9vw;
           }
-        } 
+        }
         fieldset {
           padding: 0.8rem;
         }
@@ -1756,7 +1749,6 @@ html {
         }
       }
       main {
-
         margin-top: 11vw;
 
         /* ---------- Fonte e cores ---------- */
@@ -2110,7 +2102,6 @@ html {
           background: #e67e00;
         }
       }
-
     }
   }
 }
