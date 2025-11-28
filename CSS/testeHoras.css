@@ -130,21 +130,6 @@ html {
         margin-top: calc(4.5vw + 20px);
         min-height: calc(100vh - 4.5vw - 20px);
 
-        .seta-voltar {
-          background-color: #0056b3;
-          border-radius: 1000px;
-          cursor: pointer;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          border: none;
-          z-index: 15;
-
-          img {
-            width: 55px;
-            height: 60px;
-          }
-        }
 
         /* ---------- Fonte e cores ---------- */
         body {
@@ -996,20 +981,6 @@ html {
         }
       }
       main {
-        .seta-voltar {
-          background-color: #0056b3;
-          border-radius: 1000px;
-          cursor: pointer;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          border: none;
-          z-index: 15;
-          img {
-            width: 55px;
-            height: 60px;
-          }
-        }
         margin-top: 11vw;
 
         /* ---------- Fonte e cores ---------- */
@@ -1406,20 +1377,7 @@ html {
         }
       }
       main {
-        .seta-voltar {
-          background-color: #0056b3;
-          border-radius: 1000px;
-          cursor: pointer;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          border: none;
-          z-index: 15;
-          img {
-            width: 55px;
-            height: 60px;
-          }
-        }
+
         margin-top: 11vw;
 
         /* ---------- Fonte e cores ---------- */
@@ -1798,20 +1756,7 @@ html {
         }
       }
       main {
-        .seta-voltar {
-          background-color: #0056b3;
-          border-radius: 1000px;
-          cursor: pointer;
-          position: fixed;
-          bottom: 20px;
-          right: 20px;
-          border: none;
-          z-index: 15;
-          img {
-            width: 55px;
-            height: 60px;
-          }
-        }
+
         margin-top: 11vw;
 
         /* ---------- Fonte e cores ---------- */
