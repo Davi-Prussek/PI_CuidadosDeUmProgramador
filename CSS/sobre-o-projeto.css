@@ -209,25 +209,76 @@ html {
         }
       }
     }
-  }
+  
 
   /* ======================================================
         RESPONSIVIDADE — 500px
      ====================================================== */
   @media (max-width: 500px) {
+    /* ===== Parte do Davi*/
     main {
-      .s1 h2 {
-        font-size: 36px;
+      .s1 {
+        margin-top: 30vw;
+        h2 {
+          font-size: 13vw;
+        }
+    }
+    .s2 {
+      p {
+        font-size: 5.5vw;
+        text-align: center;
+        margin-inline: 6vw;
       }
+      ul {
+        li {
+          font-size: 5.5vw;
+          margin-top: 6vw;
+        }
+      }
+      h2 {
+        font-size: 16vw;
+        line-height: 15vw;
+        margin-bottom: 4vw;
+      }
+      h3 {
+        font-size: 12vw;
+      }
+    }
 
-      .listaDeArticle {
+    .listaDeArticle {
         grid-template-columns: 1fr !important;
 
         div:last-child {
           grid-column: span 1 !important;
         }
+        div {
+          margin-bottom: 4vw;
+          h3 {
+            font-size: 8vw;
+            color: #004bb4;
+          }
+          p {
+          font-size: 5.5vw;
+        }
+        a {
+          font-size: 6vw;
+        }
       }
+    }
+    .atas {
+    .cards { 
+      .card {
+      h3 {
+        color: #006aff;
+        text-align: center;
+        font-size: 8vw;
+      }
+    }
+  }
+}
+    /* ===== Fim da parte do Davi ===== */
 
+    /* ===== Bombas do Careca ===== */
       .atas .cards {
         grid-template-columns: 1fr !important;
       }
@@ -252,28 +303,11 @@ html {
         padding: 15px 10px;
 
         h3 {
-          font-size: 1.1rem;
+          font-size: 1.1vw;
         }
       }
+    /* ===== Fim das bombas do careca ===== */
     }
   }
-
-  /* ======================================================
-        RESPONSIVIDADE — 330px
-     ====================================================== */
-  @media (max-width: 330px) {
-    main .s1 h2 {
-      font-size: 28px;
-    }
-
-    .atas {
-      display: grid;
-      grid-template-columns: 1fr !important;
-      gap: 10px;
-    }
-
-    .listaDeArticle {
-      grid-template-columns: 1fr !important;
-    }
-  }
+}
 }
