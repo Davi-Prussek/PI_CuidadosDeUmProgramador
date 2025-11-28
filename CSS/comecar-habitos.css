@@ -47,6 +47,7 @@ main::after {
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
   --container-max: 1200px;
   --content-max: 65ch;
+    --h3-glow-color: rgba(255, 255, 255, 0.4);
 }
 
 /* ====== FONTE & TIPOGRAFIA ====== */
@@ -244,7 +245,7 @@ h3::before {
   background: linear-gradient(
     90deg,
     transparent,
-    rgba(255, 255, 255, 0.4),
+    var(--h3-glow-color),
     transparent
   );
   transition: left var(--transition-slow);
@@ -266,6 +267,11 @@ h3:hover {
   line-height: 1.5;
   overflow-wrap: normal;
   padding-left: 2vw;
+  ul {
+    li {
+      line-height: 2.7vw;
+    }
+  }
 }
 
 /* ====== SEÇÕES DE CONTEÚDO ====== */

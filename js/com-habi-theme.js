@@ -75,6 +75,7 @@ function light() {
     p1.forEach(p => {p.style.color = "#ffffff"});
     titulo.style.backgroundColor = "rgba(5, 0, 23, 1)"; 
     localStorage.setItem("theme", "light");
+    HTML.style.setProperty("--h3-glow-color", "rgba(255, 255, 255, 0..4)");
 }
 
 function dark() {
@@ -103,6 +104,7 @@ function dark() {
     p1.forEach(p => {p.style.color = ""});
     titulo.style.backgroundColor = "";
     localStorage.setItem("theme", "dark");
+    HTML.style.setProperty("--h3-glow-color", "rgba(0, 0, 0, 0.4)");
 }
 
 botaoOff.addEventListener("click", ligaDesliga);
