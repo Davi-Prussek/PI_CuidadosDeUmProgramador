@@ -14,6 +14,7 @@ body {
   padding-top: 5vw;
   background-color: white;
 }
+
 /*===================== Apresentação 1 ===================*/
 main {
   background-color: white;
@@ -40,11 +41,9 @@ main {
       content: "";
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        180deg,
-        rgba(0, 0, 0, 0.6) 0%,
-        rgba(0, 0, 0, 0.4) 100%
-      );
+      background: linear-gradient(180deg,
+          rgba(0, 0, 0, 0.6) 0%,
+          rgba(0, 0, 0, 0.4) 100%);
       z-index: -1;
       border-radius: 15px;
     }
@@ -114,6 +113,7 @@ main {
         }
       }
     }
+
     .cards-right {
       display: flex;
       justify-content: space-around;
@@ -235,15 +235,34 @@ main {
     }
   }
 
+  /* ==== Between ==== */
+  .between {
+    margin: auto 20vw;
+    margin-top: 5vw;
+
+    .text-left {
+      text-align: center;
+      font-size: 1rem;
+      line-height: 1.6;
+    }
+  }
+
+
   /* ==== section 1-2 ==== */
   .ap1-2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     gap: 20px;
-    padding: 0 8vw;
-    margin-top: 10vw;
+    padding-inline: 1vw;
+    padding-top: 15vw;
+    padding-bottom: 4vw;
+    margin-top: 5vw;
+    background-image: url(/img/index-theme-card.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+
 
     .text-left {
       padding: auto 20px;
@@ -251,20 +270,37 @@ main {
       font-size: 1rem;
       line-height: 1.6;
     }
-
-    .sub-titulo {
-      margin: 4vw 0 3vw 0;
-      text-align: center;
-      color: #004589;
-      font-weight: bolder;
-      font-family: "Times New Roman", Times, serif;
-      text-align: center;
-      font-size: 70px;
-    }
+.sub-titulo-style {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 1vw;
+  z-index: 3;
+.sub-titulo {
+  flex: 0 0 auto;
+  margin-inline: 1vw;
+  text-align: center;
+  font-size: 70px;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: #004589;
+}
+article {
+flex: 1;
+width: 100%;
+padding-inline: 5vw;
+background: url(/img/icons/icon-index/linha.png) repeat-x;
+background-size: contain;
+margin-inline: 1vw;
+img {
+  visibility: hidden;
+}
+}
+}
 
     .card {
-      background-color: #e5e5e5;
-      border: 1px solid #f5f5f5;
+      background-color: #f2f2f2;
       border-radius: 8px;
       padding: 20px 15px;
       text-align: center;
@@ -279,6 +315,7 @@ main {
     }
 
     .cards-right {
+      margin-top: 5vw;
       display: flex;
       justify-content: space-around;
       gap: 45px;
@@ -288,7 +325,8 @@ main {
     .card:hover {
       background-color: #e6f0ff;
       box-shadow: 0 6px 15px rgba(0, 89, 179, 0.9);
-      transform: scale(1.02);
+      transform: scale(
+        1.02);
       transition: transform 1s ease;
     }
 
@@ -328,20 +366,152 @@ main {
       color: white;
     }
   }
+  .ap1-2::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top, 
+  rgba(255,255,255,0) 60%,
+  rgba(255,255,255,0.025) 61%,
+  rgba(255,255,255,0.05) 62%,
+  rgba(255,255,255,0.075) 63%,
+  rgba(255,255,255,0.1) 64%,
+  rgba(255,255,255,0.125) 65%,
+  rgba(255,255,255,0.15) 66%,
+  rgba(255,255,255,0.175) 67%,
+  rgba(255,255,255,0.2) 68%,
+  rgba(255,255,255,0.225) 69%,
+  rgba(255,255,255,0.25) 70%,
+  rgba(255,255,255,0.275) 71%,
+  rgba(255,255,255,0.3) 72%,
+  rgba(255,255,255,0.325) 73%,
+  rgba(255,255,255,0.35) 74%,
+  rgba(255,255,255,0.375) 75%,
+  rgba(255,255,255,0.4) 76%,
+  rgba(255,255,255,0.425) 77%,
+  rgba(255,255,255,0.45) 78%,
+  rgba(255,255,255,0.475) 79%,
+  rgba(255,255,255,0.5) 80%,
+  rgba(255,255,255,0.525) 81%,
+  rgba(255,255,255,0.55) 82%,
+  rgba(255,255,255,0.575) 83%,
+  rgba(255,255,255,0.6) 84%,
+  rgba(255,255,255,0.625) 85%,
+  rgba(255,255,255,0.65) 86%,
+  rgba(255,255,255,0.675) 87%,
+  rgba(255,255,255,0.7) 88%,
+  rgba(255,255,255,0.725) 89%,
+  rgba(255,255,255,0.75) 90%,
+  rgba(255,255,255,0.775) 91%,
+  rgba(255,255,255,0.8) 92%,
+  rgba(255,255,255,0.825) 93%,
+  rgba(255,255,255,0.85) 94%,
+  rgba(255,255,255,0.875) 95%,
+  rgba(255,255,255,0.9) 96%,
+  rgba(255,255,255,0.925) 97%,
+  rgba(255,255,255,0.95) 98%,
+  rgba(255,255,255,0.975) 99%,
+  rgba(255, 255, 255, 0.990) 100%
+    );
 
+  pointer-events: none;
+  z-index: 1;}
+
+  .ap1-2-dark::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to top,
+  rgba(3, 0, 16,0) 60%,
+  rgba(3, 0, 16,0.025) 61%,
+  rgba(3, 0, 16,0.05) 62%,
+  rgba(3, 0, 16,0.075) 63%,
+  rgba(3, 0, 16,0.1) 64%,
+  rgba(3, 0, 16,0.125) 65%,
+  rgba(3, 0, 16,0.15) 66%,
+  rgba(3, 0, 16,0.175) 67%,
+  rgba(3, 0, 16,0.2) 68%,
+  rgba(3, 0, 16,0.225) 69%,
+  rgba(3, 0, 16,0.25) 70%,
+  rgba(3, 0, 16,0.275) 71%,
+  rgba(3, 0, 16,0.3) 72%,
+  rgba(3, 0, 16,0.325) 73%,
+  rgba(3, 0, 16,0.35) 74%,
+  rgba(3, 0, 16,0.375) 75%,
+  rgba(3, 0, 16,0.4) 76%,
+  rgba(3, 0, 16,0.425) 77%,
+  rgba(3, 0, 16,0.45) 78%,
+  rgba(3, 0, 16,0.475) 79%,
+  rgba(3, 0, 16,0.5) 80%,
+  rgba(3, 0, 16,0.525) 81%,
+  rgba(3, 0, 16,0.55) 82%,
+  rgba(3, 0, 16,0.575) 83%,
+  rgba(3, 0, 16,0.6) 84%,
+  rgba(3, 0, 16,0.625) 85%,
+  rgba(3, 0, 16, 0.65) 86%,
+  rgba(3, 0, 16, 0.675) 87%,
+  rgba(3, 0, 16, 0.7) 88%,
+  rgba(3, 0, 16, 0.725) 89%,
+  rgba(3, 0, 16, 0.75) 90%,
+  rgba(3, 0, 16, 0.775) 91%,
+  rgba(3, 0, 16, 0.8) 92%,
+  rgba(3, 0, 16, 0.825) 93%,
+  rgba(3, 0, 16, 0.85) 94%,
+  rgba(3, 0, 16, 0.875) 95%,
+  rgba(3, 0, 16, 0.9) 96%,
+  rgba(3, 0, 16, 0.925) 97%,
+  rgba(3, 0, 16, 0.95) 98%,
+  rgba(3, 0, 16, 0.975) 99%,
+  rgba(3, 0, 16, 0.99) 100%
+    );
+  
+
+  pointer-events: none;
+  z-index: 1;
+  }
+  
   /* ============= RESPONSIVIDADE CARDS ============= */
-  @media (max-width: 1000px) {
+@media (max-width: 1000px) {
     .ap1-2 {
-      .sub-titulo {
-        font-size: 50px;
-        margin: 3vw 0 2vw 0;
-      }
+      background-size: 100% 100%;
+padding-top: 20vw;
+.sub-titulo-style {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 1vw;
+  z-index: 10;
+.sub-titulo {
+  flex: 0 0 auto;
+  margin-inline: 1vw;
+  text-align: center;
+  font-size: 7vw;
+  font-weight: bolder;
+  font-family: "Times New Roman", Times, serif;
+  color: #004589;
+}
+article {
+flex: 1;
+width: 100%;
+padding-inline: 2vw;
+background: url(/img/icons/icon-index/linha.png) repeat-x;
+background-size: contain;
+margin-inline: 0.5vw;
+img {
+  visibility: hidden;
+}
+}
+}
 
       .cards-right {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 25px;
         justify-content: center;
+        z-index: 10;
       }
 
       .card {
@@ -405,13 +575,13 @@ main {
         min-width: 200px;
         margin: 0 auto;
       }
-
       h3 {
-        font-size: 15px;
+        font-size: 30px;
       }
 
       p {
-        font-size: 12px;
+        font-size: 15px;
+        line-height: 18px;
       }
 
       a {
@@ -427,6 +597,7 @@ main {
         font-size: 26px;
         margin: 1.5vw 0 0.8vw 0;
       }
+
       .card {
         max-width: 280px;
         min-width: 180px;
@@ -460,7 +631,7 @@ main {
         min-width: 160px;
         padding: 12px 10px;
       }
-      
+
 
       h3 {
         font-size: 13px;
@@ -482,28 +653,35 @@ main {
 @media (max-width: 799px) {
   main {
     margin-top: 15vw;
+
     .container {
       max-width: 95%;
       padding: 1.5rem;
+
       h2 {
         font-size: 40px;
       }
     }
+
     .intro {
       font-size: 20px;
     }
+
     fieldset {
       padding: 1rem;
     }
+
     .cards {
       grid-template-columns: 1fr;
       gap: 15px;
     }
+
     .card {
       padding: 20px 15px;
     }
   }
 }
+
 @media (max-width: 500px) {
   main {
     .apresentacao1 {
@@ -511,36 +689,46 @@ main {
       margin-top: 25vw;
       padding: 7.5vw 2vw;
       min-height: fit-content;
+
       #ol1 {
         margin-top: 5vw;
         font-size: 12vw;
       }
+
       .ol .txt1 {
         line-height: 8vw;
-          margin-top: 7vw;
-          font-size: 5vw;
+        margin-top: 7vw;
+        font-size: 5vw;
       }
     }
+
     .container {
       padding: 1rem;
+
       h2 {
         font-size: 30px;
       }
     }
+
     .intro {
       font-size: 18px;
     }
+
     fieldset {
       padding: 0.8rem;
     }
+
     .card {
       padding: 15px 10px;
+
       h3 {
         font-size: 7vw;
       }
+
       p {
         font-size: 5vw;
       }
+
       a {
         font-size: 6vw;
       }

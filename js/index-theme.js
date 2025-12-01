@@ -28,6 +28,8 @@ const botaoOn = document.getElementById("themeButtonOn")
 
 const ligadoDesligado = document.getElementById("desligado");
 
+const ap1_2 = document.querySelector(".ap1-2");
+
 window.onload = () => {
     const tema = localStorage.getItem("theme");
     if (tema == "light") {
@@ -47,6 +49,8 @@ const ligaDesliga = () => {
 function light() {
     header.classList.add("light");
     header.classList.remove("dark");
+    ap1_2.classList.add("ap1-2-dark");
+    ap1_2.classList.add("ap1-2");
     body.style.backgroundColor = "rgba(5, 0, 23, 1)";
     botaoOn.style.display = "none";
     botaoOff.style.display = "block";
@@ -54,8 +58,8 @@ function light() {
     subBar.style.backgroundColor = "rgb(0, 0, 0)"
     setaVoltar.style.backgroundColor = "rgb( 0, 0, 0)";
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
-    main.style.backgroundColor = "rgba(5, 0, 23, 1)";
-    HTML.style.backgroundColor = "rgba(5, 0, 23, 1)";
+    main.style.backgroundColor = "rgb(3, 0, 16)";
+    HTML.style.backgroundColor = "rgb(3, 0, 16)";
     let tela = window.innerWidth;
     if (tela < 800) {li.forEach(li => {li.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = "black"})};
     if (tela < 800) {navTheme.style.backgroundColor = "rgba(5, 0, 23, 1)"} else {navTheme.style.backgroundColor = ""};
@@ -71,6 +75,8 @@ function light() {
 function dark() {
     header.classList.add("dark");
     header.classList.remove("light");
+    ap1_2.classList.add("ap1-2");
+    ap1_2.classList.remove("ap1-2-dark");
     body.style.backgroundColor = "";
     botaoOff.style.display = "none";
     botaoOn.style.display = "block";
