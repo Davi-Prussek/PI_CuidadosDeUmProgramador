@@ -330,11 +330,13 @@ main {
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      flex-wrap: wrap;
+      justify-content: space-around;
       min-height: 160px;
       transition: transform 0.2s ease, background-color 0.2s ease;
       z-index: 4;
   h3 {
+    flex: 1;
     margin-bottom: 2vw;
     font-size: 2.5vw;
     color: #0056b3;
@@ -353,12 +355,14 @@ main {
   }
 
   p {
+    flex-wrap: 1;
     font-size: 1.5vw;
     line-height: 1.9vw;
-    flex-grow: 1;
+    margin-bottom: 2vw;
   }
 
   a {
+    flex: 1;
     background-color: white;
     color: #0056b3;
     padding: 8px 16px;
