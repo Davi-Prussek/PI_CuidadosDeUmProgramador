@@ -66,7 +66,7 @@ function light() {
     if (tela < 800) {liMenor.forEach(liMenor => {liMenor.style.backgroundColor = "rgba(5, 0, 23, 1)"})} else {li.forEach(li => {li.style.backgroundColor = ""})};
     section.forEach(s => {s.style.color = "#ffffff";});
     div.forEach(d => { d.style.color = "#ffffff"; });
-    div.forEach(d => { d.style.backgroundColor = "black"; });
+    div.forEach(d => { d.style.backgroundColor = "rgba(0,0,0,0.89)"; });
     h2.forEach(h2 => {h2.style.color = "#3c9effff"});
     p1.forEach(p => {p.style.color = "#ffffff"});
     localStorage.setItem("theme", "light");
