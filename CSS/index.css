@@ -477,6 +477,7 @@ main {
         }
 
         article {
+          display: nome;
           flex: 1;
           width: 100%;
           padding-inline: 2vw;
