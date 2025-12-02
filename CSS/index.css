@@ -456,8 +456,9 @@ main {
 
 /* ============= RESPONSIVIDADE CARDS ============= */
 @media (max-width: 799px) {
-  .ap1-2 {
-    background-image: url(/img/index-theme-card-default-dark.jpg);
+  .ap1-2 {  
+      z-index: 2;
+      background-image: url(../img/index-theme-card-default-dark.jpg);
       .sub-titulo-style {
         position: absolute;
         justify-content: center;
