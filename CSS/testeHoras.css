@@ -13,7 +13,6 @@ html {
     max-width: 100%;
     overflow-x: hidden;
 
-    /* Media queries para melhorar a responsividade */
     @media (max-width: 799px) {
       html {
         font-size: calc(9px + 0.5vw);
@@ -35,7 +34,6 @@ html {
       }
     }
 
-    /* ========================================= HEADER ========================================= */
     @media (min-width: 800px) {
       main {
         img {
@@ -46,82 +44,6 @@ html {
         margin-top: 6vw;
         margin-bottom: 3rem;
 
-        .titulo {
-          text-align: center;
-          font-size: 2rem;
-          border-bottom: 5px solid #0056b3;
-          margin: 4.5rem 32vw 0 32vw;
-        }
-
-        .pessoas_sobreNos {
-          width: 80%;
-          text-align: center;
-          font-size: 1.005rem;
-          text-align: center;
-          max-width: 1500px;
-          margin: 0 auto;
-
-          .p-1,
-          .p-2,
-          .p-3 {
-            min-height: 34rem;
-            max-height: 0rem;
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-
-            li {
-              img {
-                width: 100%;
-                display: block;
-              }
-
-              h3 {
-                background-color: #0056b3;
-                color: white;
-                padding: 7px 0;
-              }
-
-              min-width: 3rem;
-              width: 50%;
-              margin: 3rem 0;
-              box-shadow: 0px 6px 8px #b8b8b8;
-              height: fit-content;
-              border: 1px solid black;
-              border-radius: 5px;
-
-              div {
-                max-height: 0;
-                opacity: 0;
-                overflow: hidden;
-                transition: max-height 0.9s ease, opacity 0.8s ease;
-
-                a {
-                  display: flex;
-                  align-items: center;
-                  justify-content: center;
-                  text-decoration: none;
-                  color: #333;
-
-                  img {
-                    width: 50px;
-                    display: block;
-                  }
-                }
-              }
-            }
-
-            li:hover #parte-I,
-            li:hover #parte-II,
-            li:hover #parte-III,
-            li:hover #parte-IV,
-            li:hover #parte-V,
-            li:hover #parte-VI {
-              max-height: 500px;
-              opacity: 1;
-            }
-          }
-        }
       }
       main {
         margin-top: calc(4.5vw + 20px);
@@ -182,12 +104,9 @@ html {
           font-size: 0.9rem;
         }
 
-        /* Permite que elementos de bloco dentro do item (o painel condicional)
-           ocupem a linha inteira e fiquem abaixo do checkbox/label */
         .checkbox-item {
           flex-wrap: wrap;
           align-items: flex-start;
-          /* alinha o checkbox/label ao topo quando o painel aparece */
         }
 
         .checkbox-item:hover {
@@ -195,7 +114,6 @@ html {
           box-shadow: 0 4px 10px rgba(0, 86, 179, 0.06);
         }
 
-        /* Estado quando a checkbox está selecionada */
         .checkbox-item.selected {
           background: linear-gradient(180deg, #e6f0ff 0%, #d6e8ff 100%);
           border: 1px solid #93c0ff;
@@ -207,7 +125,6 @@ html {
           border: 1px solid #b7d8ff;
         }
 
-        /* Destaque para a pergunta e caixa quando alguma opção for selecionada */
         .form-group.selected {
           background: linear-gradient(180deg, #f4f9ff 0%, #eef6ff 100%);
           border-radius: 10px;
@@ -218,7 +135,6 @@ html {
 
         .form-group.selected label#texto {
           color: #004a9f;
-          /* cor do texto da pergunta quando selecionado */
           font-weight: 600;
         }
 
@@ -226,7 +142,6 @@ html {
           width: 18px;
           height: 18px;
           accent-color: #0066cc;
-          /* modern browsers */
           cursor: pointer;
         }
 
@@ -235,7 +150,6 @@ html {
           user-select: none;
         }
 
-        /* Versão inline para opções dentro do painel de tempo livre */
         .checkbox-group-inline {
           display: flex;
           flex-wrap: wrap;
@@ -253,9 +167,6 @@ html {
           border: 1px solid #e6eefb;
         }
 
-        /* Painéis condicionais estilizados com transição (slide)
-           Começam com max-height: 0 e overflow hidden; ao mostrar, ajustamos max-height via JS
-        */
         .conditional-panel {
           overflow: hidden;
           max-height: 0;
@@ -266,7 +177,6 @@ html {
           padding: 0 0.8rem;
           border-left: 3px solid #cfe4ff;
           border-radius: 8px;
-          /* força o painel a ocupar toda a largura abaixo do checkbox */
           flex-basis: 100%;
           width: 100%;
           order: 2;
@@ -338,7 +248,6 @@ html {
         /* ===== IMC panel styling (mais polido e "à prova de usuário") ===== */
         #imcCondicional {
           display: none;
-          /* controlado por JS */
           background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
           border: 1px solid #e6f0ff;
           padding: 0.8rem;
@@ -363,7 +272,6 @@ html {
           box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.02);
         }
 
-        /* Alinhar campos do formulário à esquerda e limitar larguras para melhor alinhamento */
         .container .form-group {
           display: flex;
           flex-direction: column;
@@ -371,13 +279,11 @@ html {
           text-align: left;
         }
 
-        /* Centralizar apenas a Parte 1 */
         fieldset:first-of-type .form-group {
           align-items: center;
           text-align: center;
         }
 
-        /* Centralizar os inputs da Parte 1 */
         fieldset:first-of-type input,
         fieldset:first-of-type select {
           margin: 0.35rem auto 0.6rem auto;
@@ -397,7 +303,6 @@ html {
           text-align: left;
         }
 
-        /* Spans de emoji inseridos dinamicamente (com ou sem classe) ficam ao lado dos campos */
         .container input + span,
         .container select + span,
         .container textarea + span,
@@ -409,7 +314,6 @@ html {
           font-size: 1.1rem;
         }
 
-        /* Classe usada por createEmojiSpanAfter */
         .emoji-inline {
           display: inline-block;
           margin-left: 0.6rem;
@@ -417,7 +321,6 @@ html {
           font-size: 1.1rem;
         }
 
-        /* Centralizar o grupo de botões e estilizar botões do formulário */
         .button-group {
           display: flex;
           gap: 10px;
@@ -448,18 +351,14 @@ html {
           color: #fff;
         }
 
-        /* Remover setas (spinners) dos inputs number do IMC para visual mais limpo */
         #pesoIMC,
         #alturaIMC,
         input[type="number"].imc-input {
           -moz-appearance: textfield;
-          /* Firefox */
           -webkit-appearance: textfield;
           appearance: textfield;
-          /* padrão moderno para compatibilidade */
         }
 
-        /* Webkit browsers (Chrome, Edge, Safari) */
         #pesoIMC::-webkit-outer-spin-button,
         #pesoIMC::-webkit-inner-spin-button,
         #alturaIMC::-webkit-outer-spin-button,
@@ -488,7 +387,6 @@ html {
           margin-top: 6px;
         }
 
-        /* header do card de IMC */
         .alongamento-header,
         .imc-header {
           background: linear-gradient(90deg, #f0f8ff, #ffffff);
@@ -558,7 +456,6 @@ html {
           box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
         }
 
-        /* Estilo para a seção de resultados */
         .results-section {
           margin-top: 2rem;
           padding: 1.5rem;
@@ -576,9 +473,7 @@ html {
           box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
         }
 
-        /* Título responsivo da seção de resultados */
         .results-section h2 {
-          /* usa clamp para limitar o tamanho mínimo e máximo */
           font-size: clamp(1.4rem, 2.6vw, 2rem);
           color: #0066cc;
           text-align: center;
@@ -587,14 +482,12 @@ html {
           word-break: keep-all;
         }
 
-        /* Subtítulo / saudação responsiva */
         #saudacaoPersonalizada {
           text-align: center;
           margin: 0.6rem auto 1.2rem auto;
           font-size: clamp(0.95rem, 1.6vw, 1.05rem);
           color: #333;
           max-width: 720px;
-          /* limita largura de leitura em telas muito largas */
           padding: 0 0.6rem;
         }
 
@@ -602,7 +495,6 @@ html {
           color: #0056b3;
         }
 
-        /* Container dos cards */
         .cards-container {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -610,7 +502,6 @@ html {
           margin-top: 2rem;
         }
 
-        /* Mini-título para agrupar cards (ocupa toda a largura do grid) */
         .cards-container .mini-title {
           grid-column: 1 / -1;
           font-size: 0.85rem;
@@ -622,22 +513,14 @@ html {
           align-self: center;
         }
 
-        /* Wrappers de grupo: permitem separar título dos cards mantendo os filhos no grid
-         Usamos display: contents para que os elementos filhos participem do grid do container
-         sem adicionar uma caixa extra que quebre o layout. Alguns navegadores antigos
-         não suportam display: contents — nesse caso, o fallback é aceitável. */
-        /* Wrappers de grupo: fallback para navegadores que não suportam display:contents */
         .group-block {
           display: block;
-          /* fallback */
         }
 
         .group-items {
           display: block;
         }
 
-        /* Se o browser suportar display: contents, usamos para manter os filhos no grid sem
-         adicionar uma caixa extra que quebre o layout. */
         @supports (display: contents) {
           .group-block {
             display: contents;
@@ -649,12 +532,10 @@ html {
           }
         }
 
-        /* Garantir pequeno espaçamento após o mini-título antes dos cards */
         .cards-container .mini-title {
           margin-bottom: 8px;
         }
 
-        /* Estilo base para cada card */
         .card {
           background: #e9f2ff;
           border: 1px solid #99c2ff;
@@ -689,7 +570,7 @@ html {
           flex-grow: 1;
         }
 
-        /* Estilos específicos para cards positivos e negativos */
+
         .card-positive {
           background: #e6ffe6;
           border-color: #99ff99;
@@ -710,7 +591,6 @@ html {
           color: #330000;
         }
 
-        /* Estilo para o card de "Próximos Passos" */
         .last-card {
           grid-column: span 2;
           text-align: left;
@@ -718,18 +598,13 @@ html {
           border-color: #cce0ff;
         }
 
-        /* Quando um grupo possui apenas 1 card, fazê-lo ocupar toda a largura disponível */
-        /* Seletor mais específico para evitar conflitos com outras regras; usar !important
-         garante que o card realmente ocupe toda a linha do grid. */
         .cards-container .card.full-row {
           grid-column: 1 / -1 !important;
           width: 100%;
-          /* Limita a largura para ficar similar a dois cards lado a lado e centraliza */
           margin: 0 auto;
           box-sizing: border-box;
         }
 
-        /* Em telas menores manter full width total para evitar overflow */
         @media (max-width: 700px) {
           .cards-container .card.full-row {
             max-width: 100%;
@@ -738,7 +613,6 @@ html {
         }
 
         /* ===================== Regras responsivas para o conteúdo (exceto header/footer) ===================== */
-        /* Aplicadas ao container principal para evitar alterações no header/footer */
         @media (max-width: 900px) {
           .container {
             max-width: 720px;
@@ -746,7 +620,6 @@ html {
             padding: 1rem;
           }
 
-          /* Form inputs ocupam toda a largura disponível dentro do container */
           .container input[type="text"],
           .container input[type="number"],
           .container input[type="date"],
@@ -756,7 +629,6 @@ html {
             width: 80%;
           }
 
-          /* Ajustes visuais para checkbox items e painéis condicionais */
           .checkbox-item,
           .checkbox-item-inline {
             padding: 0.45rem 0.6rem;
@@ -767,7 +639,6 @@ html {
             padding: 0.5rem 0.6rem;
           }
 
-          /* Cards: diminuir mínimo dos cartões para caber 2 em telas menores */
           .cards-container {
             grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 16px;
@@ -785,7 +656,6 @@ html {
             font-size: 0.95rem;
           }
 
-          /* Mini-título menor */
           .cards-container .mini-title {
             font-size: 0.8rem;
             padding-left: 3px;
@@ -799,20 +669,17 @@ html {
             padding: 0.8rem;
           }
 
-          /* Forçar uma coluna única para melhor leitura em mobile */
           .cards-container {
             grid-template-columns: 1fr;
             gap: 12px;
           }
 
-          /* Garantir que o full-row ocupe 100% e não ultraponte o container */
           .cards-container .card.full-row {
             max-width: 100% !important;
             margin: 0 !important;
             grid-column: 1 / -1 !important;
           }
 
-          /* Inputs, selects e textarea com padding reduzido para caber na tela */
           .container input[type="text"],
           .container input[type="number"],
           .container select,
@@ -821,20 +688,17 @@ html {
             font-size: 0.95rem;
           }
 
-          /* Checkbox inline vira bloco para evitar corte */
           .checkbox-group-inline {
             flex-direction: column;
             gap: 0.4rem;
           }
 
-          /* Ajustes das legendas e títulos para caber melhor */
           .container h1,
           .container h2,
           .container h3 {
             word-break: break-word;
           }
 
-          /* Reduzir margens dos cards para mobile */
           .card {
             padding: 14px 12px;
           }

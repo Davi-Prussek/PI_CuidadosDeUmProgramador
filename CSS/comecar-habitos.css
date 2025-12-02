@@ -92,8 +92,8 @@ body {
   overflow-x: hidden;
   background: linear-gradient(
     180deg,
-    rgb(204, 204, 204) 0%,
-    rgb(113, 113, 113) 100%
+    rgb(242, 251, 255) 0%,
+    rgb(197, 214, 255) 100%
   );
 }
 
