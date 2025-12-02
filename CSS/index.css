@@ -275,7 +275,7 @@ main {
     padding-bottom: 4vw;
     margin-top: 5vw;
     @media (min-width:800px) {
-      background-image: url(/img/index-theme-card-default.jpg);
+      background-image: url(../img/index-theme-card-default.jpg);
     }
     background-repeat: no-repeat;
     background-size: 100% 100%;
