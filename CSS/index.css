@@ -288,7 +288,6 @@ main {
         }
 
         article {
-          display: nome;
           flex: 1;
           width: 100%;
           padding-inline: 5vw;
@@ -297,7 +296,7 @@ main {
           margin-inline: 1vw;
 
           img {
-            display: nome;
+            visibility: hidden;
           }
         }
       }
@@ -478,6 +477,7 @@ main {
         }
 
         article {
+          display: nome;
           flex: 1;
           width: 100%;
           padding-inline: 2vw;
