@@ -486,6 +486,7 @@ main {
           margin-inline: 1vw;
 
           img {
+            display: none;
             visibility: hidden;
           }
         }
