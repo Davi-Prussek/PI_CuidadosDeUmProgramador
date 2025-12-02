@@ -459,16 +459,12 @@ main {
   .ap1-2 {
     background-image: url(/img/index-theme-card-default-dark.jpg);
       .sub-titulo-style {
-        display: flex;
-        align-items: center;
-        width: 100%;
         position: absolute;
         justify-content: center;
         top: 1vw;
         z-index: 3;
 
         .sub-titulo {
-          margin-inline: 1vw;
           text-align: center;
           font-size: 7vw;
           font-weight: bolder;
