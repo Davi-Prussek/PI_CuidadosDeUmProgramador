@@ -1,3 +1,10 @@
+let resetBtn = document.getElementsByClassName("restart-btn")
+
+function reset(){
+  window.scrollTo({ top: 0, behavior: 'smooth' })
+  window.location.reload(true)
+}
+
 /* ===================== Parte 1 ===================== */
 
 // Avalia rotina
