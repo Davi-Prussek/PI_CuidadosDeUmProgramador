@@ -567,7 +567,7 @@ main {
 
 
 /*===== RESPONSIVIDADE DAVI =====*/
-@media (max-width: 799px) {
+/* @media (max-width: 799px) {
   main {
     margin-top: 15vw;
 
@@ -597,7 +597,7 @@ main {
       padding: 20px 15px;
     }
   }
-}
+} */
 
 @media (max-width: 500px) {
   main {
