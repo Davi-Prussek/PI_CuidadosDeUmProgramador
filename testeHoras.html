@@ -34,15 +34,15 @@
           align-items: center;">
           <legend>🕑 Parte 1 – Perguntas Gerais</legend>
           <div class="form-group">
-            <label for="nome" id="texto">Nome:</label>
+            <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" required>
           </div>
           <div class="form-group">
-            <label for="idade" id="texto">Idade:</label>
+            <label for="idade">Idade:</label>
             <input type="text" id="idade" name="idade" required>
           </div>
           <div class="form-group">
-            <label for="sexo" id="texto">Sexo:</label>
+            <label for="sexo" id="texto1">Sexo:</label>
             <select id="sexo" name="sexo" required>
               <option value>Selecione</option>
               <option value="homem">Homem</option>
@@ -92,7 +92,7 @@
         </fieldset>
 
         <!-- 💻 Parte 2 – Rotina Condicional -->
-        <fieldset>
+       <fieldset>
           <legend>💻 Parte 2 – Rotina Condicional</legend>
           <div class="form-group">
             <label id="texto">O que você costuma fazer no seu dia a dia?</label>
@@ -100,6 +100,9 @@
               <div class="checkbox-item">
                 <input type="checkbox" id="trabalho" name="trabalho" value="on">
                 <label for="trabalho">Trabalho/Programar</label>
+              </div>
+
+
 
                 <!-- painel condicional agora fica imediatamente abaixo da checkbox -->
                 <div id="trabalhoCondicional" class="conditional-panel" style="display: none">
@@ -165,6 +168,7 @@
               </div>
             </div>
           </div>
+          </fieldset>
         
 
         <fieldset>
@@ -262,14 +266,14 @@
         </fieldset>
         <div class="button-group">
           <button type="submit" class="btn-submit">
-            <p>Ver Resultados</p>
+            Ver Resultados
           </button>
           <button type="reset" class="btn-reset"
             onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });" id="resetButton">
-            <p>Limpar Respostas</p>
+            Limpar Respostas
           </button>
         </div>
-      </form>
+      
     </section>
     <section class="results-section" style="display: none">
       <div class="container">
