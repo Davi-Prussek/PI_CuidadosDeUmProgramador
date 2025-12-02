@@ -284,34 +284,18 @@ main {
     @media (min-width:800px) {
 
       .sub-titulo-style {
-        display: flex;
-        align-items: center;
         width: 100%;
         position: absolute;
         top: 1vw;
         z-index: 3;
 
         .sub-titulo {
-          flex: 0 0 auto;
           margin-inline: 1vw;
           text-align: center;
           font-size: 70px;
           font-weight: bolder;
           font-family: "Times New Roman", Times, serif;
           color: #004589;
-        }
-
-        article {
-          flex: 1;
-          width: 100%;
-          padding-inline: 5vw;
-          background: url(/img/icons/icon-index/linha.png) repeat-x;
-          background-size: contain;
-          margin-inline: 1vw;
-
-          img {
-            visibility: hidden;
-          }
         }
       }
     }
@@ -473,6 +457,7 @@ main {
   .ap1-2 {  
       z-index: 2;
       background-image: url(../img/index-theme-card-default-dark.jpg);
+
       .sub-titulo-style {
         position: absolute;
         justify-content: center;
@@ -485,21 +470,6 @@ main {
           font-weight: bolder;
           font-family: "Times New Roman", Times, serif;
           color: #004589;
-        }
-
-        article {
-          display: nome;
-          flex: 1;
-          width: 100%;
-          padding-inline: 2vw;
-          background: url(/img/icons/icon-index/linha.png) repeat-x;
-          background-size: contain;
-          margin-inline: 1vw;
-
-          img {
-            display: none;
-            visibility: hidden;
-          }
         }
       }
 

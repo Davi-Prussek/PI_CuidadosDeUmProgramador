@@ -8,9 +8,9 @@ const buttonLuzSolar = document.getElementById("luz-solar-router");
 const buttonBurnOut = document.getElementById("burn-out-router");
 const buttonTelas = document.getElementById("telas-router");
 
-postura.style.display = "block";
+postura.style.display = "none";
 luzSolar.style.display = "none";
-burnOut.style.display = "none";
+burnOut.style.display = "block";
 telas.style.display = "none";
 
 buttonPostura.style.backgroundColor = "#4882bf";

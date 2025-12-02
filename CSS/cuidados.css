@@ -12,6 +12,7 @@
 
       @media (min-width: 800px) {
         main {
+          padding-bottom: 6vw;
           .main-top {
             div {
               position: relative;
@@ -240,6 +241,7 @@
             }
 
             .template-II {
+              margin-bottom: 5vw;
               z-index: 2;
               margin-top: 2vw;
               padding-inline: 3vw;
@@ -553,6 +555,7 @@
       @media (max-width: 799px) {
         main {
           padding-top: 13vw;
+          padding-bottom: 5vw;
 
           .main-top {
             div {
@@ -668,7 +671,7 @@
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: center;
-                gap: 3vw;
+                gap: 5vw;
 
                 p {
                   width: 100%;
@@ -679,7 +682,7 @@
                   border-radius: 5vw;
                   line-height: 6.5vw;
                   text-align: center;
-                  padding: 2vw 3vw;
+                  padding: 3vw 3vw;
                 }
 
                 p:hover {
@@ -689,6 +692,7 @@
               }
 
               .card-img {
+                margin-bottom: 3vw;
                 img {
                   width: 100%;
                   border-radius: 5vw;
@@ -735,6 +739,7 @@
                     font-size: 6.5vw;
                     margin: 0;
                     margin-bottom: 3vw;
+                    margin-inline: 5vw;
                   }
 
                   div {
@@ -754,9 +759,9 @@
                     }
 
                     p {
-                      padding-inline: 2vw;
+                      padding-inline: 2.5vw;
                       text-align: center;
-                      line-height: 6.5vw;
+                      line-height: 7vw;
                       color: white;
                       font-size: 5.5vw;
                     }
@@ -777,8 +782,7 @@
                 border-radius: 21px;
                 margin-top: 5vw;
                 display: inline-block;
-                font-size: 3.5vw;
-                margin-bottom: 6vw;
+                font-size: 5.5vw;
               }
             }
 
@@ -794,19 +798,21 @@
                     gap: 2vw;
 
                     img {
+                      margin-top: 3vw auto;
                       padding: 1.5vw;
-                      border-radius: 24px;
+                      border-radius: 20px;
                       background-color: white;
-                      height: 15vw;
+                      height: 25vw;
                       width: auto;
                     }
 
                     p {
-                      padding-inline: 0.4vw;
+                      padding-inline: 2.5vw;
                       text-align: center;
-                      line-height: 4.5vw;
+                      line-height: 6.5vw;
+                      line-break: strict;
                       color: white;
-                      font-size: 3.5vw;
+                      font-size: 5.5vw;
                     }
                   }
                 }
@@ -823,33 +829,31 @@
               display: flex;
               flex-direction: column;
               gap: 4vw;
-              margin-inline: 2vw;
+              margin-inline: 0vw;
               justify-content: center;
-              border-bottom: 3px solid #002b59;
-              margin-bottom: 2vw;
+              border-bottom: 2px solid #002b59;
+              margin-bottom: 6vw;
               padding-bottom: 3vw;
 
+
               div {
-                position: relative;
-                min-height: auto;
 
                 h4 {
                   background: linear-gradient(180deg, #0056b3, #00bfff);
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
-                  margin-bottom: 1.5vw;
-                  font-size: 4.5vw;
+                  margin-bottom: 3.5vw;
+                  font-size: 7vw;
                 }
-
                 border-radius: 24px;
                 text-align: center;
                 flex: 1;
 
                 p {
-                  line-height: 4vw;
+                  line-height: 6.5vw;
                   width: 100%;
-                  text-align: left;
-                  font-size: 3.5vw;
+                  text-align: center;
+                  font-size: 5.5vw;
                   margin-bottom: 8vw;
                 }
 
@@ -891,8 +895,11 @@
               div {
                 h3 {
                   text-align: center;
-                  font-size: 5vw;
-                  margin-bottom: 2vw;
+                  font-size: 7vw;
+                  padding-bottom: 4vw;
+                  border-bottom: 2px solid #002b59;
+                  margin-inline: 8vw;
+                  margin-bottom: 6vw;
                   background: linear-gradient(180deg, #0056b3, #00bfff);
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
@@ -902,8 +909,9 @@
                 width: 100%;
 
                 p {
-                  line-height: 4vw;
-                  font-size: 3.5vw;
+                  line-height: 6.5vw;
+                  font-size: 5.5vw;
+                  margin-bottom: 5vw;
                 }
               }
 
@@ -1056,37 +1064,48 @@
             h3 {
               text-align: center;
               padding-bottom: 2vw;
-              font-size: 5.5vw;
+              font-size: 7vw;
               border-radius: 0px;
               border-bottom: 3px solid #002b59;
-              background: linear-gradient(180deg, #0056b3, #00bfff);
+              background: linear-gradient(180deg, #0056b3, #007fa9);
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
               margin-bottom: 4vw;
             }
 
             ul {
+              padding-inline: 2vw;
               display: flex;
               flex-direction: column;
               flex-wrap: wrap;
-              gap: 4vw;
+              gap: 7vw;
 
               li {
+                transition: 0.3 ease;
                 text-align: left;
                 width: 100%;
-                padding-inline: 2vw;
-                line-height: 5vw;
-                font-size: 3.5vw;
-
+                line-height: 6.5vw;
+                font-size: 5.5vw;
+                border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px;
+                padding: 4vw 4vw;
+                box-sizing: border-box;
+                box-shadow: 0px 0px 5px 2px #008cff5a;
+                p {
+                  display: none;
+                }
                 h5 {
-                  line-height: 5vw;
+                  line-height: 7vw;
                   text-align: center;
-                  font-size: 4.5vw;
+                  font-size: 6vw;
                   background: linear-gradient(180deg, #0056b3, #00bfff);
                   -webkit-background-clip: text;
                   -webkit-text-fill-color: transparent;
                   margin-bottom: 2vw;
-                }
+                }                
+              }
+              li:hover p {
+                  display: block;
               }
             }
           }

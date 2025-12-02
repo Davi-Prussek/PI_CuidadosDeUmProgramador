@@ -33,6 +33,11 @@ header.innerHTML = `<button id="menu-responsivo">
             </li>
           </ul>
         </li>
+          <li>
+          <a href="cuidados.html">
+            <p>Cuidados</p>
+          </a>
+        </li>
         <li>
           <a href="testeHoras.html">
             <p class="link-base">Teste de Horas</p>
@@ -40,7 +45,7 @@ header.innerHTML = `<button id="menu-responsivo">
         </li>
         <li>
           <a href="quiz.html">
-            <p class="link-base">Quiz</p>
+            <p class="link-base">Quizzz</p>
           </a>
         </li>
         <li class="sobre-nos">
@@ -59,11 +64,6 @@ header.innerHTML = `<button id="menu-responsivo">
               </a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a href="cuidados.html">
-            <p>Cuidados</p>
-          </a>
         </li>
       </ul>
       <ul class="sub-menu-header" id="sub-menu-bar">
