@@ -249,6 +249,20 @@ main {
       line-height: 1.6;
     }
   }
+  @media (max-width:799px) {
+.between {
+    margin: 0px auto;
+    margin-top: 7vw;
+    padding-bottom: 5vw;
+    border-bottom: 2px solid #0056b3;
+    .text-left {
+      margin: auto 10vw;
+      text-align: center;
+      font-size: 5.5vw;
+      line-height: 1.6;
+    }
+  }
+  }
 
   /* ==== section 1-2 ==== */
   .ap1-2 {
@@ -467,7 +481,7 @@ main {
 
         .sub-titulo {
           text-align: center;
-          font-size: 7vw;
+          font-size: 8vw;
           font-weight: bolder;
           font-family: "Times New Roman", Times, serif;
           color: #004589;
