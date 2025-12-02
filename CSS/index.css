@@ -463,11 +463,11 @@ main {
         align-items: center;
         width: 100%;
         position: absolute;
+        justify-content: center;
         top: 1vw;
         z-index: 3;
 
         .sub-titulo {
-          flex: 0 0 auto;
           margin-inline: 1vw;
           text-align: center;
           font-size: 7vw;
