@@ -34,11 +34,14 @@ ul1.appendChild(li1);
 let li2 = document.createElement("li");
 li2.classList.add("logo");
 
+let a2 = document.createElement("a");
+a2.href = "./index.html";
+
 let img2 = document.createElement("img");
 img2.src = "img/logo_PI-fundo_removido-nova.png";
 
-li2.appendChild(img2);
-
+a2.appendChild(img2);
+li2.appendChild(a2);
 ul1.appendChild(li2);
 
 
