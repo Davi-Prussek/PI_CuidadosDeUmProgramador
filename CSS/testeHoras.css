@@ -433,7 +433,7 @@ html {
         /* ---------- Botão limpar ---------- */
         .btn-reset {
           background: #e8e8e8;
-          color: #004d99;
+          color: #ffffff;
           padding: 0.8rem 1.6rem;
           border: none;
           border-radius: 10px;
@@ -572,6 +572,7 @@ html {
 
 
         .card-positive {
+          grid-column: 1 / -1 !important;
           background: #e6ffe6;
           border-color: #99ff99;
           color: #004d00;
@@ -582,6 +583,7 @@ html {
         }
 
         .card-negative {
+          grid-column: 1 / -1 !important;
           background: #ffe6e6;
           border-color: #ff9999;
           color: #4d0000;

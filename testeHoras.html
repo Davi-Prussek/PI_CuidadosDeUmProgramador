@@ -269,7 +269,7 @@
             Ver Resultados
           </button>
           <button type="reset" class="btn-reset"
-            onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });" id="resetButton">
+            onclick="window.scrollTo({ top: 0, behavior: 'smooth' });" id="resetButton">
             Limpar Respostas
           </button>
         </div>
@@ -289,8 +289,8 @@
             🖨️ Imprimir Resultados
           </button>
           <button type="button"
-            onclick="document.getElementById('meuForm').reset(); window.scrollTo({ top: 0, behavior: 'smooth' });"
-            class="restart-btn">
+            onclick=" location.reload(); window.scrollTo({ top: 0, behavior: 'smooth' });"
+            class="restart-btn" href="#">
             🔄 Fazer Teste Novamente
           </button>
         </div>
