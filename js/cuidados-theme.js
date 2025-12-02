@@ -85,10 +85,10 @@ function light() {
     localStorage.setItem("theme", "light");
     HTML.style.setProperty("--h3-glow-color", "rgba(255, 255, 255, 0.4)");
 
-    imgPostura.src = "../img/icons/icon-cuidados/postura-dark.png";
-    imgLuzSolar.src = "../img/icons/icon-cuidados/sol-dark.png";
-    imgBurnOut.src = "../img/icons/icon-cuidados/fogo-dark.png";
-    imgTelas.src = "../img/icons/icon-cuidados/telas-dark.png";
+    imgPostura.src = "./img/icons/icon-cuidados/postura-dark.png";
+    imgLuzSolar.src = "./img/icons/icon-cuidados/sol-dark.png";
+    imgBurnOut.src = "./img/icons/icon-cuidados/fogo-dark.png";
+    imgTelas.src = "./img/icons/icon-cuidados/telas-dark.png";
 }
 
 function dark() {
