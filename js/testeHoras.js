@@ -1,8 +1,8 @@
-let resetBtn = document.getElementsByClassName("restart-btn")
+let resetBtn = document.getElementsByClassName("restart-btn");
 
-function reset(){
-  window.location.reload(true)
-  window.scrollTo({ top: 0, behavior: 'smooth' })
+function reset() {
+  window.location.reload(true);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 /* ===================== Parte 1 ===================== */
@@ -210,24 +210,28 @@ const outrosLivre = document.getElementById("outrosLivre");
     // Restaurar os textos originais
     if (!telasLivre.dataset.originalText) {
       telasLivre.dataset.originalText = "Uso de telas (filmes, jogos, celular)";
-      telasLivre.nextElementSibling.textContent = telasLivre.dataset.originalText;
+      telasLivre.nextElementSibling.textContent =
+        telasLivre.dataset.originalText;
     }
 
     if (!atividadeFisicaLivre.dataset.originalText) {
       atividadeFisicaLivre.dataset.originalText = "Atividade física";
-      atividadeFisicaLivre.nextElementSibling.textContent = atividadeFisicaLivre.dataset.originalText;
+      atividadeFisicaLivre.nextElementSibling.textContent =
+        atividadeFisicaLivre.dataset.originalText;
     }
 
     if (!lazerLivre.dataset.originalText) {
       lazerLivre.dataset.originalText = "Lazer ao ar livre";
-      lazerLivre.nextElementSibling.textContent = lazerLivre.dataset.originalText;
+      lazerLivre.nextElementSibling.textContent =
+        lazerLivre.dataset.originalText;
     }
 
     // Atualizar apenas os emojis
     if (telasLivre.checked) telasLivre.emojiSpan.textContent = "📱😐";
     else telasLivre.emojiSpan.textContent = "";
 
-    if (atividadeFisicaLivre.checked) atividadeFisicaLivre.emojiSpan.textContent = "🏃😍";
+    if (atividadeFisicaLivre.checked)
+      atividadeFisicaLivre.emojiSpan.textContent = "🏃😍";
     else atividadeFisicaLivre.emojiSpan.textContent = "";
 
     if (lazerLivre.checked) lazerLivre.emojiSpan.textContent = "🌳😊";
@@ -396,12 +400,12 @@ function validarCampoIMC() {
 
   if (pesoIMCEl.value !== "") {
     if (isNaN(peso) || peso < 20) {
-      pesoIMCEl.classList.add('error');
-      pesoMsg.textContent = 'Insira um peso entre 20 e 300 kg.';
+      pesoIMCEl.classList.add("error");
+      pesoMsg.textContent = "Insira um peso entre 20 e 300 kg.";
       ok = false;
     } else if (peso > 300) {
       // clampa automaticamente para 300 sem mensagem
-      pesoIMCEl.value = '300';
+      pesoIMCEl.value = "300";
       // atualizar a variável local para evitar mensagens posteriores
       // não marcar erro nem mostrar mensagem
     }
@@ -414,7 +418,7 @@ function validarCampoIMC() {
       ok = false;
     } else if (altura > 250) {
       // clampa automaticamente para 250 sem mensagem
-      alturaIMCEl.value = '250';
+      alturaIMCEl.value = "250";
     }
   }
 
@@ -776,7 +780,8 @@ form.addEventListener("submit", (e) => {
     // Ajuste: até 8h considerado normal/positivo; 9-10h pequena atenção; >10h ruim
     if (horasTrabalho <= 3) positivos += 2;
     else if (horasTrabalho <= 5) positivos += 1; // Tempo considerado produtivo
-    else if (horasTrabalho <= 8) positivos += 1; // 6-8h: faixa normal/brasileira
+    else if (horasTrabalho <= 8)
+      positivos += 1; // 6-8h: faixa normal/brasileira
     else if (horasTrabalho <= 10) negativos += 1; // 9-10h: atenção
     else negativos += 3; // >10h: muito ruim
 
@@ -988,10 +993,11 @@ form.addEventListener("submit", (e) => {
     {
       type: "negative",
       title: "Atenção à Jornada de Trabalho",
-      content: `${horasTrabalho.toFixed(1)}h de trabalho ${horasTrabalho > 5
-        ? "é uma carga excessiva que pode prejudicar sua saúde"
-        : "já representa um tempo considerável"
-        }. Considere pausas mais frequentes e otimização de tarefas.`,
+      content: `${horasTrabalho.toFixed(1)}h de trabalho ${
+        horasTrabalho > 5
+          ? "é uma carga excessiva que pode prejudicar sua saúde"
+          : "já representa um tempo considerável"
+      }. Considere pausas mais frequentes e otimização de tarefas.`,
       condition: () => data.trabalho === "on" && horasTrabalho > 3,
     },
     {
@@ -1003,32 +1009,35 @@ form.addEventListener("submit", (e) => {
     {
       type: "negative",
       title: "Cuidado com o Tempo de Estudo",
-      content: `${horasEstudo.toFixed(1)}h de estudo ${horasEstudo > 5
-        ? "é excessivo e pode causar fadiga mental"
-        : "já é um tempo considerável"
-        }. Intercale com pausas e atividades relaxantes para manter a eficiência.`,
+      content: `${horasEstudo.toFixed(1)}h de estudo ${
+        horasEstudo > 5
+          ? "é excessivo e pode causar fadiga mental"
+          : "já é um tempo considerável"
+      }. Intercale com pausas e atividades relaxantes para manter a eficiência.`,
       condition: () => data.estudar === "on" && horasEstudo > 3,
     },
     {
       type: "negative",
       title: "Sono Insuficiente - Atenção!",
-      content: `${horasSono.toFixed(1)}h de sono ${horasSono < 4
-        ? "é criticamente insuficiente e pode afetar gravemente sua saúde"
-        : horasSono < 6
+      content: `${horasSono.toFixed(1)}h de sono ${
+        horasSono < 4
+          ? "é criticamente insuficiente e pode afetar gravemente sua saúde"
+          : horasSono < 6
           ? "está abaixo do recomendado (7-9h)"
           : horasSono > 10
-            ? "é excessivo e pode indicar outros problemas"
-            : "precisa ser ajustado"
-        }. Priorize uma rotina de sono saudável.`,
+          ? "é excessivo e pode indicar outros problemas"
+          : "precisa ser ajustado"
+      }. Priorize uma rotina de sono saudável.`,
       condition: () => horasSono < 7 || horasSono > 9,
     },
     {
       type: "negative",
       title: "Tempo de Tela Excessivo",
-      content: `${horasTela.toFixed(1)}h de tela ${horasTela > 5
-        ? "é prejudicial para seus olhos e bem-estar mental"
-        : "já representa um tempo considerável"
-        }. Implemente pausas regulares e considere atividades offline.`,
+      content: `${horasTela.toFixed(1)}h de tela ${
+        horasTela > 5
+          ? "é prejudicial para seus olhos e bem-estar mental"
+          : "já representa um tempo considerável"
+      }. Implemente pausas regulares e considere atividades offline.`,
       condition: () => horasTela > 2,
     },
     {
@@ -1153,7 +1162,8 @@ form.addEventListener("submit", (e) => {
   // Limpar container e adicionar saudação
   const saudacaoDiv = resultadosSection.querySelector("#saudacaoPersonalizada");
   saudacaoDiv.innerHTML = `
-    <p>Olá <strong>${data.nome || "usuário"
+    <p>Olá <strong>${
+      data.nome || "usuário"
     }</strong>, com base nas suas respostas, geramos ${numberOfCardsToShow} cards de feedback.</p>
     <p>Sua pontuação indica <strong>${positivos} ponto(s) positivo(s)</strong> e <strong>${negativos} ponto(s) de atenção</strong> em sua rotina.</p>
   `;
@@ -1168,18 +1178,28 @@ form.addEventListener("submit", (e) => {
     const isSleep = /sono/i.test(tip.title) || /sono/i.test(tip.content);
     if (isSleep) {
       if (!sleepCardAdded) {
-        filteredCards.push(Object.assign({}, tip, { topic: 'sono' }));
+        filteredCards.push(Object.assign({}, tip, { topic: "sono" }));
         sleepCardAdded = true;
       } else {
         continue;
       }
     } else {
       // tentar inferir tópico a partir do título/conteúdo
-      let topic = 'outros';
-      if (/imc|peso|altura/i.test(tip.title + ' ' + tip.content)) topic = 'imc';
-      else if (/alongamento|alongamentos|alongamento rápido|alongar/i.test(tip.title + ' ' + tip.content)) topic = 'alongamento';
-      else if (/sono/i.test(tip.title + ' ' + tip.content)) topic = 'sono';
-      else if (/trabalho|estudo|telas|postura|atividade/i.test(tip.title + ' ' + tip.content)) topic = 'habitos';
+      let topic = "outros";
+      if (/imc|peso|altura/i.test(tip.title + " " + tip.content)) topic = "imc";
+      else if (
+        /alongamento|alongamentos|alongamento rápido|alongar/i.test(
+          tip.title + " " + tip.content
+        )
+      )
+        topic = "alongamento";
+      else if (/sono/i.test(tip.title + " " + tip.content)) topic = "sono";
+      else if (
+        /trabalho|estudo|telas|postura|atividade/i.test(
+          tip.title + " " + tip.content
+        )
+      )
+        topic = "habitos";
       filteredCards.push(Object.assign({}, tip, { topic }));
     }
   }
@@ -1197,77 +1217,114 @@ form.addEventListener("submit", (e) => {
       function getAgeGroupInfo(age) {
         if (!age) return null;
         if (age >= 5 && age <= 9) {
-          return { min: 13.0, max: 17.0, avg: 15.0, note: 'Em crianças, o IMC é avaliado por percentis (IMC-idade/sexo). Esta faixa é uma estimativa.' };
+          return {
+            min: 13.0,
+            max: 17.0,
+            avg: 15.0,
+            note: "Em crianças, o IMC é avaliado por percentis (IMC-idade/sexo). Esta faixa é uma estimativa.",
+          };
         }
         if (age >= 10 && age <= 14) {
-          return { min: 14.0, max: 21.0, avg: 17.5, note: 'Grande variação por idade e sexo; interpretar com tabelas BMI-for-age (percentis).' };
+          return {
+            min: 14.0,
+            max: 21.0,
+            avg: 17.5,
+            note: "Grande variação por idade e sexo; interpretar com tabelas BMI-for-age (percentis).",
+          };
         }
         if (age >= 15 && age <= 19) {
-          return { min: 17.0, max: 24.0, avg: 20.5, note: 'A partir dos ~18–20 anos a interpretação aproxima-se da dos adultos; continue usando percentis até 19 anos.' };
+          return {
+            min: 17.0,
+            max: 24.0,
+            avg: 20.5,
+            note: "A partir dos ~18–20 anos a interpretação aproxima-se da dos adultos; continue usando percentis até 19 anos.",
+          };
         }
         if (age >= 20 && age <= 39) {
-          return { min: 18.5, max: 24.9, avg: 21.7, note: 'Faixa “peso saudável” padrão usada por WHO/CDC para adultos.' };
+          return {
+            min: 18.5,
+            max: 24.9,
+            avg: 21.7,
+            note: "Faixa “peso saudável” padrão usada por WHO/CDC para adultos.",
+          };
         }
         if (age >= 40 && age <= 59) {
-          return { min: 18.5, max: 24.9, avg: 21.7, note: 'Mesma faixa de referência, mas a composição corporal muda com o envelhecimento; considere perímetro da cintura e % gordura.' };
+          return {
+            min: 18.5,
+            max: 24.9,
+            avg: 21.7,
+            note: "Mesma faixa de referência, mas a composição corporal muda com o envelhecimento; considere perímetro da cintura e % gordura.",
+          };
         }
         if (age >= 60) {
-          return { min: 18.5, max: 27.0, avg: 24.0, note: 'Para idosos a interpretação pode variar; alguns estudos apontam vantagem em IMCs ligeiramente maiores. Avalie força muscular e funcionalidade.' };
+          return {
+            min: 18.5,
+            max: 27.0,
+            avg: 24.0,
+            note: "Para idosos a interpretação pode variar; alguns estudos apontam vantagem em IMCs ligeiramente maiores. Avalie força muscular e funcionalidade.",
+          };
         }
         return null;
       }
 
       const groupInfo = getAgeGroupInfo(idade);
-      let imcStatus = '';
-      let imcLabel = '';
-      let imcNote = '';
+      let imcStatus = "";
+      let imcLabel = "";
+      let imcNote = "";
 
       if (!groupInfo) {
         // sem idade válida: cair em classificação adulta padrão
-        if (imc < 18.5) imcLabel = 'Abaixo do normal (adulto)';
-        else if (imc <= 24.9) imcLabel = 'Normal (adulto)';
-        else imcLabel = 'Acima do normal (adulto)';
-        imcNote = 'Usando cortes WHO/CDC para adultos (18,5–24,9).';
+        if (imc < 18.5) imcLabel = "Abaixo do normal (adulto)";
+        else if (imc <= 24.9) imcLabel = "Normal (adulto)";
+        else imcLabel = "Acima do normal (adulto)";
+        imcNote = "Usando cortes WHO/CDC para adultos (18,5–24,9).";
       } else {
         imcNote = groupInfo.note;
         if (imc < groupInfo.min) {
-          imcStatus = 'Abaixo do normal';
+          imcStatus = "Abaixo do normal";
         } else if (imc >= groupInfo.min && imc <= groupInfo.max) {
-          imcStatus = 'Na faixa saudável';
+          imcStatus = "Na faixa saudável";
         } else {
-          imcStatus = 'Acima do normal';
+          imcStatus = "Acima do normal";
         }
         imcLabel = imcStatus;
       }
 
       // montar conteúdo com intervalo e IMC médio quando disponível
-      let rangeText = '';
+      let rangeText = "";
       if (groupInfo) {
         rangeText = ` Intervalo saudável estimado para sua faixa etária: ${groupInfo.min}–${groupInfo.max} kg/m² (IMC médio ≈ ${groupInfo.avg}).`;
       }
 
       // Construir um texto mais simples e direto para o usuário
-      let contentText = '';
+      let contentText = "";
       if (idade && idade < 18) {
         contentText = `Para a sua idade (${idade} anos) o IMC deve ser interpretado por percentis (idade/sexo). Este valor é indicativo: ${imcRounded}. Consulte um pediatra para avaliação precisa.`;
       } else {
-        const range = groupInfo ? `${groupInfo.min}–${groupInfo.max}` : '18.5–24.9';
+        const range = groupInfo
+          ? `${groupInfo.min}–${groupInfo.max}`
+          : "18.5–24.9";
         const avg = groupInfo ? groupInfo.avg : 21.7;
-        const healthy = groupInfo ? (imc >= groupInfo.min && imc <= groupInfo.max) : (imc >= 18.5 && imc <= 24.9);
+        const healthy = groupInfo
+          ? imc >= groupInfo.min && imc <= groupInfo.max
+          : imc >= 18.5 && imc <= 24.9;
         if (healthy) {
           contentText = `Na sua faixa (${range} kg/m², IMC médio ≈ ${avg}) seu IMC é ${imcRounded} e está dentro da faixa saudável. Mantenha hábitos saudáveis para conservar esse resultado.`;
         } else {
-          const aboveOrBelow = imc < (groupInfo ? groupInfo.min : 18.5) ? 'abaixo do normal' : 'acima do normal';
+          const aboveOrBelow =
+            imc < (groupInfo ? groupInfo.min : 18.5)
+              ? "abaixo do normal"
+              : "acima do normal";
           contentText = `Na sua faixa (${range} kg/m², IMC médio ≈ ${avg}) seu IMC é ${imcRounded} e está ${aboveOrBelow}. Com pequenas correções na alimentação e na atividade física você tende a melhorar. Mudanças bruscas devem ser feitas apenas com acompanhamento médico.`;
         }
       }
 
       // Inserir card IMC sem adicionar o sexo ao final do texto
       filteredCards.push({
-        type: 'positive',
+        type: "positive",
         title: `Resultado IMC: ${imcRounded} — ${imcLabel}`,
         content: contentText,
-        topic: 'imc',
+        topic: "imc",
       });
 
       // dicas genéricas de IMC (máx 4) adaptadas por idade
@@ -1373,56 +1430,58 @@ form.addEventListener("submit", (e) => {
 
   // Agrupar por tópico
   const groups = filteredCards.reduce((acc, tip) => {
-    const t = tip.topic || 'outros';
+    const t = tip.topic || "outros";
     if (!acc[t]) acc[t] = [];
     acc[t].push(tip);
     return acc;
   }, {});
 
   // Ordem de exibição: sono primeiro (se houver), depois IMC, alongamento, habitos, outros
-  const order = ['sono', 'imc', 'alongamento', 'habitos', 'outros'];
-  order.forEach(groupKey => {
+  const order = ["sono", "imc", "alongamento", "habitos", "outros"];
+  order.forEach((groupKey) => {
     const items = groups[groupKey];
     if (!items || items.length === 0) return;
 
     // Criar um wrapper de grupo para garantir separação entre título e os cards
     // usamos 'display: contents' via CSS para que os filhos sejam tratados pelo grid do container
-    const groupWrapper = document.createElement('div');
-    groupWrapper.className = 'group-block';
+    const groupWrapper = document.createElement("div");
+    groupWrapper.className = "group-block";
     cardsContainer.appendChild(groupWrapper);
 
     // Para grupos que não são 'sono', inserir mini-título dentro do wrapper
     const titleMap = {
-      imc: 'Resultado IMC',
-      alongamento: 'Alongamentos & Postura',
-      habitos: 'Hábitos & Rotina',
-      outros: 'Outras Dicas'
+      imc: "Resultado IMC",
+      alongamento: "Alongamentos & Postura",
+      habitos: "Hábitos & Rotina",
+      outros: "Outras Dicas",
     };
-    if (groupKey !== 'sono') {
-      const mini = document.createElement('div');
-      mini.className = 'mini-title';
-      mini.textContent = titleMap[groupKey] || 'Dicas';
+    if (groupKey !== "sono") {
+      const mini = document.createElement("div");
+      mini.className = "mini-title";
+      mini.textContent = titleMap[groupKey] || "Dicas";
       groupWrapper.appendChild(mini);
     }
 
     // container interno para os itens do grupo (permite controle se quisermos agrupá-los)
-    const itemsContainer = document.createElement('div');
-    itemsContainer.className = 'group-items';
+    const itemsContainer = document.createElement("div");
+    itemsContainer.className = "group-items";
     groupWrapper.appendChild(itemsContainer);
 
     // se o grupo tem apenas 1 item, dar classe para ocupar toda a largura
     const singleFull = items.length === 1;
     items.forEach((it, idx) => {
-      const card = document.createElement('div');
-      card.className = `card ${it.type === 'positive' ? 'card-positive' : 'card-negative'}`;
+      const card = document.createElement("div");
+      card.className = `card ${
+        it.type === "positive" ? "card-positive" : "card-negative"
+      }`;
       // regra especial: no grupo 'imc', o primeiro card (resultado) deve ocupar toda a largura
-      if (groupKey === 'imc' && idx === 0) {
-        card.classList.add('full-row');
+      if (groupKey === "imc" && idx === 0) {
+        card.classList.add("full-row");
       } else if (singleFull) {
-        card.classList.add('full-row');
-      } else if (groupKey === 'habitos' && idx === items.length - 1) {
+        card.classList.add("full-row");
+      } else if (groupKey === "habitos" && idx === items.length - 1) {
         // último card do grupo 'habitos' ocupa o espaço restante (ideal para layout com colunas)
-        card.classList.add('full-row');
+        card.classList.add("full-row");
       }
       card.innerHTML = `<h3>${it.title}</h3><p>${it.content}</p>`;
       itemsContainer.appendChild(card);
@@ -1505,8 +1564,8 @@ form.addEventListener("submit", (e) => {
 
 // Função para ajustar dinamicamente o margin-top do main baseado na altura do header
 function adjustMainMargin() {
-  const header = document.getElementById('header');
-  const main = document.querySelector('main');
+  const header = document.getElementById("header");
+  const main = document.querySelector("main");
 
   if (header && main) {
     const headerHeight = header.offsetHeight;
@@ -1519,19 +1578,19 @@ function adjustMainMargin() {
 }
 
 // Ajustar margin quando a página carrega
-document.addEventListener('DOMContentLoaded', adjustMainMargin);
+document.addEventListener("DOMContentLoaded", adjustMainMargin);
 
 // Ajustar margin quando a janela é redimensionada
-window.addEventListener('resize', adjustMainMargin);
+window.addEventListener("resize", adjustMainMargin);
 
 // Ajustar margin quando o conteúdo do header muda (ex: menu dropdown)
 const observer = new MutationObserver(adjustMainMargin);
-const header = document.getElementById('header');
+const header = document.getElementById("header");
 if (header) {
   observer.observe(header, {
     childList: true,
     subtree: true,
     attributes: true,
-    attributeFilter: ['style', 'class']
+    attributeFilter: ["style", "class"],
   });
 }
