@@ -200,6 +200,7 @@ html {
         padding-bottom: 2vw;
 
         .video {
+          display: none;
           text-align: center;
 
           video {
