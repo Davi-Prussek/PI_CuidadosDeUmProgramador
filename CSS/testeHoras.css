@@ -25,6 +25,9 @@ html {
 
       .card {
         padding: 14px 12px;
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
       }
     }
 
@@ -548,6 +551,9 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
+            width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
         }
 
         .card:hover {
@@ -648,6 +654,9 @@ html {
 
           .card {
             padding: 18px 14px;
+            width: 100%;
+            max-width: 100%;
+            box-sizing: border-box;
           }
 
           .card h3 {
@@ -838,6 +847,9 @@ html {
           gap: 15px;
         }
         .card {
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           padding: 20px 15px;
         }
       }
@@ -1230,6 +1242,9 @@ html {
         }
 
         .card {
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           padding: 15px 10px;
 
           h3 {
@@ -1608,6 +1623,9 @@ html {
         }
         .card {
           padding: 15px 10px;
+          width: 100%;
+          max-width: 100%;
+          box-sizing: border-box;
           h3 {
             font-size: 1.1rem;
           }

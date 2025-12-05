@@ -4,6 +4,15 @@ function reset(){
   window.scrollTo({ top: 0, behavior: 'smooth' })
   window.location.reload(true)
 }
+function letraMaisc(nome) {
+  const prep = ["a", "ante", "após", "até", "com", "contra", "de", "desde", "em",
+    "entre", "para", "perante", "por", "sem", "sob", "sobre", "trás", "da", "do"];
+
+  return nome.split(" ").map(palavra => {
+      const lower = palavra.toLowerCase();
+      return prep.includes(lower) ? lower : lower.charAt(0).toUpperCase() + lower.slice(1);
+  }).join(" ");
+};
 
 /* ===================== Parte 1 ===================== */
 
@@ -1153,7 +1162,7 @@ form.addEventListener("submit", (e) => {
   // Limpar container e adicionar saudação
   const saudacaoDiv = resultadosSection.querySelector("#saudacaoPersonalizada");
   saudacaoDiv.innerHTML = `
-    <p>Olá <strong>${data.nome || "usuário"
+    <p>Olá <strong>${letraMaisc(data.nome) || "usuário"
     }</strong>, com base nas suas respostas, geramos ${numberOfCardsToShow} cards de feedback.</p>
     <p>Sua pontuação indica <strong>${positivos} ponto(s) positivo(s)</strong> e <strong>${negativos} ponto(s) de atenção</strong> em sua rotina.</p>
   `;

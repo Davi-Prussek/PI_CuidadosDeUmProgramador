@@ -18,7 +18,7 @@ header.innerHTML = `<button id="menu-responsivo">
         </li>
         <li class="comeco">
           <a class="botao" id="botao-I">
-            <p>Começar<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            <p>Começar<i class="fa-solid fa-angle-up" style="color: #ffffff;"></i></p>
           </a>
           <ul class="sub-menus" id="sub-menus-I">
             <li>
@@ -50,7 +50,7 @@ header.innerHTML = `<button id="menu-responsivo">
         </li>
         <li class="sobre-nos">
           <a class="botao-III" id="botao-III">
-            <p>Sobre<img src="img/icons/Seta.svg" alt="seta/icon" /></p>
+            <p>Sobre<i class="fa-solid fa-angle-up" style="color: #ffffff;"></i></p>
           </a>
           <ul class="sub-menus" id="sub-menus-III">
             <li>
