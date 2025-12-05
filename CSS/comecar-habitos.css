@@ -47,7 +47,7 @@ main::after {
   --transition-slow: 350ms cubic-bezier(0.4, 0, 0.2, 1);
   --container-max: 1200px;
   --content-max: 65ch;
-    --h3-glow-color: rgba(255, 255, 255, 0.4);
+  --h3-glow-color: rgba(255, 255, 255, 0.4);
 }
 
 /* ====== FONTE & TIPOGRAFIA ====== */
@@ -62,18 +62,15 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  background-image: radial-gradient(
-      circle at 25% 25%,
+  background-image: radial-gradient(circle at 25% 25%,
       rgba(74, 144, 226, 0.05) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 75% 75%,
+      transparent 50%),
+    radial-gradient(circle at 75% 75%,
       rgba(0, 86, 179, 0.05) 0%,
-      transparent 50%
-    );
+      transparent 50%);
   background-size: 400px 400px;
 }
+
 html {
   font-size: calc(12px + 0.95vw);
   font-family: "Open Sans", sans-serif;
@@ -92,11 +89,9 @@ body {
   flex-direction: column;
   min-height: 100vh;
   overflow-x: hidden;
-  background: linear-gradient(
-    180deg,
-    rgb(242, 251, 255) 0%,
-    rgb(197, 214, 255) 100%
-  );
+  background: linear-gradient(180deg,
+      rgb(242, 251, 255) 0%,
+      rgb(197, 214, 255) 100%);
 }
 
 main {
@@ -116,6 +111,7 @@ main {
     opacity: 0;
     transform: translateY(20px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -125,8 +121,7 @@ main {
 .title {
   position: relative;
   margin-inline: 2vw;
-  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbINhsDGriGx1y-UccsTd1-jSrIYBiqii4kw&s)
-    center;
+  background: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbINhsDGriGx1y-UccsTd1-jSrIYBiqii4kw&s) center;
   padding: 5vw 0px;
   border: 5px solid var(--azul-claro);
   border-radius: 23px;
@@ -184,6 +179,7 @@ h2 {
     opacity: 0;
     transform: translateX(-20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -195,14 +191,12 @@ h2::after {
   display: block;
   width: 52vw;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--azul-claro),
-    rgb(40, 13, 58),
-    var(--azul-medio),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--azul-claro),
+      rgb(40, 13, 58),
+      var(--azul-medio),
+      transparent);
   margin: var(--space-sm) auto 0;
   border-radius: var(--radius-full);
   animation: expandWidth var(--transition-slow) ease-out;
@@ -212,6 +206,7 @@ h2::after {
   from {
     width: 0;
   }
+
   to {
     width: 60px;
   }
@@ -226,11 +221,9 @@ h3 {
   text-align: center;
   font-weight: 700;
   color: var(--azul-escuro);
-  background: linear-gradient(
-    135deg,
-    rgba(0, 86, 179, 0.03),
-    rgba(74, 144, 226, 0.05)
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 86, 179, 0.03),
+      rgba(74, 144, 226, 0.05));
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
@@ -244,12 +237,10 @@ h3::before {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    90deg,
-    transparent,
-    var(--h3-glow-color),
-    transparent
-  );
+  background: linear-gradient(90deg,
+      transparent,
+      var(--h3-glow-color),
+      transparent);
   transition: left var(--transition-slow);
 }
 
@@ -269,6 +260,7 @@ h3:hover {
   line-height: 1.5;
   overflow-wrap: normal;
   padding-left: 2vw;
+
   ul {
     li {
       line-height: 2.7vw;
@@ -285,6 +277,7 @@ h3:hover {
   justify-content: flex-start;
   gap: 10vw;
 }
+
 .parte-I,
 .parte-II,
 .parte-III,
@@ -444,6 +437,7 @@ h3:hover {
   outline: 3px solid var(--azul-claro);
   outline-offset: 4px;
 }
+
 /* ------- TABLET (768px a 1023px) ------- */
 @media (max-width: 1023px) {
   main {
@@ -461,6 +455,7 @@ h3:hover {
 
   .mini-text {
     font-size: 20px;
+    margin-bottom: 10px;
   }
 
   .botao-esquerdo,
@@ -502,6 +497,9 @@ h3:hover {
 
 /* ------- CELULARES COMPACTOS (350px – 499px) ------- */
 @media (max-width: 499px) {
+  .parte-I, .parte-II{
+    padding: 15px;
+  }
   .title {
     padding: 22vw 28vw;
   }
@@ -516,6 +514,10 @@ h3:hover {
 
   .mini-text {
     font-size: 15px;
+    margin-bottom: 10px;
+    li{
+      margin-bottom: 10px;
+    }
   }
 
   .numero img {
@@ -544,6 +546,7 @@ h3:hover {
     width: 5vw;
     height: 5vw;
   }
+
   .botao-esquerdo,
   .botao-direito {
     width: 25vw;
