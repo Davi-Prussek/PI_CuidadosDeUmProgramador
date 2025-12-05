@@ -20,6 +20,7 @@
   padding: 16px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
   color: #333;
+  margin-bottom: 5vw;
 
   .quiz-header {
     margin-top: 2vw;
