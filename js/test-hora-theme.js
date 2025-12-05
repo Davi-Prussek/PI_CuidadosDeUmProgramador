@@ -1,94 +1,147 @@
-const HTMLTheme = document.querySelector("html");
-const bodyTheme = document.querySelector("body");
+document.addEventListener('DOMContentLoaded', () => {
+  const HTMLTheme = document.documentElement;
+  const bodyTheme = document.body;
 
-const navTheme = document.querySelector("nav");
-const tela = window.screen.width;
-const headerTheme = document.querySelector("header");
-const footerTheme = document.querySelector("footer");
-const mainTheme = document.querySelector("main");
+  const navTheme = document.querySelector('nav');
+  const tela = window.screen.width;
+  const headerTheme = document.getElementById('header'); // existe no seu HTML
+  const footerTheme = document.querySelector('footer');
+  const mainTheme = document.querySelector('main');
 
-const sectionTheme = document.querySelectorAll("section");
-const fieldsetTheme = document.querySelectorAll("fieldset");
-const divTheme = document.querySelectorAll("div");
-const pTheme = document.querySelectorAll("p");
-const h1Theme = document.querySelectorAll("h1");
-const h2Theme = document.querySelectorAll("h2");
-const h3Theme = document.querySelectorAll("h3");
-const h4Theme = document.querySelectorAll("h4");
-const h5Theme = document.querySelectorAll("h5");
-const h6Theme = document.querySelectorAll("h6");
-const spanTheme = document.querySelectorAll("span");
-const subBarTheme = document.getElementById("sub-menu-bar");
+  const sectionTheme = document.querySelectorAll('section');
+  const fieldsetTheme = document.querySelectorAll('fieldset');
+  const divTheme = document.querySelectorAll('div');
+  const pTheme = document.querySelectorAll('p');
+  const h2Theme = document.querySelectorAll('h2');
 
+  const subBarTheme = document.getElementById('sub-menu-bar');
+  const IMCCond = document.getElementById('imcCondicional');
 
-const setaVoltarTheme = document.getElementById("setaVoltar");
+  const setaVoltarTheme = document.getElementById('setaVoltar');
 
-const botaoOffTheme = document.getElementById("themeButtonOff");
-const botaoOnTheme = document.getElementById("themeButtonOn")
+  const botaoOffTheme = document.getElementById('themeButtonOff');
+  const botaoOnTheme = document.getElementById('themeButtonOn');
 
-const resetButton = document.getElementById("resetButton");
+  const resetButton = document.getElementById('resetButton');
 
-const ligadoDesligado = document.getElementById("desligado");
-window.onload = () => {
-    const tema = localStorage.getItem("theme");
-    if (tema == "light") {
-        light();
+  // segurança: se algum elemento essencial estiver faltando, mostramos no console
+  if (!headerTheme) console.warn('header não encontrado: verifique id="header"');
+  if (!IMCCond) console.warn('imcCondicional não encontrado: verifique id="imcCondicional"');
+
+  // carregar tema salvo
+  const temaSalvo = localStorage.getItem('theme');
+  if (temaSalvo === 'light') {
+    setLight();
+  } else {
+    setDark();
+  }
+
+  function toggleTheme() {
+    const atual = localStorage.getItem('theme');
+    if (atual === 'light') {
+      setDark();
     } else {
-        dark();
+      setLight();
     }
-}
-const ligaDesliga = () => {
-    const atual = localStorage.getItem("theme");
-    if (atual == "light") {
-        dark();
-    } else {
-        light();
+  }
+
+  // FUNÇÕES de aplicar tema (com checagens)
+  function setLight() {
+    // classes seguras
+    if (headerTheme) {
+      headerTheme.classList.add('light');
+      headerTheme.classList.remove('dark');
     }
-}
 
-function light() {
-    header.classList.add("light");
-    header.classList.remove("dark");
-    botaoOnTheme.style.display = "none";
-    botaoOffTheme.style.display = "block";
-    headerTheme.style.backgroundColor = "rgb(0, 0, 0)";
-    subBarTheme.style.backgroundColor = "rgb(0, 0, 0)"
-    setaVoltarTheme.style.backgroundColor = "rgb( 0, 0, 0)";
-    footerTheme.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
-    mainTheme.style.backgroundColor = "rgba(5, 0, 23, 1)";
-    HTMLTheme.style.backgroundColor = "rgba(5, 0, 23, 1)";
-    sectionTheme.forEach(s => { s.style.color = "#ffffff"; });
-    sectionTheme.forEach(s => { s.style.backgroundColor = "rgb( 0, 0, 0)"; });
-    fieldsetTheme.forEach(f => { f.style.backgroundColor = "rgba(5, 0, 23, 1)" });
-    h2Theme.forEach(h2 => { h2.style.color = "#3c9effff" });
-    pTheme.forEach(p => { p.style.color = "#ffffffff" });
-    localStorage.setItem("theme", "light");
-    resetButton.style.background = "#ffffffff";
-    resetButton.style.color = "rgba(5, 0, 23, 1)";
-}
+    if (botaoOnTheme) botaoOnTheme.style.display = 'none';
+    if (botaoOffTheme) botaoOffTheme.style.display = 'block';
 
-function dark() {
-    header.classList.add("dark");
-    header.classList.remove("light");
-    botaoOffTheme.style.display = "none";
-    botaoOnTheme.style.display = "block";
-    headerTheme.style.backgroundColor = "";
-    subBarTheme.style.backgroundColor = ""
-    setaVoltarTheme.style.backgroundColor = "";
-    footerTheme.style.background = "linear-gradient( #0057b3c4, #002457)";
-    mainTheme.style.backgroundColor = "";
-    HTMLTheme.style.backgroundColor = "";
-    sectionTheme.forEach(s => { s.style.color = ""; });
-    sectionTheme.forEach(s => { s.style.backgroundColor = ""; });
-    fieldsetTheme.forEach(f => { f.style.backgroundColor = "" })
-    divTheme.forEach(d => { d.style.color = ""; });
-    divTheme.forEach(d => { d.style.backgroundColor = ""; });
-    h2Theme.forEach(h2 => { h2.style.color = "" });
-    pTheme.forEach(p => { p.style.color = "" });
-    localStorage.setItem("theme", "dark");
-    resetButton.style.background = "#004d99";
-    resetButton.style.color = "";
-}
+    if (headerTheme) headerTheme.style.backgroundColor = 'rgb(0, 0, 0)';
+    if (subBarTheme) subBarTheme.style.backgroundColor = 'rgb(0, 0, 0)';
+    if (setaVoltarTheme) setaVoltarTheme.style.backgroundColor = 'rgb(0,0,0)';
+    if (footerTheme) footerTheme.style.background = 'linear-gradient(rgb(8,8,8), rgb(0,0,0))';
+    if (mainTheme) mainTheme.style.backgroundColor = 'rgba(5,0,23,1)';
+    HTMLTheme.style.backgroundColor = 'rgba(5,0,23,1)';
 
-botaoOffTheme.addEventListener("click", ligaDesliga);
-botaoOnTheme.addEventListener("click", ligaDesliga);
+    sectionTheme.forEach(s => {
+      s.style.color = '#ffffff';
+      s.style.backgroundColor = 'rgb(0,0,0)';
+    });
+
+    fieldsetTheme.forEach(f => { f.style.backgroundColor = 'rgba(5,0,23,1)'; });
+
+    // Divs: deixar explicitamente escuras no modo LIGHT
+    divTheme.forEach(d => {
+      d.style.backgroundColor = '#000'; // fundo escuro
+      // se quiser texto claro nas divs:
+      d.style.color = '#fff';
+    });
+
+    h2Theme.forEach(h2 => { h2.style.color = '#3c9eff'; });
+    pTheme.forEach(p => { p.style.color = '#fff'; });
+
+    if (resetButton) {
+      resetButton.style.background = '#fff';
+      resetButton.style.color = 'rgba(5,0,23,1)';
+    }
+
+    if (IMCCond) {
+      IMCCond.style.backgroundColor = '#000';
+      IMCCond.style.color = '#fff';
+    }
+
+    localStorage.setItem('theme', 'light');
+  }
+
+  function setDark() {
+    if (headerTheme) {
+      headerTheme.classList.add('dark');
+      headerTheme.classList.remove('light');
+    }
+
+    if (botaoOffTheme) botaoOffTheme.style.display = 'none';
+    if (botaoOnTheme) botaoOnTheme.style.display = 'block';
+
+    // remove overrides - volta ao padrão do CSS
+    if (headerTheme) headerTheme.style.backgroundColor = '';
+    if (subBarTheme) subBarTheme.style.backgroundColor = '';
+    if (setaVoltarTheme) setaVoltarTheme.style.backgroundColor = '';
+    if (mainTheme) mainTheme.style.backgroundColor = '';
+    HTMLTheme.style.backgroundColor = '';
+
+    sectionTheme.forEach(s => {
+      s.style.color = '';
+      s.style.backgroundColor = '';
+    });
+
+    fieldsetTheme.forEach(f => { f.style.backgroundColor = ''; });
+
+    // Divs: remover override no dark (voltar para o padrão do CSS)
+    divTheme.forEach(d => {
+      d.style.backgroundColor = '';
+      d.style.color = '';
+    });
+
+    h2Theme.forEach(h2 => { h2.style.color = ''; });
+    pTheme.forEach(p => { p.style.color = ''; });
+
+    if (footerTheme) footerTheme.style.background = 'linear-gradient(#0057b3c4, #002457)';
+
+    if (resetButton) {
+      resetButton.style.background = '#004d99';
+      resetButton.style.color = '';
+    }
+
+    if (IMCCond) {
+      IMCCond.style.backgroundColor = '#2929295a';
+      IMCCond.style.color = '';
+    }
+
+    localStorage.setItem('theme', 'dark');
+  }
+
+  // eventos para alternar tema — apenas se os botões existirem
+  if (botaoOffTheme) botaoOffTheme.addEventListener('click', toggleTheme);
+  if (botaoOnTheme) botaoOnTheme.addEventListener('click', toggleTheme);
+
+});

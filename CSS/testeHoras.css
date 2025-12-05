@@ -112,35 +112,6 @@ html {
           align-items: flex-start;
         }
 
-        .checkbox-item:hover {
-          background: #f1f7ff;
-          box-shadow: 0 4px 10px rgba(0, 86, 179, 0.06);
-        }
-
-        .checkbox-item.selected {
-          background: linear-gradient(180deg, #e6f0ff 0%, #d6e8ff 100%);
-          border: 1px solid #93c0ff;
-          box-shadow: 0 6px 18px rgba(13, 77, 153, 0.08);
-        }
-
-        .checkbox-item-inline.selected {
-          background: linear-gradient(180deg, #e6f0ff 0%, #d6e8ff 100%);
-          border: 1px solid #b7d8ff;
-        }
-
-        .form-group.selected {
-          background: linear-gradient(180deg, #f4f9ff 0%, #eef6ff 100%);
-          border-radius: 10px;
-          padding: 0.8rem;
-          border: 1px solid #d0e8ff;
-          box-shadow: 0 6px 18px rgba(13, 77, 153, 0.04);
-        }
-
-        .form-group.selected label#texto {
-          color: #004a9f;
-          font-weight: 600;
-        }
-
         .checkbox-item input[type="checkbox"] {
           width: 18px;
           height: 18px;
@@ -183,11 +154,13 @@ html {
           flex-basis: 100%;
           width: 100%;
           order: 2;
+          margin-top: 10px;
         }
 
         .conditional-panel.visible {
           opacity: 1;
           padding: 0.6rem 0.8rem;
+          margin-top: 10px;
         }
 
         .intro {
@@ -251,8 +224,6 @@ html {
         /* ===== IMC panel styling (mais polido e "à prova de usuário") ===== */
         #imcCondicional {
           display: none;
-          background: linear-gradient(180deg, #ffffff 0%, #f7fbff 100%);
-          border: 1px solid #e6f0ff;
           padding: 0.8rem;
           border-radius: 10px;
           box-shadow: 0 6px 18px rgba(13, 77, 153, 0.02);
@@ -400,7 +371,7 @@ html {
         .checkbox-group {
           display: flex;
           flex-direction: column;
-          gap: 0.5rem;
+          gap: 1rem;
         }
 
         .checkbox-item {
