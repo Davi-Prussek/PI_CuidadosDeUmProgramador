@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="img/logo-icon.jpeg" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="img/logo-icon.jpeg">
     <title>Dev-Saúde | Teste de Horas</title>
-    <link rel="stylesheet" href="CSS/reset.css" />
-    <link rel="stylesheet" href="CSS/testeHoras.css" />
-    <link rel="stylesheet" href="CSS/header-footer-global.css" />
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/testeHoras.css">
+    <link rel="stylesheet" href="CSS/header-footer-global.css">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet">
   </head>
 
   <body>
@@ -19,8 +18,7 @@
     <main id="topo">
       <div class="botoes">
         <a href="#" class="seta-voltar" id="setaVoltar"
-          ><img src="img/icons/seta-voltar.svg" alt="seta/icon"
-        /></a>
+          ><img src="img/icons/seta-voltar.svg" alt="seta/icon"></a>
       </div>
 
       <section class="container">
@@ -35,11 +33,11 @@
             <legend>🕑 Parte 1 – Perguntas Gerais</legend>
             <div class="form-group">
               <label for="nome">Nome:</label>
-              <input type="text" id="nome" name="nome" required />
+              <input type="text" id="nome" name="nome" required>
             </div>
             <div class="form-group">
               <label for="idade">Idade:</label>
-              <input type="text" id="idade" name="idade" required />
+              <input type="text" id="idade" name="idade" required>
             </div>
             <div class="form-group">
               <label for="sexo" id="texto1">Sexo:</label>
@@ -108,7 +106,7 @@
                     id="trabalho"
                     name="trabalho"
                     value="on"
-                  />
+                  >
                   <label for="trabalho">Trabalho/Programar</label>
                 </div>
 
@@ -128,7 +126,7 @@
                     name="horasTrabalho"
                     maxlength="5"
                     placeholder="Ex: 8:00"
-                  />
+                  >
                   <label>Você costuma fazer pausas regulares?</label>
                   <select id="pausasTrabalho" name="pausasTrabalho">
                     <option value>Selecione</option>
@@ -139,7 +137,7 @@
               </div>
 
               <div class="checkbox-item">
-                <input type="checkbox" id="estudar" name="estudar" value="on" />
+                <input type="checkbox" id="estudar" name="estudar" value="on">
                 <label for="estudar">Estudar</label>
 
                 <div
@@ -156,8 +154,7 @@
                     id="horasEstudo"
                     name="horasEstudo"
                     maxlength="5"
-                    placeholder="Ex: 2:30"
-                  />
+                    placeholder="Ex: 2:30">
                   <label id="texto">Seus horários de estudo são:</label>
                   <select id="horarioEstudo" name="horarioEstudo">
                     <option value>Selecione</option>
@@ -173,7 +170,7 @@
                   id="tempoLivre"
                   name="tempoLivre"
                   value="on"
-                />
+                >
                 <label for="tempoLivre">Tempo livre</label>
 
                 <div
@@ -189,7 +186,7 @@
                         id="telasLivre"
                         name="telasLivre"
                         value="on"
-                      />
+                      >
                       <label for="telasLivre"
                         >Uso de telas (filmes, jogos, celular)</label
                       >
@@ -200,7 +197,7 @@
                         id="atividadeFisicaLivre"
                         name="atividadeFisicaLivre"
                         value="on"
-                      />
+                      >
                       <label for="atividadeFisicaLivre">Atividade física</label>
                     </div>
                     <div class="checkbox-item-inline">
@@ -209,7 +206,7 @@
                         id="lazerLivre"
                         name="lazerLivre"
                         value="on"
-                      />
+                      >
                       <label for="lazerLivre">Lazer ao ar livre</label>
                     </div>
                     <div class="checkbox-item-inline">
@@ -218,7 +215,7 @@
                         id="outrosLivre"
                         name="outrosLivre"
                         value="on"
-                      />
+                      >
                       <div>
                         <label for="outrosLivre">Outros:</label>
                         <input
@@ -226,7 +223,7 @@
                           id="outrosLivreTexto"
                           name="outrosLivreTexto"
                           style="width: 120px"
-                        />
+                        >
                       </div>
                     </div>
                   </div>
@@ -238,14 +235,14 @@
                     id="outros"
                     name="atividade"
                     value="outros"
-                  />
+                  >
                   <label for="outros">Outros:</label>
                   <input
                     type="text"
                     id="outrosTexto"
                     name="outrosTexto"
                     style="width: 120px"
-                  />
+                  >
                 </div>
               </div>
             </div>
@@ -261,7 +258,7 @@
               maxlength="5"
               placeholder="Ex: 7:30"
               required
-            />
+            >
             <span id="sleepEmoji"></span>
           </fieldset>
 
@@ -279,7 +276,7 @@
               maxlength="5"
               placeholder="Ex: 3:00"
               required
-            />
+            >
           </fieldset>
 
           <!-- 🧍 Parte 5 – Postura e Ambiente -->
@@ -361,7 +358,7 @@
                   step="0.1"
                   min="20"
                   max="300"
-              /></label>
+              ></label>
               <label
                 >Altura (cm):
                 <input
@@ -371,10 +368,10 @@
                   step="0.1"
                   min="50"
                   max="250"
-              /></label>
+              ></label>
             </div>
             <label>4. O que gostaria de melhorar primeiro na sua rotina?</label>
-            <input type="text" id="melhorarRotina" name="melhorarRotina" />
+            <input type="text" id="melhorarRotina" name="melhorarRotina">
             <label>5. Sugestão ou comentário final:</label>
             <textarea
               id="comentarioFinal"
