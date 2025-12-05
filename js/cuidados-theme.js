@@ -85,10 +85,10 @@ function light() {
     localStorage.setItem("theme", "light");
     HTML.style.setProperty("--h3-glow-color", "rgba(255, 255, 255, 0.4)");
 
-    imgPostura.src = "../img/icons/icon-cuidados/postura-dark.png";
-    imgLuzSolar.src = "../img/icons/icon-cuidados/sol-dark.png";
-    imgBurnOut.src = "../img/icons/icon-cuidados/fogo-dark.png";
-    imgTelas.src = "../img/icons/icon-cuidados/telas-dark.png";
+    imgPostura.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/postura-dark.png";
+    imgLuzSolar.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/sol-dark.png";
+    imgBurnOut.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/fogo-dark.png";
+    imgTelas.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/telas-dark.png";
 }
 
 function dark() {
@@ -118,10 +118,10 @@ function dark() {
     localStorage.setItem("theme", "dark");
     HTML.style.setProperty("--h3-glow-color", "rgba(0, 0, 0, 0.4)");
     
-    imgPostura.src = "../img/icons/icon-cuidados/postura.png";
-    imgLuzSolar.src = "../img/icons/icon-cuidados/sol.png";
-    imgBurnOut.src = "../img/icons/icon-cuidados/fogo.png";
-    imgTelas.src = "../img/icons/icon-cuidados/telas.png";
+    imgPostura.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/postura.png";
+    imgLuzSolar.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/sol.png";
+    imgBurnOut.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/fogo.png";
+    imgTelas.src = "/PI_CuidadosDeUmProgramador/img/icons/icon-cuidados/telas.png";
 }
 
 botaoOff.addEventListener("click", ligaDesliga);
