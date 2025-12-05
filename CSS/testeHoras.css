@@ -337,7 +337,7 @@ html {
           cursor: pointer;
           font-weight: 600;
           p {
-            font-size: 1.5vw;
+            font-size: 5.5vw;
           }
         }
 
@@ -971,7 +971,7 @@ html {
           border: none;
           border-radius: 10px;
           cursor: pointer;
-          font-size: 0.9vw;
+          font-size: 3.5vw;
           font-weight: 600;
           transition: background 0.3s;
         }
@@ -983,12 +983,12 @@ html {
         /* ---------- Botão limpar ---------- */
         .btn-reset {
           background: #e8e8e8;
-          color: #004d99;
+          color: white;
           padding: 0.8rem 1.6rem;
           border: none;
           border-radius: 10px;
           cursor: pointer;
-          font-size: 0.9vw;
+          font-size: 3.5vw;
           font-weight: 600;
           transition: background 0.3s;
         }
@@ -1353,7 +1353,7 @@ html {
           border: none;
           border-radius: 10px;
           cursor: pointer;
-          font-size: 0.9vw;
+          font-size: 5vw;
           font-weight: 600;
           transition: background 0.3s;
         }
@@ -1365,12 +1365,11 @@ html {
         /* ---------- Botão limpar ---------- */
         .btn-reset {
           background: #e8e8e8;
-          color: #004d99;
           padding: 0.8rem 1.6rem;
           border: none;
           border-radius: 10px;
           cursor: pointer;
-          font-size: 0.9vw;
+          font-size: 5vw;
           font-weight: 600;
           transition: background 0.3s;
         }
@@ -1744,7 +1743,6 @@ html {
         /* ---------- Botão limpar ---------- */
         .btn-reset {
           background: #e8e8e8;
-          color: #004d99;
           padding: 1vw 1.6vw;
           border: none;
           border-radius: 10px;
