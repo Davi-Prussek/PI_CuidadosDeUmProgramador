@@ -1,4 +1,8 @@
     /* ========================================= HEADER ========================================= */
+    :root{
+      scroll-behavior: smooth;
+    }
+    
     @media (min-width: 800px) {
       .seta-voltar {
         background-color: #0056b3;
@@ -195,6 +199,7 @@
             position: relative;
           }
         }
+
       }
 
       main {

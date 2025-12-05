@@ -1,8 +1,8 @@
 let resetBtn = document.getElementsByClassName("restart-btn")
 
 function reset(){
-  window.scrollTo({ top: 0, behavior: 'smooth' })
   window.location.reload(true)
+  window.scrollTo({ top: 0, behavior: 'smooth' })
 }
 function letraMaisc(nome) {
   const prep = ["a", "ante", "após", "até", "com", "contra", "de", "desde", "em",
@@ -1453,22 +1453,22 @@ form.addEventListener("submit", (e) => {
       content:
         "Eleve os ombros em direção às orelhas e solte; depois puxe um braço sobre o peito por 20s. Repita 2x.",
     });
-  }
 
-  if (data.senteDores === "sim") {
-    alongamentoTips.push({
-      title: "Alívio para Costas",
-      content:
-        "De pé, apoie as mãos na cintura e faça uma extensão suave da coluna por 10-15s. Repita 3x.",
-    });
-  }
+    if (data.senteDores === "sim") {
+      alongamentoTips.push({
+        title: "Alívio para Costas",
+        content:
+          "De pé, apoie as mãos na cintura e faça uma extensão suave da coluna por 10-15s. Repita 3x.",
+      });
+    }
 
-  if (data.posturaTelas === "nao" || data.posturaTelas === "parcialmente") {
-    alongamentoTips.push({
-      title: "Ajuste de Postura",
-      content:
-        "Verifique a altura da tela: ela deve estar ao nível dos olhos. Sente-se com os pés apoiados e o core levemente ativado.",
-    });
+    if (data.posturaTelas === "nao" || data.posturaTelas === "parcialmente") {
+      alongamentoTips.push({
+        title: "Ajuste de Postura",
+        content:
+          "Verifique a altura da tela: ela deve estar ao nível dos olhos. Sente-se com os pés apoiados e o core levemente ativado.",
+      });
+    }
   }
 
   if (alongamentoTips.length > 0 && cardsContainer) {

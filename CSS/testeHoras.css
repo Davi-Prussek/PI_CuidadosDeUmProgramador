@@ -499,8 +499,8 @@ html {
         }
 
         .cards-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          display: flex;
+          flex-direction: column;
           gap: 20px;
           margin-top: 2rem;
         }
@@ -551,9 +551,7 @@ html {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
-            width: 100%;
-  max-width: 100%;
-  box-sizing: border-box;
+          margin: 50px 0;
         }
 
         .card:hover {
@@ -582,6 +580,8 @@ html {
           background: #e6ffe6;
           border-color: #99ff99;
           color: #004d00;
+          margin: 25px 0;
+
         }
 
         .card-positive h3 {
@@ -593,6 +593,8 @@ html {
           background: #ffe6e6;
           border-color: #ff9999;
           color: #4d0000;
+          margin: 25px 0;
+
         }
 
         .card-negative h3 {
@@ -670,6 +672,7 @@ html {
           .cards-container .mini-title {
             font-size: 0.8rem;
             padding-left: 3px;
+            margin-bottom: 50px;
           }
         }
 
@@ -1057,9 +1060,9 @@ html {
 
         /* Container dos cards */
         .cards-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 20px;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
           margin-top: 2rem;
         }
 
@@ -1102,6 +1105,7 @@ html {
           background: #e6ffe6;
           border-color: #99ff99;
           color: #004d00;
+          margin: 10px 0;
         }
 
         .card-positive h3 {
@@ -1112,6 +1116,8 @@ html {
           background: #ffe6e6;
           border-color: #ff9999;
           color: #4d0000;
+          margin: 25px 0;
+
         }
 
         .card-negative h3 {
@@ -1441,8 +1447,8 @@ html {
 
         /* Container dos cards */
         .cards-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          display: flex;
+          flex-direction: column;
           gap: 20px;
           margin-top: 2rem;
         }
@@ -1486,6 +1492,7 @@ html {
           background: #e6ffe6;
           border-color: #99ff99;
           color: #004d00;
+          margin: 25px 0;
         }
 
         .card-positive h3 {
@@ -1496,6 +1503,8 @@ html {
           background: #ffe6e6;
           border-color: #ff9999;
           color: #4d0000;
+          margin: 25px 0;
+
         }
 
         .card-negative h3 {
@@ -1822,8 +1831,8 @@ html {
 
         /* Container dos cards */
         .cards-container {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          display: flex;
+          flex-direction: column;
           gap: 20px;
           margin-top: 2rem;
         }
@@ -1867,6 +1876,8 @@ html {
           background: #e6ffe6;
           border-color: #99ff99;
           color: #004d00;
+          margin: 25px 0;
+
         }
 
         .card-positive h3 {
@@ -1877,6 +1888,8 @@ html {
           background: #ffe6e6;
           border-color: #ff9999;
           color: #4d0000;
+          margin: 25px 0;
+
         }
 
         .card-negative h3 {
@@ -1965,7 +1978,6 @@ html {
           font-size: 0.9rem;
           font-weight: 600;
         }
-
         .print-btn {
           background: #009966;
           color: #fff;
