@@ -192,8 +192,6 @@
 
             .template-I {
               z-index: 2;
-              box-shadow: 0px 5px 15px 0px rgb(81, 81, 81);
-              background-color: #0e68c9;
               padding-top: 3vw;
               margin-inline: 3vw;
               border-radius: 25px;
@@ -213,10 +211,9 @@
                 justify-content: center;
 
                 p {
-                  border: 3px solid #53a6ff;
                   font-size: 1.5vw;
-                  background-color: white;
-                  color: #002b59;
+                  background-color: #0054ae;
+                  color: white;
                   border-radius: 2vw;
                   padding: 1vw 1vw;
                   line-height: 2vw;
@@ -736,8 +733,6 @@
 
             .template-I {
               z-index: 2;
-              box-shadow: 0px 5px 15px 0px rgb(36, 86, 121);
-              background: linear-gradient(#001934, #001b37, #000e1d);
               padding-top: 3vw;
               margin-inline: 3vw;
               border-radius: 25px;
@@ -757,7 +752,6 @@
                 justify-content: center;
 
                 p {
-                  border: 3px solid #53a6ff;
                   font-size: 1.5vw;
                   background-color: rgb(4, 21, 50);
                   color: #ffffff;
@@ -1198,8 +1192,6 @@
             }
 
             .template-I {
-              box-shadow: 0px 5px 15px 0px rgb(81, 81, 81);
-              background-color: #0e68c9;
               padding-top: 3vw;
               margin-inline: 2vw;
               border-radius: 25px;
@@ -1221,10 +1213,9 @@
 
                 p {
                   width: 100%;
-                  border: 3px solid #53a6ff;
                   font-size: 5.5vw;
-                  background-color: white;
-                  color: #002b59;
+                  background-color: #0054ae;
+                  color: white;
                   border-radius: 5vw;
                   line-height: 6.5vw;
                   text-align: center;
@@ -1774,8 +1765,6 @@
             }
 
             .template-I {
-              box-shadow: 0px 5px 15px 0px rgba(36, 86, 121, 0.6);
-              background: linear-gradient(#001934, #001b37, #000e1d);
               padding-top: 3vw;
               margin-inline: 2vw;
               border-radius: 25px;
@@ -1797,7 +1786,7 @@
 
                 p {
                   width: 100%;
-                  border: 3px solid #53a6ff;
+                  
                   font-size: 5.5vw;
                   background-color: rgb(4, 21, 50);
                   color: white;

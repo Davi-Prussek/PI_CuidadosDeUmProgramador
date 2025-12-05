@@ -20,6 +20,7 @@ const h6Theme = document.querySelectorAll("h6");
 const spanTheme = document.querySelectorAll("span");
 const subBarTheme = document.getElementById("sub-menu-bar");
 
+
 const setaVoltarTheme = document.getElementById("setaVoltar");
 
 const botaoOffTheme = document.getElementById("themeButtonOff");
@@ -63,7 +64,7 @@ function light() {
     pTheme.forEach(p => { p.style.color = "#ffffffff" });
     localStorage.setItem("theme", "light");
     resetButton.style.background = "#ffffffff";
-
+    resetButton.style.color = "rgba(5, 0, 23, 1)";
 }
 
 function dark() {
@@ -86,6 +87,7 @@ function dark() {
     pTheme.forEach(p => { p.style.color = "" });
     localStorage.setItem("theme", "dark");
     resetButton.style.background = "#004d99";
+    resetButton.style.color = "";
 }
 
 botaoOffTheme.addEventListener("click", ligaDesliga);
