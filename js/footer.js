@@ -19,12 +19,12 @@ a.href ="https://www.instagram.com/devsaude_oficial?utm_source=ig_web_button_sha
 a.target = "_blank";
 a.rel = "noopener noreferrer";
 
-let img = document.createElement("img");
-img.src = "img/icons/instagram-brands-solid-full.svg";
-img.alt = "Instagram do Dev-Saúde";
-img.classList.add("midia");
+let i = document.createElement("i");
+i.classList.add("fa-brands", "fa-instagram");
+i.style.color = "#ffffff";
+i.style.color = "#ffffff";
 
-a.appendChild(img);
+a.appendChild(i);
 li1.appendChild(a);
 
 ul1.appendChild(li1);
