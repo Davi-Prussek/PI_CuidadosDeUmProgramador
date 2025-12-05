@@ -120,7 +120,7 @@ html {
           margin-bottom: 20px;
         }
 
-        .listaDeArticle {
+        .referencias {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
           gap: 10px;
