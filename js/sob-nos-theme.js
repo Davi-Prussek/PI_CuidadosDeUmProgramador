@@ -10,6 +10,8 @@ const section = document.querySelectorAll("section");
 const div = document.querySelectorAll("div");
 const article = document.querySelectorAll("article");
 
+const li4 = document.querySelectorAll("li");
+const p4 = document.querySelectorAll("p");
 
 const parte_I = document.querySelectorAll(".parte-I > section");
 const parte_II = document.querySelectorAll(".parte-II > section");
@@ -70,13 +72,9 @@ function light() {
     subBar.style.backgroundColor = "rgba(0, 0, 0, 1)"
     footer.style.background = "linear-gradient( rgba(8, 8, 8, 1), rgba(0, 0, 0, 1))";
     
-    parte_I.forEach(parte_I => {parte_I.style.backgroundColor = "black";});
-    parte_II.forEach(parte_II => {parte_II.style.backgroundColor = "black";});
-    parte_III.forEach(parte_III => {parte_III.style.backgroundColor = "black";});
-
-    parte_I_p.forEach(parte_I_p => {parte_I_p.style.color = "white";});
-    parte_II_p.forEach(parte_II_p => {parte_II_p.style.color = "white";});
-    parte_III_p.forEach(parte_III_p => {parte_III_p.style.color = "white";});
+    li4.forEach(li4 => {li4.style.color = "white"});
+    li4.forEach(li4 => {li4.style.backgroundColor = "black"});
+    p4.forEach(p4 => {p4.style.color = "white"});
 
     face.forEach(face => {face.style.border = "8px solid black";});
 
@@ -100,13 +98,9 @@ function dark() {
     subBar.style.backgroundColor = ""
     footer.style.background = "";
     
-    parte_I.forEach(parte_I => {parte_I.style.backgroundColor = "";});
-    parte_II.forEach(parte_II => {parte_II.style.backgroundColor = "";});
-    parte_III.forEach(parte_III => {parte_III.style.backgroundColor = "";});
-
-    parte_I_p.forEach(parte_I_p => {parte_I_p.style.color = "";});
-    parte_II_p.forEach(parte_II_p => {parte_II_p.style.color = "";});
-    parte_III_p.forEach(parte_III_p => {parte_III_p.style.color = "";});
+    li4.forEach(li4 => {li4.style.color = ""});
+    li4.forEach(li4 => {li4.style.backgroundColor = ""});
+    p4.forEach(p4 => {p4.style.color = ""})
 
     face.forEach(face => {face.style.border = "";});
 
